@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-12",
+  "catalogVersion": 6774,
+  "scope": "Initial community research for the general advisor; no runtime or production recommendation use.",
+  "sources": [
+    {
+      "id": "kurii-counterbuying",
+      "kind": "guide",
+      "url": "https://deadlocklabs.gg/builds/abrams-guide-to-counterbuying-809744/",
+      "title": "Guide to Counterbuying",
+      "author": "kurii",
+      "publishedAt": "2026-09-15",
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Generic counterbuying groups in an Abrams build; not proof these items counter Abrams. Categories conflate reduction and removal."
+    },
+    {
+      "id": "reddit-rundown",
+      "kind": "community",
+      "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1r24qlp/can_someone_give_me_a_rundown_on_what_counter/",
+      "title": "Counter-item rundown discussion",
+      "author": "Multiple commenters, including Name_Amauri",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Firsthand suggestions with execution caveats; publication date not independently extracted. No patch certification."
+    },
+    {
+      "id": "reddit-shiv",
+      "kind": "community",
+      "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1uk4jnj/how_do_you_deal_with_shiv/",
+      "title": "How do you deal with Shiv?",
+      "author": "Multiple commenters",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Suggestions distinguish knife removal, mobility control and sustain. Relative timestamps vary in retrieved representations; freshness uncertain."
+    },
+    {
+      "id": "wiki-reducer",
+      "kind": "wiki",
+      "url": "https://deadlock.wiki/Debuff_Reducer",
+      "title": "Debuff Reducer",
+      "author": "Wiki contributors",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Opened representation lists 20% resist and 50 health, while client 6774 lists 25% and 90. Search excerpt and opened page differ. Treat numeric/history details as stale or inconsistent."
+    },
+    {
+      "id": "wiki-barrier",
+      "kind": "wiki",
+      "url": "https://deadlock.wiki/Reactive_Barrier",
+      "title": "Reactive Barrier",
+      "author": "Wiki contributors",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Opened page lists 22s cooldown/12s duration, while client 6774 lists 55s/10s. Trigger descriptions also differ. Not current certification."
+    },
+    {
+      "id": "natan-video",
+      "kind": "video",
+      "url": "https://www.youtube.com/watch?v=nWBBSTxizdI",
+      "title": "Counterbuying video linked by Natan cheatsheet discussion",
+      "author": "Attribution from Reddit post; video metadata unconfirmed",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "unavailable",
+      "patch": null,
+      "note": "Followed Reddit source link, but video fetch failed. No transcript watched/read; no claims extracted."
+    },
+    {
+      "id": "official-update",
+      "kind": "official",
+      "url": "https://forums.playdeadlock.com/threads/09-29-2026.166726/",
+      "title": "09-29-2026 update thread",
+      "author": "Yoshi / Valve",
+      "publishedAt": "2026-09-30",
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": null,
+      "note": "Opened primary update thread with follow-up changes. Its title date is not proof of the latest live patch or of the candidate interactions."
+    },
+    {
+      "id": "client-6774",
+      "kind": "client-extraction",
+      "url": "https://api.deadlock-api.com/v1/assets/items?client_version=6774",
+      "title": "Version-pinned item definitions",
+      "author": "Deadlock API community client extraction",
+      "publishedAt": null,
+      "accessedAt": "2026-10-12",
+      "access": "read",
+      "patch": "client-6774",
+      "note": "Local immutable snapshot and normalized facts used for comparison. Latest steam-info endpoint still returned 6774 during this research."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "abrams-barrier",
+      "itemId": "item-1644605047",
+      "enemyHeroIds": [
+        "hero-6"
+      ],
+      "goal": "survive",
+      "problem": "control",
+      "status": "candidate",
+      "sourceIds": [
+        "kurii-counterbuying",
+        "wiki-barrier",
+        "client-6774"
+      ],
+      "sourceClaim": "Guide groups Reactive Barrier among defensive responses; source tooltip describes a control-triggered barrier.",
+      "hypothesis": "A barrier triggered by Abrams control may cushion follow-up damage.",
+      "limits": "Does not stop the charge or guarantee survival; cooldown/trigger timing matter. Wiki numerical fields conflict.",
+      "nextCheck": "Corroborate exact Abrams control trigger, barrier damage coverage and ordering against current mechanics or a reproducible test."
+    },
+    {
+      "id": "abrams-stun-reduction",
+      "itemId": "item-1047818222",
+      "enemyHeroIds": [
+        "hero-6"
+      ],
+      "goal": "survive",
+      "problem": "control",
+      "status": "candidate",
+      "sourceIds": [
+        "wiki-reducer",
+        "client-6774"
+      ],
+      "sourceClaim": "Wiki lists Abrams stuns among affected controls; client tooltip describes negative-effect duration reduction.",
+      "hypothesis": "Reduced stun duration may permit an earlier response.",
+      "limits": "No guaranteed parry window; rank, duration items, spacing and latency remain unresolved.",
+      "nextCheck": "Check current Shoulder Charge and Seismic Impact control durations; test the heavy-melee timing claim separately."
+    },
+    {
+      "id": "reducer-is-cleanse",
+      "itemId": "item-1047818222",
+      "enemyHeroIds": [],
+      "goal": "survive",
+      "problem": "control",
+      "status": "disputed",
+      "sourceIds": [
+        "kurii-counterbuying",
+        "client-6774"
+      ],
+      "sourceClaim": "Guide includes Debuff Reducer in its cleanse/removal group.",
+      "hypothesis": "The guide grouping could be mistaken for removal of existing effects.",
+      "limits": "Captured tooltip supports duration reduction, not on-demand removal. Do not implement a cleanse rule.",
+      "nextCheck": "Keep duration reduction and cleanse as separate effects; reject broad guide-category inference."
+    },
+    {
+      "id": "shiv-knives-dispel",
+      "itemId": "item-3731635960",
+      "enemyHeroIds": [
+        "hero-19"
+      ],
+      "goal": "survive",
+      "problem": "burst",
+      "status": "candidate",
+      "sourceIds": [
+        "reddit-shiv",
+        "client-6774"
+      ],
+      "sourceClaim": "Commenters suggest Dispel Magic for applied Shiv knife debuffs.",
+      "hypothesis": "Removal of eligible knife effects may reduce ongoing damage and create recovery space.",
+      "limits": "Not verified execute prevention. Captured tooltip excludes ultimate debuffs and use while stunned/slept; reapplication remains possible.",
+      "nextCheck": "Find current specific Serrated Knives removal evidence; model damage-over-time separately from burst before publishing."
+    },
+    {
+      "id": "anti-sustain-healbane",
+      "itemId": "item-2603935618",
+      "enemyHeroIds": [
+        "hero-6",
+        "hero-19"
+      ],
+      "goal": "punish",
+      "problem": "sustain",
+      "status": "candidate",
+      "sourceIds": [
+        "reddit-rundown",
+        "reddit-shiv",
+        "client-6774"
+      ],
+      "sourceClaim": "Community recommends healing reduction against sustain-heavy Abrams/Shiv; client item applies healing reduction through spirit damage.",
+      "hypothesis": "Healbane may help Infernus finish healing enemies when he can maintain application.",
+      "limits": "Does not establish burst survival or execute prevention; damage deferral is not healing. Application, stacking and affected healing need review.",
+      "nextCheck": "Map each hero healing source and verify application/refresh conditions; keep punish separate from survive."
+    },
+    {
+      "id": "anti-sustain-toxic",
+      "itemId": "item-3696726732",
+      "enemyHeroIds": [
+        "hero-6",
+        "hero-19"
+      ],
+      "goal": "punish",
+      "problem": "sustain",
+      "status": "candidate",
+      "sourceIds": [
+        "kurii-counterbuying",
+        "client-6774"
+      ],
+      "sourceClaim": "Guide places Toxic Bullets among anti-heal options; source tooltip describes bullet buildup, bleed and healing reduction.",
+      "hypothesis": "A sustained bullet application option may deny relevant healing.",
+      "limits": "Not instant application or immediate protection; utility can justify a weapon item, but weapon uptime and opportunity cost need review.",
+      "nextCheck": "Verify buildup thresholds, hero application suitability and affected healing before assigning stages or strength."
+    },
+    {
+      "id": "shiv-counterspell-execute",
+      "itemId": "item-1414025773",
+      "enemyHeroIds": [
+        "hero-19"
+      ],
+      "goal": "survive",
+      "problem": "burst",
+      "status": "blocked",
+      "sourceIds": [
+        "reddit-rundown",
+        "client-6774"
+      ],
+      "sourceClaim": "A commenter lists Counterspell against Shiv ultimate; source item uses a timed parry response.",
+      "hypothesis": "A correctly timed spell parry might stop a specific ultimate interaction.",
+      "limits": "No current interaction proof or timing test collected. Do not promise execute immunity or rescue after control.",
+      "nextCheck": "Obtain direct current Killing Blow interaction evidence and activation-window test; broad item wording alone is insufficient."
+    },
+    {
+      "id": "abrams-preemptive-unstoppable",
+      "itemId": "item-3357231760",
+      "enemyHeroIds": [
+        "hero-6"
+      ],
+      "goal": "survive",
+      "problem": "control",
+      "status": "candidate",
+      "sourceIds": [
+        "reddit-rundown",
+        "kurii-counterbuying",
+        "client-6774"
+      ],
+      "sourceClaim": "Community describes Unstoppable as control protection; source tooltip prevents specified controls but disallows use while stunned/slept.",
+      "hypothesis": "Preemptive use may protect against relevant Abrams control.",
+      "limits": "Expensive future purchase, not a reactive button after stun. Damage protection and each displacement interaction require separate evidence.",
+      "nextCheck": "Verify specific charge/ultimate behavior and preemptive timing; do not equate control immunity with damage immunity."
+    }
+  ]
+}

@@ -35,6 +35,11 @@ Done when a small audited catalog can be loaded and invalid data cannot reach th
 
 ## Milestone 2 — complete one vertical slice
 
+Research progress 2026-10-12: eight source records and eight candidate claims in
+data/research/counter-claims.json, with source-supported leads, disagreements and
+specific next checks. COMMUNITY_RESEARCH.md documents the review process. Resolve
+the candidate interactions and conditional/DoT model next; no real rules yet.
+
 - Verify Infernus versus Abrams and Shiv scenarios across lane/mid/late and
   burst/control/sustain problems. Keep the UI general-purpose and uniformly sized.
 - Implement player synergy, per-enemy threat priority, conditional timing, current

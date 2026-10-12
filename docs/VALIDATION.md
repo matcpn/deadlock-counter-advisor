@@ -1,5 +1,20 @@
 # Validation record
 
+## Community-source research — 2026-10-12
+
+- Read a dated counterbuying guide, two detailed Reddit discussions, two wiki
+  pages, and an official patch thread; compared claims with local pinned client
+  data. Source registry has eight entries, including an unavailable linked video
+  and the client-extraction source. No video transcript/content was retrieved.
+- Latest public steam-info still returned client 6774 during this pass.
+- Research ledger: eight claims, with candidate/disputed/blocked status. Checked
+  every source, item and hero reference against ledger/catalog IDs successfully.
+- Stale/inconsistent wiki numeric representations recorded rather than promoted.
+  Generic guide groupings did not establish specific matchup or cleanse rules.
+- npm run check passed: snapshot verification, 62 tests, strict TypeScript and
+  production build. App output unchanged; research is not runtime recommendation
+  data. No in-game interaction or gameplay timing tests performed.
+
 ## Repeatable catalog and browsing checks — 2026-10-11
 
 - Published implementation commit d84c697 to main. Remote Checks run 38197488346

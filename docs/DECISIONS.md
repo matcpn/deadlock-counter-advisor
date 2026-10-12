@@ -1,5 +1,15 @@
 # Decisions and open questions
 
+## Community-source research — 2026-10-12
+
+User explicitly wants guides, social discussions and other internet sources to
+inform rules, without relying on their own expertise. Preserve source claims,
+scenario hypotheses, dates, disagreements and remaining checks separately in a
+research ledger. Community evidence is useful and can support practical judgments;
+upvotes/reposts are not mechanical verification. Current facts and specific
+interactions still need corroboration. The agent performs that research; user
+expertise is not a release prerequisite. See COMMUNITY_RESEARCH.md for findings.
+
 ## Repeatable catalog and simpler browsing — 2026-10-11
 
 - User prioritized repeatable game-data pulls, full hero/item coverage and optional

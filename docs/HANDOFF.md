@@ -24,6 +24,16 @@ future purchases. Explain the specific mechanics and limitations, not just a ran
 
 ## Current state
 
+Latest research 2026-10-12: user wants source-driven research and is not expected
+to be the mechanics expert. Read COMMUNITY_RESEARCH.md and
+data/research/counter-claims.json: eight sources / eight candidate claims, scoped
+to the first matchup slice. Recent guide/community discussions were compared with
+client 6774; stale wiki values and cleanse/reduction conflation recorded. Video
+retrieval failed and supplies no evidence. No claim was promoted to a live rule.
+Next: resolve the specific candidate interactions using accessible corroboration,
+model conditional timing and DoT, then implement the first supported real lists.
+Do not ask the user to certify mechanics merely because expertise would help.
+
 Latest continuation 2026-10-11: repeatable catalog import and simpler browsing
 implemented. Read GAME_DATA.md for refresh/review commands and source limits.
 Implementation d84c697 is deployed; remote Checks/Pages and manual refresh all
