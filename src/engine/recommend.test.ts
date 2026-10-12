@@ -1,0 +1,20 @@
+import { describe, expect, it } from 'vitest';
+import { demoCatalog, weights } from '../data/demo';
+import type { Scenario } from '../domain/types';
+import { recommend } from './recommend';
+const scenario: Scenario = { heroId:'infernus',build:'spirit',enemyHeroIds:['abrams','shiv'],problems:['burst','control','sustain'],stage:'mid',budget:1800,ownedItemIds:[],allowActives:true };
+const run = (overrides: Partial<Scenario> = {}) => recommend(demoCatalog,{...scenario,...overrides},weights,{demo:true});
+describe('scenario recommendation boundary', () => {
+  it('never returns demo claims in production',()=>expect(recommend(demoCatalog,scenario,weights,{patch:'current'})).toEqual([]));
+  it('separates affordable purchases from future options',()=>expect(run().map(r=>r.affordable)).toEqual([true,true,false]));
+  it('allows useful weapon-category utility in a spirit build',()=>expect(run().some(r=>r.item.id==='demo-interrupt')).toBe(true));
+  it('respects lane suitability',()=>expect(run({stage:'lane'}).map(r=>r.item.id)).toEqual(['demo-guard']));
+  it('respects active preference',()=>expect(run({allowActives:false}).every(r=>r.item.activation!=='active')).toBe(true));
+  it('does not sell owned items again',()=>expect(run({ownedItemIds:['demo-guard']}).some(r=>r.item.id==='demo-guard')).toBe(false));
+  it('aggregates multi-enemy coverage',()=>expect(run()[0].coveredEnemyIds).toEqual(['abrams','shiv']));
+  it('does not mistake anti-sustain for burst protection',()=>expect(run({problems:['burst']}).some(r=>r.goal==='punish')).toBe(false));
+  it('returns an honest empty result',()=>expect(run({enemyHeroIds:[]})).toEqual([]));
+  it('rejects invalid budgets',()=>expect(()=>run({budget:NaN})).toThrow('Invalid budget'));
+  it('rejects unknown enemies',()=>expect(()=>run({enemyHeroIds:['unknown']})).toThrow('Unknown hero'));
+  it('has stable ranking',()=>expect(run()).toEqual(run()));
+});
