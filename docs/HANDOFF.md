@@ -26,6 +26,8 @@ future purchases. Explain the specific mechanics and limitations, not just a ran
 
 Latest continuation 2026-10-11: repeatable catalog import and simpler browsing
 implemented. Read GAME_DATA.md for refresh/review commands and source limits.
+Implementation d84c697 is deployed; remote Checks/Pages and manual refresh all
+succeeded. Live page was reloaded and inspected. See VALIDATION.md for run IDs.
 Pinned client 6774 snapshot contains 65 hero records / 757 entities, with 41
 source-selectable heroes and 173 shop items displayed (17 special-tier records
 kept separate). Portrait/item URLs and colors come from the source; failures have

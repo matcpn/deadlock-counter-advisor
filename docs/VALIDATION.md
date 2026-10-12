@@ -2,6 +2,15 @@
 
 ## Repeatable catalog and browsing checks — 2026-10-11
 
+- Published implementation commit d84c697 to main. Remote Checks run 38197488346
+  and Pages run 38197488352 both succeeded. Reloaded live repository-subpath URL
+  and confirmed new client/version counts, roster selector and item-tier lists.
+- Dispatched manual data-refresh run 38197488474 with client_version=6774:
+  success. GitHub artifact `game-data-for-review` exists, not expired, 746306 bytes.
+  This verifies refresh/downloadable-review pipeline on Linux, not just locally.
+- Final build splits static catalog into its own 391.45 kB JS chunk; application
+  chunk 242.41 kB. No Vite chunk-size warning in the final check.
+
 - First live pull: source client 6774, with 65 hero records / 757 source entities,
   41 source-selectable heroes and 173 enabled shop upgrades (17 tier 5). All four
   pinned responses and SHA-256 source manifest captured locally.
