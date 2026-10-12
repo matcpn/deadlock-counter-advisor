@@ -1,5 +1,30 @@
 # Validation record
 
+## Repeatable catalog and browsing checks — 2026-10-11
+
+- First live pull: source client 6774, with 65 hero records / 757 source entities,
+  41 source-selectable heroes and 173 enabled shop upgrades (17 tier 5). All four
+  pinned responses and SHA-256 source manifest captured locally.
+- Explicit repeat pull of client 6774: no changes; timestamps/diff did not churn.
+- Offline data:verify passed: all snapshot hashes and regenerated display facts
+  match. Added this verification to every npm run check.
+- Behavioral suite: 62 tests passed, covering import identity/availability,
+  unknown enums, numeric/empty properties, missing references, activation conflicts,
+  component cycles, asset host restrictions, semantic diffs, safe plain-text
+  tooltips and all-stage/problem separation, plus previous release/engine checks.
+- TypeScript and production build passed. Initial type inference failure in an
+  item transform was fixed with an explicit GameItem return type.
+- Desktop browser: searched Victor, selected him as an additional threat, searched
+  Dispel Magic, expanded source tooltip (including cannot-use-while-stunned/slept
+  limit), and verified loaded remote images. Enabled synthetic board and browsed
+  sustain: early empty, punish/save-for-later appears in mid/late separately.
+- 375px browser screenshot inspected; document scroll width 360px vs 375px
+  viewport, no horizontal overflow. Hero portraits loaded. This is a responsive
+  smoke check, not complete accessibility/keyboard QA.
+- Source API is community-provided; roster, special-mode availability and counter
+  interactions have not been independently certified against the live client.
+  No production recommendation rules added.
+
 ## GitHub Pages deployment — 2026-10-11
 
 - Created public repository https://github.com/matcpn/deadlock-counter-advisor

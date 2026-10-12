@@ -24,6 +24,21 @@ future purchases. Explain the specific mechanics and limitations, not just a ran
 
 ## Current state
 
+Latest continuation 2026-10-11: repeatable catalog import and simpler browsing
+implemented. Read GAME_DATA.md for refresh/review commands and source limits.
+Pinned client 6774 snapshot contains 65 hero records / 757 entities, with 41
+source-selectable heroes and 173 shop items displayed (17 special-tier records
+kept separate). Portrait/item URLs and colors come from the source; failures have
+fallbacks. Imported facts stay separate from verified rules: no live counter
+recommendations have been certified. New manual data-refresh workflow uploads
+review artifacts; Pages still deploys accepted main pushes after checks.
+Problems are now browseable views with Early/Mid/Late columns in the opt-in demo
+board; stage/problem checkboxes are removed. Budget/active preference are optional.
+Full item browsing uses source tiers, not invented stage-fit or matchup claims.
+Next: audit selected mechanics and implement a real reviewed vertical slice using
+the captured data; independently check roster/mode availability against the game.
+Historical scaffold-only/no-catalog statements below are superseded.
+
 GitHub continuation 2026-10-11: user authorized creating a new repository and
 hosting the demo for testing. Repository is now
 https://github.com/matcpn/deadlock-counter-advisor, with origin configured locally

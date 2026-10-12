@@ -1,0 +1,37 @@
+name: Pull game data for review
+on:
+  workflow_dispatch:
+    inputs:
+      client_version:
+        description: Optional client version; leave empty for latest
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Pull pinned snapshot
+        env:
+          CLIENT_VERSION: ${{ inputs.client_version }}
+        run: |
+          if [ -n "$CLIENT_VERSION" ]; then
+            npm run data:pull -- --version "$CLIENT_VERSION"
+          else
+            npm run data:pull
+          fi
+      - run: npm run check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: game-data-for-review
+          path: |
+            data/
+            src/data/game-catalog.json
+          retention-days: 30

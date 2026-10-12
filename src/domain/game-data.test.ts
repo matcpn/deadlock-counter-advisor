@@ -1,0 +1,27 @@
+import { describe, expect, it } from 'vitest';
+import { normalizeGameData, diffGameData, plainText } from './game-data';
+const hero={id:1,class_name:'hero_test',name:'Test',player_selectable:true,disabled:false,in_development:false,prerelease_only:false,limited_testing:false,assigned_players_only:false,images:{},items:{signature1:'ability_test'}};
+const ability={id:2,class_name:'ability_test',name:'Ability',type:'ability',description:{desc:'<b>Test</b>'}};
+const item={id:3,class_name:'upgrade_test',name:'Item',type:'upgrade',shopable:true,item_slot_type:'vitality',item_tier:1,cost:800,activation:'passive',is_active_item:false,description:{desc:'<b>Condition</b>'},properties:{Cooldown:{value:4,label:'Cooldown'}}};
+const colors={weapon_color:{red:229,green:138,blue:0},armor_color:{red:0,green:255,blue:153},spirit_bright_color:{red:206,green:144,blue:255}};
+const run=(heroes:unknown=[hero],items:unknown=[ability,item])=>normalizeGameData(heroes,items,colors,6774,'2026-10-12T02:00:00Z');
+describe('repeatable source import',()=>{
+  it('keeps source identities and extracts only purchasable upgrades',()=>{const result=run();expect(result.items.map(i=>i.id)).toEqual(['item-3']);expect(result.heroes[0].id).toBe('hero-1');expect(result.status).toBe('imported-unreviewed');});
+  it('retains unavailable heroes without making them selectable',()=>expect(run([{...hero,disabled:true} ,{...hero,id:4,class_name:'hero_other'}]).heroes.find(h=>h.id==='hero-1')?.selectable).toBe(false));
+  it('keeps development flags visible instead of silently claiming release availability',()=>expect(run([{...hero,in_development:true}]).heroes[0].development).toBe(true));
+  it('does not turn non-active tooltips into passive-counter claims',()=>expect(run().items[0].activation).toBe('non-active'));
+  it('accepts explicit active input',()=>expect(run([hero],[ability,{...item,activation:'press',is_active_item:true}]).items[0].activation).toBe('active'));
+  it('rejects contradictory activation',()=>expect(()=>run([hero],[ability,{...item,is_active_item:true}])).toThrow('Contradictory'));
+  it('rejects unknown activation semantics',()=>expect(()=>run([hero],[ability,{...item,activation:'new'}])).toThrow('Unknown source activation'));
+  it('rejects component cycles',()=>expect(()=>run([hero],[ability,{...item,component_items:['upgrade_test']}])).toThrow('cycle'));
+  it('rejects missing hero availability',()=>expect(()=>run([{...hero,disabled:undefined}])).toThrow('availability'));
+  it('rejects unknown item categories and invalid prices',()=>{expect(()=>run([hero],[ability,{...item,item_slot_type:'new'}])).toThrow('category');expect(()=>run([hero],[ability,{...item,cost:-1}])).toThrow();});
+  it('rejects duplicate identities',()=>expect(()=>run([hero,hero])).toThrow('Duplicate'));
+  it('rejects missing abilities for selectable heroes',()=>expect(()=>run([hero],[item])).toThrow('Unresolved selectable'));
+  it('rejects missing component definitions',()=>expect(()=>run([hero],[ability,{...item,component_items:['missing']}])).toThrow('component'));
+  it('rejects untrusted image hosts',()=>expect(()=>run([{...hero,images:{icon_image_small:'https://other.example/image.png'}}])).toThrow('asset URL'));
+  it('preserves numeric, empty and string property values without inventing values',()=>{const result=run([hero],[ability,{...item,properties:{x:{value:2},y:{value:''},z:{value:'3m'}}}]);expect(result.items[0].properties.map(p=>p.value)).toEqual(['2',null,'3m']);});
+  it('detects changes to facts, removals and new identities',()=>{const before=run(),after=structuredClone(before);after.items[0].cost=1600;after.heroes=[];expect(diffGameData(before,after)).toMatchObject({items:{changed:['item-3']},heroes:{removed:['hero-1']}});expect(diffGameData(null,before).items.added).toEqual(['item-3']);});
+  it('is deterministic for an unchanged source',()=>expect(diffGameData(run(),run()).items.changed).toEqual([]));
+  it('strips markup for text rendering',()=>expect(plainText('<b>Effect</b><br>Limit')).toBe('Effect\nLimit'));
+});

@@ -1,7 +1,8 @@
 # Deadlock Counter Advisor
 
-A portable starter for a contextual item advisor. **This is a working scaffold with
-synthetic data, not a finished counter guide.** Start with [docs/HANDOFF.md](docs/HANDOFF.md).
+A contextual advisor prototype with an imported, version-pinned game catalog.
+**Counter recommendations are still an opt-in synthetic preview.** Start with
+[docs/HANDOFF.md](docs/HANDOFF.md).
 
 ## Run
 
@@ -15,22 +16,30 @@ npm run dev
 `npm run check` runs engine tests, TypeScript checking, and the production build.
 `npm run preview` serves the built site after `npm run build`.
 
+Refresh catalog: `npm run data:pull` (or append `-- --version 6774`).
+`npm run check` also verifies snapshot checksums and regeneration offline.
+See [GAME_DATA.md](docs/GAME_DATA.md) for the source, coverage limits, repeatable
+commands, art provenance and manual GitHub refresh workflow.
+
 ## Included
 
-- React + TypeScript + Vite interface with hero, build, multiple enemies, stage,
-  budget, problems, and active-item preference.
+- React + TypeScript + Vite interface with searchable full source roster, portraits,
+  multiple enemies, problem views and optional budget/active preference.
+- Imported item browser with source categories, colors, images, tier lists,
+  tooltips, properties and source links.
 - Separate Survive / Disrupt / Punish cards with category colors, activation labels,
   affordability, covered threats, timing, and limitations.
-- Pure recommendation engine, explicit demo opt-in, tests, lockfile, CI, and a
-  manually triggered GitHub Pages workflow.
+- Pure recommendation engine, explicit demo opt-in, tests, lockfile, CI, and Pages
+  deployments on accepted main pushes. Problem boards show all stages together.
 - Runtime catalog/scenario validation, versioned manifest, evidence completeness
   checks and component graph validation. See [data review](docs/DATA_REVIEW.md).
 - Product specification, full handoff, context history, data design, and roadmap.
 
-The hero selector currently validates identity only; real player-hero synergies
-are planned. Three real hero names organize invented fixtures; the roster is not
-complete. Owned-item exclusion exists in the engine but has no UI yet. Scoring is
-an illustrative baseline, not calibrated gameplay advice.
+Imported heroes and items are browseable source facts, with unreviewed counter and
+mode coverage. Demo rules cover only Infernus/Abrams/Shiv and invented items.
+Player synergy and production recommendation rules remain planned. Owned-item
+exclusion exists in the engine but has no UI yet. Scoring is an illustrative
+baseline, not calibrated gameplay advice.
 
 ## GitHub and live preview
 

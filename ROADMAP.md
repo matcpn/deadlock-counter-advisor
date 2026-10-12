@@ -9,6 +9,13 @@ No real counter advice or deployment is represented as done.
 
 ## Milestone 1 — reliable data foundation
 
+Latest progress 2026-10-11: repeatable version-pinned community source import,
+immutable raw snapshots, hashes, normalized catalog, added/removed/changed ID report,
+offline regeneration validation and manual refresh artifact workflow implemented.
+41 source-selectable heroes and 173 shop upgrades imported; complete coverage is
+relative to source flags, not an in-game audit. Portraits/icons and source colors
+displayed with fallback/provenance. No counter rules certified. See GAME_DATA.md.
+
 Progress 2026-10-11: runtime import boundary, manifest/source records, evidence
 completeness, reference/enum/numeric/duplicate checks and component cycle detection
 implemented with tests. Current roster/items/patch and user examples remain

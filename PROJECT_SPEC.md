@@ -9,6 +9,16 @@ tradeoff, and how confident/current is the advice?
 
 ## Main flow
 
+Updated 2026-10-11 at the user's request: hero and enemy selection remain primary.
+Problems are browseable result views; the selected problem displays Early/lane,
+Mid and Late columns together. No separate stage or problem-checkbox questionnaire
+is required. Available souls and active preference sit in optional preferences.
+Survive/Disrupt/Punish and Buy now/Save for later remain distinct within stage
+lists. The currently imported catalog has no audited counter rules; the board is
+an explicitly opt-in synthetic preview until reviewed rules exist. The source shop
+browser groups by item tier, which must not imply stage suitability or matchup
+coverage. This supersedes the input sequence below, retained as earlier context.
+
 1. Choose your hero and build direction (spirit/weapon/hybrid, later custom tags).
 2. Select one or several opposing heroes. Optionally mark the highest-priority
    threat and the abilities/build patterns actually causing the problem.

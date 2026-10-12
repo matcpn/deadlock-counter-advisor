@@ -1,5 +1,20 @@
 # Data review queue — 2026-10-11
 
+## Catalog import update
+
+The new version-pinned Deadlock API snapshot is documented in GAME_DATA.md. It
+supplies source-observed facts for the research queue: Victor is a named selectable
+hero in client 6774; Knockdown is listed as a spirit active costing 3200; Dispel
+Magic is listed as a vitality active costing 3200; Debuff Reducer and Reactive
+Barrier are listed at 1600. These are imported community client facts, not a
+certified live patch audit. The source tooltip for Dispel Magic explicitly excludes
+ultimate negative effects and use while stunned/slept; do not broaden it.
+
+These facts narrow the older questions below, but specific counter interaction,
+timing, ranks and practical survival outcomes remain unresolved. Debuff Remover
+was not found by that display name in this snapshot; absence is not proof it never
+existed. No abbreviation has been silently resolved and no live rule was created.
+
 ## Source discovery
 
 Opened the official [Deadlock changelog](https://forums.playdeadlock.com/forums/changelog.10/)

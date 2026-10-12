@@ -2,6 +2,15 @@
 
 ## Architecture
 
+As of 2026-10-11, the source-import layer is separate: version-pinned API responses
+→ immutable raw snapshots/checksums → `normalizeGameData` → browseable
+`GameSnapshot`. `npm run data:verify` reconstructs it offline during every check.
+Imported facts have imported-unreviewed status, and cannot become `Catalog` counter
+rules by being fetched. Stable numeric upstream IDs are prefixed hero-/item-.
+See docs/GAME_DATA.md for schema, asset provenance, refresh and coverage limits.
+The problem-board adapter evaluates each stage separately with the same selected
+heroes and budget; problem views replace stage/problem inputs in the current UI.
+
 Static React client → validated versioned catalog → pure rule evaluator → ranked,
 explained results. Domain functions have no browser dependencies. UI does not
 contain hero-specific if/else branches. Runtime validators reject malformed imports.

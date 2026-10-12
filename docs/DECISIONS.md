@@ -1,5 +1,28 @@
 # Decisions and open questions
 
+## Repeatable catalog and simpler browsing — 2026-10-11
+
+- User prioritized repeatable game-data pulls, full hero/item coverage and optional
+  artwork. Use the documented community Deadlock API's versioned client extraction
+  as imported research facts, with pinned endpoints, raw snapshots and SHA-256.
+  This does not establish an official/current mechanics audit. See GAME_DATA.md.
+- Keep all raw hero records; select source-available heroes and show development
+  flags. Preserve all source-shopable upgrades; separate special tier 5 rather
+  than asserting mode availability. Stable IDs use upstream numeric identifiers.
+- Imported facts never enter the reviewed recommendation catalog automatically.
+  Non-active items retain trigger uncertainty; no regex tooltip classifier creates
+  a verified counter. Store source tags without interpreting them as matchup advice.
+- Use source image URLs with fallback and Valve/provider attribution. Do not copy
+  binaries or claim API MIT licensing covers Valve art. User-requested artwork
+  is displayed with recorded provenance; unrestricted reuse is not asserted.
+- Problems become result views with all three stages together; budget and active
+  preferences are optional. Keep the three objectives and affordability buckets.
+  Price tier alone cannot establish stage fit. Demonstration board is opt-in.
+- Manual Actions refresh produces an artifact for review; it does not auto-promote
+  data or require credentials beyond the workflow's read access. No schedule added.
+- Require Node 24 for the importer’s native TypeScript support; the existing CI
+  and .nvmrc already use Node 24. Game facts stay outside React components.
+
 ## GitHub test deployment — 2026-10-11
 
 The user explicitly requested a new repository and a working hosted test page.
