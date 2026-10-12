@@ -24,6 +24,14 @@ future purchases. Explain the specific mechanics and limitations, not just a ran
 
 ## Current state
 
+GitHub continuation 2026-10-11: user authorized creating a new repository and
+hosting the demo for testing. Repository is now
+https://github.com/matcpn/deadlock-counter-advisor, with origin configured locally
+and main pushed. Pages uses Actions and deploys successful pushes to main (also
+manual dispatch). Test URL: https://matcpn.github.io/deadlock-counter-advisor/ .
+See VALIDATION.md for actual remote results. This supersedes all older statements
+below about no Git checkout, remote, commit or deployment. No game data was added.
+
 Continuation update 2026-10-11: completed the first runtime-validation portion of
 Milestone 1. Catalogs now require a versioned manifest, source records, coverage
 note, scoped evidence and an acyclic component graph. Recommendation entry checks

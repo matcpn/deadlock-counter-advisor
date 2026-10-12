@@ -1,5 +1,14 @@
 # Decisions and open questions
 
+## GitHub test deployment — 2026-10-11
+
+The user explicitly requested a new repository and a working hosted test page.
+Created public `matcpn/deadlock-counter-advisor`; enabled Pages with Actions.
+Pushes to main now trigger the Pages workflow as well as Checks. Pages runs its
+own test/build gate before publishing. This supersedes the earlier manual-only
+deployment decision. Synthetic demo labeling remains mandatory; publication does
+not certify game data. No domain, paid service or runtime backend was added.
+
 ## Accepted direction
 
 ### Continuation decisions — 2026-10-11

@@ -32,36 +32,18 @@ are planned. Three real hero names organize invented fixtures; the roster is not
 complete. Owned-item exclusion exists in the engine but has no UI yet. Scoring is
 an illustrative baseline, not calibrated gameplay advice.
 
-## GitHub setup
+## GitHub and live preview
 
-The GitHub connector was confirmed as `matcpn` on 2026-10-11. A scoped search found
-no accessible repository matching `deadlock`; no remote has been selected or written.
-The exposed connector did not offer repository creation.
+- Repository: https://github.com/matcpn/deadlock-counter-advisor
+- Test site: https://matcpn.github.io/deadlock-counter-advisor/
 
-Create or choose `deadlock-counter-advisor`, import this directory including its
-hidden `.github` folder, and commit all source plus package-lock.json. Do not commit
-node_modules or dist. If using Git locally with an empty remote:
+Pushes to `main` run Checks and Publish GitHub Pages. The Pages workflow installs
+locked dependencies and runs `npm run check` before uploading `dist` and deploying.
+It also supports manual dispatch. Pages is configured to use GitHub Actions.
+Only successful builds can deploy; the public UI clearly labels synthetic data.
 
-```sh
-git init -b main
-git add .
-git commit -m "Scaffold contextual Deadlock counter advisor"
-git remote add origin https://github.com/YOUR_USERNAME/deadlock-counter-advisor.git
-git push -u origin main
-```
-
-If the destination already contains work, inspect and integrate it instead of
-running these initialization steps or overwriting its files.
-
-In repository Settings → Pages, choose GitHub Actions as the publishing source.
-Run **Publish GitHub Pages** manually from the default branch when ready. CI runs
-on pushes and PRs. Publication is deliberately manual during the synthetic-data
-stage. This scaffold has not been deployed. Account/repository eligibility for
-Pages may vary; see the official documentation linked below.
-
-Vite uses a relative base (`./`), supporting repository subpaths without hardcoding
-a username. The MVP has no client-side path router; future routing should use query
-parameters or hashes so Pages deep links do not 404.
+Vite uses a relative base (`./`) for the repository subpath. There is no path router;
+future share state should use query parameters or hashes for Pages compatibility.
 
 ## Reference documentation
 
@@ -70,3 +52,4 @@ parameters or hashes so Pages deep links do not 404.
 - https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
 Dependencies are locked for reproducibility, not claimed to be the latest releases.
+

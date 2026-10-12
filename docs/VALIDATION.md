@@ -1,5 +1,21 @@
 # Validation record
 
+## GitHub Pages deployment — 2026-10-11
+
+- Created public repository https://github.com/matcpn/deadlock-counter-advisor
+  and pushed main. Initial implementation commit: a85d2c7.
+- Enabled Pages with build_type=workflow and HTTPS.
+- Remote Checks run 38195478774: success.
+- Remote Publish GitHub Pages run 38195478771: success, including npm ci,
+  all 42 tests, TypeScript/build, artifact upload and deployment.
+- Opened https://matcpn.github.io/deadlock-counter-advisor/ in the in-app browser.
+  The React interface, controls, styled recommendation groups and synthetic-data
+  notice loaded. Turning off active items removed Demo Interrupt. Selecting Abrams
+  as the player removed Abrams from enemy options and changed coverage to Shiv.
+  Reload under the repository subpath succeeded. Left default page open for testing.
+- This is a desktop smoke test, not complete mobile/accessibility QA. Real game
+  recommendations remain absent. Earlier no-deployment statements are historical.
+
 ## Continuation checks — 2026-10-11
 
 - Locked dependency installation succeeded through the bundled Node runtime and
