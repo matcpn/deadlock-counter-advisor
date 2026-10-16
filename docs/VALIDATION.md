@@ -1,5 +1,27 @@
 # Validation record
 
+## All-hero inventory and coverage — 2026-10-15
+
+- Rechecked public steam-info: client 6785 / revision 11132425, unchanged. Read all
+  168 captured main-slot ability descriptions across 42 source-selectable heroes.
+- Added manually selected functional annotations with exact source spans; 25 threat
+  themes and 12 response families. Twenty ability entries have explicit source
+  gaps. No independent in-game verification or new counter rules.
+- npm run check passed: immutable snapshot verification, deterministic research
+  regeneration, 92 tests (11 new), strict TypeScript and production build. No chunk
+  warning. The existing 25 reviewed rules remain unchanged.
+- Tests cover exact source spans, negations/self-effects, missing damage types,
+  deferral versus healing, patch/text invalidation, new and retired heroes,
+  duplicate/bad annotations, all 210 hero/problem cells, stage/scope differences,
+  expiry/patch/item drift, demo isolation and deterministic non-promoting backlog.
+- Browser checks passed: all-hero matrix, Abrams anti-heal player scope, search
+  filtering and empty state, Seven ability themes/source evidence, and unchanged
+  default recommendation cards. Desktop 1280px and mobile 375px inspected.
+  Mobile document width 360px; the 750px table scrolls within its 288px container,
+  including keyboard ArrowRight. No browser console errors observed. This is not
+  a full accessibility audit. Remote publication/refresh verification pending.
+
+
 ## Burst-defense expansion — 2026-10-15
 
 - npm run check passed after data/engine changes: immutable client 6785 snapshot

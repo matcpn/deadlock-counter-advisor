@@ -6,6 +6,7 @@ import { demoCatalog, weights } from './data/demo';
 import { reviewedCatalog, reviewAvailability } from './data/reviewed';
 import { AdviceBoard } from './components/AdviceBoard';
 import { Artwork } from './components/Artwork';
+import { ResearchCoverage } from './components/ResearchCoverage';
 import { problemAreas, recommendationBoard } from './engine/board';
 import type { Build, Problem, Scenario } from './domain/types';
 import './styles.css';
@@ -65,6 +66,7 @@ function App() {
       {demo&&demoPlayer&&<AdviceBoard board={board} catalog={demoCatalog} game={game} budget={budget} demo/>}
       {demo&&!demoPlayer&&<div className="empty">This player hero has no synthetic fixture. Choose Infernus, Abrams or Shiv to preview the layout.</div>}
     </section>
+    <ResearchCoverage game={game} catalog={reviewedCatalog}/>
     <section className="shop" aria-label="Imported item catalog"><h2>Explore the item catalog</h2><p>Shop tiers give you compact lists to browse. They describe price tiers, not verified early/mid/late suitability or enemy counters. Tier 5 is kept separate because mode availability needs review.</p>
       <div className="catalog-filters"><label>Find an item<input type="search" placeholder="Search items" value={itemSearch} onChange={e=>setItemSearch(e.target.value)}/></label><label>Item category<select value={category} onChange={e=>setCategory(e.target.value)}>{['all','weapon','vitality','spirit'].map(c=><option key={c}>{c}</option>)}</select></label><label>Source shop tag<select value={tag} onChange={e=>setTag(e.target.value)}><option value="all">All tags</option>{tags.map(t=><option key={t} value={t}>{t.replaceAll('_',' ')}</option>)}</select></label></div>
       <p className="legend">{filtered.length} matching items · <span className="weapon">Weapon</span> · <span className="vitality">Vitality</span> · <span className="spirit">Spirit</span> · active status labeled independently.</p>

@@ -13,7 +13,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "check": "npm run data:verify && npm run test && npm run build"
+    "check": "npm run data:verify && npm run research:verify && npm run test && npm run build",
+    "research:build": "node scripts/build-research.mjs",
+    "research:verify": "node scripts/build-research.mjs --verify"
   },
   "dependencies": {
     "react": "^19.0.0",

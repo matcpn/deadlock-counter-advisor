@@ -1,5 +1,25 @@
 # Decisions and open questions
 
+## Cover the roster by function and incremental research — 2026-10-15
+
+The user approved an all-hero threat inventory and coverage matrix as the next
+step. Map the current source-selectable roster up front; research interactions in
+bounded batches. Do not wait for exhaustive research or assign each hero one role.
+
+- Separate source-text threat themes, reusable response families, and independently
+  reviewed ability-specific counter rules. Function matches generate questions only.
+- Store exact source spans and baseline descriptions per ability. A patch change
+  withholds existing tags; text drift invalidates only the affected annotation.
+  Regeneration never reviews or promotes annotations or rules automatically.
+- Show coverage across all player scopes, with stage/objective/scope details and
+  partial-coverage language. Missing rules are research gaps, not negative verdicts.
+- Preserve incomplete descriptions and alternate-kit gaps explicitly. Start with
+  main ability slots; no claim to full build/weapon/transform coverage.
+- Keep research UI collapsed below advice. Batches prioritize reusable questions
+  and unserved heroes, not invented popularity metrics. Current recommendations
+  remain unchanged and saved/shareable scenarios move behind coverage research.
+
+
 ## Conditional burst coverage — 2026-10-15
 
 - Publish bounded source-reviewed defenses rather than hold every burst option for

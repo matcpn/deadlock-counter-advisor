@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "functions": [
+    {
+      "id": "spirit",
+      "label": "Spirit damage",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [
+        "spirit-resistance",
+        "barrier"
+      ],
+      "question": "Confirm damage instances, scaling and barrier timing."
+    },
+    {
+      "id": "bullet",
+      "label": "Bullet / weapon damage",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [
+        "bullet-resistance",
+        "bullet-immunity",
+        "barrier"
+      ],
+      "question": "Separate weapon damage from spirit riders and on-hit effects."
+    },
+    {
+      "id": "melee",
+      "label": "Melee damage",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [
+        "melee-resistance",
+        "barrier"
+      ],
+      "question": "Check melee classification, parryability and follow-up timing."
+    },
+    {
+      "id": "unknown-damage",
+      "label": "Damage type unresolved",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [],
+      "question": "Resolve missing damage type from raw fields or current client; Spirit scaling alone is insufficient."
+    },
+    {
+      "id": "dot",
+      "label": "Damage over time",
+      "problems": [
+        "dot"
+      ],
+      "responseIds": [
+        "debuff-removal",
+        "barrier"
+      ],
+      "question": "Check removal eligibility, reapplication and ultimate exceptions."
+    },
+    {
+      "id": "windup",
+      "label": "Delayed / charged damage",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [
+        "barrier",
+        "interrupt"
+      ],
+      "question": "Check activation window and whether this cast can actually be interrupted."
+    },
+    {
+      "id": "stun",
+      "label": "Stun",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "control-prevention",
+        "control-barrier"
+      ],
+      "question": "Confirm ability rank, duration and proc ordering; do not promise a parry."
+    },
+    {
+      "id": "sleep",
+      "label": "Sleep",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "control-barrier"
+      ],
+      "question": "Check wake-up and follow-up timing; sleep does not imply interruption."
+    },
+    {
+      "id": "silence",
+      "label": "Silence",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "debuff-removal",
+        "control-barrier"
+      ],
+      "question": "Distinguish silence from stun and item-use restrictions."
+    },
+    {
+      "id": "root",
+      "label": "Immobilize",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "debuff-removal",
+        "control-barrier"
+      ],
+      "question": "Confirm movement restriction and removal exceptions."
+    },
+    {
+      "id": "displace",
+      "label": "Pull / knockback / launch",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "control-prevention"
+      ],
+      "question": "Check displacement directly; immunity or barrier triggers cannot be inferred from movement."
+    },
+    {
+      "id": "slow",
+      "label": "Movement slow",
+      "problems": [
+        "control",
+        "escape"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "debuff-removal"
+      ],
+      "question": "Separate movement slow, dash restrictions and ability lockout."
+    },
+    {
+      "id": "disarm",
+      "label": "Disarm",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "duration-reduction",
+        "debuff-removal"
+      ],
+      "question": "Check attack and item-use limits separately."
+    },
+    {
+      "id": "grounded",
+      "label": "Movement / stamina restriction",
+      "problems": [
+        "control",
+        "escape"
+      ],
+      "responseIds": [
+        "debuff-removal"
+      ],
+      "question": "Determine which movements or abilities are blocked and when removal is allowed."
+    },
+    {
+      "id": "channel",
+      "label": "Channeled ability",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [
+        "interrupt"
+      ],
+      "question": "Test interruption eligibility, immunity and line-of-sight rules."
+    },
+    {
+      "id": "heal",
+      "label": "Healing / regeneration / lifesteal",
+      "problems": [
+        "sustain"
+      ],
+      "responseIds": [
+        "healing-reduction"
+      ],
+      "question": "Check recipient, delivery, overlap and whether the effect is healing rather than a shield or deferral."
+    },
+    {
+      "id": "barrier",
+      "label": "Barrier",
+      "problems": [
+        "sustain"
+      ],
+      "responseIds": [],
+      "question": "Investigate barrier-specific responses; healing reduction is not assumed to affect barriers."
+    },
+    {
+      "id": "defense",
+      "label": "Damage protection / avoidance",
+      "problems": [
+        "sustain"
+      ],
+      "responseIds": [],
+      "question": "Determine exact protection and duration; do not treat it as healing."
+    },
+    {
+      "id": "mobility",
+      "label": "Dash / flight / teleport",
+      "problems": [
+        "escape"
+      ],
+      "responseIds": [
+        "movement-denial"
+      ],
+      "question": "Research delivery, range and immunity; mobility is not a single interruptible effect."
+    },
+    {
+      "id": "stealth",
+      "label": "Stealth / vision denial",
+      "problems": [
+        "escape"
+      ],
+      "responseIds": [],
+      "question": "Research detection and vision mechanics before proposing item responses."
+    },
+    {
+      "id": "amp",
+      "label": "Damage amplification / resist reduction",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [
+        "debuff-removal"
+      ],
+      "question": "Separate direct damage from stacking amplification and check removal eligibility."
+    },
+    {
+      "id": "execute",
+      "label": "Execute / threshold kill",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [],
+      "question": "Direct current interaction evidence is required; ordinary barriers are not execute protection."
+    },
+    {
+      "id": "special",
+      "label": "Special control / rules",
+      "problems": [
+        "control"
+      ],
+      "responseIds": [],
+      "question": "Resolve the unique effect rather than mapping its name to stun, cleanse or immunity."
+    },
+    {
+      "id": "summon",
+      "label": "Summons / deployables",
+      "problems": [
+        "burst"
+      ],
+      "responseIds": [],
+      "question": "Check targetability, damage type and which item effects interact with summons."
+    },
+    {
+      "id": "healblock",
+      "label": "Healing suppression",
+      "problems": [
+        "sustain"
+      ],
+      "responseIds": [
+        "debuff-removal"
+      ],
+      "question": "Check whether the debuff can be removed; this is not evidence of enemy healing."
+    }
+  ],
+  "responses": [
+    {
+      "id": "spirit-resistance",
+      "label": "Spirit resistance",
+      "itemIds": [
+        "item-112198670"
+      ]
+    },
+    {
+      "id": "bullet-resistance",
+      "label": "Bullet resistance",
+      "itemIds": [
+        "item-805079544"
+      ]
+    },
+    {
+      "id": "melee-resistance",
+      "label": "Melee resistance",
+      "itemIds": [
+        "item-4204808176",
+        "item-1342610602"
+      ]
+    },
+    {
+      "id": "barrier",
+      "label": "Damage barrier",
+      "itemIds": [
+        "item-1672893796",
+        "item-1644605047",
+        "item-805079544",
+        "item-112198670"
+      ]
+    },
+    {
+      "id": "bullet-immunity",
+      "label": "Bullet immunity",
+      "itemIds": [
+        "item-1378931225"
+      ]
+    },
+    {
+      "id": "duration-reduction",
+      "label": "Debuff duration reduction",
+      "itemIds": [
+        "item-1047818222"
+      ]
+    },
+    {
+      "id": "control-prevention",
+      "label": "Preemptive control immunity",
+      "itemIds": [
+        "item-3357231760"
+      ]
+    },
+    {
+      "id": "control-barrier",
+      "label": "Barrier after qualifying control",
+      "itemIds": [
+        "item-1644605047"
+      ]
+    },
+    {
+      "id": "debuff-removal",
+      "label": "Applied debuff removal",
+      "itemIds": [
+        "item-3731635960"
+      ]
+    },
+    {
+      "id": "healing-reduction",
+      "label": "Healing reduction",
+      "itemIds": [
+        "item-2603935618",
+        "item-3696726732"
+      ]
+    },
+    {
+      "id": "interrupt",
+      "label": "Interrupt",
+      "itemIds": []
+    },
+    {
+      "id": "movement-denial",
+      "label": "Movement denial",
+      "itemIds": []
+    }
+  ]
+}

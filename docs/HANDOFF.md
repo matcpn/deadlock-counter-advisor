@@ -1,5 +1,32 @@
 # Start here — continuation handoff
 
+## All-hero research foundation — 2026-10-15
+
+Added source-traced inventory for all 42 selectable heroes / 168 main ability slots,
+25 threat-function themes, 12 response families and an enemy × problem coverage
+matrix with stage/goal/player-scope detail. Current advice remains 25 rules / 12
+items and partial coverage for six enemy heroes; no new counter rules were inferred.
+
+Read ROSTER_RESEARCH.md for the generated coverage/backlog and RESEARCH_PROCESS.md
+for how to maintain it. Source annotations: data/research/hero-threats.json. Shared
+functions: src/data/research-functions.json. Batch plan: data/research/research-plan.json.
+Twenty ability entries have explicit source gaps; alternate/copy kits and base
+weapons are not completely inventoried. This is source-text triage, not certification.
+
+npm run research:build regenerates the UI inventory and Markdown report offline;
+research:verify runs in npm run check. Client changes withhold old tags, same-client
+text changes withhold affected tags, and new abilities appear untriaged. Manual
+refresh now regenerates/includes these artifacts. It never renews recommendation
+reviews. The UI adds a collapsed roster-research section below advice with a search,
+coverage cells, ability evidence and the queue; no new scenario questions.
+
+The user approved function-based grouping and iterative research. Next priority is
+batch 1: Seven, Dynamo and Mo & Krill, resolving damage-type/control/channel questions
+before proposing rules. Subsequent batches: Victor/Kelvin/McGinnis, then
+Vindicta/Grey Talon/Calico. Saved/shareable scenarios remain useful but are now behind
+this coverage work. See latest VALIDATION.md for actual checks/publication status.
+
+
 ## Current expansion — 2026-10-15
 
 Implementation 95b23e2 is live; remote Checks and Pages succeeded and the live

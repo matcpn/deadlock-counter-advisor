@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": 6785,
+  "plannedAt": "2026-10-15",
+  "basis": "Editorial research order based on reusable mechanic questions and current coverage gaps, not hero popularity, win rate or certified counter strength.",
+  "batches": [
+    {
+      "title": "1. Control and channel interactions",
+      "heroIds": ["hero-2", "hero-11", "hero-18"],
+      "questions": ["Separate delayed stun, sustained control and interruptible channels.", "Resolve missing damage types from raw properties or current client observations.", "Research duration reduction, qualifying barrier triggers and interrupt timing independently; do not transfer rules automatically."]
+    },
+    {
+      "title": "2. Healing and persistent damage",
+      "heroIds": ["hero-66", "hero-12", "hero-8"],
+      "questions": ["Separate regeneration, ally healing, barriers and reanimation.", "Review how healing reduction is delivered by different player heroes.", "Compare sustained mitigation with attempts to interrupt or leave a damaging area."]
+    },
+    {
+      "title": "3. Flight, movement and escape",
+      "heroIds": ["hero-3", "hero-17", "hero-16"],
+      "questions": ["Check movement denial, delivery range and defensive activation windows.", "Distinguish flight, teleport, untargetability and invisibility.", "Review execute wording separately from ordinary bonus damage against low-health targets."]
+    }
+  ],
+  "gates": ["Repair incomplete ability text and alternate-kit gaps before relying on those profiles.", "Read current item facts and independent matchup evidence for each proposed interaction.", "Record exact affected ability, objective, conditions, exclusions, player scope and patch.", "Add behavioral regressions and keep untested interactions labeled source-reviewed."]
+}

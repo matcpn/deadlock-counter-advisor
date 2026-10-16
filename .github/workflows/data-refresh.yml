@@ -28,6 +28,7 @@ jobs:
           else
             npm run data:pull
           fi
+      - run: npm run research:build
       - run: npm run check
       - uses: actions/upload-artifact@v4
         if: ${{ always() && steps.snapshot.outcome == 'success' }}
@@ -36,4 +37,6 @@ jobs:
           path: |
             data/
             src/data/game-catalog.json
+            src/data/threat-inventory.json
+            docs/ROSTER_RESEARCH.md
           retention-days: 30

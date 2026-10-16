@@ -25,6 +25,18 @@ Refresh catalog: `npm run data:pull` (or append `-- --version 6785`).
 See [GAME_DATA.md](docs/GAME_DATA.md) for the source, coverage limits, repeatable
 commands, art provenance and manual GitHub refresh workflow.
 
+## Roster coverage and research
+
+The collapsed roster-research section inventories all 42 source-selectable heroes
+and 168 main-slot abilities, with functional themes, source text, unresolved gaps
+and an enemy/problem coverage matrix. Six enemies currently have partial advice;
+inventoried heroes are not automatically counter-covered.
+
+Run `npm run research:build` after a catalog refresh or annotation edit.
+`npm run research:verify` checks generated artifacts inside every full check.
+See [the generated backlog](docs/ROSTER_RESEARCH.md) and
+[research workflow](docs/RESEARCH_PROCESS.md). Next batch: Seven, Dynamo, Mo & Krill.
+
 ## Included
 
 - React + TypeScript + Vite interface with searchable full source roster, portraits,

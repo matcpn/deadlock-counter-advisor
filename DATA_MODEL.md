@@ -1,5 +1,21 @@
 # Data model and recommendation contract
 
+## Source-traced threat inventory — 2026-10-15
+
+A separate research layer now stores per-ability function tags, exact source spans,
+baseline text, notes and gaps for all source-selectable heroes. A hero may have many
+functions. Response families contain research questions and references to existing
+reviewed items, never automatically generated counter links. This data is not
+imported by the recommendation evaluator.
+
+buildThreatInventory invalidates tags on snapshot or description drift; new abilities
+are untriaged. buildCoverage reports available reviewed rules by enemy/problem/stage,
+objective and player scope, with expiry/patch/item-drift checks. These counts are
+partial, across player scopes and before scenario preferences. researchBacklog groups
+questions by function and counts unserved heroes without modifying the catalog.
+See docs/RESEARCH_PROCESS.md for source files, regeneration and evidence boundaries.
+
+
 ## Implemented source-reviewed extension — 2026-10-15
 
 Evidence now includes source-reviewed, separate from verified, needs-review and demo.

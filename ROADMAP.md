@@ -2,18 +2,21 @@
 
 ## Current agenda — 2026-10-15
 
-Completed: sourced defensive beta expanded to 25 rules / 12 items across six enemy
-heroes. Personal defenses support all currently selectable player heroes; anti-heal
-remains Infernus-specific. Burst, control and DoT distinguish damage types, triggers,
-readiness and uncertainty. Extra alternatives expand within the existing boards.
+Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
+function vocabulary, response families, coverage matrix, deterministic research
+regeneration, source-change invalidation and prioritized batches. Current published
+advice remains 25 conditional rules / 12 items across six enemies, not full coverage.
+See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
 
 Next priorities:
-1. Saved/shareable scenarios so test cases can be reproduced with one link.
-2. Practical interaction checks: Reactive Barrier event ordering and community-
-   reported cleanse interactions. Follow-up-only advice does not resolve first-hit
-   protection; do not promote it to verified without direct evidence.
-3. Research chase/disruption options and expand additional enemy coverage.
-4. Review the beta by 2026-11-14 UTC; source refresh alone does not renew rules.
+1. Batch 1: Seven, Dynamo, Mo & Krill — resolve damage types and investigate control
+   and channel responses. Keep stun/sleep/silence/displacement/interrupt distinct.
+2. Batch 2: Victor, Kelvin, McGinnis — healing, regeneration and persistent damage.
+3. Batch 3: Vindicta, Grey Talon, Calico — flight, movement and escape.
+4. Resolve source gaps alongside each batch; directly test uncertain timing/removal
+   interactions before verified promotion. Keep expanding the queue as new facts arrive.
+5. Saved/shareable scenarios for reproducible user tests. Review existing advice
+   by 2026-11-14 UTC; fetching new data alone does not renew it.
 
 GitHub hosting and repeatable imports are delivered. Historical milestone text below
 is retained for context; do not restart repository or deployment setup.
