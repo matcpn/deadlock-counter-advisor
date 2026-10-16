@@ -15,8 +15,14 @@
   deduplicate repeated cells/stages, withhold stale/changed evidence, preserve active,
   ownership and response-window filters, and exercise named exception boundaries.
   Power Slash raw marker drift correctly invalidates its classification.
-- The refresh workflow now retains ITEM_COVERAGE.md with its review artifact.
-  Deployment validation is recorded below when completed.
+- Published implementation 3f04a49. Checks 38912746774, Pages 38912747273 and
+  pinned refresh 38912747514 all passed. The refresh workflow retains
+  ITEM_COVERAGE.md; its game-data-for-review artifact was produced successfully.
+- Live browser checks confirmed Pocket's two passive options, Vyper's actionable
+  Dispel Magic option and its removal when active items are disabled, plus Baba's
+  Spirit Shielding / Reactive Barrier pair. Inspected desktop stage columns and
+  saved two-items-live.png. No console errors observed. Reset the viewport and
+  reloaded: all 42 hero choices present, zero selected.
 
 ## Empty initial selection — 2026-10-16
 

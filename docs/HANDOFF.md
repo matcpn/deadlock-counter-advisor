@@ -2,6 +2,10 @@
 
 ## Two distinct items per hero — 2026-10-16
 
+Implementation 3f04a49 is live. All 165 tests, Checks, Pages and the manual pinned
+refresh passed. Live item pairs and active filtering were verified; empty initial
+selection remains. See VALIDATION.md for run IDs and exact scope.
+
 The user requested a loop targeting one-item heroes. Counted distinct eligible item
 IDs, not repeated rules/stages: 19 heroes had one. Each now has a second bounded
 source-reviewed option; all 42 selectable heroes meet the two-item target across
