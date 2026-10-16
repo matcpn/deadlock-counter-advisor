@@ -10,6 +10,10 @@
 - Checked Yamato with keyboard Space and Baba by tile click. Filtering to Baba and
   clearing the search retained both selections and restored all 42 choices.
   No console errors observed; temporary viewport reset and preview tab closed.
+- Published bd1cebc. Checks 38919579505 and Pages 38919579708 passed. Live page
+  has all 42 heroes, no intro text and zero initial selections. At the normal
+  322×527 panel size the grid ends at 526px with no internal scrolling. Restored
+  the page to the roster and saved compact-roster-live.png.
 
 ## Item stats and source popovers — 2026-10-16
 

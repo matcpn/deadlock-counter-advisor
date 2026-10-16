@@ -2,6 +2,9 @@
 
 ## Compact full-roster selector — 2026-10-16
 
+Implementation bd1cebc is live; Checks and Pages passed. Verified all 42 choices
+and no intro text on the hosted page, including the normal 322×527 browser panel.
+
 Removed the introductory branding, headline and subtitle at the user's request.
 The selector uses compact portrait/name tiles and no internal scrollbar; all 42
 heroes fit in the tested 1280×720 desktop and 375×667 mobile first view. Search,
