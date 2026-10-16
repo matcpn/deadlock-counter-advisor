@@ -1,5 +1,20 @@
 # Validation record
 
+## Build-color coverage — 2026-10-16
+
+- Initial category audit identified Dynamo, Mo & Krill and Seven as purple-only;
+  39/42 already had green. Pinned item categories and current client 6785 checked.
+  Three source-reviewed rules close the gaps; all 42 have green, 105 rules / 16 items.
+- npm run check passed: immutable snapshot/offline data and research verification,
+  170 tests, strict TypeScript and production build. Existing chunk-size notice remains.
+- Added coverage truth-table checks (green OR purple+orange), same-color rejection,
+  stale-evidence exclusion and whole-roster coverage. New defenses appear in both
+  weapon/spirit builds and with active items excluded / already stunned. Explicit
+  exclusions protect against treating mitigation as escape or interruption.
+- Channel-disruption tests now scope their assertions to Disrupt results, preserving
+  their original delay, targetability, ownership and stage checks alongside the newly
+  available passive Survive options. No gameplay tests were performed.
+
 ## Compact full-roster selector — 2026-10-16
 
 - TypeScript and production build passed; existing catalog chunk-size notice remains.

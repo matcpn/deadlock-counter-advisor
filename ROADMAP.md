@@ -9,12 +9,15 @@ flow at user request. Scoped rules and the personalized engine remain in the mod
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published
-advice now includes 102 conditional rules / 16 items across all 42 captured selectable
+advice now includes 105 conditional rules / 16 items across all 42 captured selectable
 enemies, with partial scenario coverage. The full-roster source pass is complete;
 no in-game certification is implied. See [per-hero remaining work](docs/ROSTER_REVIEW.md).
 See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
 
 Next priorities:
+Build-color audit complete: all 42 enemies have a green option. Future research
+must maintain green or both purple and orange, alongside two distinct items.
+
 The second-item pass is complete: all 42 heroes have two or more distinct eligible
 items across scenarios. [Item coverage](docs/ITEM_COVERAGE.md) regenerates the queue
 after changes. Continue with interaction confidence and scenario depth below.

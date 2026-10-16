@@ -8,51 +8,53 @@ Counts combine reviewed scenarios and stages. Repeating an item in another stage
 
 ## Next research loop
 
-No heroes are below the two-item research target. Next work is scenario depth and practical interaction testing.
+Build-color target: at least one green (Vitality), or both purple (Spirit) and orange (Weapon). 42/42 meet this target. Category coverage is across reviewed scenarios/stages; it does not establish universal suitability or override player-delivery conditions.
 
-| Hero | Distinct items | Options |
-| --- | --- | --- |
-| Abrams | 8 | Debuff Reducer, Close Quarters, Reactive Barrier, Grit, Healbane, Unstoppable, Toxic Bullets, Rebuttal |
-| Apollo | 2 | Reactive Barrier, Slowing Hex |
-| Baba | 2 | Spirit Shielding, Reactive Barrier |
-| Bebop | 2 | Spirit Shielding, Grit |
-| Billy | 2 | Spirit Shielding, Rebuttal |
-| Calico | 2 | Slowing Hex, Rebuttal |
-| Celeste | 2 | Spirit Shielding, Reactive Barrier |
-| Deadman Danny | 2 | Spirit Shielding, Weapon Shielding |
-| Drifter | 2 | Spirit Shielding, Dispel Magic |
-| Dynamo | 2 | Knockdown, Cursed Relic |
-| Graves | 2 | Reactive Barrier, Dispel Magic |
-| Grey Talon | 2 | Knockdown, Weapon Shielding |
-| Haze | 5 | Debuff Reducer, Metal Skin, Reactive Barrier, Grit, Weapon Shielding |
-| Holliday | 2 | Spirit Shielding, Reactive Barrier |
-| Infernus | 2 | Spirit Shielding, Dispel Magic |
-| Ivy | 2 | Debuff Reducer, Reactive Barrier |
-| Kelvin | 3 | Spirit Shielding, Healbane, Toxic Bullets |
-| Lady Geist | 2 | Healbane, Toxic Bullets |
-| Lash | 2 | Reactive Barrier, Slowing Hex |
-| McGinnis | 3 | Spirit Shielding, Healbane, Toxic Bullets |
-| Mina | 2 | Spirit Shielding, Slowing Hex |
-| Mirage | 2 | Spirit Shielding, Dispel Magic |
-| Mo & Krill | 2 | Knockdown, Cursed Relic |
-| Paige | 2 | Spirit Shielding, Reactive Barrier |
-| Paradox | 2 | Debuff Reducer, Spirit Shielding |
-| Pocket | 2 | Debuff Reducer, Spirit Shielding |
-| Rat King | 2 | Metal Skin, Weapon Shielding |
-| Rem | 2 | Debuff Reducer, Reactive Barrier |
-| Seven | 2 | Knockdown, Cursed Relic |
-| Shiv | 4 | Grit, Healbane, Toxic Bullets, Dispel Magic |
-| Silver | 2 | Dispel Magic, Weapon Shielding |
-| Sinclair | 2 | Debuff Reducer, Spirit Shielding |
-| Solomon | 2 | Spirit Shielding, Reactive Barrier |
-| The Doorman | 2 | Spirit Shielding, Reactive Barrier |
-| Venator | 2 | Reactive Barrier, Weapon Shielding |
-| Victor | 4 | Spirit Shielding, Inhibitor, Healbane, Toxic Bullets |
-| Vindicta | 2 | Knockdown, Reactive Barrier |
-| Viscous | 2 | Reactive Barrier, Rebuttal |
-| Vyper | 2 | Spirit Shielding, Dispel Magic |
-| Warden | 2 | Debuff Reducer, Reactive Barrier |
-| Wraith | 4 | Metal Skin, Reactive Barrier, Grit, Weapon Shielding |
-| Yamato | 2 | Spirit Shielding, Rebuttal |
+No heroes are below the two-item or build-color targets. Next work is scenario depth and practical interaction testing.
+
+| Hero | Distinct items | Build-color coverage | Options |
+| --- | --- | --- | --- |
+| Abrams | 8 | Green available | Debuff Reducer (vitality), Close Quarters (weapon), Reactive Barrier (vitality), Grit (vitality), Healbane (vitality), Unstoppable (vitality), Toxic Bullets (weapon), Rebuttal (vitality) |
+| Apollo | 2 | Green available | Reactive Barrier (vitality), Slowing Hex (spirit) |
+| Baba | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| Bebop | 2 | Green available | Spirit Shielding (vitality), Grit (vitality) |
+| Billy | 2 | Green available | Spirit Shielding (vitality), Rebuttal (vitality) |
+| Calico | 2 | Green available | Slowing Hex (spirit), Rebuttal (vitality) |
+| Celeste | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| Deadman Danny | 2 | Green available | Spirit Shielding (vitality), Weapon Shielding (vitality) |
+| Drifter | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
+| Dynamo | 3 | Green available | Knockdown (spirit), Reactive Barrier (vitality), Cursed Relic (spirit) |
+| Graves | 2 | Green available | Reactive Barrier (vitality), Dispel Magic (vitality) |
+| Grey Talon | 2 | Green available | Knockdown (spirit), Weapon Shielding (vitality) |
+| Haze | 5 | Green available | Debuff Reducer (vitality), Metal Skin (vitality), Reactive Barrier (vitality), Grit (vitality), Weapon Shielding (vitality) |
+| Holliday | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| Infernus | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
+| Ivy | 2 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality) |
+| Kelvin | 3 | Green available | Spirit Shielding (vitality), Healbane (vitality), Toxic Bullets (weapon) |
+| Lady Geist | 2 | Green available | Healbane (vitality), Toxic Bullets (weapon) |
+| Lash | 2 | Green available | Reactive Barrier (vitality), Slowing Hex (spirit) |
+| McGinnis | 3 | Green available | Spirit Shielding (vitality), Healbane (vitality), Toxic Bullets (weapon) |
+| Mina | 2 | Green available | Spirit Shielding (vitality), Slowing Hex (spirit) |
+| Mirage | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
+| Mo & Krill | 3 | Green available | Knockdown (spirit), Reactive Barrier (vitality), Cursed Relic (spirit) |
+| Paige | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| Paradox | 2 | Green available | Debuff Reducer (vitality), Spirit Shielding (vitality) |
+| Pocket | 2 | Green available | Debuff Reducer (vitality), Spirit Shielding (vitality) |
+| Rat King | 2 | Green available | Metal Skin (vitality), Weapon Shielding (vitality) |
+| Rem | 2 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality) |
+| Seven | 3 | Green available | Spirit Shielding (vitality), Knockdown (spirit), Cursed Relic (spirit) |
+| Shiv | 4 | Green available | Grit (vitality), Healbane (vitality), Toxic Bullets (weapon), Dispel Magic (vitality) |
+| Silver | 2 | Green available | Dispel Magic (vitality), Weapon Shielding (vitality) |
+| Sinclair | 2 | Green available | Debuff Reducer (vitality), Spirit Shielding (vitality) |
+| Solomon | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| The Doorman | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
+| Venator | 2 | Green available | Reactive Barrier (vitality), Weapon Shielding (vitality) |
+| Victor | 4 | Green available | Spirit Shielding (vitality), Inhibitor (vitality), Healbane (vitality), Toxic Bullets (weapon) |
+| Vindicta | 2 | Green available | Knockdown (spirit), Reactive Barrier (vitality) |
+| Viscous | 2 | Green available | Reactive Barrier (vitality), Rebuttal (vitality) |
+| Vyper | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
+| Warden | 2 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality) |
+| Wraith | 4 | Green available | Metal Skin (vitality), Reactive Barrier (vitality), Grit (vitality), Weapon Shielding (vitality) |
+| Yamato | 2 | Green available | Spirit Shielding (vitality), Rebuttal (vitality) |
 
 The historical 19-hero target set and added rule IDs are recorded in data/research/item-depth-pass.json. See [source review](COMMUNITY_RESEARCH.md) and [per-hero open questions](ROSTER_REVIEW.md).

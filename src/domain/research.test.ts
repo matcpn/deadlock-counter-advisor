@@ -149,6 +149,6 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(backlog.find(f=>f.functionId==='channel')!.occurrences.some(o=>o.heroId==='hero-2')).toBe(true);
     expect(backlog.every((f,i)=>i===0||backlog[i-1].uncoveredHeroCount>=f.uncoveredHeroCount)).toBe(true);
     expect(reviewedCatalog).toEqual(before);
-    expect(reviewedCatalog.rules).toHaveLength(102);
+    expect(reviewedCatalog.rules).toHaveLength(105);
   });
 });

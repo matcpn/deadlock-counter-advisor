@@ -1,5 +1,10 @@
 # Expanding roster coverage
 
+Also enforce the build-color target in ITEM_COVERAGE.md: an enemy needs green
+(Vitality), or both purple (Spirit) and orange (Weapon), from eligible reviewed
+rules. Two purple items alone do not pass. Check categories against imported facts;
+do not fabricate interactions or assume green guarantees universal suitability.
+
 For the next item-depth loop, run `npm run research:build` and read
 [ITEM_COVERAGE.md](ITEM_COVERAGE.md). It counts distinct eligible items across all
 scenarios/stages and lists every hero below two. Counts use the inventory's explicit

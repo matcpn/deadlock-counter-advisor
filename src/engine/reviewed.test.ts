@@ -87,24 +87,25 @@ describe('source-reviewed defensive coverage',()=>{
 
 describe('channel disruption and teammate rescue',()=>{
   const enemies=['hero-2','hero-11','hero-18'];
+  const disrupt=(extra:Partial<Scenario>)=>run(extra).filter(r=>r.goal==='disrupt');
   it('aggregates only reviewed channel matchups under Disrupt across player builds',()=>{
     for(const heroId of ['hero-1','hero-3']){
-      const results=run({heroId,build:'weapon',enemyHeroIds:enemies});
+      const results=disrupt({heroId,build:'weapon',enemyHeroIds:enemies});
       expect(results.map(r=>r.item.name).sort()).toEqual(['Cursed Relic','Knockdown']);
       expect(results.every(r=>r.goal==='disrupt'&&r.coveredEnemyIds.length===3)).toBe(true);
     }
-    expect(run({enemyHeroIds:enemies,problems:['burst']})).toEqual([]);
-    expect(run({enemyHeroIds:enemies,problems:['sustain']})).toEqual([]);
+    expect(disrupt({enemyHeroIds:enemies,problems:['burst']})).toEqual([]);
+    expect(disrupt({enemyHeroIds:enemies,problems:['sustain']})).toEqual([]);
   });
   it('withholds rescue actives when the player cannot act or excludes actives',()=>{
-    for(const restriction of [{allowActives:false},{responseWindow:'stunned-or-slept' as const}])expect(run({enemyHeroIds:enemies,...restriction})).toEqual([]);
+    for(const restriction of [{allowActives:false},{responseWindow:'stunned-or-slept' as const}])expect(disrupt({enemyHeroIds:enemies,...restriction})).toEqual([]);
     for(const id of ['hero-11','hero-18']){
-      const results=run({enemyHeroIds:[id],responseWindow:'can-act'});
+      const results=disrupt({enemyHeroIds:[id],responseWindow:'can-act'});
       expect(results.every(r=>r.rules[0].conditions?.some(c=>c.includes('free teammate')&&c.includes('not the stunned victim')))).toBe(true);
     }
   });
   it('keeps short-channel delay, immunity and caster damage limits explicit',()=>{
-    const results=run({enemyHeroIds:enemies});
+    const results=disrupt({enemyHeroIds:enemies});
     const knockdown=results.find(r=>r.item.name==='Knockdown')!;
     expect(knockdown.rules.every(r=>r.conditions?.some(c=>c.includes('2-second stun delay')))).toBe(true);
     expect(knockdown.rules.find(r=>r.enemyHeroId==='hero-11')!.timing).toContain('2.75s');
@@ -115,11 +116,11 @@ describe('channel disruption and teammate rescue',()=>{
   });
   it('keeps stage, budget and ownership independent for channel purchases',()=>{
     const overrides={enemyHeroIds:enemies,budget:3200};
-    expect(run({...overrides,stage:'lane'})).toEqual([]);
-    const results=run(overrides);
+    expect(disrupt({...overrides,stage:'lane'})).toEqual([]);
+    const results=disrupt(overrides);
     expect(results.find(r=>r.item.name==='Knockdown')!.affordable).toBe(true);
     expect(results.find(r=>r.item.name==='Cursed Relic')!.affordable).toBe(false);
-    expect(run({...overrides,ownedItemIds:['item-1254091416']}).map(r=>r.item.name)).toEqual(['Cursed Relic']);
+    expect(disrupt({...overrides,ownedItemIds:['item-1254091416']}).map(r=>r.item.name)).toEqual(['Cursed Relic']);
   });
 });
 

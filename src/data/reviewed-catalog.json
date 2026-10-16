@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "two-item-pass-2026-10-16",
+    "dataVersion": "build-color-pass-2026-10-16",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -413,11 +413,35 @@
         "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/",
         "title": "Yamato defense discussion; spirit shielding and transformation limits",
         "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "color-seven",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1rt9pwq/when_is_spirit_shielding_the_best_move/",
+        "title": "Spirit Shielding discussion: repeated Seven spirit damage",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "color-mo",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1rhv32w/hi_what_do_i_do_against_mo_krill/",
+        "title": "Combo discussion: barrier protection while still stunned",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "color-dynamo",
+        "url": "https://forums.playdeadlock.com/threads/indomitable-does-not-proc-against-singularity-when-reactive-barrier-does.143976/",
+        "title": "Community report: Singularity triggers Reactive Barrier",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "color-pulse",
+        "url": "https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/",
+        "title": "Kinetic Pulse does not trigger Reactive Barrier report",
+        "accessedAt": "2026-10-16"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 102 conditional rules / 16 items. Every source-selectable enemy has at least two distinct eligible item options across reviewed scenarios and stages. This is not complete kit coverage or a guarantee that two options fit every situation. No in-game tests."
+      "note": "Source-reviewed beta: 105 conditional rules / 16 items. Every source-selectable enemy has at least two distinct eligible item options across reviewed scenarios and stages. This is not complete kit coverage or a guarantee that two options fit every situation. No in-game tests. Build-color coverage: every enemy has a green option or both purple and orange across reviewed scenarios."
     }
   },
   "heroes": [
@@ -9192,6 +9216,263 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "The counter discussion suggests Metal Skin against gun damage; its wording about deflection is rejected. Pinned item text grants bullet immunity. This narrow rule covers ordinary gunfire only, not every damage source or summon interaction. No in-game test."
+      }
+    },
+    {
+      "id": "color-reactive-11",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-11",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when this specific threat matters enough to delay core items. Stage placement is editorial, not a mandatory build.",
+      "mechanism": "Singularity applying its stun can trigger a barrier against subsequent damage while you remain caught.",
+      "conditions": [
+        "Singularity actually applies its stun to you.",
+        "Reactive Barrier is equipped, its proc is ready, and you survive until the barrier activates."
+      ],
+      "timing": "Equip before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not shorten or cleanse the stun, interrupt the channel or guarantee survival. The barrier can be exhausted by follow-up damage; it is not an escape from the ultimate. Kinetic Pulse knockup is excluded: reports distinguish it from the Singularity trigger. This does not certify Indomitable or repeated barrier procs during one channel.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/indomitable-does-not-proc-against-singularity-when-reactive-barrier-does.143976/",
+          "https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned disable/item definitions plus a June 2026 first-hand forum report support the Singularity trigger. The report describes an attached test video; no video or in-game test was performed here. Kinetic Pulse and Indomitable are explicitly excluded."
+      }
+    },
+    {
+      "id": "color-reactive-18",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-18",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when this specific threat matters enough to delay core items. Stage placement is editorial, not a mandatory build.",
+      "mechanism": "Combo applying its stun can trigger a barrier against subsequent damage while you remain grabbed.",
+      "conditions": [
+        "Combo actually applies its stun to you.",
+        "Reactive Barrier is equipped, its proc is ready, and you survive until the barrier activates."
+      ],
+      "timing": "Equip before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not shorten or cleanse the stun, interrupt the channel or guarantee survival. The barrier can be exhausted by follow-up damage; it is not an escape from the ultimate. Does not prevent Mo & Krill gaining health from a kill, deny Scorn healing, or promise a trigger from Burrow knockup or Sand Blast disarm alone.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1rhv32w/hi_what_do_i_do_against_mo_krill/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Community reports describe Reactive Barrier protection during Combo without removing the stun. Pinned definitions supply current base numbers. Historical scaling, duration-reduction and guaranteed-survival claims were not adopted. No in-game test."
+      }
+    },
+    {
+      "id": "color-spirit-2",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-2",
+      "goal": "survive",
+      "problems": [
+        "burst",
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when this specific threat matters enough to delay core items. Stage placement is editorial, not a mandatory build.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Repeated Lightning Ball, Power Surge shock or Storm Cloud spirit damage reaches the trigger threshold within its window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Resistance is conditional on the proc, not always on. The opening damage is not protected; low or widely spaced damage may never trigger it. Does not interrupt Storm Cloud, remove Static Charge, prevent its stun, or make staying in the storm safe. Power Surge shock is separate from ordinary bullet damage.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1rt9pwq/when_is_spirit_shielding_the_best_move/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned raw spirit-damage markers support Lightning Ball, Power Surge shock and Storm Cloud. Community discussion identifies repeated Seven spirit hits as a shielding use case. This is a conditional damage-protection inference, not client verification or a gun-build counter."
       }
     }
   ]

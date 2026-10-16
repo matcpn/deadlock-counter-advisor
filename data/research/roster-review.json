@@ -341,15 +341,18 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-11",
-        "channel-relic-hero-11"
+        "channel-relic-hero-11",
+        "color-reactive-11"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/",
+        "https://forums.playdeadlock.com/threads/indomitable-does-not-proc-against-singularity-when-reactive-barrier-does.143976/",
+        "https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/"
       ],
       "remainingQuestions": [
-        "Teammate channel disruption exists. Short-channel reaction time, personal survival and entanglement protections need client tests."
+        "Teammate channel disruption and Singularity-triggered barrier protection are reviewed. Kinetic Pulse is excluded from the barrier trigger. Short-channel reaction time, barrier timing and entanglement protections need client tests."
       ],
       "abilityBaselines": [
         {
@@ -812,14 +815,16 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-18",
-        "channel-relic-hero-18"
+        "channel-relic-hero-18",
+        "color-reactive-18"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1rhv32w/hi_what_do_i_do_against_mo_krill/"
       ],
       "remainingQuestions": [
-        "Teammate disruption of Combo is conditional. Burrow protections, personal survival and short-channel timing remain open."
+        "Teammate disruption and Combo-triggered barrier protection are conditional. Burrow protections, barrier survival under follow-up damage and short-channel timing need client tests."
       ],
       "abilityBaselines": [
         {
@@ -1025,15 +1030,18 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-2",
-        "channel-relic-hero-2"
+        "channel-relic-hero-2",
+        "color-spirit-2"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1rt9pwq/when_is_spirit_shielding_the_best_move/",
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
-        "Only the channel-interrupt slice is reviewed. Power Surge and Static Charge removal, personal survival and protection timing remain open."
+        "Channel interrupts and conditional shielding against repeated spirit damage are reviewed. Static Charge removal, first-hit/proc timing and protection interactions still need client tests."
       ],
       "abilityBaselines": [
         {

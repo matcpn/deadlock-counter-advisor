@@ -42,7 +42,7 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Celeste | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
 | Deadman Danny | conditional 1/1/1 | needs-research | conditional 1/1/1 | needs-research | needs-research |
 | Drifter | needs-research | needs-research | conditional 1/2/2 | needs-research | needs-research |
-| Dynamo | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
+| Dynamo | conditional 1/1/1 | conditional 1/3/3 | needs-research | needs-research | needs-research |
 | Graves | conditional 1/1/1 | conditional 1/2/2 | needs-research | needs-research | needs-research |
 | Grey Talon | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 0/1/1 |
 | Haze | conditional 3/4/4 | conditional 2/2/2 | needs-research | needs-research | needs-research |
@@ -55,13 +55,13 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | McGinnis | needs-research | needs-research | conditional 1/1/1 | conditional 1/2/2 | needs-research |
 | Mina | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |
 | Mirage | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
-| Mo & Krill | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
+| Mo & Krill | conditional 1/1/1 | conditional 1/3/3 | needs-research | needs-research | needs-research |
 | Paige | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
 | Paradox | needs-research | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
 | Pocket | conditional 1/1/1 | needs-research | conditional 1/1/1 | needs-research | needs-research |
 | Rat King | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
 | Rem | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
-| Seven | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
+| Seven | conditional 1/1/1 | conditional 0/2/2 | conditional 1/1/1 | needs-research | needs-research |
 | Shiv | conditional 1/1/1 | needs-research | conditional 0/1/1 | conditional 1/2/2 | needs-research |
 | Silver | conditional 1/1/1 | conditional 0/1/1 | needs-research | needs-research | needs-research |
 | Sinclair | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |

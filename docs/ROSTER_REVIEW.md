@@ -117,10 +117,11 @@ Status: partial-source-reviewed.
 
 - **Knockdown / disrupt / control:** Knockdown's delayed stun can interrupt Dynamo's Singularity if it lands while the channel is still running.
 - **Cursed Relic / disrupt / control:** Cursed Relic's explicit interrupt can stop Dynamo's Singularity; this relies on the interrupt, not silence alone.
+- **Reactive Barrier / survive / control, burst:** Singularity applying its stun can trigger a barrier against subsequent damage while you remain caught.
 
-Still open: Teammate channel disruption exists. Short-channel reaction time, personal survival and entanglement protections need client tests.
+Still open: Teammate channel disruption and Singularity-triggered barrier protection are reviewed. Kinetic Pulse is excluded from the barrier trigger. Short-channel reaction time, barrier timing and entanglement protections need client tests.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Dynamo teammate rescue discussion · 2026; patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/); [Seven and Dynamo counter discussion · 2026; displayed dates inconsistent](https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Dynamo teammate rescue discussion · 2026; patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/); [Seven and Dynamo counter discussion · 2026; displayed dates inconsistent](https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/); [Community report: Singularity triggers Reactive Barrier](https://forums.playdeadlock.com/threads/indomitable-does-not-proc-against-singularity-when-reactive-barrier-does.143976/); [Kinetic Pulse does not trigger Reactive Barrier report](https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/)
 
 ## Graves
 
@@ -265,10 +266,11 @@ Status: partial-source-reviewed.
 
 - **Knockdown / disrupt / control:** Knockdown's delayed stun can interrupt Mo & Krill's Combo if it lands while the channel is still running.
 - **Cursed Relic / disrupt / control:** Cursed Relic's explicit interrupt can stop Mo & Krill's Combo; this relies on the interrupt, not silence alone.
+- **Reactive Barrier / survive / control, burst:** Combo applying its stun can trigger a barrier against subsequent damage while you remain grabbed.
 
-Still open: Teammate disruption of Combo is conditional. Burrow protections, personal survival and short-channel timing remain open.
+Still open: Teammate disruption and Combo-triggered barrier protection are conditional. Burrow protections, barrier survival under follow-up damage and short-channel timing need client tests.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Mo & Krill interrupt discussion · 2026; patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Mo & Krill interrupt discussion · 2026; patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/); [Combo discussion: barrier protection while still stunned](https://www.reddit.com/r/DeadlockTheGame/comments/1rhv32w/hi_what_do_i_do_against_mo_krill/)
 
 ## Paige
 
@@ -331,10 +333,11 @@ Status: partial-source-reviewed.
 
 - **Knockdown / disrupt / control:** Knockdown's delayed stun can interrupt Seven's Storm Cloud if it lands while the channel is still running.
 - **Cursed Relic / disrupt / control:** Cursed Relic's explicit interrupt can stop Seven's Storm Cloud; this relies on the interrupt, not silence alone.
+- **Spirit Shielding / survive / burst, dot:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 
-Still open: Only the channel-interrupt slice is reviewed. Power Surge and Static Charge removal, personal survival and protection timing remain open.
+Still open: Channel interrupts and conditional shielding against repeated spirit damage are reviewed. Static Charge removal, first-hit/proc timing and protection interactions still need client tests.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Seven channel interrupts · Sep 4, 2024; historical community report](https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg); [Seven and Dynamo counter discussion · 2026; displayed dates inconsistent](https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Seven channel interrupts · Sep 4, 2024; historical community report](https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg); [Seven and Dynamo counter discussion · 2026; displayed dates inconsistent](https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/); [Spirit Shielding discussion: repeated Seven spirit damage](https://www.reddit.com/r/DeadlockTheGame/comments/1rt9pwq/when_is_spirit_shielding_the_best_move/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
 ## Shiv
 

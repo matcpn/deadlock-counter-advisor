@@ -1,5 +1,35 @@
 # Community counter research — 2026-10-12
 
+## Build-color gaps — 2026-10-16
+
+Initial eligible coverage: 39 enemies with a green option; Dynamo, Mo & Krill and
+Seven had Knockdown and Cursed Relic, both Spirit. Added three bounded rules, bringing
+the release to 105 rules / 16 items and 42/42 enemies with green options.
+Public steam-info remains client/server 6785, revision 11132425 (October 14).
+
+- **Dynamo / Reactive Barrier:** the [first-hand Singularity report](https://forums.playdeadlock.com/threads/indomitable-does-not-proc-against-singularity-when-reactive-barrier-does.143976/)
+  describes this proc, contrasted with a different item's failure. Current pinned
+  Singularity explicitly applies stun, matching Reactive Barrier's listed trigger.
+  The report mentions video; this pass read the report, not the video. No escape,
+  cleanse, Indomitable equivalence or repeated-proc guarantee is implied.
+  [Kinetic Pulse's reported failure](https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/)
+  and its current knockup description exclude Pulse from the advice.
+- **Mo & Krill / Reactive Barrier:** [Combo counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1rhv32w/hi_what_do_i_do_against_mo_krill/)
+  supports barrier protection while still grabbed. Pinned item values supply the
+  325 base barrier, 10-second duration and 55-second cooldown. Historical scaling,
+  continuous-stun reduction and guaranteed survival claims were not adopted.
+  No Burrow-knockup or Sand Blast-disarm trigger is claimed.
+- **Seven / Spirit Shielding:** [shielding discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1rt9pwq/when_is_spirit_shielding_the_best_move/)
+  identifies repeated Seven spirit hits. Existing raw markers support Lightning
+  Ball, Power Surge shock and Storm Cloud damage type. Current pinned threshold is
+  225 spirit damage in 3.5 seconds, then 300 base barrier / 18% spirit resistance
+  for 8 seconds, cooldown 45 seconds. The opening damage must be survived. This
+  does not interrupt the storm, clear Static Charge or cover ordinary bullets via
+  spirit resistance. Low/spread-out damage may not proc the item.
+
+All three remain source-reviewed, with no in-game test. Existing reviews were not
+renewed; expiry stays November 14. Green category does not remove matchup conditions.
+
 ## Second distinct item pass — 2026-10-16
 
 Counted distinct eligible items, not rules or repeated stage cards. The 19 heroes below each had one; this pass adds one different item per hero. All 42 selectable heroes now have at least two across reviewed scenarios (102 rules / 16 items). No client interaction tests were performed. See [repeatable queue](ITEM_COVERAGE.md).

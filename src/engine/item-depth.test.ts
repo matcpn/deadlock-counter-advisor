@@ -3,7 +3,7 @@ import gameJson from '../data/game-catalog.json';
 import pass from '../../data/research/item-depth-pass.json';
 import { reviewedCatalog } from '../data/reviewed';
 import type { GameSnapshot } from '../domain/game-data';
-import { buildCoverage, itemDepth } from '../domain/research';
+import { buildCoverage, itemDepth, hasBuildCoverage } from '../domain/research';
 import { browseBoard } from './browse';
 import { recommend } from './recommend';
 import { weights } from '../data/demo';
@@ -14,6 +14,27 @@ const options={patch:'client-6785',allowSourceReviewed:true,asOf:'2026-10-16'};
 const depth=()=>itemDepth(buildCoverage(game,reviewedCatalog,options.asOf),reviewedCatalog);
 const rule=(id:string)=>reviewedCatalog.rules.find(r=>r.id===id)!;
 const run=(enemy:string,problem:Scenario['problems'][number],extra:Partial<Scenario>={})=>recommend(reviewedCatalog,{heroId:'hero-1',build:'hybrid',enemyHeroIds:[enemy],problems:[problem],stage:'mid',budget:3200,ownedItemIds:[],allowActives:true,...extra},weights,options);
+
+it('requires green or both purple and orange, not two items of the same color',()=>{
+  expect(hasBuildCoverage(['vitality'])).toBe(true);
+  expect(hasBuildCoverage(['spirit','weapon'])).toBe(true);
+  for(const colors of [[],['spirit'],['weapon'],['spirit','spirit']] as Parameters<typeof hasBuildCoverage>[0][])
+    expect(hasBuildCoverage(colors)).toBe(false);
+  expect(depth().every(h=>h.buildCovered)).toBe(true);
+  expect(itemDepth(buildCoverage(game,reviewedCatalog,'2026-11-14'),reviewedCatalog).every(h=>!h.buildCovered)).toBe(true);
+});
+it('offers passive green protection for the three formerly purple-only enemies without claiming escape',()=>{
+  for(const [hero,item] of [['hero-2','Spirit Shielding'],['hero-11','Reactive Barrier'],['hero-18','Reactive Barrier']]){
+    for(const build of ['weapon','spirit'] as const){
+      const board=browseBoard(reviewedCatalog,{enemyHeroIds:[hero],allowActives:false,ownedItemIds:[],responseWindow:'stunned-or-slept'},options);
+      expect(board.every(c=>c.results.some(r=>r.item.name===item&&r.item.category==='vitality'))).toBe(true);
+      expect(run(hero,hero==='hero-2'?'dot':'control',{build,allowActives:false,responseWindow:'stunned-or-slept'}).some(r=>r.item.name===item&&r.goal==='survive')).toBe(true);
+    }
+  }
+  expect(rule('color-reactive-11').limitation).toContain('Kinetic Pulse knockup is excluded');
+  expect(rule('color-reactive-18').limitation).toContain('not an escape');
+  expect(rule('color-spirit-2').limitation).toContain('Does not interrupt Storm Cloud');
+});
 
 it('every selectable hero has at least two distinct eligible items in the actual browse view',()=>{
   expect(depth()).toHaveLength(42);

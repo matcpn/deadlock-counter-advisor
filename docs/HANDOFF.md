@@ -1,5 +1,19 @@
 # Start here — continuation handoff
 
+## Build-color coverage — 2026-10-16
+
+The user requires each enemy to have a green (Vitality) option, or both purple
+(Spirit) and orange (Weapon) options. This supplements the two-distinct-item target.
+The initial audit found 39 with green; Dynamo, Mo & Krill and Seven only had purple.
+Added source-reviewed Reactive Barrier for Singularity/Combo and Spirit Shielding
+for Seven's repeated spirit damage. All 42 now have green; 105 rules / 16 items.
+
+itemDepth and generated ITEM_COVERAGE.md now check both targets using eligible
+rules. This is a category-coverage audit across scenarios/stages, not a promise of
+universal build suitability or unrestricted player delivery. No UI controls added.
+No in-game testing; source review, trigger timing and exclusions remain explicit.
+The release still expires November 14 UTC. See COMMUNITY_RESEARCH.md and VALIDATION.md.
+
 ## Compact full-roster selector — 2026-10-16
 
 Implementation bd1cebc is live; Checks and Pages passed. Verified all 42 choices

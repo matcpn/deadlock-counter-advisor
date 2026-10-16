@@ -1,5 +1,15 @@
 # Decisions and open questions
 
+## Green or both damage categories — 2026-10-16
+
+Adopt the user's coverage target: each enemy needs an eligible Vitality item, or
+both a Spirit and a Weapon item. Keep the existing two-distinct-item minimum too.
+Categories come from pinned source data, never icon/name inference. Measure across
+reviewed stages/scenarios in the background, using the existing evidence gate.
+Vitality is a broadly usable category preference, not proof that any green item
+is suitable for every character or threat. Player-specific application limits still
+apply, and utility can justify an item outside a player's main damage category.
+
 ## Full roster before scrolling — 2026-10-16
 
 Remove the decorative introduction and devote the initial view to hero selection.
