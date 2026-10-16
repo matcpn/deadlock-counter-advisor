@@ -18,6 +18,10 @@
   preview is implemented; automated checks exercised click and keyboard paths.
 - Non-failing build notice: generated game-catalog chunk is 502.71 kB minified,
   64.35 kB gzip, just above Vite's 500 kB advisory threshold.
+- Published 6c3c187. Checks 38916636829 and Pages 38916636983 succeeded.
+  Live Spirit Shielding popup displayed the source values, components and links;
+  saved item-tooltip-live.png. No console errors observed. Closed the popup,
+  reset viewport and reloaded to retain an empty initial enemy selection.
 
 ## Second distinct item pass — 2026-10-16
 

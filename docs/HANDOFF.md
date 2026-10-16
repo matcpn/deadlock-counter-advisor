@@ -2,6 +2,9 @@
 
 ## Item stats and source popovers — 2026-10-16
 
+Implementation 6c3c187 is live. All 168 tests, Checks and Pages passed. The deployed
+Spirit Shielding popup and source links were inspected; see VALIDATION.md.
+
 Item names/icons in recommendations and the full shop catalog now open a shared
 stats panel: mouse preview, click/tap or keyboard activation to keep open. It shows
 source tooltip sections, base values with units, components, wiki and pinned API
