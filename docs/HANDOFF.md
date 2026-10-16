@@ -2,7 +2,8 @@
 
 ## Channel disruption slice — 2026-10-15
 
-Implemented six source-reviewed rules for Knockdown / Cursed Relic against Seven's
+Implementation 4356b94 is live; remote checks, Pages and pinned refresh passed.
+Added six source-reviewed rules for Knockdown / Cursed Relic against Seven's
 Storm Cloud, Dynamo's Singularity and Mo & Krill's Combo. Total: 31 rules / 14 items,
 nine enemies with partial advice. Use Control & combos, mid/late Disrupt. Dynamo/Mo
 require a free teammate; stunned/asleep filters these actives. No new inputs.

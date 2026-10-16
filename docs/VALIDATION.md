@@ -24,7 +24,14 @@
 - Desktop 1280px and mobile 375px checked. Long evidence paths wrap; mobile
   document width 360px vs 375px viewport. Rescue conditions/details remain readable.
   No browser console errors observed. This is not a full accessibility audit.
-- Publication pending at this checkpoint; remote outcomes will be recorded below.
+- Published implementation 4356b94. Checks 38843235788, Pages 38843235809 and
+  manual pinned refresh 38843247249 all succeeded. The refresh produced
+  game-data-for-review (1,504,357 bytes, not expired), including rebuilt research.
+- Reloaded the live repository-subpath page and confirmed the 31-rule release,
+  Dynamo disruption cards, source labels and Buy now / Save for later separation.
+  Inspected deployed desktop layout and saved channel-counters-live.png.
+  No live browser console errors observed. Preview server stopped; temporary
+  browser tab closed and viewport override reset.
 
 
 ## All-hero inventory and coverage — 2026-10-15
