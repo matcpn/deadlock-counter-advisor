@@ -19,7 +19,14 @@
   default recommendation cards. Desktop 1280px and mobile 375px inspected.
   Mobile document width 360px; the 750px table scrolls within its 288px container,
   including keyboard ArrowRight. No browser console errors observed. This is not
-  a full accessibility audit. Remote publication/refresh verification pending.
+  a full accessibility audit.
+- Published implementation 488d9a1. Remote Checks 38841367676, Pages 38841367708
+  and manual pinned refresh 38841380622 all succeeded. The refresh ran research:build
+  and uploaded game-data-for-review (1,502,487 bytes, not expired). This confirms
+  generation and validation on GitHub Linux as well as local Windows.
+- Reloaded the live subpath URL, opened roster research, and confirmed all 42 enemy
+  rows plus the header. Saved the live matrix screenshot. Preview server stopped.
+- Existing non-failing GitHub action-runtime and Ubuntu migration notices persist.
 
 
 ## Burst-defense expansion — 2026-10-15

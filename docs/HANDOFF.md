@@ -2,7 +2,8 @@
 
 ## All-hero research foundation — 2026-10-15
 
-Added source-traced inventory for all 42 selectable heroes / 168 main ability slots,
+Implementation 488d9a1 is live; CI, Pages and the manual refresh passed. The live
+42-hero matrix was inspected. Added source-traced inventory for 168 main ability slots,
 25 threat-function themes, 12 response families and an enemy × problem coverage
 matrix with stage/goal/player-scope detail. Current advice remains 25 rules / 12
 items and partial coverage for six enemy heroes; no new counter rules were inferred.
