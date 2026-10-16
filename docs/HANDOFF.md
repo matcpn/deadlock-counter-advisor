@@ -2,6 +2,9 @@
 
 ## Defining threats and item decisions — 2026-10-16
 
+Implementation c9b27b6 is live. Checks and Pages passed; hosted Bebop + Lady Geist
+choice/tradeoff guidance and shared Dispel attribution were verified.
+
 The user accepted priorities 1 and 2 from the earlier gap assessment: deepen five
 thin heroes and help choose between their items. Completed Bebop, Infernus,
 Warden, Lady Geist and Yamato: six new conditional rules, 111 total / 16 items.

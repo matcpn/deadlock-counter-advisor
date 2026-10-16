@@ -13,6 +13,11 @@
   Shared Dispel card attributes each decision to the right enemy; mobile wraps
   without horizontal overflow. Full facts remain available through the item popup.
   No console errors. This is software/source verification, not in-game testing.
+- Browser active-item filtering also checked with all five enemies selected.
+  Published c9b27b6: Checks 38924026907 and Pages 38924026802 passed. Live shared
+  Dispel choices for Bebop/Geist show the new text and correct attribution. Saved
+  decision-cards-live.png; restored empty selection, closed local preview and
+  stopped its server. No live console errors. Temporary viewport reset.
 
 ## Build-color coverage — 2026-10-16
 
