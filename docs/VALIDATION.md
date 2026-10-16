@@ -1,5 +1,22 @@
 # Validation record
 
+## Abrams problem-row prototype — 2026-10-16
+
+- npm run check passed: data/research verification, 178 tests across 11 files,
+  strict TypeScript and production build. Existing catalog chunk-size notice remains.
+- Three new tests cover exact item placement, stage eligibility, filtering, mixed
+  selection fallback, full result identity/scope preservation, future-item fallback
+  and server-rendered collapsed groups with two choices and overflow.
+- Browser verified empty initial selection; nine closed rows across three stages
+  for Abrams; Debuff Reducer/Reactive Barrier first, Grit/Unstoppable under More
+  options in mid game. Enter opens a row and Space closes it.
+- Adding Shiv restores ordinary combined cards; removing Shiv restores closed rows.
+  Early healing includes only Healbane and retains the Infernus application label.
+  Desktop and 375x667 mobile inspected; mobile scroll width 360 at viewport 375,
+  no horizontal overflow. No browser console errors; viewport override reset.
+- Presentation/copy changes reuse existing source-reviewed rules without renewing
+  evidence or adding mechanics. No in-game tests.
+
 ## Item preferences removal — 2026-10-16
 
 UI-only removal; recommendation mechanics/data unchanged. Removed dead preference

@@ -1,5 +1,19 @@
 # Decisions and open questions
 
+## Prototype problem rows for Abrams — 2026-10-16
+
+The user found eight counter items difficult to compare and accepted an Abrams
+prototype. Group eligible items by stun setup, melee damage and healing within the
+existing stage columns. These are expandable result sections, not extra selection
+inputs. Preview two item names, then show two full comparisons on expansion and
+put remaining choices under More options. First pairs represent different approaches,
+not a universal strength ranking. Add concise decision copy from existing rules.
+
+Apply only when Abrams is selected alone; retain combined cards for mixed enemies
+until attribution/grouping is designed for that case. Keep grouping in a separate
+data file, preserve full eligible results and show unmapped future items in a fallback
+group. No stage, scope, evidence or expiry bypass. Reset expansions on enemy changes.
+
 ## Remove optional item preferences — 2026-10-16
 
 The user requested removing Item preferences. Remove the active-item toggle,

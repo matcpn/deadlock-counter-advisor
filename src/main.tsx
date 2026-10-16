@@ -47,7 +47,7 @@ function App() {
     <section aria-label="Item options" className="advisor"><h2>Item options</h2>
       {reviewIssue?<div className="empty" role="status">{reviewIssue}</div>:<>
         {(!enemies.length||uncovered.length>0)&&<p className="coverage-note" role="status">{enemies.length?'No eligible advice for '+uncovered.map(heroName).join(' + ')+'.':'Select enemies to see options.'}</p>}
-        <AdviceBoard board={liveBoard} catalog={reviewedCatalog} game={game}/>
+        <AdviceBoard key={enemies.join(',')} board={liveBoard} catalog={reviewedCatalog} game={game} focusHeroId={enemies.length===1?enemies[0]:undefined}/>
       </>}
     </section>
     <ResearchCoverage game={game} catalog={reviewedCatalog}/>

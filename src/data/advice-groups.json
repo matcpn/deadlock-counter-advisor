@@ -1,0 +1,25 @@
+[
+  {
+    "heroId": "hero-6",
+    "groups": [
+      {
+        "id": "stun-setup",
+        "title": "His stun sets up the kill",
+        "description": "Compare getting control back sooner with cushioning the follow-up damage.",
+        "itemIds": ["item-1047818222", "item-1644605047", "item-1672893796", "item-3357231760"]
+      },
+      {
+        "id": "melee-damage",
+        "title": "His melee hits hurt too much",
+        "description": "These options target melee damage; they do not shorten his stun.",
+        "itemIds": ["item-4204808176", "item-1342610602"]
+      },
+      {
+        "id": "healing",
+        "title": "He keeps healing through our damage",
+        "description": "Choose by how you can apply healing reduction to Abrams.",
+        "itemIds": ["item-2603935618", "item-3696726732"]
+      }
+    ]
+  }
+]

@@ -2,9 +2,10 @@ import type { Catalog } from '../domain/types';
 import type { GameSnapshot } from '../domain/game-data';
 import type { browseBoard, BrowseItem } from '../engine/browse';
 import { browseExplanations } from '../engine/browse';
+import { groupAdvice } from '../engine/advice-groups';
 import { ItemDetails } from './ItemDetails';
 
-export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browseBoard>;catalog:Catalog;game:GameSnapshot}) {
+export function AdviceBoard({board,catalog,game,focusHeroId}:{board:ReturnType<typeof browseBoard>;catalog:Catalog;game:GameSnapshot;focusHeroId?:string}) {
   const name=(id:string)=>catalog.heroes.find(h=>h.id===id)?.name??id;
   const unique=(values:string[])=>[...new Set(values)];
   const conditionGroups=(r:BrowseItem)=>r.rules.map(rule=>({
@@ -16,6 +17,7 @@ export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browse
     <h3>{column.label}</h3>
     {(()=>{
         const matches=column.results;
+        const groups=groupAdvice(matches,focusHeroId);
         const card=(r:BrowseItem)=><article className={'card advice-card '+r.item.category} key={r.item.id}>
             <div className="item-heading">{(()=>{const item=game.items.find(i=>i.id===r.item.id);return item?<ItemDetails item={item} game={game}/>:<h3>{r.item.name}</h3>;})()}<strong>{r.item.cost.toLocaleString()} souls</strong></div>
             <div className="badges"><span>{r.item.category}</span><span className={r.item.activation==='active'?'active':''}>{r.item.activation==='conditional'?'CONDITIONAL PROC':r.item.activation.toUpperCase()}</span></div>
@@ -31,9 +33,15 @@ export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browse
               <strong>Does not solve</strong>{unique(r.rules.map(rule=>rule.limitation)).map(text=><p key={text}>{text}</p>)}
               {unique(r.rules.flatMap(rule=>rule.stageReason?[rule.stageReason]:[])).map(text=><p key={text}>{text}</p>)}
               {r.item.componentIds.length>0&&<p>Components: {r.item.componentIds.map(id=>catalog.items.find(i=>i.id===id)?.name??id).join(', ')}. Full price shown; upgrade credit is not calculated.</p>}
-              <><p>Options are listed by price, then shared enemy coverage. Check the conditions for your hero and situation.</p>{r.rules.map(rule=><div className="evidence-note" key={rule.id}><strong>{name(rule.enemyHeroId)} · reviewed {rule.evidence.reviewedAt}</strong><p>{rule.evidence.note}</p></div>)}<p>{catalog.manifest.gamePatchId} · review expires {r.item.evidence.expiresAt}. No in-game tests performed.</p><ul>{unique([...r.item.evidence.sourceUrls,...r.rules.flatMap(rule=>rule.evidence.sourceUrls)]).map(url=><li key={url}><a href={url} target="_blank" rel="noreferrer">{catalog.manifest.sources.find(s=>s.url===url)?.title??'Evidence source'}</a></li>)}</ul></>
+              <><p>{groups?'Options are grouped by the problem they address; the first pair highlights different approaches.':'Options are listed by price, then shared enemy coverage.'} Check the conditions for your hero and situation.</p>{r.rules.map(rule=><div className="evidence-note" key={rule.id}><strong>{name(rule.enemyHeroId)} · reviewed {rule.evidence.reviewedAt}</strong><p>{rule.evidence.note}</p></div>)}<p>{catalog.manifest.gamePatchId} · review expires {r.item.evidence.expiresAt}. No in-game tests performed.</p><ul>{unique([...r.item.evidence.sourceUrls,...r.rules.flatMap(rule=>rule.evidence.sourceUrls)]).map(url=><li key={url}><a href={url} target="_blank" rel="noreferrer">{catalog.manifest.sources.find(s=>s.url===url)?.title??'Evidence source'}</a></li>)}</ul></>
             </details>
           </article>;
+        if(groups?.length)return <div className="problem-groups">{groups.map(group=><details className="problem-group" key={group.id}>
+          <summary><span className="problem-title">{group.title}</span><span className="problem-preview">{group.results.slice(0,2).map(r=><span className={'problem-item '+r.item.category} key={r.item.id}>{r.item.name}</span>)}</span><span className="problem-count">{group.results.length} {group.results.length===1?'option':'options'} · Compare</span></summary>
+          <p className="problem-description">{group.description}</p>
+          {group.results.slice(0,2).map(card)}
+          {group.results.length>2&&<details className="more-items"><summary>More options ({group.results.length-2})</summary>{group.results.slice(2).map(card)}</details>}
+        </details>)}</div>;
         return matches.length?<>{matches.slice(0,4).map(card)}{matches.length>4&&<details className="more-items"><summary>Show {matches.length-4} more items</summary>{matches.slice(4).map(card)}</details>}</>:<p className="small-empty">No reviewed options for this stage.</p>;
     })()}
   </section>)}</div>;

@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "defining-threats-2026-10-16",
+    "dataVersion": "abrams-presentation-2026-10-16",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -1248,6 +1248,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference: current tooltips describe stuns and duration reduction; an older wiki explicitly lists both abilities. Wiki numbers conflict with the snapshot, so no numeric stun or parry window is claimed. Generic personal defense scope applies across source-selectable player heroes; no hero-specific synergy or build is certified."
+      },
+      "decision": {
+        "chooseWhen": "the stun is leaving you unable to respond to his follow-up.",
+        "tradeoff": "Passive duration reduction. It does not block the damage or guarantee a parry."
       }
     },
     {
@@ -1332,6 +1336,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current immunity/stun descriptions and community matchup advice. Only the stun aspect is supported here; no blanket charge cancellation claim. Generic personal defense scope applies across source-selectable player heroes; no hero-specific synergy or build is certified."
+      },
+      "decision": {
+        "chooseWhen": "you can anticipate his engage and activate protection before the stun lands.",
+        "tradeoff": "A costly active commitment. You cannot activate it while stunned, and it does not make you immune to damage."
       }
     },
     {
@@ -1461,6 +1469,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed conditional application: client tooltips establish healing reduction and Infernus spirit damage; community discussion recommends this matchup. No all-healing-source or stacking test has been performed."
+      },
+      "decision": {
+        "chooseWhen": "healing is keeping Abrams alive and you can apply qualifying spirit damage.",
+        "tradeoff": "Apply it to Abrams during his healing window. It does not help you survive the initial stun or burst."
       }
     },
     {
@@ -1505,6 +1517,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed scenario inference from the bullet-buildup tooltip and guide anti-heal grouping. This is an alternative application route, not an instruction to stack it with Healbane. Exact shots depend on buildup and are not claimed."
+      },
+      "decision": {
+        "chooseWhen": "healing is keeping Abrams alive and you can maintain bullet buildup.",
+        "tradeoff": "Needs repeated hits. Healbane uses spirit damage instead; neither provides immediate protection from his combo."
       }
     },
     {
@@ -1679,6 +1695,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "A community commenter specifically proposes these melee-resistance purchases for Abrams combos; current extracted properties corroborate 18% and 20%. Old Rebuttal wiki values differ. We use only the unconditional melee-resistance benefit, not disputed parry timing or stacking claims."
+      },
+      "decision": {
+        "chooseWhen": "his melee follow-up is the damage you need to reduce.",
+        "tradeoff": "Green melee resistance works without a successful parry. Parry rewards are separate; his stun still applies."
       }
     },
     {
@@ -1763,6 +1783,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "A community commenter specifically proposes these melee-resistance purchases for Abrams combos; current extracted properties corroborate 18% and 20%. Old Rebuttal wiki values differ. We use only the unconditional melee-resistance benefit, not disputed parry timing or stacking claims."
+      },
+      "decision": {
+        "chooseWhen": "you want an orange option for reducing the melee portion of his combo.",
+        "tradeoff": "Melee resistance does not shorten control or cover every damage type. Do not assume additive stacking with other resistance."
       }
     },
     {
@@ -1848,6 +1872,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      },
+      "decision": {
+        "chooseWhen": "you can time a barrier before his combo damage lands.",
+        "tradeoff": "An extra button and a short protection window. It does not prevent or remove the stun."
       }
     },
     {
@@ -2280,6 +2308,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      },
+      "decision": {
+        "chooseWhen": "you need a barrier against damage that follows his wall stun or ultimate stun.",
+        "tradeoff": "Triggers automatically after qualifying control. You remain stunned, and the triggering hit is not guaranteed protection."
       }
     },
     {

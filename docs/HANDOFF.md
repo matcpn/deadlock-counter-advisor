@@ -1,5 +1,20 @@
 # Start here — continuation handoff
 
+## Abrams problem rows — 2026-10-16
+
+The user approved an Abrams-only presentation prototype. When Abrams is the sole
+selected enemy, each stage has three collapsed rows: stun setup, melee damage and
+healing. Colored item-name chips preview the first two choices; expanding compares
+their full cards, with remaining items under More options. Other and mixed enemy
+selections retain the combined list. Enemy defaults remain empty.
+
+Presentation configuration lives in src/data/advice-groups.json and consumes only
+already-eligible browse results. No new mechanics or rules: 111 rules / 16 items.
+Eight Abrams rules now have chooseWhen/tradeoff summaries (24 guided rules total).
+Player-delivery scope, timing, evidence, item tooltips and expiry remain intact.
+178 tests and local desktop/mobile checks passed; publication status follows below.
+Try this layout before extending the grouping to other heroes.
+
 ## Item preferences removed — 2026-10-16
 
 Implementation 6d35d80 is live; Checks, Pages and hosted verification passed.

@@ -10,6 +10,11 @@ expandable conditions/sources. Player-specific delivery scope remains labeled.
 No assumed player or budget; no affordability buckets. Model and personalized
 engine retain the original dimensions. This supersedes the UI sequence below.
 
+Abrams-only prototype: stage results are three expandable problem rows (stun setup,
+melee damage, healing), each previewing up to two choices and retaining additional
+options on expansion. Other/mixed selections keep the combined list. This is result
+organization, not a return of problem-category inputs.
+
 ## Product outcome
 
 Help a player make the next useful item purchase against the threats in their
