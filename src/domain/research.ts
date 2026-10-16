@@ -101,6 +101,14 @@ export interface CoverageCell {
   ruleIds:string[];stages:Record<Stage,number>;goals:Goal[];playerHeroIds:string[];
 }
 export interface HeroCoverage {heroId:string;cells:CoverageCell[]}
+/** Depth counts distinct available items, never repeated stages/problems/rules. */
+export function itemDepth(coverage:HeroCoverage[],catalog:Catalog,minimum=2){
+  return coverage.map(hero=>{
+    const ruleIds=new Set(hero.cells.flatMap(cell=>cell.ruleIds));
+    const itemIds=[...new Set(catalog.rules.filter(r=>ruleIds.has(r.id)).map(r=>r.itemId))].sort();
+    return {heroId:hero.heroId,itemIds,count:itemIds.length,needsResearch:itemIds.length<minimum};
+  }).sort((a,b)=>a.count-b.count||a.heroId.localeCompare(b.heroId));
+}
 const validDate=(date:string)=>/^\d{4}-\d{2}-\d{2}$/.test(date)&&Number.isFinite(Date.parse(date))&&new Date(date).toISOString().slice(0,10)===date;
 const available=(e:Evidence,patch:string,asOf:string)=>
   (e.status==='verified'||e.status==='source-reviewed')&&e.patch===patch&&

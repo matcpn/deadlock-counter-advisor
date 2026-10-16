@@ -1,5 +1,23 @@
 # Validation record
 
+## Second distinct item pass — 2026-10-16
+
+- Rechecked upstream client/server 6785, revision 11132425; reviewed captured item
+  and ability properties plus linked community/reference evidence. No in-game tests.
+- The original 19 one-item heroes each gained a different bounded option. Generated
+  ITEM_COVERAGE.md counts 42/42 selectable heroes with at least two distinct eligible
+  items across scenarios; the catalog contains 102 rules / 16 items.
+- npm run check passed: snapshot checksums/offline regeneration, generated research
+  verification, 165 tests across nine files, strict TypeScript and production build.
+  Four old expectations were updated for the new coverage; shield proc wording was
+  made explicit before the successful run.
+- Focused checks compare every hero's distinct-item count with actual browse output,
+  deduplicate repeated cells/stages, withhold stale/changed evidence, preserve active,
+  ownership and response-window filters, and exercise named exception boundaries.
+  Power Slash raw marker drift correctly invalidates its classification.
+- The refresh workflow now retains ITEM_COVERAGE.md with its review artifact.
+  Deployment validation is recorded below when completed.
+
 ## Empty initial selection — 2026-10-16
 
 Changed only the initial UI state to an empty typed enemy list. TypeScript and

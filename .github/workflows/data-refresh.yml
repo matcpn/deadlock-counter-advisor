@@ -40,4 +40,5 @@ jobs:
             src/data/threat-inventory.json
             docs/ROSTER_RESEARCH.md
             docs/ROSTER_REVIEW.md
+            docs/ITEM_COVERAGE.md
           retention-days: 30

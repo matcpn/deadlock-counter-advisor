@@ -1,5 +1,15 @@
 # Expanding roster coverage
 
+For the next item-depth loop, run `npm run research:build` and read
+[ITEM_COVERAGE.md](ITEM_COVERAGE.md). It counts distinct eligible items across all
+scenarios/stages and lists every hero below two. Counts use the inventory's explicit
+triage date for reproducibility and the same coverage gate for expired/changed
+evidence; the application checks today's availability. Research candidates by
+function, then verify their individual abilities and exclusions before adding rules.
+The October 16 pass resolved 19 one-item heroes; its original targets are preserved
+in `data/research/item-depth-pass.json`. This is a research target, never a reason
+to invent a second interaction. New heroes or evidence changes can reopen the queue.
+
 Start with [ROSTER_RESEARCH.md](ROSTER_RESEARCH.md): the generated inventory, all-hero
 coverage matrix, unresolved source details, reusable function queue and research
 batches. It is a research map, not a complete counter guide. As of October 16, 2026,

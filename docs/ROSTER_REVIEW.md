@@ -28,20 +28,22 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Slowing Hex / disrupt / escape:** Slowing Hex can prevent a new Disengaging Sigil cast during its movement-ability silence.
+- **Reactive Barrier / survive / control, burst:** the Riposte stun can trigger a barrier for follow-up damage.
 
-Still open: Only Disengaging Sigil prevention is reviewed. Riposte invulnerability, lunge recasts and ultimate slow-motion timing need client tests.
+Still open: Disengaging Sigil prevention and Riposte-stun follow-up protection are reviewed. Riposte invulnerability, lunge recasts, trigger ordering and ultimate slow-motion timing need client tests.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: apollo · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: apollo · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/); [Apollo Riposte counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1sdr3se/apollo_interactionsbalance/)
 
 ## Baba
 
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / dot:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Reactive Barrier / survive / control, burst:** the silence mode of Baba's Brew can trigger a barrier for follow-up damage.
 
 Still open: Spirit theft, brew modes and bird transformation need testing.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: baba · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: baba · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Baba ability reference; Feed The Birds trigger exception](https://deadlock.wiki/Baba)
 
 ## Bebop
 
@@ -59,10 +61,11 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Rebuttal / survive / burst:** Passive melee resistance reduces the melee portion of Bashdown slam and ordinary melee hits. No successful parry is required for that resistance.
+- **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 
 Still open: Bashdown slam is melee; the shockwave is spirit. Resistance does not make the slam parryable. Chain Gang removal and Rising Ram timing remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: billy · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: billy · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/); [Billy matchup discussion; damage and melee context](https://www.reddit.com/r/DeadlockTheGame/comments/1vkfk3x/any_advice_for_characters_i_play/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
 ## Calico
 
@@ -182,10 +185,11 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Reactive Barrier / survive / control, burst:** The stun from Stone Form landing can trigger a barrier for follow-up damage.
+- **Debuff Reducer / survive / control:** Passive debuff resistance can shorten Stone Form's stun.
 
 Still open: Only Stone Form stun follow-up is covered. Immunity/healing order, shared healing recipient attribution and Air Drop interactions remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: ivy · community evidence; patch and test limits recorded in roster review](https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: ivy · community evidence; patch and test limits recorded in roster review](https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer)
 
 ## Kelvin
 
@@ -215,10 +219,11 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Slowing Hex / disrupt / escape:** Slowing Hex can prevent a new Grapple cast during its movement-ability silence.
+- **Reactive Barrier / survive / control, burst:** the stun applied by Death Slam can trigger a barrier for follow-up damage.
 
 Still open: Hex blocks a new Grapple; it is not a Death Slam interrupt or cancellation of an already-started dive. Flog healing and dive damage types need further review.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: lash · community evidence; patch and test limits recorded in roster review](https://deadlock.g-wiki.online/en/countering-every-hero/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: lash · community evidence; patch and test limits recorded in roster review](https://deadlock.g-wiki.online/en/countering-every-hero/); [Historical Reactive Barrier trigger list; compare with current definitions](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/); [Reported Reactive Barrier knockup exclusions](https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/)
 
 ## McGinnis
 
@@ -248,10 +253,11 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Dispel Magic / survive / burst:** Purge applied Djinn's Mark stacks before their delayed damage resolves.
+- **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 
-Still open: Only Djinn Mark removal is reviewed. Reapplication, mark consumption race and Fire Scarabs healing/steal semantics need tests.
+Still open: Djinn Mark removal and conditional spirit-damage shielding are scoped. Reapplication, mark consumption race and Fire Scarabs healing/steal semantics need tests.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: mirage · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: mirage · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
 ## Mo & Krill
 
@@ -280,40 +286,44 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / dot:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Debuff Reducer / survive / control:** Passive debuff resistance can shorten the upgraded Time Wall silence.
 
 Still open: Pulse Grenade is spirit damage. Carbine weapon scaling does not change its spirit damage type. Time-stop classification and Swap remain untested.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: paradox · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Chrono); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: paradox · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Chrono); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Paradox duration discussion; Time Wall silence](https://www.reddit.com/r/DeadlockTheGame/comments/1wo5jlt/paradox_carbine_build/); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer)
 
 ## Pocket
 
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Debuff Reducer / survive / dot:** Passive debuff resistance can shorten the remaining duration of Affliction.
 
 Still open: Only Barrage direct projectile damage is used for shielding. Affliction is non-lethal and explicitly does not apply item procs; its defensive-proc attribution is not inferred. Cloak recast remains open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: pocket · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1uuarhi/i_got_abused_by_slowing_hex_as_a_pocket_player/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: pocket · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1uuarhi/i_got_abused_by_slowing_hex_as_a_pocket_player/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Pocket Affliction duration reduction versus cleanse discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1nrvocz/is_there_any_counter_to_pockets_affliction_or_is/)
 
 ## Rat King
 
 Status: partial-source-reviewed.
 
 - **Weapon Shielding / survive / burst:** Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.
+- **Metal Skin / survive / burst:** Brief bullet immunity can protect against Rat King's ordinary gunfire while you reposition.
 
-Still open: Only Scrap Grenade bullet detonations are scoped. Rat Swarm summon attribution, returned bullets and banner effects need tests. Item-win-rate tables were not treated as causal proof.
+Still open: Scrap Grenade bullet detonations are scoped for Weapon Shielding; ordinary gunfire is separately scoped for Metal Skin. Rat Swarm attribution, returned bullets, grenade-immunity ordering and banner effects need tests. Item-win-rate tables were not treated as causal proof.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: rat · community evidence; patch and test limits recorded in roster review](https://senseos.gg/guides/deadlock/how-to-counter-rat-king/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: rat · community evidence; patch and test limits recorded in roster review](https://senseos.gg/guides/deadlock/how-to-counter-rat-king/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Rat King counter-item discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1x3be01/what_items_counter_the_rat_king_the_most/)
 
 ## Rem
 
 Status: partial-source-reviewed.
 
 - **Reactive Barrier / survive / control, burst:** The sleep from Naptime can trigger a barrier for follow-up damage.
+- **Debuff Reducer / survive / control:** Passive debuff resistance can shorten Naptime's applied sleep.
 
 Still open: Naptime sleep may trigger barrier, but barrier damage may not wake the victim in historical reports. Tag Along targetability and self-cast redirection remain separate.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: rem · community evidence; patch and test limits recorded in roster review](https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: rem · community evidence; patch and test limits recorded in roster review](https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/); [Rem Naptime sleep and debuff-resistance discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1tax2co/how_does_this_little_shits_ult_work_how_do_i/)
 
 ## Seven
 
@@ -344,20 +354,22 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Weapon Shielding / survive / burst:** Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.
+- **Dispel Magic / survive / control:** Purge the Entangling Bola debuff after it is applied, while you can still use items.
 
-Still open: Only human Slam Fire bullet damage is covered. Transformed weapon/abilities, automatic transformation and bonus-health mechanics need a separate inventory.
+Still open: Human Slam Fire bullet damage and actionable Entangling Bola removal are scoped. Transformed weapon/abilities, automatic transformation and bonus-health mechanics need a separate inventory.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: silver · community evidence; patch and test limits recorded in roster review](https://forums.somethingawful.com/showthread.php?noseen=0&pagenumber=202&perpage=40&threadid=4065321); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: silver · community evidence; patch and test limits recorded in roster review](https://forums.somethingawful.com/showthread.php?noseen=0&pagenumber=202&perpage=40&threadid=4065321); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Silver discussion; comment on removing Entangling Bola](https://www.reddit.com/r/DeadlockTheGame/comments/1u2jvjo/silver_is_so_broken/)
 
 ## Sinclair
 
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Debuff Reducer / survive / control:** Passive debuff resistance can shorten Rabbit Hex's transformation duration.
 
 Still open: Own Vexing Bolt damage type is supported by raw markers. Assistant attribution, Rabbit Hex action restrictions and every copied ultimate require separate testing.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: sinclair · community evidence; patch and test limits recorded in roster review](https://denypick.com/heroes/sinclair/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: sinclair · community evidence; patch and test limits recorded in roster review](https://denypick.com/heroes/sinclair/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer); [Sinclair Rabbit Hex duration reference](https://deadlock.wiki/Rabbit)
 
 ## Solomon
 
@@ -375,20 +387,22 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Reactive Barrier / survive / control, burst:** the upgraded Luggage Cart wall-impact stun can trigger a barrier for follow-up damage.
 
 Still open: Call Bell follow-up damage is scoped. Cart purge has community reports but race/bug questions; Hotel Guest and door travel are not removed by these defenses.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: doorman · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1x4trmk/how_to_counter_doorman/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: doorman · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1x4trmk/how_to_counter_doorman/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Doorman cart wall-stun counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1rthccx/tell_me_a_better_way_to_counter_this_doorman_combo/)
 
 ## Venator
 
 Status: partial-source-reviewed.
 
 - **Reactive Barrier / survive / control, burst:** The stun or immobilize from Gutshot wall hit or Hex-Lined Snap Trap can trigger a barrier for follow-up damage.
+- **Weapon Shielding / survive / burst:** Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.
 
 Still open: Wall stun and trap immobilize are explicit triggers. Pure damage, blessed attacks and Ira Domini execute are excluded from generic armor/barrier guarantees.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: venator · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Venator)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: venator · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Venator); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
 ## Victor
 
@@ -409,28 +423,31 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Knockdown / disrupt / escape:** Knockdown applies a delayed stun and increased gravity to contest Flight.
+- **Reactive Barrier / survive / control, burst:** the chain applied by Stake can trigger a barrier for follow-up damage.
 
 Still open: Knockdown is delayed and can be defeated by removal/protection. Flight adds spirit damage; no bullet-only total immunity. Crow and Assassinate remain separate.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: flight · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: flight · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/); [Historical Reactive Barrier trigger list; compare with current definitions](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/)
 
 ## Viscous
 
 Status: partial-source-reviewed.
 
 - **Rebuttal / survive / burst:** Passive melee resistance reduces the melee portion of Puddle Punch. No successful parry is required for that resistance.
+- **Reactive Barrier / survive / control, burst:** a Goo Ball impact stun can trigger a barrier for follow-up damage.
 
-Still open: Puddle Punch melee resistance is supported; parry is possible but not assumed. Cube purge/healing order and Goo Ball control remain open.
+Still open: Puddle Punch melee resistance and Goo Ball stun-triggered follow-up protection are scoped; parry is possible but not assumed. Cube purge/healing order and barrier timing remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: viscous · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: viscous · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/); [Historical Reactive Barrier trigger list; compare with current definitions](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/); [Reported Reactive Barrier knockup exclusions](https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/)
 
 ## Vyper
 
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Dispel Magic / survive / burst:** Purge the pending Lethal Venom debuff after it is applied, while you can still use items.
 
-Still open: Only repeated dagger damage is scoped. Lethal Venom bypasses Petrify damage block; its removal, missing-health burst and slide-specific controls need testing.
+Still open: Repeated dagger damage and actionable pending Lethal Venom removal are scoped. Lethal Venom bypasses Petrify damage block; removal ordering, activation while Petrified, missing-health burst and slide-specific controls need client tests.
 
 Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: vyper · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1uqpp0n/what_am_i_supposed_to_do_against_vyper/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
@@ -439,10 +456,11 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Reactive Barrier / survive / control, burst:** The immobilize from Binding Word can trigger a barrier for follow-up damage.
+- **Debuff Reducer / survive / control:** Passive debuff resistance can shorten Binding Word's applied immobilize.
 
 Still open: Binding Word root follow-up is scoped. Escape timer is not root duration; upgraded Last Stand has Unstoppable, so blanket channel interrupts are excluded.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: warden · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Binding_Word)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: warden · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Binding_Word); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer); [Warden Binding Word duration and immunity reference](https://deadlock.wiki/Warden); [Historical Binding Word escape-timer bug report](https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/)
 
 ## Wraith
 
@@ -462,9 +480,10 @@ Evidence: [Pinned item and ability definitions · client 6785](https://api.deadl
 Status: partial-source-reviewed.
 
 - **Rebuttal / survive / burst:** Passive melee resistance reduces the melee portion of Flying Slash. No successful parry is required for that resistance.
+- **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 
-Still open: Flying Slash melee damage is scoped. No parry claim, no prevention of grapple, and no debuff advice through Shadow Transformation immunity.
+Still open: Flying Slash melee damage and raw-marker-supported Power Slash spirit damage are scoped separately. Test shield threshold timing; no parry claim, prevention of grapple, or debuff advice through Shadow Transformation immunity.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: yamato · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Damage_Resistance)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: yamato · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Damage_Resistance); [Yamato defense discussion; spirit shielding and transformation limits](https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
 A new client, changed ability text or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.

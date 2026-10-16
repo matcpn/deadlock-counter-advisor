@@ -91,6 +91,14 @@ describe('source-traced all-hero inventory',()=>{
     expect(inventory.heroes.find(h=>h.heroId===added.id)!.abilities.every(a=>a.status==='untriaged'&&!a.signals.length)).toBe(true);
     expect(inventory.retiredHeroIds).toContain('hero-6');
   });
+  it('traces Power Slash spirit damage to raw markers and withholds it after marker drift',()=>{
+    expect(build().heroes.find(h=>h.heroId==='hero-27')!.abilities[0].signals).toContainEqual(expect.objectContaining({functionId:'spirit',source:'properties'}));
+    const changed=structuredClone(rawAbilities),slash=changed.find(r=>r.class_name==='citadel_ability_power_slash')!;
+    (slash.properties as Record<string,Record<string,unknown>>).FullChargeDamage.css_class='weapon_damage';
+    const ability=buildThreatInventory(game,seeds,taxonomy,changed).heroes.find(h=>h.heroId==='hero-27')!.abilities[0];
+    expect(ability.status).toBe('needs-review');
+    expect(ability.signals).toEqual([]);
+  });
   it('rejects invented evidence, unknown functions and duplicate identities',()=>{
     for(const mutation of [
       (s:ThreatSeeds)=>{s.profiles[0].abilities[0].signals[0].quote='invented text';},
@@ -106,7 +114,7 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(matrix).toHaveLength(42);
     expect(matrix.flatMap(h=>h.cells)).toHaveLength(210);
     expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(42);
-    expect(matrix.find(h=>h.heroId==='hero-3')!.cells.filter(c=>c.problem!=='escape').every(c=>c.status==='needs-research')).toBe(true);
+    expect(matrix.find(h=>h.heroId==='hero-3')!.cells.filter(c=>['dot','sustain'].includes(c.problem)).every(c=>c.status==='needs-research')).toBe(true);
     expect(matrix.flatMap(h=>h.cells).filter(c=>c.ruleIds.length).every(c=>c.status==='conditional')).toBe(true);
     expect(matrix.find(h=>h.heroId==='hero-2')!.cells.find(c=>c.problem==='control')!.goals).toEqual(['disrupt']);
   });
@@ -141,6 +149,6 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(backlog.find(f=>f.functionId==='channel')!.occurrences.some(o=>o.heroId==='hero-2')).toBe(true);
     expect(backlog.every((f,i)=>i===0||backlog[i-1].uncoveredHeroCount>=f.uncoveredHeroCount)).toBe(true);
     expect(reviewedCatalog).toEqual(before);
-    expect(reviewedCatalog.rules).toHaveLength(83);
+    expect(reviewedCatalog.rules).toHaveLength(102);
   });
 });

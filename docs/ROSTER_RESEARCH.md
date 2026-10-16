@@ -26,7 +26,6 @@ Function labels are manually selected tooltip themes, not verified threats or co
 - **Vindicta / Assassinate:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 - **Viscous / Splatter:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 - **Wraith / Card Trick:** Individual card-suit effects are missing from this description.
-- **Yamato / Power Slash:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 
 ## Coverage matrix
 
@@ -35,10 +34,10 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Enemy | burst | control | dot | sustain | escape |
 | --- | --- | --- | --- | --- | --- |
 | Abrams | conditional 4/4/4 | conditional 2/3/3 | needs-research | conditional 1/2/2 | needs-research |
-| Apollo | needs-research | needs-research | needs-research | needs-research | conditional 1/1/1 |
-| Baba | needs-research | needs-research | conditional 1/1/1 | needs-research | needs-research |
+| Apollo | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 1/1/1 |
+| Baba | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
 | Bebop | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
-| Billy | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
+| Billy | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
 | Calico | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |
 | Celeste | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
 | Deadman Danny | conditional 1/1/1 | needs-research | conditional 1/1/1 | needs-research | needs-research |
@@ -49,33 +48,33 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Haze | conditional 3/4/4 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Holliday | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
 | Infernus | needs-research | needs-research | conditional 1/2/2 | needs-research | needs-research |
-| Ivy | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| Ivy | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Kelvin | needs-research | needs-research | conditional 1/1/1 | conditional 1/2/2 | needs-research |
 | Lady Geist | needs-research | needs-research | needs-research | conditional 1/2/2 | needs-research |
-| Lash | needs-research | needs-research | needs-research | needs-research | conditional 1/1/1 |
+| Lash | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 1/1/1 |
 | McGinnis | needs-research | needs-research | conditional 1/1/1 | conditional 1/2/2 | needs-research |
 | Mina | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |
-| Mirage | conditional 0/1/1 | needs-research | needs-research | needs-research | needs-research |
+| Mirage | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
 | Mo & Krill | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
 | Paige | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
-| Paradox | needs-research | needs-research | conditional 1/1/1 | needs-research | needs-research |
-| Pocket | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Rat King | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Rem | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| Paradox | needs-research | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
+| Pocket | conditional 1/1/1 | needs-research | conditional 1/1/1 | needs-research | needs-research |
+| Rat King | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
+| Rem | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Seven | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
 | Shiv | conditional 1/1/1 | needs-research | conditional 0/1/1 | conditional 1/2/2 | needs-research |
-| Silver | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Sinclair | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
+| Silver | conditional 1/1/1 | conditional 0/1/1 | needs-research | needs-research | needs-research |
+| Sinclair | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |
 | Solomon | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
-| The Doorman | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Venator | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| The Doorman | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| Venator | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
 | Victor | needs-research | needs-research | conditional 1/1/2 | conditional 1/2/3 | needs-research |
-| Vindicta | needs-research | needs-research | needs-research | needs-research | conditional 0/1/1 |
-| Viscous | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Vyper | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
-| Warden | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| Vindicta | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 0/1/1 |
+| Viscous | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
+| Vyper | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
+| Warden | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Wraith | conditional 3/4/4 | conditional 1/1/1 | needs-research | needs-research | needs-research |
-| Yamato | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
+| Yamato | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
 
 ## Next research batches
 
@@ -121,12 +120,22 @@ Source review pass complete for every captured selectable hero. Partial advice o
 - Extend problem and player-delivery coverage rather than treating one supported scenario as a complete kit.
 - Re-review by November 14 UTC; refreshes never renew evidence.
 
+### 5. Second distinct item pass
+
+Apollo, Baba, Billy, Ivy, Lash, Mirage, Paradox, Pocket, Rat King, Rem, Silver, Sinclair, The Doorman, Venator, Vindicta, Viscous, Vyper, Warden, Yamato
+
+Completed source review: 19 formerly one-item heroes each gained one distinct option. All 42 selectable heroes now have at least two; 102 conditional rules across 16 items, no in-game certification.
+
+- Test disable-trigger ordering, passive duration reduction and actionable debuff removal in controlled games.
+- Re-run the distinct-item report after changes; investigate any hero below two without adding unsupported counters.
+- Extend scenario depth separately: two items across all stages is not two answers to every ability.
+
 ## Reusable function queue
 
 Ordered by number of heroes with no current published advice, then total hero reach. This is an editorial research-efficiency order, not a meta or popularity ranking. Heroes with advice can still have major unresearched threats. Response families are investigation directions, not approved item matches.
 
 ### Spirit damage
-34 heroes mention this theme; 0 have no available published advice in any problem.
+35 heroes mention this theme; 0 have no available published advice in any problem.
 Confirm damage instances, scaling and barrier timing.
 Research directions: Spirit resistance, Damage barrier, Reduce enemy damage output
 
@@ -200,11 +209,6 @@ Research directions: Resolve the specific mechanic before choosing a response fa
 Separate weapon damage from spirit riders and on-hit effects.
 Research directions: Bullet resistance, Bullet immunity, Damage barrier
 
-### Damage type unresolved
-7 heroes mention this theme; 0 have no available published advice in any problem.
-Resolve missing damage type from raw fields or current client; Spirit scaling alone is insufficient.
-Research directions: Resolve the specific mechanic before choosing a response family.
-
 ### Healing suppression
 6 heroes mention this theme; 0 have no available published advice in any problem.
 Check whether the debuff can be removed; this is not evidence of enemy healing.
@@ -219,6 +223,11 @@ Research directions: Melee resistance, Damage barrier
 6 heroes mention this theme; 0 have no available published advice in any problem.
 Confirm movement restriction and removal exceptions.
 Research directions: Debuff duration reduction, Applied debuff removal, Barrier after qualifying control
+
+### Damage type unresolved
+6 heroes mention this theme; 0 have no available published advice in any problem.
+Resolve missing damage type from raw fields or current client; Spirit scaling alone is insufficient.
+Research directions: Resolve the specific mechanic before choosing a response family.
 
 ### Movement / stamina restriction
 5 heroes mention this theme; 0 have no available published advice in any problem.
@@ -499,7 +508,7 @@ Research directions: Debuff duration reduction, Barrier after qualifying control
 - **Telekinesis** (triaged): Pull / knockback / launch; Silence. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 
 ### Yamato
-- **Power Slash** (triaged): Channeled ability; Delayed / charged damage; Damage type unresolved. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
+- **Power Slash** (triaged): Channeled ability; Delayed / charged damage; Spirit damage. Power Slash spirit type is traced to raw FullChargeDamage markers, not inferred from spirit scaling. This does not type Flying Slash or certify protection from the first hit.
 - **Flying Slash** (triaged): Dash / flight / teleport; Melee damage. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 - **Crimson Slash** (triaged): Healing / regeneration / lifesteal. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 - **Shadow Transformation** (triaged): Damage protection / avoidance; Healing / regeneration / lifesteal. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.

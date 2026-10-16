@@ -56,14 +56,16 @@
       "name": "Apollo",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-hex-77"
+        "roster-hex-77",
+        "depth-reactive-77"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1sdr3se/apollo_interactionsbalance/"
       ],
       "remainingQuestions": [
-        "Only Disengaging Sigil prevention is reviewed. Riposte invulnerability, lunge recasts and ultimate slow-motion timing need client tests."
+        "Disengaging Sigil prevention and Riposte-stun follow-up protection are reviewed. Riposte invulnerability, lunge recasts, trigger ordering and ultimate slow-motion timing need client tests."
       ],
       "abilityBaselines": [
         {
@@ -89,12 +91,14 @@
       "name": "Baba",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-88"
+        "roster-spirit-88",
+        "depth-reactive-88"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://deadlock.wiki/Baba"
       ],
       "remainingQuestions": [
         "Spirit theft, brew modes and bird transformation need testing."
@@ -161,11 +165,14 @@
       "name": "Billy",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-melee-72"
+        "roster-melee-72",
+        "depth-spirit-72"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1vkfk3x/any_advice_for_characters_i_play/",
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
         "Bashdown slam is melee; the shockwave is spirit. Resistance does not make the slam parryable. Chain Gang removal and Rising Ram timing remain open."
@@ -554,11 +561,13 @@
       "name": "Ivy",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-reactive-20"
+        "roster-reactive-20",
+        "depth-duration-20"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/"
+        "https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/",
+        "https://deadlock.wiki/Debuff_Reducer"
       ],
       "remainingQuestions": [
         "Only Stone Form stun follow-up is covered. Immunity/healing order, shared healing recipient attribution and Air Drop interactions remain open."
@@ -658,11 +667,14 @@
       "name": "Lash",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-hex-31"
+        "roster-hex-31",
+        "depth-reactive-31"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://deadlock.g-wiki.online/en/countering-every-hero/"
+        "https://deadlock.g-wiki.online/en/countering-every-hero/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/",
+        "https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/"
       ],
       "remainingQuestions": [
         "Hex blocks a new Grapple; it is not a Death Slam interrupt or cancellation of an already-started dive. Flog healing and dive damage types need further review."
@@ -764,14 +776,16 @@
       "name": "Mirage",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-dispel-52"
+        "roster-dispel-52",
+        "depth-spirit-52"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/",
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
-        "Only Djinn Mark removal is reviewed. Reapplication, mark consumption race and Fire Scarabs healing/steal semantics need tests."
+        "Djinn Mark removal and conditional spirit-damage shielding are scoped. Reapplication, mark consumption race and Fire Scarabs healing/steal semantics need tests."
       ],
       "abilityBaselines": [
         {
@@ -866,12 +880,15 @@
       "name": "Paradox",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-10"
+        "roster-spirit-10",
+        "depth-duration-10"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://deadlock.wiki/Chrono",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1wo5jlt/paradox_carbine_build/",
+        "https://deadlock.wiki/Debuff_Reducer"
       ],
       "remainingQuestions": [
         "Pulse Grenade is spirit damage. Carbine weapon scaling does not change its spirit damage type. Time-stop classification and Swap remain untested."
@@ -900,12 +917,14 @@
       "name": "Pocket",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-50"
+        "roster-spirit-50",
+        "depth-duration-50"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1uuarhi/i_got_abused_by_slowing_hex_as_a_pocket_player/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1nrvocz/is_there_any_counter_to_pockets_affliction_or_is/"
       ],
       "remainingQuestions": [
         "Only Barrage direct projectile damage is used for shielding. Affliction is non-lethal and explicitly does not apply item procs; its defensive-proc attribution is not inferred. Cloak recast remains open."
@@ -934,15 +953,17 @@
       "name": "Rat King",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-weapon-84"
+        "roster-weapon-84",
+        "depth-bullets-84"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://senseos.gg/guides/deadlock/how-to-counter-rat-king/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1x3be01/what_items_counter_the_rat_king_the_most/"
       ],
       "remainingQuestions": [
-        "Only Scrap Grenade bullet detonations are scoped. Rat Swarm summon attribution, returned bullets and banner effects need tests. Item-win-rate tables were not treated as causal proof."
+        "Scrap Grenade bullet detonations are scoped for Weapon Shielding; ordinary gunfire is separately scoped for Metal Skin. Rat Swarm attribution, returned bullets, grenade-immunity ordering and banner effects need tests. Item-win-rate tables were not treated as causal proof."
       ],
       "abilityBaselines": [
         {
@@ -968,11 +989,13 @@
       "name": "Rem",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-reactive-79"
+        "roster-reactive-79",
+        "depth-duration-79"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/"
+        "https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1tax2co/how_does_this_little_shits_ult_work_how_do_i/"
       ],
       "remainingQuestions": [
         "Naptime sleep may trigger barrier, but barrier damage may not wake the victim in historical reports. Tag Along targetability and self-cast redirection remain separate."
@@ -1077,15 +1100,17 @@
       "name": "Silver",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-weapon-80"
+        "roster-weapon-80",
+        "depth-dispel-80"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://forums.somethingawful.com/showthread.php?noseen=0&pagenumber=202&perpage=40&threadid=4065321",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1u2jvjo/silver_is_so_broken/"
       ],
       "remainingQuestions": [
-        "Only human Slam Fire bullet damage is covered. Transformed weapon/abilities, automatic transformation and bonus-health mechanics need a separate inventory."
+        "Human Slam Fire bullet damage and actionable Entangling Bola removal are scoped. Transformed weapon/abilities, automatic transformation and bonus-health mechanics need a separate inventory."
       ],
       "abilityBaselines": [
         {
@@ -1111,12 +1136,15 @@
       "name": "Sinclair",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-60"
+        "roster-spirit-60",
+        "depth-duration-60"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://denypick.com/heroes/sinclair/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://deadlock.wiki/Debuff_Reducer",
+        "https://deadlock.wiki/Rabbit"
       ],
       "remainingQuestions": [
         "Own Vexing Bolt damage type is supported by raw markers. Assistant attribution, Rabbit Hex action restrictions and every copied ultimate require separate testing."
@@ -1180,12 +1208,14 @@
       "name": "The Doorman",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-69"
+        "roster-spirit-69",
+        "depth-reactive-69"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1x4trmk/how_to_counter_doorman/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1rthccx/tell_me_a_better_way_to_counter_this_doorman_combo/"
       ],
       "remainingQuestions": [
         "Call Bell follow-up damage is scoped. Cart purge has community reports but race/bug questions; Hotel Guest and door travel are not removed by these defenses."
@@ -1214,11 +1244,13 @@
       "name": "Venator",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-reactive-65"
+        "roster-reactive-65",
+        "depth-weapon-65"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://deadlock.wiki/Venator"
+        "https://deadlock.wiki/Venator",
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
         "Wall stun and trap immobilize are explicit triggers. Pure damage, blessed attacks and Ira Domini execute are excluded from generic armor/barrier guarantees."
@@ -1287,11 +1319,13 @@
       "name": "Vindicta",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-flight-3"
+        "roster-flight-3",
+        "depth-reactive-3"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/"
       ],
       "remainingQuestions": [
         "Knockdown is delayed and can be defeated by removal/protection. Flight adds spirit damage; no bullet-only total immunity. Crow and Assassinate remain separate."
@@ -1320,14 +1354,17 @@
       "name": "Viscous",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-melee-35"
+        "roster-melee-35",
+        "depth-reactive-35"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/",
+        "https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/"
       ],
       "remainingQuestions": [
-        "Puddle Punch melee resistance is supported; parry is possible but not assumed. Cube purge/healing order and Goo Ball control remain open."
+        "Puddle Punch melee resistance and Goo Ball stun-triggered follow-up protection are scoped; parry is possible but not assumed. Cube purge/healing order and barrier timing remain open."
       ],
       "abilityBaselines": [
         {
@@ -1353,7 +1390,8 @@
       "name": "Vyper",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-spirit-58"
+        "roster-spirit-58",
+        "depth-dispel-58"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
@@ -1361,7 +1399,7 @@
         "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
-        "Only repeated dagger damage is scoped. Lethal Venom bypasses Petrify damage block; its removal, missing-health burst and slide-specific controls need testing."
+        "Repeated dagger damage and actionable pending Lethal Venom removal are scoped. Lethal Venom bypasses Petrify damage block; removal ordering, activation while Petrified, missing-health burst and slide-specific controls need client tests."
       ],
       "abilityBaselines": [
         {
@@ -1387,11 +1425,15 @@
       "name": "Warden",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-reactive-25"
+        "roster-reactive-25",
+        "depth-duration-25"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://deadlock.wiki/Binding_Word"
+        "https://deadlock.wiki/Binding_Word",
+        "https://deadlock.wiki/Debuff_Reducer",
+        "https://deadlock.wiki/Warden",
+        "https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/"
       ],
       "remainingQuestions": [
         "Binding Word root follow-up is scoped. Escape timer is not root duration; upgraded Last Stand has Unstoppable, so blanket channel interrupts are excluded."
@@ -1463,14 +1505,17 @@
       "name": "Yamato",
       "status": "partial-source-reviewed",
       "ruleIds": [
-        "roster-melee-27"
+        "roster-melee-27",
+        "depth-spirit-27"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://deadlock.wiki/Damage_Resistance"
+        "https://deadlock.wiki/Damage_Resistance",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/",
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
-        "Flying Slash melee damage is scoped. No parry claim, no prevention of grapple, and no debuff advice through Shadow Transformation immunity."
+        "Flying Slash melee damage and raw-marker-supported Power Slash spirit damage are scoped separately. Test shield threshold timing; no parry claim, prevention of grapple, or debuff advice through Shadow Transformation immunity."
       ],
       "abilityBaselines": [
         {

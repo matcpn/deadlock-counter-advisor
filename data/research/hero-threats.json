@@ -3151,15 +3151,32 @@
             {
               "functionId": "windup",
               "quote": "fully-charged"
-            },
-            {
-              "functionId": "unknown-damage",
-              "quote": "dealing partial damage"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
+          "note": "Power Slash spirit type is traced to raw FullChargeDamage markers, not inferred from spirit scaling. This does not type Flying Slash or certify protection from the first hit.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "spirit",
+              "facts": [
+                {
+                  "path": [
+                    "properties",
+                    "FullChargeDamage",
+                    "css_class"
+                  ],
+                  "value": "tech_damage"
+                },
+                {
+                  "path": [
+                    "properties",
+                    "FullChargeDamage",
+                    "icon"
+                  ],
+                  "value": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+                }
+              ]
+            }
           ]
         },
         {

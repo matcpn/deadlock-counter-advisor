@@ -9,19 +9,23 @@ flow at user request. Scoped rules and the personalized engine remain in the mod
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published
-advice now includes 83 conditional rules / 16 items across all 42 captured selectable
+advice now includes 102 conditional rules / 16 items across all 42 captured selectable
 enemies, with partial scenario coverage. The full-roster source pass is complete;
 no in-game certification is implied. See [per-hero remaining work](docs/ROSTER_REVIEW.md).
 See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
 
 Next priorities:
+The second-item pass is complete: all 42 heroes have two or more distinct eligible
+items across scenarios. [Item coverage](docs/ITEM_COVERAGE.md) regenerates the queue
+after changes. Continue with interaction confidence and scenario depth below.
+
 1. Batch-one follow-up: test short-channel timing, protection/removal and personal
    survival for Seven, Dynamo and Mo & Krill. Six conditional interrupt rules exist.
 2. Batch-two follow-up: more player delivery routes, recipient targeting, Kelvin
    purge reapplication, turret attribution and Victor aura/reanimation semantics.
 3. Mobility follow-up: first-cast versus recast, untargetability, protection/removal
    and flight event ordering. The first movement slice is delivered.
-4. Resolve the 15 known source gaps, transformed/copy kits and summon attribution;
+4. Resolve the 14 known source gaps, transformed/copy kits and summon attribution;
    directly test uncertain timing/removal before verified promotion. Extend sparse
    problem coverage using the review ledger instead of counting heroes as fully solved.
 5. Saved/shareable scenarios for reproducible user tests. Review existing advice

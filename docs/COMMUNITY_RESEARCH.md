@@ -1,5 +1,43 @@
 # Community counter research — 2026-10-12
 
+## Second distinct item pass — 2026-10-16
+
+Counted distinct eligible items, not rules or repeated stage cards. The 19 heroes below each had one; this pass adds one different item per hero. All 42 selectable heroes now have at least two across reviewed scenarios (102 rules / 16 items). No client interaction tests were performed. See [repeatable queue](ITEM_COVERAGE.md).
+
+Rechecked public steam-info: client/server 6785, revision 11132425, unchanged. Current pinned item and ability definitions take precedence over older discussion values. Community reports are leads and corroboration; explicit typed-damage/disable inferences remain labeled source-reviewed.
+
+| Hero | Added item | Scoped mechanism | Supporting sources |
+| --- | --- | --- | --- |
+| Apollo | Reactive Barrier | the Riposte stun can trigger a barrier for follow-up damage. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1sdr3se/apollo_interactionsbalance/) |
+| Baba | Reactive Barrier | the silence mode of Baba's Brew can trigger a barrier for follow-up damage. | [Source 1](https://deadlock.wiki/Baba) |
+| Billy | Spirit Shielding | Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1vkfk3x/any_advice_for_characters_i_play/); [Source 2](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053) |
+| Ivy | Debuff Reducer | Passive debuff resistance can shorten Stone Form's stun. | [Source 1](https://deadlock.wiki/Debuff_Reducer) |
+| Lash | Reactive Barrier | the stun applied by Death Slam can trigger a barrier for follow-up damage. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/); [Source 2](https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/) |
+| Mirage | Spirit Shielding | Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/); [Source 2](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053) |
+| Paradox | Debuff Reducer | Passive debuff resistance can shorten the upgraded Time Wall silence. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1wo5jlt/paradox_carbine_build/); [Source 2](https://deadlock.wiki/Debuff_Reducer) |
+| Pocket | Debuff Reducer | Passive debuff resistance can shorten the remaining duration of Affliction. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1nrvocz/is_there_any_counter_to_pockets_affliction_or_is/) |
+| Rat King | Metal Skin | Brief bullet immunity can protect against Rat King's ordinary gunfire while you reposition. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1x3be01/what_items_counter_the_rat_king_the_most/) |
+| Rem | Debuff Reducer | Passive debuff resistance can shorten Naptime's applied sleep. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1tax2co/how_does_this_little_shits_ult_work_how_do_i/) |
+| Silver | Dispel Magic | Purge the Entangling Bola debuff after it is applied, while you can still use items. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1u2jvjo/silver_is_so_broken/) |
+| Sinclair | Debuff Reducer | Passive debuff resistance can shorten Rabbit Hex's transformation duration. | [Source 1](https://deadlock.wiki/Debuff_Reducer); [Source 2](https://deadlock.wiki/Rabbit) |
+| The Doorman | Reactive Barrier | the upgraded Luggage Cart wall-impact stun can trigger a barrier for follow-up damage. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1rthccx/tell_me_a_better_way_to_counter_this_doorman_combo/) |
+| Venator | Weapon Shielding | Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on. | [Source 1](https://deadlock.wiki/Venator); [Source 2](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053) |
+| Vindicta | Reactive Barrier | the chain applied by Stake can trigger a barrier for follow-up damage. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/) |
+| Viscous | Reactive Barrier | a Goo Ball impact stun can trigger a barrier for follow-up damage. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1gw0lav/); [Source 2](https://forums.playdeadlock.com/threads/reactive-barrier-not-activating-on-knockups.82868/) |
+| Vyper | Dispel Magic | Purge the pending Lethal Venom debuff after it is applied, while you can still use items. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1uqpp0n/what_am_i_supposed_to_do_against_vyper/) |
+| Warden | Debuff Reducer | Passive debuff resistance can shorten Binding Word's applied immobilize. | [Source 1](https://deadlock.wiki/Debuff_Reducer); [Source 2](https://deadlock.wiki/Warden); [Source 3](https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/) |
+| Yamato | Spirit Shielding | Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on. | [Source 1](https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/); [Source 2](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053) |
+
+### Accepted boundaries and rejected overclaims
+
+- Reactive Barrier is protection for subsequent damage after a qualifying applied disable, not a cleanse. Apollo Riposte, Baba Brew silence, Lash Death Slam stun, upgraded Doorman cart wall-stun, Vindicta Stake and Viscous Goo Ball are separately bounded. Baba Feed The Birds is excluded because of a reported trigger failure. Knockup-only claims from historical lists are excluded.
+- Debuff Reducer is passive duration reduction: Ivy Stone Form, upgraded Paradox Time Wall silence, Pocket Affliction, Rem applied sleep, Sinclair Rabbit Hex and Warden applied root. It does not shorten Paradox Carbine time-stop, cleanse Affliction, prevent Rem wake-up damage, certify copied ultimates, or extend Warden's escape window. Historical Warden timer reports remain unresolved.
+- Debuff Reducer reference pages served conflicting historical stats; only their named interaction leads were used. Numeric item values come from the pinned current snapshot.
+- Spirit Shielding additions for Billy, Mirage and Yamato and Weapon Shielding for Venator are typed-damage inferences. Resistance begins after the threshold proc; the opening hit is not protected. Billy melee slam, Yamato Flying Slash melee, and Venator pure damage/execute are excluded. Yamato Power Slash now has explicit raw FullChargeDamage type markers, not an inference from scaling.
+- Rat King Metal Skin covers ordinary gunfire only. A community comment described deflection; that claim was rejected because the item gives bullet immunity, not reflection. Reflected projectiles and grenade interactions remain untested.
+- Dispel Magic additions cover applied Silver Entangling Bola and pending Vyper Lethal Venom while actionable. The Silver lead comes from a specific comment, not the satirical post premise. No claim is made about activation while Petrified or transformed-kit suppression.
+- Every new rule retains exact conditions, timing, exclusions and source notes. Existing reviews were not renewed; expiry remains November 14 UTC. Two items overall does not guarantee two per ability, stage, player or preference.
+
 ## Whole-roster pass — 2026-10-16
 
 Public assets/steam-info still reports client/server 6785, revision 11132425,

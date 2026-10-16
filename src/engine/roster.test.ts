@@ -74,8 +74,8 @@ describe('roster completion means bounded advice, not universal coverage',()=>{
       expect(run({...s,responseWindow:'stunned-or-slept'}).some(r=>r.item.name==='Dispel Magic')).toBe(false);
       expect(run({...s,stage:'lane'}).some(r=>r.item.name==='Dispel Magic')).toBe(false);
     }
-    expect(run({enemyHeroIds:['hero-50'],problems:['dot']})).toEqual([]);
-    expect(run({enemyHeroIds:['hero-69'],problems:['control']})).toEqual([]);
+    expect(run({enemyHeroIds:['hero-50'],problems:['dot']}).map(r=>r.item.name)).toEqual(['Debuff Reducer']);
+    expect(run({enemyHeroIds:['hero-69'],problems:['control']}).map(r=>r.item.name)).toEqual(['Reactive Barrier']);
   });
   it('keeps healing denial on Geist under Punish, outside Soul Exchange protection',()=>{
     const s={enemyHeroIds:['hero-4'],problems:['sustain'] as Scenario['problems']};

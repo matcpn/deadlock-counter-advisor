@@ -3330,14 +3330,13 @@
               "quote": "fully-charged"
             },
             {
-              "functionId": "unknown-damage",
-              "quote": "dealing partial damage"
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.FullChargeDamage.css_class = \"tech_damage\"; properties.FullChargeDamage.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Power Slash spirit type is traced to raw FullChargeDamage markers, not inferred from spirit scaling. This does not type Flying Slash or certify protection from the first hit."
         },
         {
           "className": "citadel_ability_flying_strike",

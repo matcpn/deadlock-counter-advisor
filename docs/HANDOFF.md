@@ -1,5 +1,24 @@
 # Start here — continuation handoff
 
+## Two distinct items per hero — 2026-10-16
+
+The user requested a loop targeting one-item heroes. Counted distinct eligible item
+IDs, not repeated rules/stages: 19 heroes had one. Each now has a second bounded
+source-reviewed option; all 42 selectable heroes meet the two-item target across
+scenarios. There are 102 conditional rules / 16 items. No UI controls were added.
+
+Read generated docs/ITEM_COVERAGE.md for the repeatable queue and current counts,
+data/research/item-depth-pass.json for the original targets, and the new section in
+docs/COMMUNITY_RESEARCH.md for evidence and exceptions. research:build/verify and
+the refresh workflow include the report. Dates are fixed for reproducibility;
+runtime availability still reevaluates freshness. Two items overall does not mean
+two per stage, ability, player or active-item preference. No in-game tests occurred.
+
+Power Slash spirit damage now has raw property evidence; 14 source gaps remain.
+Existing reviews were not renewed; the November 14 UTC expiry remains. Next work:
+controlled interaction testing and deeper scenarios, plus review after source drift.
+See VALIDATION.md for checks and publication status.
+
 ## Empty initial selection — 2026-10-16
 
 The user requested no preselected enemies. The page now starts with an empty

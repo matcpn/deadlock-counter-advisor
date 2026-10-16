@@ -89,6 +89,36 @@
         "Re-review by November 14 UTC; refreshes never renew evidence."
       ],
       "status": "Source review pass complete for every captured selectable hero. Partial advice only; no in-game certification."
+    },
+    {
+      "title": "5. Second distinct item pass",
+      "heroIds": [
+        "hero-77",
+        "hero-88",
+        "hero-72",
+        "hero-20",
+        "hero-31",
+        "hero-52",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-80",
+        "hero-60",
+        "hero-69",
+        "hero-65",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-27"
+      ],
+      "questions": [
+        "Test disable-trigger ordering, passive duration reduction and actionable debuff removal in controlled games.",
+        "Re-run the distinct-item report after changes; investigate any hero below two without adding unsupported counters.",
+        "Extend scenario depth separately: two items across all stages is not two answers to every ability."
+      ],
+      "status": "Completed source review: 19 formerly one-item heroes each gained one distinct option. All 42 selectable heroes now have at least two; 102 conditional rules across 16 items, no in-game certification."
     }
   ],
   "gates": [

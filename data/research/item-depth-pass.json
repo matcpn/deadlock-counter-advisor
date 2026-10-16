@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-16",
+  "clientVersion": 6785,
+  "minimumDistinctItems": 2,
+  "meaning": "Count distinct eligible item IDs across all reviewed stages and scenarios, not rules or repeated cards. A research target, never permission to invent an interaction.",
+  "targets": [
+    {
+      "heroId": "hero-77",
+      "name": "Apollo",
+      "previousItemIds": [
+        "item-1813726886"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-77"
+      ]
+    },
+    {
+      "heroId": "hero-88",
+      "name": "Baba",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-88"
+      ]
+    },
+    {
+      "heroId": "hero-72",
+      "name": "Billy",
+      "previousItemIds": [
+        "item-4204808176"
+      ],
+      "addedRuleIds": [
+        "depth-spirit-72"
+      ]
+    },
+    {
+      "heroId": "hero-20",
+      "name": "Ivy",
+      "previousItemIds": [
+        "item-1644605047"
+      ],
+      "addedRuleIds": [
+        "depth-duration-20"
+      ]
+    },
+    {
+      "heroId": "hero-31",
+      "name": "Lash",
+      "previousItemIds": [
+        "item-1813726886"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-31"
+      ]
+    },
+    {
+      "heroId": "hero-52",
+      "name": "Mirage",
+      "previousItemIds": [
+        "item-3731635960"
+      ],
+      "addedRuleIds": [
+        "depth-spirit-52"
+      ]
+    },
+    {
+      "heroId": "hero-10",
+      "name": "Paradox",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-duration-10"
+      ]
+    },
+    {
+      "heroId": "hero-50",
+      "name": "Pocket",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-duration-50"
+      ]
+    },
+    {
+      "heroId": "hero-84",
+      "name": "Rat King",
+      "previousItemIds": [
+        "item-805079544"
+      ],
+      "addedRuleIds": [
+        "depth-bullets-84"
+      ]
+    },
+    {
+      "heroId": "hero-79",
+      "name": "Rem",
+      "previousItemIds": [
+        "item-1644605047"
+      ],
+      "addedRuleIds": [
+        "depth-duration-79"
+      ]
+    },
+    {
+      "heroId": "hero-80",
+      "name": "Silver",
+      "previousItemIds": [
+        "item-805079544"
+      ],
+      "addedRuleIds": [
+        "depth-dispel-80"
+      ]
+    },
+    {
+      "heroId": "hero-60",
+      "name": "Sinclair",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-duration-60"
+      ]
+    },
+    {
+      "heroId": "hero-69",
+      "name": "The Doorman",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-69"
+      ]
+    },
+    {
+      "heroId": "hero-65",
+      "name": "Venator",
+      "previousItemIds": [
+        "item-1644605047"
+      ],
+      "addedRuleIds": [
+        "depth-weapon-65"
+      ]
+    },
+    {
+      "heroId": "hero-3",
+      "name": "Vindicta",
+      "previousItemIds": [
+        "item-1254091416"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-3"
+      ]
+    },
+    {
+      "heroId": "hero-35",
+      "name": "Viscous",
+      "previousItemIds": [
+        "item-4204808176"
+      ],
+      "addedRuleIds": [
+        "depth-reactive-35"
+      ]
+    },
+    {
+      "heroId": "hero-58",
+      "name": "Vyper",
+      "previousItemIds": [
+        "item-112198670"
+      ],
+      "addedRuleIds": [
+        "depth-dispel-58"
+      ]
+    },
+    {
+      "heroId": "hero-25",
+      "name": "Warden",
+      "previousItemIds": [
+        "item-1644605047"
+      ],
+      "addedRuleIds": [
+        "depth-duration-25"
+      ]
+    },
+    {
+      "heroId": "hero-27",
+      "name": "Yamato",
+      "previousItemIds": [
+        "item-4204808176"
+      ],
+      "addedRuleIds": [
+        "depth-spirit-27"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 # Decisions and open questions
 
+## Distinct-item research target — 2026-10-16
+
+The user requested a second-item loop for under-covered heroes. Count unique eligible item IDs across all reviewed scenarios and stages, keeping this metric in research documentation. Do not add repeated rules to inflate depth or invent mechanics to meet the target. The generated report shares the coverage freshness gate and feeds the next loop. Meeting two options per hero is breadth, not complete scenario coverage or in-game verification.
+
 ## Stop tracking development metadata — 2026-10-16
 
 The user confirmed Baba is live and explicitly requested removing development flags
