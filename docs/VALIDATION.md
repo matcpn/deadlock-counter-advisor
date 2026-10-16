@@ -1,5 +1,31 @@
 # Validation record
 
+## Whole-roster source review — 2026-10-16
+
+- Rechecked public steam-info: client/server 6785, revision 11132425, unchanged.
+  Reviewed captured ability/item definitions and linked community/guide evidence.
+  Some sources were available through search excerpts; provenance and conflicting
+  reports remain explicit. No in-game tests or verified promotion.
+- Added 41 rules for the remaining 30 enemies: 83 source-reviewed rules, 16 items,
+  and bounded advice for all 42 source-selectable heroes. Development flags remain
+  visible; this does not certify current mode availability or complete kit coverage.
+- Added a per-hero review ledger, source/rule integrity audit and ability baselines.
+  Tests cover new heroes and changed descriptions/flags losing reviewed status.
+  Fifteen ability entries retain known source gaps. Sinclair's damage marker and
+  five exact MOVEMENT flags are traced to pinned raw data; recasts are not inferred.
+- npm run check passed: snapshot verification, deterministic research regeneration,
+  155 tests across seven files, strict TypeScript and production build. Every hero
+  has a tested supported scenario. Focused checks cover player/goal/stage/budget,
+  ownership and active-item filters, flight, recast limits, melee versus spirit,
+  mark/root removal, healing versus health exchange, and unsupported scenarios.
+- Build completed without a large-chunk warning after separating reviewed JSON:
+  main 389.63 kB, reviewed catalog 206.98 kB, game catalog 393.77 kB.
+- Local browser checks at 1280px and 375px covered Calico/Mina Slowing Hex,
+  Vindicta Knockdown, budget separation, active-item filtering, passive fallbacks,
+  expanded limits and the roster matrix. Mobile document width was 360px against
+  a 375px viewport. No console errors observed. Not a full accessibility audit.
+- Publication and deployed checks are recorded below once complete.
+
 ## Healing and persistent-damage slice — 2026-10-15
 
 - Rechecked public steam-info: client/server 6785, revision 11132425, unchanged.

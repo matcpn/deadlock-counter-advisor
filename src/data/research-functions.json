@@ -370,7 +370,9 @@
     {
       "id": "movement-denial",
       "label": "Movement denial",
-      "itemIds": []
+      "itemIds": [
+        "item-1813726886"
+      ]
     },
     {
       "id": "damage-output-reduction",

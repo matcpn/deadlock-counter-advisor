@@ -12,6 +12,7 @@ import type { Build, Problem, Scenario } from './domain/types';
 import './styles.css';
 const game = snapshotJson as GameSnapshot;
 const heroes = game.heroes.filter(h=>h.selectable);
+const reviewDates = [...new Set([...reviewedCatalog.items,...reviewedCatalog.rules].map(r=>r.evidence.reviewedAt))].sort().join(' / ');
 const heroName = (id:string) => heroes.find(h=>h.id===id)?.name ?? id;
 function ItemCard({item,budget}:{item:GameItem;budget:number}) {
   return <article className={'card '+item.category} style={{'--item':game.colors[item.category]} as React.CSSProperties}>
@@ -47,7 +48,7 @@ function App() {
   const selected=problemAreas.find(p=>p.id===problem)!;
   return <main style={{'--weapon':game.colors.weapon,'--vitality':game.colors.vitality,'--spirit':game.colors.spirit} as React.CSSProperties}>
     <header><span className="eyebrow">DEADLOCK / COUNTER ADVISOR</span><h1>Read the fight. Find your options.</h1><p>Your hero and their threats up front. Problems and stages organized below.</p></header>
-    <aside className="notice"><strong>Sourced recommendations · research beta</strong><p>Client {game.clientVersion} · {game.counts.selectableHeroes} source-selectable heroes · {game.items.length} source shop items · pulled {game.importedAt.slice(0,10)} UTC.</p><p>Source review: {reviewedCatalog.items[0].evidence.reviewedAt}. Advice is conditional and has not been tested in-game. Community data may lag the game.</p></aside>
+    <aside className="notice"><strong>Sourced recommendations · research beta</strong><p>Client {game.clientVersion} · {game.counts.selectableHeroes} source-selectable heroes · {game.items.length} source shop items · pulled {game.importedAt.slice(0,10)} UTC.</p><p>Source reviews: {reviewDates}. Advice is conditional and has not been tested in-game. Community data may lag the game.</p></aside>
     <section className="scenario" aria-label="Your scenario">
       <div className="player-row"><Artwork src={player.portrait}/><label>Your hero<select value={heroId} onChange={e=>{setHero(e.target.value);setEnemies(ids=>ids.filter(id=>id!==e.target.value));}}>{heroes.map(h=><option value={h.id} key={h.id}>{h.name}{h.development?' · development':''}</option>)}</select></label></div>
       <fieldset className="threats"><legend>Who is causing problems? · {enemies.length} selected</legend>

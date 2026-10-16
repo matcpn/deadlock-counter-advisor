@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientVersion": 6785,
-  "triagedAt": "2026-10-15",
+  "triagedAt": "2026-10-16",
   "reviewer": "Codex source-text triage; no in-game verification",
   "profiles": [
     {
@@ -85,16 +85,30 @@
               "quote": "as it explodes"
             },
             {
-              "functionId": "mobility",
-              "quote": "leap backwards"
-            },
-            {
               "functionId": "slow",
               "quote": "slowing enemies"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "mobility",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_SHOW_CAST_RANGE_AS_SAT_SPHERE_WHILE_CASTING",
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "className": "ability_fencer_riposte",
@@ -405,16 +419,32 @@
               "quote": "melee damage"
             },
             {
-              "functionId": "mobility",
-              "quote": "Dash forward"
-            },
-            {
               "functionId": "heal",
               "quote": "heal a small amount"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "mobility",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_DONT_TRIGGER_POST_CAST_ON_CAST_COMPLETE",
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
+                    "CITADEL_ABILITY_BEHAVIOR_TRIGGER_CANCEL_MASH_PROTECTION_ON_CAST",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "className": "ability_nano_catform",
@@ -449,8 +479,30 @@
               "quote": "Heal for 450"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "mobility",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_CHANNELLED",
+                    "CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL",
+                    "CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_DODGING",
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST",
+                    "CITADEL_ABILITY_BEHAVIOR_INHIBIT_SOFT_CAMERA_COLLISION"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1389,14 +1441,25 @@
         {
           "className": "citadel_ability_lash",
           "baselineDescription": "Pull yourself through the air toward a target. Using Grapple also resets your limit of air jumps and dashes. Use your whip to pull yourself to an enemy +20m Cast Range and gain +7.0 Weapon Damage for 6s +1 Charges OnCast : +1 Stamina and +60% Air Control",
-          "signals": [
+          "signals": [],
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied.",
+          "gaps": [],
+          "propertySignals": [
             {
               "functionId": "mobility",
-              "quote": "Pull yourself through the air"
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+                  ]
+                }
+              ]
             }
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          ]
         },
         {
           "className": "ability_lash_flog",
@@ -1543,14 +1606,32 @@
             {
               "functionId": "defense",
               "quote": "becoming untargetable"
-            },
-            {
-              "functionId": "mobility",
-              "quote": "flying to a target location"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "mobility",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_CHANNELLED",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_PREVENT_BOT_USAGE",
+                    "CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL",
+                    "CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST",
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
+                    "CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "className": "ability_vampirebat_lovebites",
@@ -2330,15 +2411,31 @@
         {
           "className": "ability_magician_magicbolt",
           "baselineDescription": "Fire a bolt of magic that deals Damage, increasing as it travels. If you have an Assistant, they also cast Vexing Bolt at reduced damage. Press Ability 1 to redirect the bolt towards your crosshairs. Launch a guided bolt of magic Bolts apply -25% Fire Rate for 5s. +126.0 Max Damage. +50.0% Assistant Damage.",
-          "signals": [
+          "signals": [],
+          "note": "Own Vexing Bolt is spirit damage by captured MaxDamage presentation markers. Assistant attribution and copied ultimates remain separate questions.",
+          "gaps": [],
+          "propertySignals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "deals Damage"
+              "functionId": "spirit",
+              "facts": [
+                {
+                  "path": [
+                    "properties",
+                    "MaxDamage",
+                    "css_class"
+                  ],
+                  "value": "tech_damage"
+                },
+                {
+                  "path": [
+                    "properties",
+                    "MaxDamage",
+                    "icon"
+                  ],
+                  "value": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+                }
+              ]
             }
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
           ]
         },
         {

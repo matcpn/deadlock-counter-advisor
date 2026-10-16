@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientVersion": 6785,
-  "triagedAt": "2026-10-15",
+  "triagedAt": "2026-10-16",
   "sourceUrl": "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
   "heroes": [
     {
@@ -99,16 +99,17 @@
               "quote": "as it explodes"
             },
             {
-              "functionId": "mobility",
-              "quote": "leap backwards"
-            },
-            {
               "functionId": "slow",
               "quote": "slowing enemies"
+            },
+            {
+              "functionId": "mobility",
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_NO_TARGET\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_SHOW_CAST_RANGE_AS_SAT_SPHERE_WHILE_CASTING\",\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied."
         },
         {
           "className": "ability_fencer_riposte",
@@ -461,16 +462,17 @@
               "quote": "melee damage"
             },
             {
-              "functionId": "mobility",
-              "quote": "Dash forward"
-            },
-            {
               "functionId": "heal",
               "quote": "heal a small amount"
+            },
+            {
+              "functionId": "mobility",
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_NO_TARGET\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_DONT_TRIGGER_POST_CAST_ON_CAST_COMPLETE\",\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\",\"CITADEL_ABILITY_BEHAVIOR_TRIGGER_CANCEL_MASH_PROTECTION_ON_CAST\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied."
         },
         {
           "className": "ability_nano_catform",
@@ -507,10 +509,15 @@
             {
               "functionId": "heal",
               "quote": "Heal for 450"
+            },
+            {
+              "functionId": "mobility",
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_CHANNELLED\",\"CITADEL_ABILITY_BEHAVIOR_NO_TARGET\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL\",\"CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_DODGING\",\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\",\"CITADEL_ABILITY_BEHAVIOR_INHIBIT_SOFT_CAMERA_COLLISION\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied."
         }
       ]
     },
@@ -1544,11 +1551,12 @@
           "signals": [
             {
               "functionId": "mobility",
-              "quote": "Pull yourself through the air"
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied."
         },
         {
           "className": "ability_lash_flog",
@@ -1700,11 +1708,12 @@
             },
             {
               "functionId": "mobility",
-              "quote": "flying to a target location"
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_CHANNELLED\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_PREVENT_BOT_USAGE\",\"CITADEL_ABILITY_BEHAVIOR_CANNOT_CANCEL_DURING_CHANNEL\",\"CITADEL_ABILITY_BEHAVIOR_ALLOW_ALT_CAST\",\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\",\"CITADEL_ABILITY_BEHAVIOR_CAN_SET_QUICK_CAST\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. Movement classification is additionally traced to the captured MOVEMENT behaviour flag; recast and ongoing-cast interactions are not implied."
         },
         {
           "className": "ability_vampirebat_lovebites",
@@ -2540,14 +2549,13 @@
           "status": "triaged",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "deals Damage"
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.MaxDamage.css_class = \"tech_damage\"; properties.MaxDamage.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Own Vexing Bolt is spirit damage by captured MaxDamage presentation markers. Assistant attribution and copied ultimates remain separate questions."
         },
         {
           "className": "ability_magician_cloneturret",

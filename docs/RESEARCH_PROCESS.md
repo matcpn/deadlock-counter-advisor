@@ -2,7 +2,7 @@
 
 Start with [ROSTER_RESEARCH.md](ROSTER_RESEARCH.md): the generated inventory, all-hero
 coverage matrix, unresolved source details, reusable function queue and research
-batches. It is a research map, not a complete counter guide. As of October 15, 2026,
+batches. It is a research map, not a complete counter guide. As of October 16, 2026,
 it inventories 42 selectable heroes / 168 main-slot abilities from client 6785.
 The public steam-info endpoint was rechecked and still reports that client version.
 
@@ -40,6 +40,11 @@ interruption from sleep, cleanse eligibility from a debuff, or healing from defe
   gates. Priorities reflect reuse and current gaps, not measured popularity.
 - `src/data/threat-inventory.json` and `docs/ROSTER_RESEARCH.md`: generated outputs;
   edit the source annotations or plan and rebuild them instead of hand-editing.
+- `data/research/roster-review.json`: per-hero pass ledger, exact ability baselines,
+  rule/source references and unresolved questions. `docs/ROSTER_REVIEW.md` is generated
+  from it. New heroes or changed source descriptions/development flags lose completion;
+  invalid rule identities, missing rule/source references and duplicate records fail
+  validation. This does not generate or renew recommendations.
 
 ```sh
 npm run data:pull
@@ -78,16 +83,19 @@ Individual recommendation cards still determine whether a purchase fits a scenar
 The browser evaluates availability using today's UTC date. The generated Markdown
 uses the triage date explicitly, so the committed artifact does not change each
 day. Release-wide expiry, patch and item-fact drift suppress available coverage.
-Player scope is visible: existing healing-denial rules remain Infernus-only, while
-generic personal-defense rules support other source-selectable players.
+Player scope is visible: Abrams/Shiv healing denial remains Infernus-only; newer
+recipient rules cover four reviewed delivery routes. Generic personal defenses
+support other source-selectable players.
 
 No `no-supported-option` negative verdict is populated without a documented review.
-The initial inventory added no advice. The subsequent channel batch brings the catalog to 42 rules / 15 items; see COMMUNITY_RESEARCH.md.
+The initial inventory added no advice. Subsequent reviewed batches bring the catalog
+to 83 rules / 16 items, with a bounded scenario for each of the 42 enemies; see
+COMMUNITY_RESEARCH.md. Complete roster review does not mean complete counter coverage.
 
 ## Research a batch
 
 1. Repair any missing descriptions/types for the selected heroes. The current
-   report flags 16 abilities, including incomplete base text, missing damage types,
+   report flags 15 abilities, including incomplete base text, missing damage types,
    transformed/copy kits and Wraith's card suits. This is a known-gap list, not a
    completeness audit. Base weapons and alternate kits still need inventory work.
 2. Read pinned item facts and current official changes; find accessible creator,
@@ -103,7 +111,7 @@ The initial inventory added no advice. The subsequent channel batch brings the c
 
 First slice delivered: **Seven, Dynamo, Mo & Krill**, six conditional channel-interrupt rules with personal-survival and timing questions still open.
 The first healing/persistent-damage slice for **Victor, Kelvin, McGinnis** is also
-delivered. Next: **Vindicta, Grey Talon, Calico** for flight/movement/escape. The complete function
-queue remains available for reprioritization as research reveals better shared
-opportunities. Research is incremental; exhaustive up-front certification is not
-required to keep improving the app.
+delivered. The flight/movement slice and remaining-roster pass are now delivered too.
+Use ROSTER_REVIEW.md for per-hero follow-ups and the function queue for shared
+opportunities. Research remains incremental; a completed first pass does not close
+the remaining mechanics questions or certify every match scenario.

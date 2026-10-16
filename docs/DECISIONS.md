@@ -1,5 +1,26 @@
 # Decisions and open questions
 
+## Whole-roster completion boundary — 2026-10-16
+
+The user's "loop until all heroes are done" authorizes continuing the batch work
+through every captured selectable hero. Completion means a source-review pass and
+at least one useful, explicitly scoped scenario for each; it does not certify every
+kit interaction or turn source review into in-game verification. Keep completeRoster
+false and retain problem gaps in the matrix. No minimum rule count overrides evidence.
+
+Added a separate audited review ledger with per-hero unresolved questions, rule and
+source references, and ability baselines. It supports repeatable completion reporting
+without generating counter recommendations. Exact movement flags supplement source
+text; they do not certify recasts. Existing evidence dates/expiry stay unchanged.
+
+Community snippets and guides supply hypotheses and contradictory reports. Current
+pinned item/ability definitions constrain the rules. Match/item win rates are not
+causal counter evidence; generic guides and shared API lineage are not independent
+client tests. Conditional generic mitigation is labeled as inference, not a hard counter.
+
+The expanded reviewed catalog is emitted in a separate Vite chunk. No new runtime
+service, model call, input questionnaire or recommendation algorithm was introduced.
+
 ## Healing recipients and shield correction — 2026-10-15
 
 - Keep healing denial under Punish and ongoing-damage mitigation under Survive.

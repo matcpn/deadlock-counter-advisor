@@ -1,5 +1,60 @@
 # Community counter research — 2026-10-12
 
+## Whole-roster pass — 2026-10-16
+
+Public assets/steam-info still reports client/server 6785, revision 11132425,
+October 14 20:01:37. Reviewed the remaining 30 heroes' captured main-slot text,
+current item properties, and accessible community/guide evidence. Added 41 rules:
+83 rules / 16 items, with a bounded scenario for all 42 selectable enemies.
+Read [the per-hero review](ROSTER_REVIEW.md) for precise rule scopes and open questions.
+
+### Evidence and limits
+
+- Current pinned definitions establish damage type, named disable, item cost,
+  category, activation, range and trigger. Raw MOVEMENT flags corroborate Apollo's
+  Disengaging Sigil, Calico's Leaping Slash/Return to Shadows, Lash's Grapple and
+  Mina's Sanguine Retreat. Exact facts are stored in the threat annotations.
+- [Flying-opponent discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/)
+  describes Knockdown and its removal/protection limits. Current item text supports
+  delayed stun and increased gravity, not permanent flight cancellation or protection
+  from the target's spells. [Calico discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1rulw4r/whats_the_play_against_calico_this_patch/)
+  supports investigating movement denial but disagrees on its practical strength.
+  No guaranteed catch, one-shot survival or automatic item purchase is claimed.
+- [Mina recast report](https://forums.playdeadlock.com/threads/mina-can-use-sanguine-retreat-2-despite-being-slowing-hexed.91745/)
+  conflicts with blanket movement suppression. The new rule is restricted to the
+  first cast while targetable. [Holliday barrier report](https://forums.playdeadlock.com/threads/holliday-barrel-knockup-doesnt-activate-reactive-barrier.96124/)
+  is why her lasso-stun rule does not include barrel knockup.
+- [Rem sleep/barrier report](https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/)
+  warns that barrier damage may not contribute to waking. The card claims only
+  follow-up damage buffering and explicitly rejects an early-wake benefit.
+- [Graves](https://www.reddit.com/r/DeadlockTheGame/comments/1wzao6h/how_do_i_counter_grave/),
+  [Drifter](https://www.reddit.com/r/DeadlockGame/comments/1t15ew6/tips_to_counter_drifter/)
+  and [Mirage](https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/)
+  discussions support narrow non-ultimate removal candidates. No all-debuff,
+  ultimate, guaranteed timing or reapplication-immunity claims were promoted.
+- [Geist discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/)
+  supports healing denial during Life Drain. Soul Exchange remains distinct.
+  Delivery remains limited to four reviewed players; other healing routes are open.
+- Typed mitigation is explicitly a source-based inference. For example, current
+  Deadman Danny definitions separate weapon spray from spirit backblast; Silver's
+  human weapon is distinct from transformed attacks; Venator's pure/execute effects
+  are not generic armor targets. Rat King statistics were inspected but not used to
+  infer counter efficacy. Solomon square attribution remains an explicit condition.
+- Sinclair's own Vexing Bolt is spirit damage by MaxDamage css/icon markers. Its
+  assistant and copied ultimates are excluded. Fifteen known ability entries still
+  have gaps, including missing base descriptions and alternate kits.
+
+Sources in the per-hero ledger include full accessible discussions, search-result
+excerpts, wiki/guide summaries and historical reports. Exact dates/patches are not
+known for every community claim. Some guides share the same API lineage and some
+are generic editorial advice; none counts as an independent in-game test. The
+ledger records current source baselines and unresolved questions, not certification.
+Do not repeat broad source claims such as silence interrupting all channels,
+barriers absorbing the triggering hit, anti-heal preventing a health swap, or a
+movement flag proving every recast is blocked.
+
+No full-game/client experiment was performed. Review expiry was not extended.
+
 ## Healing and persistent-damage batch — 2026-10-15
 
 Eleven new conditional rules cover Victor, Kelvin and McGinnis: Healbane/Toxic

@@ -11,7 +11,7 @@ const game=gameJson as GameSnapshot;
 const seeds=seedsJson as ThreatSeeds;
 const rawAbilities=rawJson as Record<string,unknown>[];
 const build=(snapshot=game,annotations=seeds)=>buildThreatInventory(snapshot,annotations,taxonomy,rawAbilities);
-const coverage=(asOf='2026-10-15')=>buildCoverage(game,reviewedCatalog,asOf);
+const coverage=(asOf='2026-10-16')=>buildCoverage(game,reviewedCatalog,asOf);
 
 describe('source-traced all-hero inventory',()=>{
   it('reproduces the stored inventory with every selectable main ability and exact evidence spans',()=>{
@@ -74,6 +74,15 @@ describe('source-traced all-hero inventory',()=>{
     invalid.profiles.find(p=>p.heroId==='hero-2')!.abilities[0].propertySignals![0].facts=[];
     expect(()=>build(game,invalid)).toThrow('Invalid property evidence');
   });
+  it('traces movement eligibility and Sinclair damage type without certifying recasts or copied kits',()=>{
+    const inventory=build();
+    const ability=(hero:string,cls:string)=>inventory.heroes.find(h=>h.heroId===hero)!.abilities.find(a=>a.className===cls)!;
+    expect(ability('hero-16','ability_nano_shadow_pulse').signals).toContainEqual(expect.objectContaining({functionId:'mobility',source:'properties'}));
+    expect(ability('hero-60','ability_magician_magicbolt').signals).toContainEqual(expect.objectContaining({functionId:'spirit',source:'properties'}));
+    const changed=structuredClone(rawAbilities),sigil=changed.find(r=>r.class_name==='ability_fencer_throwblade')!;
+    sigil.behaviours=(sigil.behaviours as string[]).filter(b=>!b.endsWith('_MOVEMENT'));
+    expect(buildThreatInventory(game,seeds,taxonomy,changed).heroes.find(h=>h.heroId==='hero-77')!.abilities[0].status).toBe('needs-review');
+  });
   it('adds unknown heroes/abilities without copying another kit and records retired heroes',()=>{
     const changed=structuredClone(game),added={...structuredClone(changed.heroes[0]),id:'hero-9999',sourceId:9999,name:'New source hero',selectable:true};
     changed.heroes.push(added);
@@ -92,12 +101,12 @@ describe('source-traced all-hero inventory',()=>{
 });
 
 describe('coverage and research are not recommendation generation',()=>{
-  it('reports all problem cells but only twelve enemies with partial reviewed advice',()=>{
+  it('reports all problem cells but all enemies with partial reviewed advice',()=>{
     const matrix=coverage();
     expect(matrix).toHaveLength(42);
     expect(matrix.flatMap(h=>h.cells)).toHaveLength(210);
-    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(12);
-    expect(matrix.find(h=>h.heroId==='hero-3')!.cells.every(c=>c.status==='needs-research')).toBe(true);
+    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(42);
+    expect(matrix.find(h=>h.heroId==='hero-3')!.cells.filter(c=>c.problem!=='escape').every(c=>c.status==='needs-research')).toBe(true);
     expect(matrix.flatMap(h=>h.cells).filter(c=>c.ruleIds.length).every(c=>c.status==='conditional')).toBe(true);
     expect(matrix.find(h=>h.heroId==='hero-2')!.cells.find(c=>c.problem==='control')!.goals).toEqual(['disrupt']);
   });
@@ -113,7 +122,7 @@ describe('coverage and research are not recommendation generation',()=>{
     for(const asOf of ['2026-11-14','2026-10-14'])expect(coverage(asOf).flatMap(h=>h.cells).some(c=>c.ruleIds.length)).toBe(false);
     const changed=structuredClone(game);changed.items.find(i=>i.id===reviewedCatalog.items[0].id)!.cost++;
     for(const snapshot of [changed,{...game,clientVersion:6786}]){
-      const matrix=buildCoverage(snapshot,reviewedCatalog,'2026-10-15');
+      const matrix=buildCoverage(snapshot,reviewedCatalog,'2026-10-16');
       expect(matrix.flatMap(h=>h.cells).every(c=>!c.ruleIds.length)).toBe(true);
       expect(matrix.find(h=>h.heroId==='hero-6')!.cells.find(c=>c.problem==='burst')!.status).toBe('needs-review');
     }
@@ -122,7 +131,7 @@ describe('coverage and research are not recommendation generation',()=>{
   it('never counts demo or needs-review records as available coverage',()=>{
     for(const status of ['demo','needs-review'] as const){
       const changed=structuredClone(reviewedCatalog);changed.rules.forEach(r=>r.evidence.status=status);
-      expect(buildCoverage(game,changed,'2026-10-15').flatMap(h=>h.cells).every(c=>!c.ruleIds.length)).toBe(true);
+      expect(buildCoverage(game,changed,'2026-10-16').flatMap(h=>h.cells).every(c=>!c.ruleIds.length)).toBe(true);
     }
   });
   it('produces a deterministic reusable queue without mutating or inventing rules',()=>{
@@ -132,6 +141,6 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(backlog.find(f=>f.functionId==='channel')!.occurrences.some(o=>o.heroId==='hero-2')).toBe(true);
     expect(backlog.every((f,i)=>i===0||backlog[i-1].uncoveredHeroCount>=f.uncoveredHeroCount)).toBe(true);
     expect(reviewedCatalog).toEqual(before);
-    expect(reviewedCatalog.rules).toHaveLength(42);
+    expect(reviewedCatalog.rules).toHaveLength(83);
   });
 });

@@ -1,5 +1,36 @@
 # Start here — continuation handoff
 
+## Whole-roster source review — 2026-10-16
+
+The user asked to loop until all heroes were done. The source-review pass now
+accounts for all 42 source-selectable heroes, with at least one bounded scenario
+each: 83 rules / 16 items. This is partial scenario coverage, not every ability,
+problem, stage or player delivery route, and no in-game verification.
+
+Added 41 rules for the remaining 30 enemies. Slowing Hex is the only new item.
+Mobility rules distinguish new casts, untargetability and Mina's unverified recasts.
+Typed damage, explicit disable triggers, scoped mark/root removal and melee
+resistance provide the other slices. Lady Geist healing denial excludes Soul
+Exchange. Pure damage, executes, transformed/copy kits and summon attribution stay
+explicitly limited. Existing reviews were not renewed; expiry remains November 14 UTC.
+
+Read generated docs/ROSTER_REVIEW.md for every hero's rules, sources and remaining
+questions. Its source is data/research/roster-review.json; research:build/verify now
+audit identities, source membership and complete rule references. New heroes and
+changed source descriptions/flags lose completed-review status. This audit does
+not create, renew or certify recommendation rules. The existing release gate still
+pauses advice on patch/item drift or expiry.
+
+Sinclair's own Vexing Bolt damage type is traced to raw markers; five movement
+abilities have exact raw MOVEMENT evidence. Fifteen known ability source gaps
+remain. Research data is kept separate from UI/scoring. Reviewed JSON now has its
+own build chunk so the expanded release does not enlarge the main chunk past 500kB.
+
+Next work is depth and practical verification: prioritize the per-hero remaining
+questions and saved/shareable scenarios. Do not restart an uncovered-hero loop or
+call this complete counter coverage. See the latest VALIDATION.md for actual
+checks and publication state.
+
 ## Healing and persistent-damage slice — 2026-10-15
 
 Implementation eb3387c is live; remote checks, Pages and pinned refresh passed.

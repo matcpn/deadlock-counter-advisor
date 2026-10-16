@@ -1,13 +1,13 @@
 # Implementation and maintenance plan
 
-## Current agenda — 2026-10-15
+## Current agenda — 2026-10-16
 
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published
-advice now includes 42 conditional rules / 15 items across twelve enemies, not full coverage.
-Batch one delivered six channel-interrupt rules. Batch two adds eleven healing/
-sustained-damage rules, checked delivery scopes and corrected shield resistance.
+advice now includes 83 conditional rules / 16 items across all 42 captured selectable
+enemies, with partial scenario coverage. The full-roster source pass is complete;
+no in-game certification is implied. See [per-hero remaining work](docs/ROSTER_REVIEW.md).
 See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
 
 Next priorities:
@@ -15,9 +15,11 @@ Next priorities:
    survival for Seven, Dynamo and Mo & Krill. Six conditional interrupt rules exist.
 2. Batch-two follow-up: more player delivery routes, recipient targeting, Kelvin
    purge reapplication, turret attribution and Victor aura/reanimation semantics.
-3. Next research batch: Vindicta, Grey Talon, Calico — flight, movement and escape.
-4. Resolve source gaps alongside each batch; directly test uncertain timing/removal
-   interactions before verified promotion. Keep expanding the queue as new facts arrive.
+3. Mobility follow-up: first-cast versus recast, untargetability, protection/removal
+   and flight event ordering. The first movement slice is delivered.
+4. Resolve the 15 known source gaps, transformed/copy kits and summon attribution;
+   directly test uncertain timing/removal before verified promotion. Extend sparse
+   problem coverage using the review ledger instead of counting heroes as fully solved.
 5. Saved/shareable scenarios for reproducible user tests. Review existing advice
    by 2026-11-14 UTC; fetching new data alone does not renew it.
 

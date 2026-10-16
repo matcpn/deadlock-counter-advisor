@@ -39,4 +39,5 @@ jobs:
             src/data/game-catalog.json
             src/data/threat-inventory.json
             docs/ROSTER_RESEARCH.md
+            docs/ROSTER_REVIEW.md
           retention-days: 30

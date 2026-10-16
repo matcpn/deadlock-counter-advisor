@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "sustain-coverage-2026-10-15",
+    "dataVersion": "roster-pass-2026-10-16",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -143,11 +143,191 @@
         "url": "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
         "title": "Valve gameplay update · May 22, 2026 · temporary shield resistance",
         "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "roster-flight",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/",
+        "title": "Roster review: flight · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-calico",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1rulw4r/whats_the_play_against_calico_this_patch/",
+        "title": "Roster review: calico · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-apollo",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/",
+        "title": "Roster review: apollo · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-baba",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/",
+        "title": "Roster review: baba · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-billy",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/",
+        "title": "Roster review: billy · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-celeste",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1wrjxdn/hero_counter_series_03_how_do_you_actually_play/",
+        "title": "Roster review: celeste · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-danny",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1x5cizz/dead_man_danny_tips_and_item_discussion/",
+        "title": "Roster review: danny · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-drifter",
+        "url": "https://www.reddit.com/r/DeadlockGame/comments/1t15ew6/tips_to_counter_drifter/",
+        "title": "Roster review: drifter · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-graves",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1wzao6h/how_do_i_counter_grave/",
+        "title": "Roster review: graves · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-holliday",
+        "url": "https://forums.playdeadlock.com/threads/holliday-barrel-knockup-doesnt-activate-reactive-barrier.96124/",
+        "title": "Roster review: holliday · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-ivy",
+        "url": "https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/",
+        "title": "Roster review: ivy · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-geist",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/",
+        "title": "Roster review: geist · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-lash",
+        "url": "https://deadlock.g-wiki.online/en/countering-every-hero/",
+        "title": "Roster review: lash · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-mina",
+        "url": "https://deadlock.wiki/Nox_Nostra",
+        "title": "Roster review: mina · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-minaRecast",
+        "url": "https://forums.playdeadlock.com/threads/mina-can-use-sanguine-retreat-2-despite-being-slowing-hexed.91745/",
+        "title": "Roster review: minaRecast · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-mirage",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/",
+        "title": "Roster review: mirage · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-paige",
+        "url": "https://deadlock.wiki/Bookwyrm",
+        "title": "Roster review: paige · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-paradox",
+        "url": "https://deadlock.wiki/Chrono",
+        "title": "Roster review: paradox · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-pocket",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1uuarhi/i_got_abused_by_slowing_hex_as_a_pocket_player/",
+        "title": "Roster review: pocket · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-rat",
+        "url": "https://senseos.gg/guides/deadlock/how-to-counter-rat-king/",
+        "title": "Roster review: rat · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-rem",
+        "url": "https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/",
+        "title": "Roster review: rem · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-silver",
+        "url": "https://forums.somethingawful.com/showthread.php?noseen=0&pagenumber=202&perpage=40&threadid=4065321",
+        "title": "Roster review: silver · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-sinclair",
+        "url": "https://denypick.com/heroes/sinclair/",
+        "title": "Roster review: sinclair · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-solomon",
+        "url": "https://deadlockitembuilder.com/counter/solomon",
+        "title": "Roster review: solomon · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-doorman",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1x4trmk/how_to_counter_doorman/",
+        "title": "Roster review: doorman · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-venator",
+        "url": "https://deadlock.wiki/Venator",
+        "title": "Roster review: venator · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-viscous",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/",
+        "title": "Roster review: viscous · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-vyper",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1uqpp0n/what_am_i_supposed_to_do_against_vyper/",
+        "title": "Roster review: vyper · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-warden",
+        "url": "https://deadlock.wiki/Binding_Word",
+        "title": "Roster review: warden · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "roster-yamato",
+        "url": "https://deadlock.wiki/Damage_Resistance",
+        "title": "Roster review: yamato · community evidence; patch and test limits recorded in roster review",
+        "accessedAt": "2026-10-16"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 42 conditional rules / 15 items, with partial advice for 12 enemy heroes. Added healing denial and sustained-damage options for Victor, Kelvin and McGinnis. New anti-heal delivery is reviewed for Infernus, Kelvin, Victor and McGinnis; earlier Abrams/Shiv anti-heal remains Infernus-only. No in-game tests or complete hero coverage."
+      "note": "Source-reviewed beta: 83 conditional rules / 16 items. Every source-selectable enemy has a limited reviewed scenario; this is not full ability, problem or player-delivery coverage. No in-game tests. New movement advice requires targetability and timing; immunity, copied kits and development availability remain limited."
     }
   },
   "heroes": [
@@ -784,6 +964,36 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-1813726886",
+      "name": "Slowing Hex",
+      "category": "spirit",
+      "cost": 1600,
+      "activation": "active",
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.8,
+        "weapon": 0.7,
+        "hybrid": 0.8
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Compared price, category, active status and components with pinned extraction; fit is editorial."
       }
     }
   ],
@@ -3899,6 +4109,3396 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from the named ability damage type and the item trigger. Kelvin beam and McGinnis rockets are classified using current damage presentation markers, not Spirit scaling alone. No timing experiment, trigger-hit absorption or guaranteed survival is claimed."
+      }
+    },
+    {
+      "id": "roster-flight-3",
+      "itemId": "item-1254091416",
+      "enemyHeroId": "hero-3",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late targeted team utility when contesting flight justifies the cost; not an automatic first purchase.",
+      "mechanism": "Knockdown applies a delayed stun and increased gravity to contest Flight.",
+      "conditions": [
+        "Flight is keeping the enemy airborne and hard to reach.",
+        "The target is visible, targetable and within 45m base cast range; you can act and the item is ready.",
+        "The target has no active stun immunity or applicable target protection; removal can defeat the attempt."
+      ],
+      "timing": "Cast early enough to allow the 2-second delay. The captured item increases stun duration with airborne height and gravity during the stun; coordinate follow-up.",
+      "limitation": "Does not immediately stop damage or guarantee a kill, safe landing, or permanent flight cancellation. Does not prevent future casts; protection and removal can defeat the attempt.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-flight-17",
+      "itemId": "item-1254091416",
+      "enemyHeroId": "hero-17",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late targeted team utility when contesting flight justifies the cost; not an automatic first purchase.",
+      "mechanism": "Knockdown applies a delayed stun and increased gravity to contest Rain of Arrows.",
+      "conditions": [
+        "Rain of Arrows is keeping the enemy airborne and hard to reach.",
+        "The target is visible, targetable and within 45m base cast range; you can act and the item is ready.",
+        "The target has no active stun immunity or applicable target protection; removal can defeat the attempt."
+      ],
+      "timing": "Cast early enough to allow the 2-second delay. The captured item increases stun duration with airborne height and gravity during the stun; coordinate follow-up.",
+      "limitation": "Does not immediately stop damage or guarantee a kill, safe landing, or permanent flight cancellation. Does not prevent future casts; protection and removal can defeat the attempt.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-weapon-17",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-17",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Rain of Arrows multishot is dealing bullet/weapon damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers. Does not establish protection from Charged Shot, Spirit Snare or Guided Owl execution.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1ub8t3h/having_trouble_fighting_vindicta_grey_talon/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-hex-16",
+      "itemId": "item-1813726886",
+      "enemyHeroId": "hero-16",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Slowing Hex can prevent a new Leaping Slash or Return to Shadows cast during its movement-ability silence.",
+      "conditions": [
+        "Leaping Slash or Return to Shadows has not started; the enemy is visible, targetable and within 25m base cast range.",
+        "You can act, the item is ready, and the target has no applicable debuff/control protection."
+      ],
+      "timing": "Apply before the escape cast while your team can follow up. Captured base duration 3.5 seconds, cooldown 29 seconds. This is a short window, not permanent lockdown.",
+      "limitation": "Does not stop ordinary stamina usage or every ability, and removal can end the window. Cannot target Calico during Return to Shadows untargetability or retroactively cancel it. Ava and stamina escape are not covered.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1rulw4r/whats_the_play_against_calico_this_patch/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-melee-16",
+      "itemId": "item-4204808176",
+      "enemyHeroId": "hero-16",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Passive melee resistance reduces the melee portion of Leaping Slash. No successful parry is required for that resistance.",
+      "conditions": [
+        "Leaping Slash's melee damage is a material part of the threat."
+      ],
+      "timing": "Equip before contact. Captured melee resistance: 18%. Conditional healing/returned damage require a successful parry and are not assumed by this rule.",
+      "limitation": "Does not prevent displacement, shorten control or protect against other damage types. Gloom Bombs and Return to Shadows are spirit threats; no automatic parry or prevention of healing is claimed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1rulw4r/whats_the_play_against_calico_this_patch/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-hex-77",
+      "itemId": "item-1813726886",
+      "enemyHeroId": "hero-77",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Slowing Hex can prevent a new Disengaging Sigil cast during its movement-ability silence.",
+      "conditions": [
+        "Disengaging Sigil has not started; the enemy is visible, targetable and within 25m base cast range.",
+        "You can act, the item is ready, and the target has no applicable debuff/control protection."
+      ],
+      "timing": "Apply before the escape cast while your team can follow up. Captured base duration 3.5 seconds, cooldown 29 seconds. This is a short window, not permanent lockdown.",
+      "limitation": "Does not stop ordinary stamina usage or every ability, and removal can end the window. Only this movement cast is covered. Riposte invulnerability, Flawless Advance timing and Itani Lo Sahn are not solved.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-hex-31",
+      "itemId": "item-1813726886",
+      "enemyHeroId": "hero-31",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Slowing Hex can prevent a new Grapple cast during its movement-ability silence.",
+      "conditions": [
+        "Grapple has not started; the enemy is visible, targetable and within 25m base cast range.",
+        "You can act, the item is ready, and the target has no applicable debuff/control protection."
+      ],
+      "timing": "Apply before the escape cast while your team can follow up. Captured base duration 3.5 seconds, cooldown 29 seconds. This is a short window, not permanent lockdown.",
+      "limitation": "Does not stop ordinary stamina usage or every ability, and removal can end the window. Does not cancel Death Slam, undo an airborne dive already started or prevent ordinary air dashes.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.g-wiki.online/en/countering-every-hero/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-hex-63",
+      "itemId": "item-1813726886",
+      "enemyHeroId": "hero-63",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Slowing Hex can prevent a new Sanguine Retreat cast during its movement-ability silence.",
+      "conditions": [
+        "Sanguine Retreat has not started; the enemy is visible, targetable and within 25m base cast range.",
+        "You can act, the item is ready, and the target has no applicable debuff/control protection."
+      ],
+      "timing": "Apply before the escape cast while your team can follow up. Captured base duration 3.5 seconds, cooldown 29 seconds. This is a short window, not permanent lockdown.",
+      "limitation": "Does not stop ordinary stamina usage or every ability, and removal can end the window. Apply before the first cast. Recast suppression is excluded because a historical bug report contradicts a blanket claim. Cannot target Mina during untargetability.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Nox_Nostra",
+          "https://forums.playdeadlock.com/threads/mina-can-use-sanguine-retreat-2-despite-being-slowing-hexed.91745/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-88",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-88",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Baba's Brew scalding burn is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not restore stolen Spirit, remove silence or prevent Feed The Birds. Source marks Baba as development; current-mode availability is not certified.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-melee-72",
+      "itemId": "item-4204808176",
+      "enemyHeroId": "hero-72",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Passive melee resistance reduces the melee portion of Bashdown slam and ordinary melee hits. No successful parry is required for that resistance.",
+      "conditions": [
+        "Bashdown slam and ordinary melee hits's melee damage is a material part of the threat."
+      ],
+      "timing": "Equip before contact. Captured melee resistance: 18%. Conditional healing/returned damage require a successful parry and are not assumed by this rule.",
+      "limitation": "Does not prevent displacement, shorten control or protect against other damage types. Bashdown shockwave is spirit damage. Melee resistance does not imply Bashdown can be parried or that Chain Gang is removed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1ulluzt/even_after_the_nerfs_billy_keeps_beating_my_ass/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-81",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-81",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Radiant Daggers and subsequent spell hits is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not prevent Dazzling Trick silence or stop Light Eater healing.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wrjxdn/hero_counter_series_03_how_do_you_actually_play/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-81",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-81",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The silence from Dazzling Trick barrier-break explosion can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Dazzling Trick barrier-break explosion actually applies silence; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not prevent the explosion, strip the enemy barrier or protect before it triggers.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wrjxdn/hero_counter_series_03_how_do_you_actually_play/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-weapon-78",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-78",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Jettison Fuel spray is dealing bullet/weapon damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers. Its backblast and Close The Deal are separate spirit damage. Does not stop jetpack movement or the ultimate grab.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1x5cizz/dead_man_danny_tips_and_item_discussion/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-78",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-78",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Strix Salvo explosions is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not cover the weapon portion of Jettison Fuel, cleanse marks or undo Close The Deal.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1x5cizz/dead_man_danny_tips_and_item_discussion/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-64",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-64",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Stalker's Mark bleed is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not remove the mark, stop its teleport recast or dispel Eternal Night.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockGame/comments/1t15ew6/tips_to_counter_drifter/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-dispel-64",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-64",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Purge the applied non-ultimate Stalker's Mark debuff to end its remaining effect.",
+      "conditions": [
+        "Stalker's Mark is already applied.",
+        "You can use items and are not stunned or asleep; the cooldown is ready."
+      ],
+      "timing": "Activate after application and before the remaining effect resolves. Break contact to avoid reapplication; captured cooldown 45 seconds.",
+      "limitation": "No damage already dealt is undone, and no immunity to reapplication is granted. Cannot be used while stunned or asleep. Only the non-ultimate mark is covered; Eternal Night is excluded. Teleport-versus-purge race timing has not been measured.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockGame/comments/1t15ew6/tips_to_counter_drifter/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-14",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-14",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Powder Keg burn is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not remove the burn or stop Spirit Lasso. The barrel knockup is not treated as a Reactive Barrier trigger.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/holliday-barrel-knockup-doesnt-activate-reactive-barrier.96124/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-14",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-14",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The stun from Spirit Lasso can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Spirit Lasso actually applies stun; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. No shorter lasso duration or self-activation during stun is claimed. Powder Keg knockup is excluded.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/holliday-barrel-knockup-doesnt-activate-reactive-barrier.96124/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-63",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-63",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Love Bites spirit damage is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not block ordinary bullet damage, stop Sanguine Retreat or certify the incomplete Rake tooltip.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Nox_Nostra",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-67",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-67",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Bookwyrm burning path is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not remove Captivating Read immobilize, destroy Plot Armor or deny Rallying Charge healing.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Bookwyrm",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-67",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-67",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The immobilize from Captivating Read detonation can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Captivating Read detonation actually applies immobilize; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not prevent the root or guarantee absorption of its detonation. A slow alone is not this trigger.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Bookwyrm"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-10",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-10",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Pulse Grenade pulses is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not stop Paradoxical Swap or remove time slow. Kinetic Carbine is spirit damage despite weapon scaling; no bullet immunity claim is made.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Chrono",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-50",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-50",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Barrage projectiles is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. This is not Affliction removal or a guarantee against its non-lethal ultimate. Affliction item-proc attribution is deliberately unreviewed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1uuarhi/i_got_abused_by_slowing_hex_as_a_pocket_player/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-weapon-84",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-84",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Scrap Grenade repeated detonations is dealing bullet/weapon damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers. Does not answer Rat Swarm spirit damage, remove Royal Pestments, block reflected effects or negate Rule, Ratannia! protection.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://senseos.gg/guides/deadlock/how-to-counter-rat-king/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-weapon-80",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-80",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Slam Fire shots is dealing bullet/weapon damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers. Lycan Curse replaces abilities and weapon; transformed damage and bonus-health semantics are not covered by this rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.somethingawful.com/showthread.php?noseen=0&pagenumber=202&perpage=40&threadid=4065321",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-60",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-60",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Sinclair's own Vexing Bolt is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Assistant attribution, Rabbit Hex and copied ultimates are excluded; no imported counter for a copied hero is assumed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://denypick.com/heroes/sinclair/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-85",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-85",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Setup Bishop square damage is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it.",
+        "The square damage is credited to Solomon as hero damage; attribution has not been reproduced in a client test."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Do not stay in the squares to trigger it. No protection from Develop Queen checkmate/execution is established.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlockitembuilder.com/counter/solomon",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed. Bishop square attribution remains conditional; do not treat a piece as an independently verified trigger."
+      }
+    },
+    {
+      "id": "roster-reactive-85",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-85",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The immobilize from Rook Battery can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Rook Battery actually applies immobilize; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not prevent the root, remove pieces or defeat Kingside Knight invulnerability. Develop Queen execution is excluded.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlockitembuilder.com/counter/solomon"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-69",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-69",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Call Bell impact and explosion is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not remove Luggage Cart, prevent Hotel Guest or return you from the hotel.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1x4trmk/how_to_counter_doorman/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-spirit-58",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-58",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Screwjab Dagger repeated hits is dealing spirit damage in a concentrated window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not remove Lethal Venom or Petrifying Bola. A lethal venom hit may arrive before any useful proc; do not treat this as execute protection.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1uqpp0n/what_am_i_supposed_to_do_against_vyper/",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-76",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-76",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The immobilize from Grasping Hands can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Grasping Hands actually applies immobilize; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not destroy summons or remove Essence Theft. Summon damage attribution is not inferred.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wzao6h/how_do_i_counter_grave/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-dispel-76",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-76",
+      "goal": "survive",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Purge the applied non-ultimate Grasping Hands immobilize debuff to end its remaining effect.",
+      "conditions": [
+        "Grasping Hands immobilize is already applied.",
+        "You can use items and are not stunned or asleep; the cooldown is ready."
+      ],
+      "timing": "Activate after application and before the remaining effect resolves. Break contact to avoid reapplication; captured cooldown 45 seconds.",
+      "limitation": "No damage already dealt is undone, and no immunity to reapplication is granted. Cannot be used while stunned or asleep. The wall can reapply control. This rule does not promise removal of every summon effect or Essence Theft stacks.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wzao6h/how_do_i_counter_grave/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-20",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-20",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The stun from Stone Form landing can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Stone Form landing actually applies stun; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not stop Stone Form, prevent its healing or remove Kudzu Connection.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/upgrade-to-reactive-barrier-idea.116146/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-79",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-79",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The sleep from Naptime can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Naptime actually applies sleep; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not wake you or shorten sleep. A historical report says barrier damage may not count toward waking; no early-wake benefit is claimed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/rem-naptime-damage-threshold-does-not-proc-if-the-damage-is-vs-barriers.122311/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-65",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-65",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The stun or immobilize from Gutshot wall hit or Hex-Lined Snap Trap can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Gutshot wall hit or Hex-Lined Snap Trap actually applies stun or immobilize; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Gutshot without a wall stun is excluded. Does not prevent pure damage or Ira Domini execution.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Venator"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-reactive-25",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-25",
+      "goal": "survive",
+      "problems": [
+        "control",
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "The immobilize from Binding Word can trigger a barrier for follow-up damage.",
+      "conditions": [
+        "Binding Word actually applies immobilize; a missed or prevented disable does not qualify.",
+        "The proc is ready and damage follows while the barrier lasts."
+      ],
+      "timing": "Own it before the disable. Captured base barrier 325 for 10 seconds, cooldown 55 seconds. Absorption of the triggering hit is unconfirmed.",
+      "limitation": "Does not remove or shorten control, undo damage or guarantee survival. Does not shorten the escape timer or prevent Last Stand healing. No interrupt through upgraded Last Stand Unstoppable is claimed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Binding_Word"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-melee-35",
+      "itemId": "item-4204808176",
+      "enemyHeroId": "hero-35",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Passive melee resistance reduces the melee portion of Puddle Punch. No successful parry is required for that resistance.",
+      "conditions": [
+        "Puddle Punch's melee damage is a material part of the threat."
+      ],
+      "timing": "Equip before contact. Captured melee resistance: 18%. Conditional healing/returned damage require a successful parry and are not assumed by this rule.",
+      "limitation": "Does not prevent displacement, shorten control or protect against other damage types. The punch is explicitly parryable, but this recommendation only counts passive resistance. It does not stun Viscous, break The Cube or stop Goo Ball.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1vk9ebw/how_to_deal_with_viscous_puddle_punch/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-melee-27",
+      "itemId": "item-4204808176",
+      "enemyHeroId": "hero-27",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Passive melee resistance reduces the melee portion of Flying Slash. No successful parry is required for that resistance.",
+      "conditions": [
+        "Flying Slash's melee damage is a material part of the threat."
+      ],
+      "timing": "Equip before contact. Captured melee resistance: 18%. Conditional healing/returned damage require a successful parry and are not assumed by this rule.",
+      "limitation": "Does not prevent displacement, shorten control or protect against other damage types. Power Slash and Crimson Slash damage are not covered. Does not cancel the grapple or bypass Shadow Transformation immunity.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Damage_Resistance"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-healbane-4",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-4",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Healbane reduces incoming healing on Lady Geist while Life Drain is restoring her health.",
+      "conditions": [
+        "Lady Geist herself is receiving Life Drain healing and can be damaged.",
+        "You can land qualifying spirit damage on the healing recipient while they heal."
+      ],
+      "timing": "Land spirit damage during the healing window. Reviewed delivery examples: Infernus Afterburn, Kelvin Frost Grenade, Victor Pain Battery, McGinnis Heavy Barrage. Ordinary bullets alone do not apply Healbane.",
+      "limitation": "Healing denial is not a counter to Soul Exchange health swapping. Does not reduce damage dealt by the drain, remove Malice or protect you from burst. No stacking percentage is claimed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-toxic-4",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-4",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Toxic Bullets reduces incoming healing on Lady Geist while Life Drain is restoring her health.",
+      "conditions": [
+        "Lady Geist herself is receiving Life Drain healing and can be damaged.",
+        "You can maintain bullet hits on the healing recipient long enough to trigger the buildup."
+      ],
+      "timing": "Land enough bullet hits to trigger the bleed before or during the healing window; one hit is not assumed sufficient. Rebuild after removal.",
+      "limitation": "Healing denial is not a counter to Soul Exchange health swapping. Does not reduce damage dealt by the drain, remove Malice or protect you from burst. No stacking percentage is claimed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      }
+    },
+    {
+      "id": "roster-dispel-52",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-52",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Purge applied Djinn's Mark stacks before their delayed damage resolves.",
+      "conditions": [
+        "Djinn's Mark stacks are already applied and have not expired or been consumed.",
+        "You can use items and are not stunned or asleep; the cooldown is ready."
+      ],
+      "timing": "Use after marks build up, before their damage resolves. Break line of fire afterward to avoid immediate reapplication; captured cooldown 45 seconds.",
+      "limitation": "Does not undo damage already dealt, grant mark immunity or prevent Dust Devil or Traveler. The race between Mirage consuming marks and your purge has not been measured.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1s6pjcv/counter_mirage/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Community reports describe removing Djinn marks; pinned definitions identify delayed non-ultimate damage and a non-ultimate purge. This is not an in-game verification of event ordering."
       }
     }
   ]

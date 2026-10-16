@@ -26,6 +26,31 @@ export interface ThreatInventory {
   heroes:{heroId:string;name:string;development:boolean;abilities:ThreatAbility[]}[];
   retiredHeroIds:string[];
 }
+export interface RosterReview {
+  schemaVersion:number;clientVersion:number;reviewedAt:string;meaning:string;
+  heroes:{heroId:string;name:string;development:boolean;status:string;ruleIds:string[];
+    sourceUrls:string[];remainingQuestions:string[];
+    abilityBaselines:{className:string;description:string}[]}[];
+}
+
+/** Audit completion separately from coverage. A new/changed hero must not inherit a completed review. */
+export function auditRosterReview(game:GameSnapshot,catalog:Catalog,review:RosterReview){
+  if(review.schemaVersion!==1||!validDate(review.reviewedAt)||!unique(review.heroes.map(h=>h.heroId))) throw new Error('Invalid roster review');
+  for(const h of review.heroes){
+    if(!h.remainingQuestions.length||h.remainingQuestions.some(q=>!q?.trim())||!unique(h.ruleIds)||!h.ruleIds.length||
+      !unique(h.abilityBaselines.map(a=>a.className))||!h.abilityBaselines.length||
+      h.sourceUrls.some(url=>!catalog.manifest.sources.some(s=>s.url===url))||
+      h.ruleIds.some(id=>!catalog.rules.some(r=>r.id===id&&r.enemyHeroId===h.heroId))) throw new Error('Invalid roster review evidence');
+    const rules=catalog.rules.filter(r=>r.enemyHeroId===h.heroId);
+    if(rules.some(r=>!h.ruleIds.includes(r.id))||rules.some(r=>r.evidence.sourceUrls.some(url=>!h.sourceUrls.includes(url)))) throw new Error('Roster review is missing rules or sources');
+  }
+  return game.heroes.filter(h=>h.selectable).map(h=>{
+    const record=review.heroes.find(r=>r.heroId===h.id);
+    const current=record&&review.clientVersion===game.clientVersion&&record.development===h.development&&
+      record.abilityBaselines.length===h.abilities.length&&h.abilities.every(a=>record.abilityBaselines.some(b=>b.className===a.className&&b.description===normalized(a.description)));
+    return {heroId:h.id,status:!record?'unreviewed':current?'partial-source-reviewed':'needs-review',record};
+  });
+}
 const normalized=(text:string)=>text.replace(/\s+/g,' ').trim();
 const unique=(values:string[])=>new Set(values).size===values.length;
 const sourceValue=(record:unknown,path:string[]):unknown=>path.reduce<unknown>((value,key)=>
