@@ -33,4 +33,24 @@ describe('repeatable source import',()=>{
   it('detects changes to facts, removals and new identities',()=>{const before=run(),after=structuredClone(before);after.items[0].cost=1600;after.heroes=[];expect(diffGameData(before,after)).toMatchObject({items:{changed:['item-3']},heroes:{removed:['hero-1']}});expect(diffGameData(null,before).items.added).toEqual(['item-3']);});
   it('is deterministic for an unchanged source',()=>expect(diffGameData(run(),run()).items.changed).toEqual([]));
   it('strips markup for text rendering',()=>expect(plainText('<b>Effect</b><br>Limit')).toBe('Effect\nLimit'));
+  it('keeps innate and triggered stats separate and preserves source units and signs',()=>{
+    const changed={...item,properties:{Health:{value:'90',label:'Health',prefix:'{s:sign}'},Resist:{value:'25',label:'Resist',postfix:'%',prefix:'{s:sign}'},Range:{value:'45m',label:'Range',postfix:'m'},Penalty:{value:'-20',label:'Penalty',postfix:'%'}},tooltip_sections:[
+      {section_type:'innate',section_attributes:[{properties:['Health']}]},
+      {section_type:'passive',section_attributes:[{loc_string:'<b>When triggered</b>',important_properties:['Resist','StatusIcon'],properties:['Range','Penalty']}]}
+    ]};
+    const sections=run([hero],[ability,changed]).items[0].tooltipSections;
+    expect(sections.map(s=>s.heading)).toEqual(['Innate stats','Passive effect']);
+    expect(sections[0].stats.map(s=>s.value)).toEqual(['+90']);
+    expect(sections[1].description).toBe('When triggered');
+    expect(sections[1].stats.map(s=>s.value)).toEqual(['+25%','45m','-20%']);
+  });
+  it('shows extra meaningful base values without exposing inactive engine defaults as stats',()=>{
+    const changed={...item,properties:{AbilityCooldown:{value:35,label:'Cooldown',postfix:'s'},StunDuration:{value:'0.5',label:'Stun',postfix:'s'},AbilityDuration:{value:0,label:'Duration',disable_value:'0'},AbilityCooldownBetweenCharge:{value:'-1.0',label:'Charge Delay'},Missing:{label:'Missing'},Internal:{value:4}}};
+    expect(run([hero],[ability,changed]).items[0].tooltipSections).toEqual([{heading:'Additional base values',description:'',stats:[{name:'AbilityCooldown',label:'Cooldown',value:'35s'},{name:'StunDuration',label:'Stun',value:'0.5s'}]}]);
+  });
+  it('deduplicates referenced properties while preserving an explicit zero in a source tooltip',()=>{
+    const changed={...item,properties:{Value:{value:'0',label:'Value'}},tooltip_sections:[{section_type:'active',section_attributes:[{properties:['Value'],important_properties:['Value']}]}]};
+    expect(run([hero],[ability,changed]).items[0].tooltipSections[0].stats).toHaveLength(1);
+    expect(run([hero],[ability,changed]).items[0].tooltipSections[0].stats[0].value).toBe('0');
+  });
 });

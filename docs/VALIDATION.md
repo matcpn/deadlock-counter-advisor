@@ -1,5 +1,24 @@
 # Validation record
 
+## Item stats and source popovers — 2026-10-16
+
+- Regenerated normalized item data offline from immutable client-6785 snapshots.
+  Added source tooltip sections and formatted values; existing raw properties remain.
+  All 173 shop items have sections. Matchup rules and their dates were not changed.
+- npm run check passed with 168 tests, generated data/research verification,
+  TypeScript and production build. New tests cover source grouping, units, signs,
+  explicit zeros, missing icon-only references and exclusion of unused defaults.
+- Local browser: Debuff Reducer +90 health / +25% resist, Spirit Shielding threshold,
+  duration/resistance and components, plus Knockdown range/cooldown/stun values
+  checked. Wiki and pinned API hrefs inspected. Keyboard Enter and Escape, close
+  button, and outside-click dismissal checked. Added an explicit outside-click
+  handler after the browser's native dismissal alone was inconsistent.
+- Inspected 1280px desktop and 375px mobile placement. Popup scrolls within the
+  viewport and retains source links. No console errors observed. Mouse-enter
+  preview is implemented; automated checks exercised click and keyboard paths.
+- Non-failing build notice: generated game-catalog chunk is 502.71 kB minified,
+  64.35 kB gzip, just above Vite's 500 kB advisory threshold.
+
 ## Second distinct item pass — 2026-10-16
 
 - Rechecked upstream client/server 6785, revision 11132425; reviewed captured item

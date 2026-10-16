@@ -1,7 +1,7 @@
 import type { Catalog } from '../domain/types';
 import type { GameSnapshot } from '../domain/game-data';
 import type { browseBoard, BrowseItem } from '../engine/browse';
-import { Artwork } from './Artwork';
+import { ItemDetails } from './ItemDetails';
 
 export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browseBoard>;catalog:Catalog;game:GameSnapshot}) {
   const name=(id:string)=>catalog.heroes.find(h=>h.id===id)?.name??id;
@@ -16,7 +16,7 @@ export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browse
     {(()=>{
         const matches=column.results;
         const card=(r:BrowseItem)=><article className={'card advice-card '+r.item.category} key={r.item.id}>
-            <div className="item-title"><Artwork src={game.items.find(i=>i.id===r.item.id)?.image??null}/><div><h3>{r.item.name}</h3><strong>{r.item.cost.toLocaleString()} souls</strong></div></div>
+            <div className="item-heading">{(()=>{const item=game.items.find(i=>i.id===r.item.id);return item?<ItemDetails item={item} game={game}/>:<h3>{r.item.name}</h3>;})()}<strong>{r.item.cost.toLocaleString()} souls</strong></div>
             <div className="badges"><span>{r.item.category}</span><span className={r.item.activation==='active'?'active':''}>{r.item.activation==='conditional'?'CONDITIONAL PROC':r.item.activation.toUpperCase()}</span></div>
             <p>For {r.coveredEnemyIds.map(name).join(' + ')}.</p>
             {unique(r.rules.map(rule=>rule.mechanism)).map(text=><p key={text}>{text}</p>)}

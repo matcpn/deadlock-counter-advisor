@@ -1,5 +1,18 @@
 # Start here — continuation handoff
 
+## Item stats and source popovers — 2026-10-16
+
+Item names/icons in recommendations and the full shop catalog now open a shared
+stats panel: mouse preview, click/tap or keyboard activation to keep open. It shows
+source tooltip sections, base values with units, components, wiki and pinned API
+links. Escape, close and outside click dismiss it. The compact main flow remains.
+
+The repeatable importer preserves tooltipSections from the pinned raw snapshot;
+no new gameplay rules or numeric values were invented. Innate stats and triggered
+effects remain separate. Additional labeled base values are shown separately when
+the source omits them from its main tooltip. Base values exclude upgrades/scaling.
+All 173 source shop items have sections. See VALIDATION.md for checks/publication.
+
 ## Two distinct items per hero — 2026-10-16
 
 Implementation 3f04a49 is live. All 165 tests, Checks, Pages and the manual pinned

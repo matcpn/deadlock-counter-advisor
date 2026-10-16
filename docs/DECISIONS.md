@@ -1,5 +1,15 @@
 # Decisions and open questions
 
+## Inspect item facts without expanding matchup advice — 2026-10-16
+
+The user requested item links and actual tooltip numbers. Use a shared accessible
+popover on item titles in both recommendation and catalog cards. Hover previews;
+click/tap or keyboard activation keeps it open for reading and links. Import source
+tooltip sections and units so numbers refresh with the catalog. Preserve innate
+versus conditional grouping and identify values as base snapshot values, without
+mixing enhanced variants or hero scaling into them. Wiki links are current external
+references; the pinned API link identifies the actual data displayed.
+
 ## Distinct-item research target — 2026-10-16
 
 The user requested a second-item loop for under-covered heroes. Count unique eligible item IDs across all reviewed scenarios and stages, keeping this metric in research documentation. Do not add repeated rules to inflate depth or invent mechanics to meet the target. The generated report shares the coverage freshness gate and feeds the next loop. Meeting two options per hero is breadth, not complete scenario coverage or in-game verification.

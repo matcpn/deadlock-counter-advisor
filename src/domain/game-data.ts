@@ -10,6 +10,7 @@ export interface GameItem {
   activation: 'active' | 'non-active'; sourceActivation: string;
   image: string | null; description: string; componentIds: string[]; sourceTags: string[];
   properties: {name: string; value: string | null; label: string}[];
+  tooltipSections: {heading: string; description: string; stats: {name: string; label: string; value: string}[]}[];
 }
 export interface GameSnapshot {
   schemaVersion: 1; clientVersion: number; importedAt: string;
@@ -60,6 +61,46 @@ export function plainText(v: unknown): string {
   return v.replace(/<br\s*\/?\s*>/gi, '\n').replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').trim();
 }
 const description = (v: unknown): string => [...new Set(Object.values(object(v ?? {})).filter(x => typeof x === 'string').map(plainText).filter(Boolean))].join('\n\n');
+
+/** Preserve source tooltip grouping and units; no item mechanics are supplied by the UI. */
+function tooltipSections(item: Row): GameItem['tooltipSections'] {
+  const properties=object(item.properties??{}), used=new Set<string>();
+  const stat=(name:string)=>{
+    const raw=properties[name];
+    if(!raw) return []; // Some references are status icons, not numeric properties.
+    const p=object(raw),value=p.value==null?'':String(p.value).trim();
+    if(!value||!plainText(p.label)||used.has(name)) return [];
+    used.add(name);
+    const prefix=p.prefix==='{s:sign}'?(Number.parseFloat(value)>0?'+':''):plainText(p.prefix);
+    const suffix=plainText(p.postfix);
+    // Source strings can already include their unit (e.g. 45m), or a minus sign.
+    const formatted=(prefix&& !value.startsWith(prefix)?prefix:'')+value+(suffix&&!value.endsWith(suffix)?suffix:'');
+    return [{name,label:plainText(p.label),value:formatted}];
+  };
+  const sections:GameItem['tooltipSections']=[];
+  if(item.tooltip_sections!=null&&!Array.isArray(item.tooltip_sections)) throw new Error('Invalid tooltip sections');
+  for(const raw of (item.tooltip_sections??[]) as unknown[]){
+    const section=object(raw),attrs=section.section_attributes??[];
+    if(!Array.isArray(attrs)) throw new Error('Invalid tooltip attributes');
+    const heading=section.section_type==='innate'?'Innate stats':section.section_type==='active'?'Active effect':section.section_type==='passive'?'Passive effect':'Item effect';
+    for(const entry of attrs){
+      const a=object(entry);
+      const names=[...strings(a.elevated_properties),...strings(a.important_properties),...strings(a.properties)];
+      const stats=names.flatMap(stat),description=plainText(a.loc_string).replace(/\n{3,}/g,'\n');
+      if(stats.length||description)sections.push({heading,description,stats});
+    }
+  }
+  // Useful labeled base values (e.g. Knockdown's stun duration) may be omitted
+  // from tooltip_sections. Keep them separate rather than inventing an effect group.
+  const extra=Object.entries(properties).filter(([name,raw])=>{
+    const p=object(raw),v=p.value==null?'':String(p.value).trim();
+    if(!v||!Number.isFinite(Number.parseFloat(v))||Number.parseFloat(v)===0||v===String(p.disable_value))return false;
+    if(name==='AbilityCooldownBetweenCharge'&&Number.parseFloat(v)<0)return false;
+    return !!plainText(p.label);
+  }).flatMap(([name])=>stat(name));
+  if(extra.length)sections.push({heading:'Additional base values',description:'',stats:extra});
+  return sections;
+}
 
 export function normalizeGameData(rawHeroes: unknown, rawItems: unknown, rawColors: unknown,
   clientVersion: number, importedAt: string): GameSnapshot {
@@ -114,7 +155,7 @@ export function normalizeGameData(rawHeroes: unknown, rawItems: unknown, rawColo
         const component = byClass.get(name);
         if (!component || component.type !== 'upgrade') throw new Error(`Unresolved component ${name}`);
         return `item-${integer(component.id)}`;
-      }),sourceTags:strings(i.shop_filters),
+      }),sourceTags:strings(i.shop_filters),tooltipSections:tooltipSections(i),
       properties:Object.entries(object(i.properties ?? {})).map(([name,value]) => {
         const p = object(value);
         if(p.value != null && typeof p.value !== 'string' && !(typeof p.value === 'number'&&Number.isFinite(p.value))) throw new Error('Invalid property value');

@@ -1,5 +1,14 @@
 # Data model and recommendation contract
 
+## Imported item tooltips — 2026-10-16
+
+GameItem.tooltipSections stores sanitized source section text and formatted base
+stats (stable property name, label, value with source sign/unit). It preserves
+innate/active/passive boundaries, omits missing icon-only references, and puts
+additional meaningful labeled properties in their own section. Raw properties are
+still retained. Regeneration uses the same immutable snapshots and verification;
+the UI never invents item numbers or promotes these facts into interaction rules.
+
 ## Unpersonalized browse adapter — 2026-10-16
 
 The primary UI uses browseBoard: enemy IDs and optional active/owned/response filters

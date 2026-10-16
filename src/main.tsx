@@ -5,6 +5,7 @@ import type { GameItem, GameSnapshot } from './domain/game-data';
 import { reviewedCatalog, reviewAvailability } from './data/reviewed';
 import { AdviceBoard } from './components/AdviceBoard';
 import { Artwork } from './components/Artwork';
+import { ItemDetails } from './components/ItemDetails';
 import { ResearchCoverage } from './components/ResearchCoverage';
 import { browseBoard } from './engine/browse';
 import type { Scenario } from './domain/types';
@@ -15,7 +16,7 @@ const reviewDates = [...new Set([...reviewedCatalog.items,...reviewedCatalog.rul
 const heroName = (id:string) => heroes.find(h=>h.id===id)?.name ?? id;
 function ItemCard({item}:{item:GameItem}) {
   return <article className={'card '+item.category} style={{'--item':game.colors[item.category]} as React.CSSProperties}>
-    <div className="item-title"><Artwork src={item.image}/><div><h3>{item.name}</h3><span>{item.cost.toLocaleString()} souls</span></div></div>
+    <div className="item-heading"><ItemDetails item={item} game={game}/><strong>{item.cost.toLocaleString()} souls</strong></div>
     <div className="badges"><span>{item.category}</span><span className={item.activation==='active'?'active':''}>{item.activation==='active'?'ACTIVE':'NON-ACTIVE · trigger varies'}</span></div>
     <details><summary>Tooltip & source facts</summary><p className="tooltip">{item.description||'No description supplied; inspect source properties below.'}</p><p>Source activation: {item.sourceActivation}. A non-active item may have a conditional trigger.</p>
       <p>This catalog shows imported facts. Matchup advice is limited to the sourced cards above; mode availability remains unreviewed.</p>
