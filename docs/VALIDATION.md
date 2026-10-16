@@ -12,6 +12,9 @@
 - Browser verified Abrams 6/1/1 item placement, expanded Toxic Bullets player scope,
   and combined Abrams/Shiv prices. Desktop layout inspected; 375px viewport has
   no horizontal overflow (360px content width), no console errors. Override reset.
+- Published eccec49: Checks 38940946655 and Pages 38940946296 passed. Hosted
+  price labels and Abrams 6/1/1 placement confirmed. Local preview closed/server
+  stopped. Saved price-tiers.png; live demo left on Abrams, defaults remain empty.
 
 ## Abrams problem-row prototype — 2026-10-16
 

@@ -9,6 +9,8 @@ engine and research audits still evaluate gameplay stages independently.
 Abrams now has six Early options across three problem groups, Toxic Bullets in
 Mid/healing, and Unstoppable in Late/stun setup. This supersedes the repeated
 three-group-per-stage prototype below. No mechanics/data review dates changed.
+Published eccec49; Checks and Pages passed. Live Abrams placement and price labels
+verified. 179 tests pass; the working preview server was stopped.
 
 ## Abrams problem rows — 2026-10-16
 
