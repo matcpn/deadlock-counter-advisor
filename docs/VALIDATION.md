@@ -4,7 +4,11 @@
 
 UI-only removal; recommendation mechanics/data unchanged. Removed dead preference
 state and updated empty-stage wording. Strict TypeScript and production build
-passed; existing catalog chunk-size notice remains. Hosted verification pending.
+passed; existing catalog chunk-size notice remains. Published 6d35d80: Checks
+38924652812 and Pages 38924652986 passed (including all 175 tests). Hosted page
+has no Item preferences section; selecting Bebop still shows active and conditional
+options. No console errors. Saved no-item-preferences-live.png and restored empty
+selection.
 
 ## Defining threats and decision cards — 2026-10-16
 

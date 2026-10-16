@@ -2,6 +2,8 @@
 
 ## Item preferences removed — 2026-10-16
 
+Implementation 6d35d80 is live; Checks, Pages and hosted verification passed.
+
 Removed the Item preferences panel at the user's request. Enemy selection now uses
 all eligible active/passive items, no assumed owned items and the planning response
 window. Engine filters remain available in the background; card timing, conditions
