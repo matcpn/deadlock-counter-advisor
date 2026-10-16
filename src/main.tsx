@@ -26,7 +26,7 @@ function ItemCard({item}:{item:GameItem}) {
   </article>;
 }
 function App() {
-  const [enemies,setEnemies]=useState(['hero-6','hero-19']);
+  const [enemies,setEnemies]=useState<string[]>([]);
   const [heroSearch,setHeroSearch]=useState(''),[allowActives,setActives]=useState(true);
   const [itemSearch,setItemSearch]=useState(''),[category,setCategory]=useState('all'),[tag,setTag]=useState('all');
   const [responseWindow,setResponseWindow]=useState<NonNullable<Scenario['responseWindow']>>('unknown');

@@ -1,5 +1,10 @@
 # Start here — continuation handoff
 
+## Empty initial selection — 2026-10-16
+
+The user requested no preselected enemies. The page now starts with an empty
+selection; Abrams and Shiv remain ordinary selectable options.
+
 ## Development flag removed — 2026-10-16
 
 Implementation 17d1150 is live; all 159 tests, Checks and Pages passed. The deployed

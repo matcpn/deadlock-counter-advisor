@@ -1,5 +1,10 @@
 # Validation record
 
+## Empty initial selection — 2026-10-16
+
+Changed only the initial UI state to an empty typed enemy list. TypeScript and
+production build passed; existing empty-selection behavior is retained.
+
 ## Development metadata removal — 2026-10-16
 
 - Removed the field from normalized heroes, research inventory and review baselines,
