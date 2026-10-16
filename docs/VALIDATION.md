@@ -9,7 +9,11 @@
   intact. Existing ability/client review invalidation and Baba scenario tests pass.
 - npm run check passed: snapshot checksums/offline regeneration, research verification,
   159 tests across eight files, strict TypeScript and production build.
-- Publication pending.
+- Published 17d1150. Checks 38909851102 and Pages 38909850698 passed.
+  Reloaded the live site: Baba's checkbox has the exact name Baba, all 42 enemy
+  choices remain, and no development text exists even in collapsed content.
+  Inspected the rendered label, saved baba-no-flag-live.png and restored the full
+  hero list. No browser console errors observed.
 
 ## Enemy-first UI cleanup — 2026-10-16
 

@@ -2,6 +2,9 @@
 
 ## Development flag removed — 2026-10-16
 
+Implementation 17d1150 is live; all 159 tests, Checks and Pages passed. The deployed
+Baba label and absence of development text were verified.
+
 At the user's request, development metadata is no longer tracked. Removed the
 normalized field, selector/research labels, roster review baseline comparison,
 generated report labels and Baba caveat. Raw source snapshots remain intact.
