@@ -8,14 +8,7 @@ export function recommend(catalog: Catalog, scenario: Scenario, weights: Weights
   parseCatalog(catalog);
   validateScenario(scenario, catalog);
   validateWeights(weights);
-  const asOf = options.asOf ?? new Date().toISOString().slice(0, 10);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf) || !Number.isFinite(Date.parse(asOf)) || new Date(asOf).toISOString().slice(0,10) !== asOf) throw new Error('Invalid evaluation date');
-  const eligible = (e: Catalog['items'][number]['evidence']) => options.demo
-    ? e.status === 'demo'
-    : catalog.manifest.kind === 'production' && (e.status === 'verified' ||
-      (options.allowSourceReviewed === true && e.status === 'source-reviewed')) && !!options.patch &&
-      catalog.manifest.gamePatchId === options.patch && e.patch === options.patch &&
-      (!e.expiresAt || asOf < e.expiresAt) && (!e.reviewedAt || asOf >= e.reviewedAt);
+  const eligible = evidenceEligibility(catalog,options);
   const results: Recommendation[] = [];
   for (const item of catalog.items) {
     if (!eligible(item.evidence) || scenario.ownedItemIds.includes(item.id) ||
@@ -36,4 +29,16 @@ export function recommend(catalog: Catalog, scenario: Scenario, weights: Weights
     }
   }
   return results.sort((a,b) => Number(b.affordable)-Number(a.affordable) || b.score-a.score || a.item.id.localeCompare(b.item.id));
+}
+
+/** Shared freshness gate for personalized recommendations and the unpersonalized browse view. */
+export function evidenceEligibility(catalog:Catalog, options:RecommendationOptions = {}) {
+  const asOf = options.asOf ?? new Date().toISOString().slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf) || !Number.isFinite(Date.parse(asOf)) || new Date(asOf).toISOString().slice(0,10) !== asOf) throw new Error('Invalid evaluation date');
+  return (e: Catalog['items'][number]['evidence']) => options.demo
+    ? e.status === 'demo'
+    : catalog.manifest.kind === 'production' && (e.status === 'verified' ||
+      (options.allowSourceReviewed === true && e.status === 'source-reviewed')) && !!options.patch &&
+      catalog.manifest.gamePatchId === options.patch && e.patch === options.patch &&
+      (!e.expiresAt || asOf < e.expiresAt) && (!e.reviewedAt || asOf >= e.reviewedAt);
 }

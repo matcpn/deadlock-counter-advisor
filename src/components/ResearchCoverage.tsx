@@ -22,7 +22,7 @@ export function ResearchCoverage({game,catalog}:{game:GameSnapshot;catalog:Catal
   return <details className="research-coverage">
     <summary>Roster research & coverage · {supported}/{coverage.length} enemies with partial advice</summary>
     <p>Every source-selectable hero has a main-ability inventory. Counter research is incomplete. A conditional cell means some advice exists for that problem, not that every ability or build is covered.</p>
-    <p>Client {inventory.clientVersion} · tooltip triage {inventory.triagedAt} · advice availability checked {asOf} UTC. This view spans all supported player heroes; your budget, inventory and response window still determine the cards above.</p>
+    <p>Client {inventory.clientVersion} · tooltip triage {inventory.triagedAt} · advice availability checked {asOf} UTC. This view spans all supported player heroes; the cards above combine problem types and preserve each rule’s conditions and player scope.</p>
     <label className="search">Find a hero in the research inventory<input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Filter coverage and abilities"/></label>
     <div className="coverage-scroll" role="region" aria-label="All-hero coverage matrix" tabIndex={0}>
       <table className="coverage-table"><caption>Enemy × problem · expand a populated cell for stages and scope</caption>

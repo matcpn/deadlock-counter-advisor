@@ -2,6 +2,10 @@
 
 ## Current agenda — 2026-10-16
 
+UI cleanup delivered: enemy-first selection and combined stage item lists. Player,
+build, budget, problem tabs, demo preview and goal headings removed from the main
+flow at user request. Scoped rules and the personalized engine remain in the model.
+
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published

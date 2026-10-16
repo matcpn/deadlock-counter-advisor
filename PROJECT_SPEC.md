@@ -1,5 +1,14 @@
 # Product specification
 
+## Current simplified flow — 2026-10-16
+
+At the user's request, select enemies and browse combined item lists for Early / Mid /
+Late. No player hero, build, souls, problem tabs, demo toggle or goal headings.
+Each item appears once per stage with price, category, activation, mechanism and
+expandable conditions/sources. Player-specific delivery scope remains labeled.
+No assumed player or budget; no affordability buckets. Model and personalized
+engine retain the original dimensions. This supersedes the UI sequence below.
+
 ## Product outcome
 
 Help a player make the next useful item purchase against the threats in their

@@ -1,5 +1,19 @@
 # Start here — continuation handoff
 
+## Enemy-first UI cleanup — 2026-10-16
+
+The user requested a simpler UI. Enemy selection now drives one combined item list
+per Early / Mid / Late stage. Removed player/build/budget inputs, problem tabs,
+synthetic preview, goal headings and the long beta banner. Data/review details are
+collapsed in the footer; research remains collapsed. Active, owned-item and response
+preferences remain optional. Prices remain visible without affordability claims.
+
+src/engine/browse.ts retains rule scopes/conditions and stage/freshness eligibility,
+merges items across goals/problems, and orders by price then shared coverage.
+Restricted player delivery is labeled on cards; no hidden Infernus/default budget.
+The original personalized engine and synthetic test fixtures remain available.
+See VALIDATION.md for actual checks and publication state.
+
 ## Whole-roster source review — 2026-10-16
 
 Implementation e99e02d is live. Checks, Pages and the manual pinned refresh passed;

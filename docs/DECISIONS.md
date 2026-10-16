@@ -1,5 +1,20 @@
 # Decisions and open questions
 
+## Enemy-first UI — 2026-10-16
+
+The user explicitly removed problem tabs, synthetic preview, player hero/build/souls
+inputs, goal headings and the long release disclaimer from the main flow. This
+supersedes earlier visible goal/budget grouping requirements. Keep those concepts
+in the model and personalized engine for future use; do not hide an assumed player
+hero or budget behind the simplified UI.
+
+The browse adapter combines all eligible problem/goal rules per item and stage,
+orders by price then shared enemy coverage, and retains each rule's scope and
+conditions. It does not compare objective scores or claim affordability. Limited
+player delivery routes are labeled on cards; detailed prerequisites, timing and
+sources expand in place. Active/owned/response preferences remain optional.
+Research and source metadata remain collapsed. No mechanics or evidence changed.
+
 ## Whole-roster completion boundary — 2026-10-16
 
 The user's "loop until all heroes are done" authorizes continuing the batch work

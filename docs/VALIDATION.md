@@ -1,5 +1,20 @@
 # Validation record
 
+## Enemy-first UI cleanup — 2026-10-16
+
+- npm run check passed: immutable snapshot and generated research verification,
+  159 tests across eight files, strict TypeScript and production build. An initial
+  JSX delimiter error was fixed before this successful final run.
+- Four browse-adapter tests cover merging goals/problems without duplicate items,
+  retaining scoped rules, Infernus as an enemy, stage eligibility, price ordering,
+  ownership/active/response filters, empty selection, and evidence expiry/patch/demo
+  exclusions. Personalized engine tests still pass; no gameplay data changed.
+- Local browser checks confirmed removed controls/headings, combined stage lists,
+  expandable extra items and evidence, limited Infernus delivery labels, active
+  filtering and selection of Infernus as an enemy. Desktop 1280px and mobile 375px
+  layouts inspected; mobile document width 360px. No console errors observed.
+- Publication pending.
+
 ## Whole-roster source review — 2026-10-16
 
 - Rechecked public steam-info: client/server 6785, revision 11132425, unchanged.

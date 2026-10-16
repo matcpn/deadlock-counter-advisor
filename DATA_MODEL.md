@@ -1,5 +1,15 @@
 # Data model and recommendation contract
 
+## Unpersonalized browse adapter — 2026-10-16
+
+The primary UI uses browseBoard: enemy IDs and optional active/owned/response filters
+produce a deduplicated item list for each stage across all problems and goals.
+It shares the personalized engine's evidence eligibility gate. The existing release
+adapter still pauses on item/patch drift. Player scope remains attached to each
+rule and appears on restricted cards; there is no assumed player, build or budget.
+Sorting is by price, shared enemy count and stable item ID, without cross-goal score
+aggregation. Personalized recommend() and its goal/budget model remain intact.
+
 ## Source-traced threat inventory — 2026-10-15
 
 A separate research layer now stores per-ability function tags, exact source spans,
