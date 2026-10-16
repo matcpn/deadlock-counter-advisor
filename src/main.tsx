@@ -26,7 +26,7 @@ function ItemCard({item,budget}:{item:GameItem;budget:number}) {
 }
 function App() {
   const [heroId,setHero]=useState('hero-1'),[enemies,setEnemies]=useState(['hero-6','hero-19']);
-  const [heroSearch,setHeroSearch]=useState(''),[problem,setProblem]=useState<Problem>('control');
+  const [heroSearch,setHeroSearch]=useState(''),[problem,setProblem]=useState<Problem>('burst');
   const [budget,setBudget]=useState(1800),[allowActives,setActives]=useState(true),[build,setBuild]=useState<Build>('spirit');
   const [demo,setDemo]=useState(false),[itemSearch,setItemSearch]=useState(''),[category,setCategory]=useState('all'),[tag,setTag]=useState('all');
   const [responseWindow,setResponseWindow]=useState<NonNullable<Scenario['responseWindow']>>('unknown');
@@ -46,7 +46,7 @@ function App() {
   const selected=problemAreas.find(p=>p.id===problem)!;
   return <main style={{'--weapon':game.colors.weapon,'--vitality':game.colors.vitality,'--spirit':game.colors.spirit} as React.CSSProperties}>
     <header><span className="eyebrow">DEADLOCK / COUNTER ADVISOR</span><h1>Read the fight. Find your options.</h1><p>Your hero and their threats up front. Problems and stages organized below.</p></header>
-    <aside className="notice"><strong>First sourced recommendations · research beta</strong><p>Client {game.clientVersion} · {game.counts.selectableHeroes} source-selectable heroes · {game.items.length} source shop items · pulled {game.importedAt.slice(0,10)} UTC.</p><p>Source review: {reviewedCatalog.items[0].evidence.reviewedAt}. Advice is conditional and has not been tested in-game. Community data may lag the game.</p></aside>
+    <aside className="notice"><strong>Sourced recommendations · research beta</strong><p>Client {game.clientVersion} · {game.counts.selectableHeroes} source-selectable heroes · {game.items.length} source shop items · pulled {game.importedAt.slice(0,10)} UTC.</p><p>Source review: {reviewedCatalog.items[0].evidence.reviewedAt}. Advice is conditional and has not been tested in-game. Community data may lag the game.</p></aside>
     <section className="scenario" aria-label="Your scenario">
       <div className="player-row"><Artwork src={player.portrait}/><label>Your hero<select value={heroId} onChange={e=>{setHero(e.target.value);setEnemies(ids=>ids.filter(id=>id!==e.target.value));}}>{heroes.map(h=><option value={h.id} key={h.id}>{h.name}{h.development?' · development':''}</option>)}</select></label></div>
       <fieldset className="threats"><legend>Who is causing problems? · {enemies.length} selected</legend>
@@ -59,7 +59,7 @@ function App() {
     </section>
     <section aria-label="Problem areas" className="advisor"><h2>Browse by problem</h2><div className="problem-tabs" aria-label="Problem views">{problemAreas.map(p=><button key={p.id} aria-pressed={problem===p.id} onClick={()=>setProblem(p.id)}>{p.label}</button>)}</div><p>{selected.description}</p>
       <label className="check demo-toggle"><input type="checkbox" checked={demo} onChange={e=>setDemo(e.target.checked)}/>Preview layout with invented demo items</label>
-      {!demo&&<><p className="coverage-note">{reviewedCatalog.manifest.coverage.note}</p>{reviewIssue?<div className="empty" role="status">{reviewIssue}</div>:<><p className="coverage-note" role="status">{uncovered.length?'No eligible advice for '+uncovered.map(heroName).join(' + ')+' in this problem view with these preferences.':enemies.length?'Options found for the selected threats; check each card’s conditions.':'Select enemies to see options.'}</p>{problem==='burst'&&<p>Immediate burst survival is still unresolved. Browse Control & combos for stun responses or Damage over time for applied bleed.</p>}{responseWindow==='stunned-or-slept'&&<p>Active responses that cannot be used while stunned or asleep are hidden. Passive purchases must already be equipped.</p>}<AdviceBoard board={liveBoard} catalog={reviewedCatalog} game={game} budget={budget}/></>}</>}
+      {!demo&&<><p className="coverage-note">{reviewedCatalog.manifest.coverage.note}</p>{reviewIssue?<div className="empty" role="status">{reviewIssue}</div>:<><p className="coverage-note" role="status">{uncovered.length?'No eligible advice for '+uncovered.map(heroName).join(' + ')+' in this problem view with these preferences.':enemies.length?'Options found for the selected threats; check each card’s conditions.':'Select enemies to see options.'}</p>{problem==='burst'&&<p>Match the damage pattern: melee, bullets, spirit damage or damage after a disable. Barriers have timing limits; no card guarantees survival.</p>}{responseWindow==='stunned-or-slept'&&<p>Active responses that cannot be used while stunned or asleep are hidden. Passive purchases must already be equipped.</p>}<AdviceBoard board={liveBoard} catalog={reviewedCatalog} game={game} budget={budget}/></>}</>}
 
       {demo&&<p className="demo-warning">Synthetic layout preview only. Invented items and prices. Demo coverage is limited to Infernus, Abrams and Shiv; other selected heroes have no demo coverage.</p>}
       {demo&&demoPlayer&&<AdviceBoard board={board} catalog={demoCatalog} game={game} budget={budget} demo/>}

@@ -1,5 +1,77 @@
 # Community counter research — 2026-10-12
 
+## Burst-defense expansion — 2026-10-15
+
+The published catalog now contains 25 source-reviewed rules / 12 items. This section
+supersedes the first-slice hold on Reactive Barrier only for follow-up damage. No
+opening-hit ordering or guaranteed survival claim has been resolved. Public
+steam-info was rechecked and still reports client 6785; no redundant snapshot was
+created. All facts below were compared with the existing immutable client 6785
+items and hero abilities. No in-game tests were performed.
+
+### Evidence actually read and how it was used
+
+- [Abrams combo discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1sawbl7/is_there_anyway_to_counter_phantom_strike_abrams/):
+  proposes Rebuttal, Close Quarters and Reactive Barrier. Pinned properties confirm
+  18% and 20% melee resistance for the first two. Use that unconditional benefit,
+  not disputed guaranteed parry timing or commenters' stacking arithmetic. Relative
+  comment dates do not establish a patch baseline.
+- [Reactive Barrier](https://www.deadlock.io/en/items/reactive-barrier),
+  [Grit](https://www.deadlock.io/en/items/grit),
+  [Weapon Shielding](https://www.deadlock.io/en/items/weapon-shielding),
+  [Spirit Shielding](https://www.deadlock.io/en/items/spirit-shielding), and
+  [barrier mechanics](https://www.deadlock.io/en/mechanics/shields-and-barriers):
+  tooltips and usage explanations distinguish before-damage activation, control
+  triggers and damage-threshold triggers. The mechanics guide displays September
+  20, 2026; individual item pages have differing snapshot dates. Item data shares
+  Deadlock API lineage, so these are not independent confirmations. Current
+  numbers come from our pinned snapshot, not an assumed freshest webpage.
+- [Community Haze / Infernus discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/):
+  supports Metal Skin against Haze bullets and Dispel against applied Infernus
+  burn. Reject blanket claims that Haze can deal no damage; current Fixation text
+  includes a spirit-damage upgrade. Wraith Full Auto also includes spirit damage.
+- [Metal Skin community report](https://forums.playdeadlock.com/threads/interaction-of-metal-skin-with-hero-passive-abilities-and-passive-items-dependent-on-bullets.37903/):
+  October 12, 2024 user report describes passive buildup through immunity. This is
+  historical caution, not Valve confirmation or certification of current behavior.
+  Its old melee-immunity wording is not adopted; current text says bullet immunity.
+- Reopened Rebuttal and Reactive Barrier wiki pages have outdated numeric values.
+  Do not use them for current values. Two older Reactive Barrier Reddit threads and
+  another Metal Skin discussion could not be retrieved; snippets are not evidence.
+  The official May 8, 2025 forum post links onward to a shop-rework article but
+  contains no direct ordering proof; it is not cited as proof of these interactions.
+
+### Release boundaries
+
+| Defense | Covered pattern | Excluded conclusion |
+| --- | --- | --- |
+| Rebuttal / Close Quarters | Abrams melee follow-up | Guaranteed parry, all-damage protection or additive stacking |
+| Grit | Anticipated ordinary damage from Abrams, Shiv, Haze, Wraith or Bebop | Control immunity, undoing damage or Shiv execute prevention |
+| Reactive Barrier | Follow-up after Abrams wall/ultimate stun, Haze sleep, Wraith Telekinesis silence | Absorbing the triggering hit or treating every displacement as a trigger; no Bebop hook rule |
+| Weapon Shielding | Haze/Wraith bullet pressure; static resist plus conditional barrier | Barrier already present before incoming damage or spirit protection |
+| Spirit Shielding | Bebop bomb spirit damage / Infernus Afterburn | Guaranteed survival of one bomb, burn removal or guaranteed proc |
+| Metal Skin | Haze/Wraith bullet portion | Total immunity, melee immunity or confirmed passive-proc prevention |
+| Dispel Magic | Applied Infernus Afterburn (community report) | Preventing reapplication or undoing damage |
+| Debuff Reducer | Haze Sleep Dagger duration | Cleansing sleep or guaranteed response timing |
+
+All generic personal-defense rules explicitly list the currently source-selectable
+player roster, excluding the enemy itself. This broadens the original three
+personal-defense rules too. It is an inference from hero-independent item use, not
+certified synergy for all 42 heroes. The four healing-denial rules stay Infernus-only
+because their delivery assumptions depend on his damage application.
+
+Grit and Metal Skin require a while-actionable response window. This is a conservative
+recommendation prerequisite, not a newly certified item-specific casting exception.
+Stages and scores remain editorial. Rules require readiness, relevant damage and
+surviving until a conditional proc can help. Source review still expires November
+14 UTC and never becomes verified merely because the importer or tests pass.
+
+Next mechanical checks: practical Reactive Barrier event ordering, controlled-item
+activation exceptions, damage-threshold measurement/refresh interactions, and direct
+current-client tests of the two community-reported removals. Next useful app feature:
+saved/shareable scenarios for repeatable testing; chase/disruption coverage remains
+an independent research gap.
+
+
 ## First published slice review — 2026-10-15
 
 The October 12 ledger is preserved as historical research. Published outcomes are

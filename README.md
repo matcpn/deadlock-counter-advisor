@@ -1,8 +1,9 @@
 # Deadlock Counter Advisor
 
 A contextual advisor prototype with an imported, version-pinned game catalog.
-**First source-reviewed beta: Infernus versus Abrams/Shiv.** Seven conditional
-rules cover control, applied bleed and enemy healing. Advice has sources and limits,
+**Source-reviewed beta: 25 conditional rules across 12 items.** Personal defenses
+cover selected problems against Abrams, Shiv, Haze, Wraith, Bebop and Infernus.
+Healing-denial advice remains Infernus-specific. Advice has sources and limits,
 but has not been tested in-game. Synthetic items remain an opt-in layout preview.
 Start with
 [docs/HANDOFF.md](docs/HANDOFF.md).
@@ -38,8 +39,8 @@ commands, art provenance and manual GitHub refresh workflow.
   checks and component graph validation. See [data review](docs/DATA_REVIEW.md).
 - Product specification, full handoff, context history, data design, and roadmap.
 
-Imported heroes and items are browseable source facts. The first recommendation
-slice uses five real items with explicit prerequisites, application timing, review
+Imported heroes and items are browseable source facts. The reviewed recommendation
+catalog uses twelve real items with explicit prerequisites, application timing, review
 dates and source links. Optional preferences include owned items and ability to
 respond while controlled. Unsupported heroes/problems/goals are visibly empty.
 Scoring and stage placement are editorial, not calibrated effectiveness estimates.

@@ -1,5 +1,23 @@
 # Decisions and open questions
 
+## Conditional burst coverage — 2026-10-15
+
+- Publish bounded source-reviewed defenses rather than hold every burst option for
+  unresolved event ordering. Reactive Barrier explicitly covers follow-up damage;
+  triggering-hit absorption remains unknown and visible. No verified promotion.
+- Expand generic personal defenses to the current selectable player roster and six
+  reviewed enemy heroes. Preserve Infernus-specific anti-heal application scope.
+  Current tooltips govern damage types; community blanket immunity and parry claims
+  are not adopted. Shared API-derived sites count as one data lineage.
+- Add while-actionable response metadata for Grit and Metal Skin. Hide these when
+  already stunned/asleep; do not equate barriers with cleanse or control immunity.
+- Start on Burst damage and reveal alternatives beyond three in each objective /
+  affordability group. Group identical prerequisites by enemy names so multiple
+  threat rules are alternatives, not a requirement to face every trigger at once.
+- Keep facts, evidence, scope and stage rationale in versioned data. No new inputs,
+  live runtime data dependency, scoring change or automatic rule certification.
+
+
 ## Source-reviewed beta release — 2026-10-15
 
 The user authorized implementing the first real sourced slice. Accessible evidence

@@ -128,7 +128,7 @@ export function parseCatalog(input: unknown): Catalog {
       players.forEach(id => reference(id, heroIds, path));
     }
     if (r.conditions !== undefined && !strings(r.conditions, `${path}.conditions`).length) fail(path, 'Conditions must not be empty');
-    if (r.response !== undefined) choice(r.response, ['passive', 'before-control', 'after-debuff'], `${path}.response`);
+    if (r.response !== undefined) choice(r.response, ['passive', 'before-control', 'after-debuff', 'while-actionable'], `${path}.response`);
     if (r.stageReason !== undefined) string(r.stageReason, `${path}.stageReason`);
     if (row(r.evidence, path).status === 'source-reviewed' &&
         (!r.playerHeroIds || !r.conditions || !r.response || !r.stageReason)) fail(path, 'Source-reviewed rule requires scope, conditions, response and stage rationale');

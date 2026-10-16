@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "first-slice-2026-10-15",
+    "dataVersion": "burst-coverage-2026-10-15",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -41,11 +41,59 @@
         "url": "https://deadlocklabs.gg/builds/abrams-guide-to-counterbuying-809744/",
         "title": "kurii: Guide to Counterbuying · updated Sep 15, 2026",
         "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-reactive",
+        "url": "https://www.deadlock.io/en/items/reactive-barrier",
+        "title": "Reactive Barrier tooltip and usage · shared API lineage",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-barriers",
+        "url": "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+        "title": "Barrier mechanics guide · updated Sep 20, 2026",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-grit",
+        "url": "https://www.deadlock.io/en/items/grit",
+        "title": "Grit tooltip and usage · shared API lineage",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-weapon",
+        "url": "https://www.deadlock.io/en/items/weapon-shielding",
+        "title": "Weapon Shielding tooltip and usage · shared API lineage",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-spirit",
+        "url": "https://www.deadlock.io/en/items/spirit-shielding",
+        "title": "Spirit Shielding tooltip and usage · shared API lineage",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-abrams",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1sawbl7/is_there_anyway_to_counter_phantom_strike_abrams/",
+        "title": "Community Abrams combo discussion · date/patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-haze",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/",
+        "title": "Community Haze / Infernus discussion · date/patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "burst-metal",
+        "url": "https://forums.playdeadlock.com/threads/interaction-of-metal-skin-with-hero-passive-abilities-and-passive-items-dependent-on-bullets.37903/",
+        "title": "Community Metal Skin interaction report · Oct 12, 2024; historical caution",
+        "accessedAt": "2026-10-15"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: Infernus versus Abrams/Shiv, limited to control, damage over time and enemy healing. Seven conditional rules, five items. No in-game interaction tests. Burst, chase and disruption coverage remain open."
+      "note": "Source-reviewed beta: 25 conditional rules / 12 items. Personal defenses cover selected problems against Abrams, Shiv, Haze, Wraith, Bebop and Infernus for all source-selectable player heroes. Healing-denial advice remains Infernus-specific. No in-game tests; chase and disruption coverage remain open."
     }
   },
   "heroes": [
@@ -370,6 +418,229 @@
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
       }
+    },
+    {
+      "id": "item-1672893796",
+      "name": "Grit",
+      "category": "vitality",
+      "activation": "active",
+      "cost": 800,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
+    },
+    {
+      "id": "item-1644605047",
+      "name": "Reactive Barrier",
+      "category": "vitality",
+      "activation": "conditional",
+      "cost": 1600,
+      "componentIds": [
+        "item-1672893796"
+      ],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
+    },
+    {
+      "id": "item-4204808176",
+      "name": "Rebuttal",
+      "category": "vitality",
+      "activation": "conditional",
+      "cost": 800,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial. The recommended melee-resistance benefit itself does not require the item’s conditional trigger."
+      }
+    },
+    {
+      "id": "item-1342610602",
+      "name": "Close Quarters",
+      "category": "weapon",
+      "activation": "conditional",
+      "cost": 800,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.5,
+        "weapon": 0.8,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial. The recommended melee-resistance benefit itself does not require the item’s conditional trigger."
+      }
+    },
+    {
+      "id": "item-805079544",
+      "name": "Weapon Shielding",
+      "category": "vitality",
+      "activation": "conditional",
+      "cost": 1600,
+      "componentIds": [
+        "item-1672893796"
+      ],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
+    },
+    {
+      "id": "item-112198670",
+      "name": "Spirit Shielding",
+      "category": "vitality",
+      "activation": "conditional",
+      "cost": 1600,
+      "componentIds": [
+        "item-1672893796"
+      ],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
+    },
+    {
+      "id": "item-1378931225",
+      "name": "Metal Skin",
+      "category": "vitality",
+      "activation": "active",
+      "cost": 3200,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
     }
   ],
   "rules": [
@@ -395,7 +666,47 @@
       ],
       "response": "passive",
       "playerHeroIds": [
-        "hero-1"
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
       ],
       "stageReason": "Consider from lane onward if this specific problem persists; buy only when it justifies delaying core items. This is an editorial stage judgment, not a prescribed build.",
       "evidence": {
@@ -414,7 +725,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference: current tooltips describe stuns and duration reduction; an older wiki explicitly lists both abilities. Wiki numbers conflict with the snapshot, so no numeric stun or parry window is claimed."
+        "note": "Source-reviewed inference: current tooltips describe stuns and duration reduction; an older wiki explicitly lists both abilities. Wiki numbers conflict with the snapshot, so no numeric stun or parry window is claimed. Generic personal defense scope applies across source-selectable player heroes; no hero-specific synergy or build is certified."
       }
     },
     {
@@ -439,7 +750,47 @@
       ],
       "response": "before-control",
       "playerHeroIds": [
-        "hero-1"
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
       ],
       "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
       "evidence": {
@@ -458,7 +809,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference from current immunity/stun descriptions and community matchup advice. Only the stun aspect is supported here; no blanket charge cancellation claim."
+        "note": "Source-reviewed inference from current immunity/stun descriptions and community matchup advice. Only the stun aspect is supported here; no blanket charge cancellation claim. Generic personal defense scope applies across source-selectable player heroes; no hero-specific synergy or build is certified."
       }
     },
     {
@@ -483,7 +834,47 @@
       ],
       "response": "after-debuff",
       "playerHeroIds": [
-        "hero-1"
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
       ],
       "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
       "evidence": {
@@ -502,7 +893,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Community-reported knife removal agrees with the current non-ultimate purge tooltip and knife description. Specific interaction has not been reproduced in-game; confidence is limited."
+        "note": "Community-reported knife removal agrees with the current non-ultimate purge tooltip and knife description. Specific interaction has not been reproduced in-game; confidence is limited. Generic personal defense scope applies across source-selectable player heroes; no hero-specific synergy or build is certified."
       }
     },
     {
@@ -682,6 +1073,1537 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed scenario inference from the bullet-buildup tooltip and guide anti-heal grouping. This is an alternative application route, not an instruction to stack it with Healbane. Exact shots depend on buildup and are not claimed."
+      }
+    },
+    {
+      "id": "abrams-rebuttal-melee",
+      "itemId": "item-4204808176",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "The item's passive 18% melee resistance targets the melee portion of Abrams's combo. No successful parry is required for this resistance.",
+      "conditions": [
+        "Abrams is following up with melee attacks; this is not a defense against every source of his damage."
+      ],
+      "timing": "Equip before the fight. The melee resistance is separate from the item’s conditional damage or parry rewards.",
+      "limitation": "Does not shorten control, guarantee a parry or protect against every damage type. No additive stacking or guaranteed combo survival is assumed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sawbl7/is_there_anyway_to_counter_phantom_strike_abrams/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "A community commenter specifically proposes these melee-resistance purchases for Abrams combos; current extracted properties corroborate 18% and 20%. Old Rebuttal wiki values differ. We use only the unconditional melee-resistance benefit, not disputed parry timing or stacking claims."
+      }
+    },
+    {
+      "id": "abrams-close-quarters-melee",
+      "itemId": "item-1342610602",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "The item's passive 20% melee resistance targets the melee portion of Abrams's combo. No successful parry is required for this resistance.",
+      "conditions": [
+        "Abrams is following up with melee attacks; this is not a defense against every source of his damage."
+      ],
+      "timing": "Equip before the fight. The melee resistance is separate from the item’s conditional damage or parry rewards.",
+      "limitation": "Does not shorten control, guarantee a parry or protect against every damage type. No additive stacking or guaranteed combo survival is assumed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sawbl7/is_there_anyway_to_counter_phantom_strike_abrams/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "A community commenter specifically proposes these melee-resistance purchases for Abrams combos; current extracted properties corroborate 18% and 20%. Old Rebuttal wiki values differ. We use only the unconditional melee-resistance benefit, not disputed parry timing or stacking claims."
+      }
+    },
+    {
+      "id": "grit-hero-6",
+      "itemId": "item-1672893796",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A manually activated barrier can cushion incoming damage if applied before it lands.",
+      "conditions": [
+        "The item is ready and you can use it before the expected damage, within its short barrier window."
+      ],
+      "timing": "Activate shortly before the damage. Captured base values: 200 barrier for 4 seconds, 60-second cooldown.",
+      "limitation": "No control immunity, cleanse or damage reversal. The barrier can run out; it is not guaranteed combo survival or protection against Shiv’s Killing Blow execute.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/grit",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "grit-hero-19",
+      "itemId": "item-1672893796",
+      "enemyHeroId": "hero-19",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A manually activated barrier can cushion incoming damage if applied before it lands.",
+      "conditions": [
+        "The item is ready and you can use it before the expected damage, within its short barrier window."
+      ],
+      "timing": "Activate shortly before the damage. Captured base values: 200 barrier for 4 seconds, 60-second cooldown.",
+      "limitation": "No control immunity, cleanse or damage reversal. The barrier can run out; it is not guaranteed combo survival or protection against Shiv’s Killing Blow execute.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/grit",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "grit-hero-13",
+      "itemId": "item-1672893796",
+      "enemyHeroId": "hero-13",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A manually activated barrier can cushion incoming damage if applied before it lands.",
+      "conditions": [
+        "The item is ready and you can use it before the expected damage, within its short barrier window."
+      ],
+      "timing": "Activate shortly before the damage. Captured base values: 200 barrier for 4 seconds, 60-second cooldown.",
+      "limitation": "No control immunity, cleanse or damage reversal. The barrier can run out; it is not guaranteed combo survival or protection against Shiv’s Killing Blow execute.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/grit",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "grit-hero-7",
+      "itemId": "item-1672893796",
+      "enemyHeroId": "hero-7",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A manually activated barrier can cushion incoming damage if applied before it lands.",
+      "conditions": [
+        "The item is ready and you can use it before the expected damage, within its short barrier window."
+      ],
+      "timing": "Activate shortly before the damage. Captured base values: 200 barrier for 4 seconds, 60-second cooldown.",
+      "limitation": "No control immunity, cleanse or damage reversal. The barrier can run out; it is not guaranteed combo survival or protection against Shiv’s Killing Blow execute.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/grit",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "grit-hero-15",
+      "itemId": "item-1672893796",
+      "enemyHeroId": "hero-15",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A manually activated barrier can cushion incoming damage if applied before it lands.",
+      "conditions": [
+        "The item is ready and you can use it before the expected damage, within its short barrier window."
+      ],
+      "timing": "Activate shortly before the damage. Captured base values: 200 barrier for 4 seconds, 60-second cooldown.",
+      "limitation": "No control immunity, cleanse or damage reversal. The barrier can run out; it is not guaranteed combo survival or protection against Shiv’s Killing Blow execute.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/grit",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "reactive-hero-6",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "burst",
+        "control"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A qualifying disable triggers a barrier for follow-up damage. Absorption of the hit that triggers it is unconfirmed.",
+      "conditions": [
+        "Abrams wall-stuns you with Shoulder Charge or stuns you with Seismic Impact, and additional damage follows.",
+        "The proc is ready before the disable and you survive long enough for its barrier to help."
+      ],
+      "timing": "Own it before the engage. Captured base values: 325 barrier for 10 seconds, 55-second cooldown.",
+      "limitation": "Does not remove or shorten control, undo damage already taken, or guarantee survival of the triggering hit. Not all displacement qualifies; Bebop hook is deliberately outside this rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/reactive-barrier",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sawbl7/is_there_anyway_to_counter_phantom_strike_abrams/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "reactive-hero-13",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-13",
+      "goal": "survive",
+      "problems": [
+        "burst",
+        "control"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A qualifying disable triggers a barrier for follow-up damage. Absorption of the hit that triggers it is unconfirmed.",
+      "conditions": [
+        "Haze hits Sleep Dagger, and additional damage follows the sleep trigger.",
+        "The proc is ready before the disable and you survive long enough for its barrier to help."
+      ],
+      "timing": "Own it before the engage. Captured base values: 325 barrier for 10 seconds, 55-second cooldown.",
+      "limitation": "Does not remove or shorten control, undo damage already taken, or guarantee survival of the triggering hit. Not all displacement qualifies; Bebop hook is deliberately outside this rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/reactive-barrier",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "reactive-hero-7",
+      "itemId": "item-1644605047",
+      "enemyHeroId": "hero-7",
+      "goal": "survive",
+      "problems": [
+        "burst",
+        "control"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "A qualifying disable triggers a barrier for follow-up damage. Absorption of the hit that triggers it is unconfirmed.",
+      "conditions": [
+        "Wraith applies Telekinesis silence, and additional damage follows. This rule relies on the current silence text, not an assumed stun.",
+        "The proc is ready before the disable and you survive long enough for its barrier to help."
+      ],
+      "timing": "Own it before the engage. Captured base values: 325 barrier for 10 seconds, 55-second cooldown.",
+      "limitation": "Does not remove or shorten control, undo damage already taken, or guarantee survival of the triggering hit. Not all displacement qualifies; Bebop hook is deliberately outside this rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/reactive-barrier",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "weapon-shield-hero-13",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-13",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Bullet resistance reduces the bullet portion; concentrated weapon damage can then trigger an additional barrier.",
+      "conditions": [
+        "The threat is repeated bullet damage, and you survive the damage needed to trigger the ready barrier."
+      ],
+      "timing": "Equip beforehand. Captured values: 18% bullet resistance; 250 weapon damage within 4 seconds triggers 300 barrier for 8 seconds, 35-second cooldown.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/weapon-shielding",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "weapon-shield-hero-7",
+      "itemId": "item-805079544",
+      "enemyHeroId": "hero-7",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Bullet resistance reduces the bullet portion; concentrated weapon damage can then trigger an additional barrier.",
+      "conditions": [
+        "The threat is repeated bullet damage, and you survive the damage needed to trigger the ready barrier."
+      ],
+      "timing": "Equip beforehand. Captured values: 18% bullet resistance; 250 weapon damage within 4 seconds triggers 300 barrier for 8 seconds, 35-second cooldown.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/weapon-shielding",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "spirit-shield-hero-15",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-15",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Spirit resistance targets the spirit damage; concentrated spirit damage can then trigger a temporary barrier.",
+      "conditions": [
+        "Bebop Sticky Bomb spirit damage is the problem; a single lethal bomb is not made safe by assuming the barrier procs first.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Captured values: 18% spirit resistance; 225 spirit damage within 3.5 seconds triggers 300 barrier for 8 seconds, 45-second cooldown.",
+      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/spirit-shielding",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "spirit-shield-hero-1",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-1",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Spirit resistance targets the spirit damage; concentrated spirit damage can then trigger a temporary barrier.",
+      "conditions": [
+        "Infernus Afterburn spirit damage is the problem; the burn is already damaging you.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Captured values: 18% spirit resistance; 225 spirit damage within 3.5 seconds triggers 300 barrier for 8 seconds, 45-second cooldown.",
+      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.deadlock.io/en/items/spirit-shielding",
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      }
+    },
+    {
+      "id": "metal-skin-hero-13",
+      "itemId": "item-1378931225",
+      "enemyHeroId": "hero-13",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.8,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late consideration for a timed defensive purchase against sustained bullet pressure; an editorial placement, not a mandatory build step.",
+      "mechanism": "Temporary bullet immunity targets the bullet portion of incoming fire. Spirit damage and control can still matter.",
+      "conditions": [
+        "Incoming bullet damage is the threat, the item is ready, and you can activate before that damage."
+      ],
+      "timing": "Activate while able to use items and before bullets land. Captured duration: 5 seconds; cooldown: 24 seconds. Move away or break sight during the window.",
+      "limitation": "Do not read bullet immunity as total damage immunity or melee immunity. Haze Fixation can add spirit damage and Wraith Full Auto adds spirit damage. Passive buildup/other procs are not certified as blocked. Activation also reduces movement speed and dash distance.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/",
+          "https://forums.playdeadlock.com/threads/interaction-of-metal-skin-with-hero-passive-abilities-and-passive-items-dependent-on-bullets.37903/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Current tooltip supports bullet immunity only. Community advice recommends Metal Skin against Haze; Wraith application is our damage-type inference from Full Auto and weapon definitions. An October 2024 user report describes passive buildup through immunity; it is a historical caution, not current verified behavior. No blanket immunity claim is adopted."
+      }
+    },
+    {
+      "id": "metal-skin-hero-7",
+      "itemId": "item-1378931225",
+      "enemyHeroId": "hero-7",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.8,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late consideration for a timed defensive purchase against sustained bullet pressure; an editorial placement, not a mandatory build step.",
+      "mechanism": "Temporary bullet immunity targets the bullet portion of incoming fire. Spirit damage and control can still matter.",
+      "conditions": [
+        "Incoming bullet damage is the threat, the item is ready, and you can activate before that damage."
+      ],
+      "timing": "Activate while able to use items and before bullets land. Captured duration: 5 seconds; cooldown: 24 seconds. Move away or break sight during the window.",
+      "limitation": "Do not read bullet immunity as total damage immunity or melee immunity. Haze Fixation can add spirit damage and Wraith Full Auto adds spirit damage. Passive buildup/other procs are not certified as blocked. Activation also reduces movement speed and dash distance.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/",
+          "https://forums.playdeadlock.com/threads/interaction-of-metal-skin-with-hero-passive-abilities-and-passive-items-dependent-on-bullets.37903/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Current tooltip supports bullet immunity only. Community advice recommends Metal Skin against Haze; Wraith application is our damage-type inference from Full Auto and weapon definitions. An October 2024 user report describes passive buildup through immunity; it is a historical caution, not current verified behavior. No blanket immunity claim is adopted."
+      }
+    },
+    {
+      "id": "infernus-afterburn-dispel",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-1",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late consideration for repeated applied burns that justify an active defensive purchase; editorial stage judgment.",
+      "mechanism": "Community reports support removing applied Afterburn with Dispel Magic, if you can still activate it.",
+      "conditions": [
+        "Infernus Afterburn is already applied, Dispel Magic is ready, and you can use items."
+      ],
+      "timing": "Use after the burn is applied and while able to act. The source tooltip disallows use while stunned or asleep.",
+      "limitation": "Does not prevent immediate reapplication, undo damage or certify removal of ultimate effects. Creating distance still matters.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Community reports specifically propose Dispel against Infernus burn, compared with current Afterburn and Dispel tooltips. Removal is not an in-game tested interaction; immediate reapplication remains possible."
+      }
+    },
+    {
+      "id": "haze-sleep-reducer",
+      "itemId": "item-1047818222",
+      "enemyHeroId": "hero-13",
+      "goal": "survive",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Debuff duration reduction can shorten the sleep from Haze’s Sleep Dagger.",
+      "conditions": [
+        "Sleep Dagger sleep duration is the problem, not just the damage that follows."
+      ],
+      "timing": "Equip before the dagger hits. This is passive duration reduction.",
+      "limitation": "Does not cleanse sleep, block dagger damage or guarantee a response before follow-up shots.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Narrow inference from captured Sleep Dagger sleep and Debuff Reducer duration-reduction definitions. Practical wake-up and follow-up timing has not been tested."
       }
     }
   ]

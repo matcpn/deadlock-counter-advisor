@@ -1,5 +1,24 @@
 # Validation record
 
+## Burst-defense expansion — 2026-10-15
+
+- npm run check passed after data/engine changes: immutable client 6785 snapshot
+  verification, 81 tests, strict TypeScript and production build. Six new behavioral
+  tests plus updates to previous coverage boundaries; no chunk warning.
+- Added regressions for actionable-only defenses, per-damage-type coverage,
+  qualifying Reactive Barrier triggers, no hook rule, limited Shiv burst buffer,
+  Metal Skin's spirit/melee limits, generic player scope vs Infernus-only anti-heal,
+  budget/ownership without component credit, and unsupported escape coverage.
+- Browser smoke checks: expanded fourth early option; Seven vs Haze/Wraith;
+  enemy-specific and shared conditions; stunned/asleep removes Grit/Metal Skin;
+  3,200 souls moves Metal Skin from Save for later into Buy now. Desktop 1280px
+  and mobile 375px inspected; mobile scroll width 360px, viewport 375px, no overflow.
+  Expanded mobile timing/limits remained readable. No browser console errors seen.
+- No game-client experiments or complete accessibility audit. 25 rules are
+  source-reviewed hypotheses with explicit limits, not verified interactions.
+- Publication pending; remote run outcomes will be recorded after push.
+
+
 ## First sourced slice — 2026-10-15
 
 - Refreshed through the repeatable importer to client 6785 (build Oct 14 UTC).

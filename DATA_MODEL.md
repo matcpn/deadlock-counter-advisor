@@ -9,8 +9,9 @@ The evaluator includes it only with allowSourceReviewed:true, and rejects expire
 or future-dated evidence. Default evaluation remains verified-only.
 
 Source-reviewed rules require playerHeroIds, nonempty visible conditions, response
-(passive / before-control / after-debuff), and stageReason. Scenario.responseWindow
-can explicitly exclude active timing that is impossible while stunned/asleep.
+(passive / before-control / after-debuff / while-actionable), and stageReason. Scenario.responseWindow
+excludes the three actionable response types when already stunned/asleep.
+While-actionable is a recommendation prerequisite, not proof of every casting exception.
 Unobserved prerequisites remain conditional text, not automatically true facts.
 Problem dot is separate from burst. The release adapter additionally checks imported
 item identity, price, category, activation and components before showing advice.

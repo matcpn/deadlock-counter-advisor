@@ -1,5 +1,30 @@
 # Start here — continuation handoff
 
+## Current expansion — 2026-10-15
+
+Burst-defense expansion implemented: 25 conditional source-reviewed rules / 12
+items, pinned to unchanged client 6785. Generic personal defenses now work for all
+42 source-selectable player heroes against reviewed patterns from Abrams, Shiv,
+Haze, Wraith, Bebop and Infernus. Four healing-denial rules remain Infernus-specific.
+
+New purchases: Grit, Reactive Barrier, Rebuttal, Close Quarters, Weapon Shielding,
+Spirit Shielding and Metal Skin; also reviewed Haze sleep reduction and applied
+Infernus burn removal. Reactive Barrier is follow-up protection only: triggering-hit
+absorption is unresolved. No execute, guaranteed parry or total-immunity claim.
+See COMMUNITY_RESEARCH.md for source lineage, disputed/stale claims and exact scope.
+
+Burst is the default problem view. More than three matches can be expanded within
+each stage/objective/affordability bucket. Enemy-specific prerequisites are visible,
+with identical sets grouped by enemy name. New while-actionable response metadata
+filters Grit/Metal Skin when already stunned/asleep. No new questionnaire inputs.
+
+All rules remain beta, not in-game tested. Review expires November 14, 2026 UTC;
+refreshing facts never renews advice. Next: saved/shareable scenarios for reproducible
+user tests, practical interaction timing checks, and researched chase/disruption
+coverage. See the latest VALIDATION.md entry for checks and publication status.
+The earlier first-slice-only scope and next-step text below is historical.
+
+
 ## Current release — 2026-10-15
 
 Implementation ef93ce2 is live on GitHub Pages; remote Checks, Pages and the pinned

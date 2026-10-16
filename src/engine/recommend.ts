@@ -24,7 +24,7 @@ export function recommend(catalog: Catalog, scenario: Scenario, weights: Weights
       const rules = catalog.rules.filter(r => r.itemId === item.id && r.goal === goal &&
         eligible(r.evidence) && scenario.enemyHeroIds.includes(r.enemyHeroId) &&
         (!r.playerHeroIds || r.playerHeroIds.includes(scenario.heroId)) &&
-        !(scenario.responseWindow === 'stunned-or-slept' && (r.response === 'before-control' || r.response === 'after-debuff')) &&
+        !(scenario.responseWindow === 'stunned-or-slept' && (r.response === 'before-control' || r.response === 'after-debuff' || r.response === 'while-actionable')) &&
         r.stages.includes(scenario.stage) && r.problems.some(p => scenario.problems.includes(p)));
       if (!rules.length) continue;
       // More rules for a single enemy must not manufacture multi-enemy coverage.

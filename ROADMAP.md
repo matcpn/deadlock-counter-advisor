@@ -2,20 +2,21 @@
 
 ## Current agenda — 2026-10-15
 
-Completed: first conditional source-reviewed beta slice (7 rules / 5 items), client
-6785 refresh, DoT view, visible prerequisites, source disclosures, inventory exclusion,
-response-window filter, version/expiry suppression and behavioral regressions.
-This is usable sourced advice, not completion of every Milestone 2 acceptance scenario.
+Completed: sourced defensive beta expanded to 25 rules / 12 items across six enemy
+heroes. Personal defenses support all currently selectable player heroes; anti-heal
+remains Infernus-specific. Burst, control and DoT distinguish damage types, triggers,
+readiness and uncertainty. Extra alternatives expand within the existing boards.
 
 Next priorities:
-1. Find evidence for immediate burst survival, especially Reactive Barrier trigger
-   ordering; test unresolved practical timing before verified promotion.
-2. Expand hero/problem coverage with the same card and evidence contract.
-3. Add saved/shareable scenarios and remaining constraints where they change advice.
+1. Saved/shareable scenarios so test cases can be reproduced with one link.
+2. Practical interaction checks: Reactive Barrier event ordering and community-
+   reported cleanse interactions. Follow-up-only advice does not resolve first-hit
+   protection; do not promote it to verified without direct evidence.
+3. Research chase/disruption options and expand additional enemy coverage.
 4. Review the beta by 2026-11-14 UTC; source refresh alone does not renew rules.
 
-GitHub hosting and repeatable imports are already delivered. Historical milestone
-text below is retained for context; do not restart repository/deployment setup.
+GitHub hosting and repeatable imports are delivered. Historical milestone text below
+is retained for context; do not restart repository or deployment setup.
 
 ## Milestone 0 — portable foundation (this handoff)
 

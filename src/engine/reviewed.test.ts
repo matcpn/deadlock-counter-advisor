@@ -12,14 +12,19 @@ const options={patch:'client-6785',allowSourceReviewed:true,asOf:'2026-10-15'};
 const scenario:Scenario={heroId:'hero-1',build:'spirit',enemyHeroIds:['hero-6','hero-19'],problems:['control'],stage:'mid',budget:1800,ownedItemIds:[],allowActives:true};
 const run=(overrides:Partial<Scenario>={})=>recommend(reviewedCatalog,{...scenario,...overrides},weights,options);
 
-describe('first source-reviewed slice',()=>{
+describe('source-reviewed defensive coverage',()=>{
   it('keeps source-reviewed advice out of verified-only evaluation',()=>expect(recommend(reviewedCatalog,scenario,weights,{...options,allowSourceReviewed:false})).toEqual([]));
   it('offers an affordable passive control response before an expensive active',()=>{
     const results=run();
-    expect(results.map(r=>[r.item.name,r.affordable,r.goal])).toEqual([['Debuff Reducer',true,'survive'],['Unstoppable',false,'survive']]);
+    expect(results.map(r=>[r.item.name,r.affordable,r.goal])).toEqual([['Debuff Reducer',true,'survive'],['Reactive Barrier',true,'survive'],['Unstoppable',false,'survive']]);
     expect(results.every(r=>r.coveredEnemyIds.join()==='hero-6')).toBe(true);
   });
-  it('never substitutes anti-heal or stun reduction for immediate burst survival',()=>expect(run({problems:['burst']})).toEqual([]));
+  it('offers damage defenses without substituting anti-heal or stun reduction for burst survival',()=>{
+    const results=run({problems:['burst']});
+    expect(results.map(r=>r.item.name).sort()).toEqual(['Close Quarters','Grit','Reactive Barrier','Rebuttal']);
+    expect(results.every(r=>r.goal==='survive')).toBe(true);
+    expect(results.find(r=>r.item.name==='Close Quarters')?.item.category).toBe('weapon');
+  });
   it('changes DoT results to the applied-knife response',()=>{
     const results=run({problems:['dot']});
     expect(results.map(r=>r.item.name)).toEqual(['Dispel Magic']);
@@ -33,20 +38,21 @@ describe('first source-reviewed slice',()=>{
     expect(results.flatMap(r=>r.rules).filter(r=>r.enemyHeroId==='hero-19').every(r=>r.conditions?.some(c=>c.includes('not healing')))).toBe(true);
   });
   it('does not extrapolate player or enemy coverage',()=>{
-    expect(run({heroId:'hero-2'})).toEqual([]);
+    expect(run({heroId:'hero-2'}).map(r=>r.item.name)).toContain('Debuff Reducer');
+    expect(run({heroId:'hero-2',problems:['sustain']})).toEqual([]);
     expect(run({enemyHeroIds:['hero-2']})).toEqual([]);
     expect(run({enemyHeroIds:[]})).toEqual([]);
   });
   it('removes unavailable active responses without removing passive purchases',()=>{
-    expect(run({allowActives:false}).map(r=>r.item.name)).toEqual(['Debuff Reducer']);
-    expect(run({responseWindow:'stunned-or-slept'}).map(r=>r.item.name)).toEqual(['Debuff Reducer']);
+    expect(run({allowActives:false}).map(r=>r.item.name)).toEqual(['Debuff Reducer','Reactive Barrier']);
+    expect(run({responseWindow:'stunned-or-slept'}).map(r=>r.item.name)).toEqual(['Debuff Reducer','Reactive Barrier']);
     expect(run({responseWindow:'stunned-or-slept',problems:['dot']})).toEqual([]);
   });
   it('uses budget independently of stage and never assumes component credit',()=>{
     const board=recommendationBoard(reviewedCatalog,{...scenario,budget:10000},'control',weights,options);
-    expect(board[0].results.map(r=>r.item.name)).toEqual(['Debuff Reducer']);
+    expect(board[0].results.map(r=>r.item.name)).toEqual(['Debuff Reducer','Reactive Barrier']);
     const results=run({ownedItemIds:['item-1047818222'],budget:4800});
-    expect(results.map(r=>[r.item.name,r.affordable])).toEqual([['Unstoppable',false]]);
+    expect(results.map(r=>[r.item.name,r.affordable])).toEqual([['Reactive Barrier',true],['Unstoppable',false]]);
   });
   it('fails closed for another patch, expired review or future review date',()=>{
     for(const change of [{patch:'client-6786'},{asOf:'2026-11-14'},{asOf:'2026-10-14'}]) expect(recommend(reviewedCatalog,scenario,weights,{...options,...change})).toEqual([]);
@@ -76,5 +82,52 @@ describe('first source-reviewed slice',()=>{
     expect(reviewedCatalog.heroes.map(h=>h.id).sort()).toEqual(game.heroes.filter(h=>h.selectable).map(h=>h.id).sort());
     expect(reviewedCatalog.manifest.coverage.completeRoster).toBe(false);
     expect(reviewedCatalog.items.some(i=>i.id.startsWith('demo-'))).toBe(false);
+  });
+});
+
+
+describe('burst and expanded enemy boundaries',()=>{
+  it('uses active defenses only while actionable, with passive options still present',()=>{
+    const overrides:Partial<Scenario>={enemyHeroIds:['hero-13','hero-7'],problems:['burst']};
+    expect(run(overrides).map(r=>r.item.name)).toEqual(expect.arrayContaining(['Metal Skin','Grit','Weapon Shielding','Reactive Barrier']));
+    for(const restriction of [{allowActives:false},{responseWindow:'stunned-or-slept' as const}]){
+      const results=run({...overrides,...restriction});
+      expect(results.map(r=>r.item.name).sort()).toEqual(['Reactive Barrier','Weapon Shielding']);
+    }
+  });
+  it('keeps reactive follow-up coverage scoped to explicit qualifying disables',()=>{
+    const results=run({enemyHeroIds:['hero-6','hero-13','hero-7','hero-15','hero-19'],problems:['burst']});
+    const reactive=results.find(r=>r.item.name==='Reactive Barrier')!;
+    expect(reactive.coveredEnemyIds.sort()).toEqual(['hero-13','hero-6','hero-7']);
+    expect(reactive.rules.every(r=>r.mechanism.includes('triggering')||r.mechanism.includes('triggers it'))).toBe(true);
+    expect(reactive.rules.find(r=>r.enemyHeroId==='hero-7')?.conditions?.join()).toContain('silence');
+    expect(reactive.rules.every(r=>r.limitation.includes('Does not remove or shorten control'))).toBe(true);
+  });
+  it('matches shield resistance to the reviewed damage pattern, not every hero attack',()=>{
+    const bebop=run({enemyHeroIds:['hero-15'],problems:['burst']});
+    expect(bebop.map(r=>r.item.name).sort()).toEqual(['Grit','Spirit Shielding']);
+    expect(bebop.find(r=>r.item.name==='Spirit Shielding')?.rules[0].conditions?.join()).toContain('Sticky Bomb');
+    const burn=run({heroId:'hero-2',enemyHeroIds:['hero-1'],problems:['dot']});
+    expect(burn.map(r=>r.item.name).sort()).toEqual(['Dispel Magic','Spirit Shielding']);
+    expect(run({heroId:'hero-2',enemyHeroIds:['hero-1'],problems:['burst']})).toEqual([]);
+    expect(run({enemyHeroIds:['hero-13'],problems:['control']}).map(r=>r.item.name).sort()).toEqual(['Debuff Reducer','Reactive Barrier']);
+  });
+  it('preserves Metal Skin limits and editorial stage placement',()=>{
+    const query={enemyHeroIds:['hero-13'],problems:['burst'] as Scenario['problems']};
+    const skin=run(query).find(r=>r.item.name==='Metal Skin')!;
+    expect(skin.rules[0].limitation).toContain('spirit damage');
+    expect(skin.rules[0].limitation).toContain('melee immunity');
+    expect(run({...query,stage:'lane'}).map(r=>r.item.name)).not.toContain('Metal Skin');
+  });
+  it('never discounts the barrier upgrade just because Grit is owned',()=>{
+    const results=run({enemyHeroIds:['hero-13'],problems:['burst'],budget:800,ownedItemIds:['item-1672893796']});
+    expect(results.some(r=>r.item.name==='Grit')).toBe(false);
+    expect(results.filter(r=>['Reactive Barrier','Weapon Shielding'].includes(r.item.name)).map(r=>r.affordable)).toEqual([false,false]);
+  });
+  it('offers only the limited Grit buffer for Shiv burst, with an explicit execute exclusion',()=>{
+    const results=run({enemyHeroIds:['hero-19'],problems:['burst']});
+    expect(results.map(r=>r.item.name)).toEqual(['Grit']);
+    expect(results[0].rules[0].limitation).toContain('Killing Blow execute');
+    expect(run({problems:['escape']})).toEqual([]);
   });
 });

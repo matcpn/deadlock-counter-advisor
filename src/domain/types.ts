@@ -28,7 +28,7 @@ export interface CounterRule {
   mechanism: string; limitation: string; timing: string; evidence: Evidence;
   playerHeroIds?: string[];
   conditions?: string[];
-  response?: 'passive' | 'before-control' | 'after-debuff';
+  response?: 'passive' | 'before-control' | 'after-debuff' | 'while-actionable';
   stageReason?: string;
 }
 export interface Catalog { manifest: Manifest; heroes: Hero[]; items: Item[]; rules: CounterRule[] }
