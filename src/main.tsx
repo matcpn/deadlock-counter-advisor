@@ -8,7 +8,6 @@ import { Artwork } from './components/Artwork';
 import { ItemDetails } from './components/ItemDetails';
 import { ResearchCoverage } from './components/ResearchCoverage';
 import { browseBoard } from './engine/browse';
-import type { Scenario } from './domain/types';
 import './styles.css';
 const game = snapshotJson as GameSnapshot;
 const heroes = game.heroes.filter(h=>h.selectable);
@@ -28,15 +27,13 @@ function ItemCard({item}:{item:GameItem}) {
 }
 function App() {
   const [enemies,setEnemies]=useState<string[]>([]);
-  const [heroSearch,setHeroSearch]=useState(''),[allowActives,setActives]=useState(true);
+  const [heroSearch,setHeroSearch]=useState('');
   const [itemSearch,setItemSearch]=useState(''),[category,setCategory]=useState('all'),[tag,setTag]=useState('all');
-  const [responseWindow,setResponseWindow]=useState<NonNullable<Scenario['responseWindow']>>('unknown');
-  const [ownedItemIds,setOwned]=useState<string[]>([]);
   const reviewIssue=reviewAvailability(game);
-  const liveBoard=reviewIssue?[]:browseBoard(reviewedCatalog,{enemyHeroIds:enemies,allowActives,ownedItemIds,responseWindow},{patch:`client-${game.clientVersion}`,allowSourceReviewed:true});
+  const liveBoard=reviewIssue?[]:browseBoard(reviewedCatalog,{enemyHeroIds:enemies,allowActives:true,ownedItemIds:[],responseWindow:'unknown'},{patch:`client-${game.clientVersion}`,allowSourceReviewed:true});
   const covered=new Set(liveBoard.flatMap(column=>column.results.flatMap(r=>r.coveredEnemyIds)));
   const uncovered=enemies.filter(id=>!covered.has(id));
-  const filtered=game.items.filter(i=>(allowActives||i.activation!=='active')&&(category==='all'||i.category===category)&&(tag==='all'||i.sourceTags.includes(tag))&&i.name.toLowerCase().includes(itemSearch.toLowerCase()));
+  const filtered=game.items.filter(i=>(category==='all'||i.category===category)&&(tag==='all'||i.sourceTags.includes(tag))&&i.name.toLowerCase().includes(itemSearch.toLowerCase()));
   const tags=[...new Set(game.items.flatMap(i=>i.sourceTags))].sort();
   return <main style={{'--weapon':game.colors.weapon,'--vitality':game.colors.vitality,'--spirit':game.colors.spirit} as React.CSSProperties}>
     <section className="scenario" aria-label="Enemy selection">
@@ -46,12 +43,10 @@ function App() {
         {!heroes.some(h=>h.name.toLowerCase().includes(heroSearch.toLowerCase()))&&<p>No matching heroes.</p>}
       </fieldset>
       {!!enemies.length&&<p className="selected-threats">Selected threats: {enemies.map(heroName).join(' + ')}</p>}
-      <details className="preferences"><summary>Item preferences</summary><div className="controls"><label className="check"><input type="checkbox" checked={allowActives} onChange={e=>setActives(e.target.checked)}/>Include active items</label><label>When do you need to respond?<select value={responseWindow} onChange={e=>setResponseWindow(e.target.value as NonNullable<Scenario['responseWindow']>)}><option value="unknown">Planning / not sure</option><option value="can-act">While I can still act</option><option value="stunned-or-slept">Already stunned or asleep</option></select></label></div><fieldset className="owned"><legend>Already own any of these?</legend>{reviewedCatalog.items.map(item=><label className="check" key={item.id}><input type="checkbox" checked={ownedItemIds.includes(item.id)} onChange={e=>setOwned(ids=>e.target.checked?[...ids,item.id]:ids.filter(id=>id!==item.id))}/>{item.name}</label>)}</fieldset><p>Owned items are excluded. Full purchase prices are used; component discounts and inventory slots are not calculated.</p></details>
     </section>
     <section aria-label="Item options" className="advisor"><h2>Item options</h2>
       {reviewIssue?<div className="empty" role="status">{reviewIssue}</div>:<>
         {(!enemies.length||uncovered.length>0)&&<p className="coverage-note" role="status">{enemies.length?'No eligible advice for '+uncovered.map(heroName).join(' + ')+'.':'Select enemies to see options.'}</p>}
-        {responseWindow==='stunned-or-slept'&&<p>Responses that require you to act are hidden. Passive purchases must already be equipped.</p>}
         <AdviceBoard board={liveBoard} catalog={reviewedCatalog} game={game}/>
       </>}
     </section>

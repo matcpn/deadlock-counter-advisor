@@ -1,5 +1,11 @@
 # Validation record
 
+## Item preferences removal — 2026-10-16
+
+UI-only removal; recommendation mechanics/data unchanged. Removed dead preference
+state and updated empty-stage wording. Strict TypeScript and production build
+passed; existing catalog chunk-size notice remains. Hosted verification pending.
+
 ## Defining threats and decision cards — 2026-10-16
 
 - npm run check passed: immutable data/regenerated research checks, 175 tests across

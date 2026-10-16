@@ -1,5 +1,12 @@
 # Start here — continuation handoff
 
+## Item preferences removed — 2026-10-16
+
+Removed the Item preferences panel at the user's request. Enemy selection now uses
+all eligible active/passive items, no assumed owned items and the planning response
+window. Engine filters remain available in the background; card timing, conditions
+and player-delivery limits still apply. Catalog search/category/tag filters remain.
+
 ## Defining threats and item decisions — 2026-10-16
 
 Implementation c9b27b6 is live. Checks and Pages passed; hosted Bebop + Lady Geist

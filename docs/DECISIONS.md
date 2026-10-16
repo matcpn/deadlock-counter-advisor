@@ -1,5 +1,13 @@
 # Decisions and open questions
 
+## Remove optional item preferences — 2026-10-16
+
+The user requested removing Item preferences. Remove the active-item toggle,
+response-window selector, owned-item checklist and associated explanatory text.
+Use the existing default browse values (actives allowed, no ownership exclusions,
+unknown/planning response). Preserve engine capability without exposing these
+inputs. This supersedes earlier decisions to keep those optional UI controls.
+
 ## Defining threats and short item comparisons — 2026-10-16
 
 The user accepted the previously proposed first sprint: research five thin heroes

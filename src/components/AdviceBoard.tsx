@@ -34,7 +34,7 @@ export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browse
               <><p>Options are listed by price, then shared enemy coverage. Check the conditions for your hero and situation.</p>{r.rules.map(rule=><div className="evidence-note" key={rule.id}><strong>{name(rule.enemyHeroId)} · reviewed {rule.evidence.reviewedAt}</strong><p>{rule.evidence.note}</p></div>)}<p>{catalog.manifest.gamePatchId} · review expires {r.item.evidence.expiresAt}. No in-game tests performed.</p><ul>{unique([...r.item.evidence.sourceUrls,...r.rules.flatMap(rule=>rule.evidence.sourceUrls)]).map(url=><li key={url}><a href={url} target="_blank" rel="noreferrer">{catalog.manifest.sources.find(s=>s.url===url)?.title??'Evidence source'}</a></li>)}</ul></>
             </details>
           </article>;
-        return matches.length?<>{matches.slice(0,4).map(card)}{matches.length>4&&<details className="more-items"><summary>Show {matches.length-4} more items</summary>{matches.slice(4).map(card)}</details>}</>:<p className="small-empty">No options for this stage with these preferences.</p>;
+        return matches.length?<>{matches.slice(0,4).map(card)}{matches.length>4&&<details className="more-items"><summary>Show {matches.length-4} more items</summary>{matches.slice(4).map(card)}</details>}</>:<p className="small-empty">No reviewed options for this stage.</p>;
     })()}
   </section>)}</div>;
 }

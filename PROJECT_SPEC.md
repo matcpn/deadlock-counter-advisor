@@ -3,7 +3,8 @@
 ## Current simplified flow — 2026-10-16
 
 At the user's request, select enemies and browse combined item lists for Early / Mid /
-Late. No player hero, build, souls, problem tabs, demo toggle or goal headings.
+Late. No player hero, build, souls, problem tabs, demo toggle, item preferences or
+goal headings. Actives are included; ownership and response filters stay in the engine.
 Each item appears once per stage with price, category, activation, mechanism and
 expandable conditions/sources. Player-specific delivery scope remains labeled.
 No assumed player or budget; no affordability buckets. Model and personalized
