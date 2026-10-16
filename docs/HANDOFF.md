@@ -2,6 +2,9 @@
 
 ## Whole-roster source review — 2026-10-16
 
+Implementation e99e02d is live. Checks, Pages and the manual pinned refresh passed;
+the deployed 83-rule release, movement scenarios and 42/42 matrix were inspected.
+
 The user asked to loop until all heroes were done. The source-review pass now
 accounts for all 42 source-selectable heroes, with at least one bounded scenario
 each: 83 rules / 16 items. This is partial scenario coverage, not every ability,

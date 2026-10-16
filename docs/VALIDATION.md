@@ -24,7 +24,15 @@
   Vindicta Knockdown, budget separation, active-item filtering, passive fallbacks,
   expanded limits and the roster matrix. Mobile document width was 360px against
   a 375px viewport. No console errors observed. Not a full accessibility audit.
-- Publication and deployed checks are recorded below once complete.
+- Published implementation e99e02d. Checks 38850068186, Pages 38850068146 and
+  manual pinned refresh 38850080901 succeeded. Refresh produced game-data-for-review
+  (1,539,747 bytes, not expired), including the generated roster review report.
+- Reloaded the live repository-subpath page and confirmed the 83-rule / 16-item
+  release, Calico/Mina movement limits, Vindicta delayed disruption, budget groups
+  and 42/42 enemies with partial advice in the coverage matrix. Inspected desktop
+  layout and saved roster-coverage-live.png. No live console errors observed.
+  Closed the temporary local preview and reset the viewport override. Existing
+  non-failing action-runtime and Ubuntu migration notices remain.
 
 ## Healing and persistent-damage slice — 2026-10-15
 
