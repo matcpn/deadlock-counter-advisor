@@ -1,5 +1,13 @@
 # Data model and recommendation contract
 
+## Item decision summaries — 2026-10-16
+
+CounterRule optionally carries decision { chooseWhen, tradeoff }, both nonempty.
+It shares the rule evidence, eligibility and player scope. browseExplanations only
+groups current matched rules, retaining enemy IDs; the UI renders the pair instead
+of the main mechanism paragraph. Full mechanics remain in details and older rules
+fall back to their mechanism. No runtime generation or new ranking is introduced.
+
 ## Imported item tooltips — 2026-10-16
 
 GameItem.tooltipSections stores sanitized source section text and formatted base

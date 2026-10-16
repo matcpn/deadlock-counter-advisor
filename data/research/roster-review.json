@@ -128,7 +128,8 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "grit-hero-15",
-        "spirit-shield-hero-15"
+        "spirit-shield-hero-15",
+        "defining-bomb-15"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
@@ -136,10 +137,12 @@
         "https://www.deadlock.io/en/items/grit",
         "https://www.deadlock.io/en/mechanics/shields-and-barriers",
         "https://www.deadlock.io/en/items/spirit-shielding",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://forums.playdeadlock.com/threads/01-30-2026-update.102822/",
+        "https://deadlock.wiki/Bebop"
       ],
       "remainingQuestions": [
-        "Hook/uppercut barrier attribution, bomb purge and Hyper Beam coverage remain separate from the existing spirit-burst buffer."
+        "Test purge-to-movement timing and dropped-bomb splash safety; Hyper Beam interruption and hook protection remain open."
       ],
       "abilityBaselines": [
         {
@@ -527,7 +530,8 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "spirit-shield-hero-1",
-        "infernus-afterburn-dispel"
+        "infernus-afterburn-dispel",
+        "defining-dash-1"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
@@ -535,10 +539,11 @@
         "https://www.deadlock.io/en/items/spirit-shielding",
         "https://www.deadlock.io/en/mechanics/shields-and-barriers",
         "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/",
+        "https://deadlock.wiki/Slowing_Hex"
       ],
       "remainingQuestions": [
-        "Afterburn response is covered. Removal reapplication and other player healing-denial routes remain untested."
+        "Test first-cast versus ongoing Flame Dash/recast ordering; burn reapplication and ultimate response remain open."
       ],
       "abilityBaselines": [
         {
@@ -637,14 +642,18 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-healbane-4",
-        "roster-toxic-4"
+        "roster-toxic-4",
+        "defining-drain-4"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
-        "https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/"
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/",
+        "https://deadlock.wiki/Dispel_Magic",
+        "https://forums.playdeadlock.com/threads/lady-geist-life-drain-uninterruptible-by-cursed-relic.157029/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1sea0au/how_tf_am_i_supposed_to_fight_lady_geist/"
       ],
       "remainingQuestions": [
-        "Life Drain healing denial is distinct from Soul Exchange. No health-swap prevention, Malice purge or damage-type inference from self-damage is claimed."
+        "Test repeated Life Drain charges and purge timing; Cursed Relic conflicts and Soul Exchange prevention remain unresolved."
       ],
       "abilityBaselines": [
         {
@@ -1434,17 +1443,21 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-25",
-        "depth-duration-25"
+        "depth-duration-25",
+        "defining-cage-25"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://deadlock.wiki/Binding_Word",
         "https://deadlock.wiki/Debuff_Reducer",
         "https://deadlock.wiki/Warden",
-        "https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/"
+        "https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/",
+        "https://deadlock.wiki/Dispel_Magic",
+        "https://deadlocklabs.gg/builds/warden-spoooomples-make-them-buy-dispel-816613/",
+        "https://www.reddit.com/r/DeadlockTheGame/comments/1t6x3ae/nerf_warden_lvl_3_cage/"
       ],
       "remainingQuestions": [
-        "Binding Word root follow-up is scoped. Escape timer is not root duration; upgraded Last Stand has Unstoppable, so blanket channel interrupts are excluded."
+        "Test pending-cage and post-root purge ordering, repeat casts and simultaneous stun; Last Stand protection/healing remain open."
       ],
       "abilityBaselines": [
         {
@@ -1514,16 +1527,19 @@
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-melee-27",
-        "depth-spirit-27"
+        "depth-spirit-27",
+        "defining-healbane-27",
+        "defining-toxic-27"
       ],
       "sourceUrls": [
         "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
         "https://deadlock.wiki/Damage_Resistance",
         "https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/",
-        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "https://deadlock.wiki/Shadow_Transformation"
       ],
       "remainingQuestions": [
-        "Flying Slash melee damage and raw-marker-supported Power Slash spirit damage are scoped separately. Test shield threshold timing; no parry claim, prevention of grapple, or debuff advice through Shadow Transformation immunity."
+        "Test healing reduction during Shadow Transformation and before/after cleanse; broaden delivery routes and Power Slash timing."
       ],
       "abilityBaselines": [
         {

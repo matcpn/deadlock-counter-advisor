@@ -1202,16 +1202,17 @@
           "status": "triaged",
           "signals": [
             {
-              "functionId": "mobility",
-              "quote": "Dash forward"
-            },
-            {
               "functionId": "dot",
               "quote": "spirit damage over time"
+            },
+            {
+              "functionId": "mobility",
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_NO_TARGET\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_PREVENT_BOT_USAGE\",\"CITADEL_ABILITY_BEHAVIOR_MOVEMENT\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. New-cast movement silence is traced to the raw MOVEMENT flag; ongoing-cast cancellation is excluded."
         },
         {
           "className": "ability_afterburn",

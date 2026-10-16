@@ -17,7 +17,7 @@ No heroes are below the two-item or build-color targets. Next work is scenario d
 | Abrams | 8 | Green available | Debuff Reducer (vitality), Close Quarters (weapon), Reactive Barrier (vitality), Grit (vitality), Healbane (vitality), Unstoppable (vitality), Toxic Bullets (weapon), Rebuttal (vitality) |
 | Apollo | 2 | Green available | Reactive Barrier (vitality), Slowing Hex (spirit) |
 | Baba | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
-| Bebop | 2 | Green available | Spirit Shielding (vitality), Grit (vitality) |
+| Bebop | 3 | Green available | Spirit Shielding (vitality), Grit (vitality), Dispel Magic (vitality) |
 | Billy | 2 | Green available | Spirit Shielding (vitality), Rebuttal (vitality) |
 | Calico | 2 | Green available | Slowing Hex (spirit), Rebuttal (vitality) |
 | Celeste | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
@@ -28,10 +28,10 @@ No heroes are below the two-item or build-color targets. Next work is scenario d
 | Grey Talon | 2 | Green available | Knockdown (spirit), Weapon Shielding (vitality) |
 | Haze | 5 | Green available | Debuff Reducer (vitality), Metal Skin (vitality), Reactive Barrier (vitality), Grit (vitality), Weapon Shielding (vitality) |
 | Holliday | 2 | Green available | Spirit Shielding (vitality), Reactive Barrier (vitality) |
-| Infernus | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
+| Infernus | 3 | Green available | Spirit Shielding (vitality), Slowing Hex (spirit), Dispel Magic (vitality) |
 | Ivy | 2 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality) |
 | Kelvin | 3 | Green available | Spirit Shielding (vitality), Healbane (vitality), Toxic Bullets (weapon) |
-| Lady Geist | 2 | Green available | Healbane (vitality), Toxic Bullets (weapon) |
+| Lady Geist | 3 | Green available | Healbane (vitality), Toxic Bullets (weapon), Dispel Magic (vitality) |
 | Lash | 2 | Green available | Reactive Barrier (vitality), Slowing Hex (spirit) |
 | McGinnis | 3 | Green available | Spirit Shielding (vitality), Healbane (vitality), Toxic Bullets (weapon) |
 | Mina | 2 | Green available | Spirit Shielding (vitality), Slowing Hex (spirit) |
@@ -53,8 +53,8 @@ No heroes are below the two-item or build-color targets. Next work is scenario d
 | Vindicta | 2 | Green available | Knockdown (spirit), Reactive Barrier (vitality) |
 | Viscous | 2 | Green available | Reactive Barrier (vitality), Rebuttal (vitality) |
 | Vyper | 2 | Green available | Spirit Shielding (vitality), Dispel Magic (vitality) |
-| Warden | 2 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality) |
+| Warden | 3 | Green available | Debuff Reducer (vitality), Reactive Barrier (vitality), Dispel Magic (vitality) |
 | Wraith | 4 | Green available | Metal Skin (vitality), Reactive Barrier (vitality), Grit (vitality), Weapon Shielding (vitality) |
-| Yamato | 2 | Green available | Spirit Shielding (vitality), Rebuttal (vitality) |
+| Yamato | 4 | Green available | Spirit Shielding (vitality), Healbane (vitality), Toxic Bullets (weapon), Rebuttal (vitality) |
 
 The historical 19-hero target set and added rule IDs are recorded in data/research/item-depth-pass.json. See [source review](COMMUNITY_RESEARCH.md) and [per-hero open questions](ROSTER_REVIEW.md).

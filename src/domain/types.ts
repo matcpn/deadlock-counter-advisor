@@ -30,6 +30,7 @@ export interface CounterRule {
   conditions?: string[];
   response?: 'passive' | 'before-control' | 'after-debuff' | 'while-actionable';
   stageReason?: string;
+  decision?: { chooseWhen: string; tradeoff: string };
 }
 export interface Catalog { manifest: Manifest; heroes: Hero[]; items: Item[]; rules: CounterRule[] }
 export interface Scenario {

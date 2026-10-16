@@ -1,7 +1,7 @@
 # Deadlock Counter Advisor
 
 A contextual advisor prototype with an imported, version-pinned game catalog.
-**Source-reviewed beta: 105 conditional rules across 16 items.** All 42 captured
+**Source-reviewed beta: 111 conditional rules across 16 items.** All 42 captured
 source-selectable enemy heroes now have at least two distinct item options across reviewed scenarios. Advice is
 organized into combined Early / Mid / Late item lists, with expandable sources and limits.
 This is partial coverage, not every ability or player delivery route, and has not

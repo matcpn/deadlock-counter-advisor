@@ -1,5 +1,19 @@
 # Validation record
 
+## Defining threats and decision cards — 2026-10-16
+
+- npm run check passed: immutable data/regenerated research checks, 175 tests across
+  ten files, strict TypeScript and production build. Existing catalog chunk warning.
+- Five new behavioral tests cover the five-hero batch, stage/active/owned/expiry
+  filters, player-delivery restrictions, per-enemy grouping, repeat deduplication,
+  required decision fields, and server-rendered guidance with fallback/details.
+- Updated two existing expectations for the new Bebop and Geist self-purge options;
+  shielding type and healing-versus-Soul-Exchange assertions remain intact.
+- Browser checked combined Bebop + Lady Geist cards at 1280px and 375px widths.
+  Shared Dispel card attributes each decision to the right enemy; mobile wraps
+  without horizontal overflow. Full facts remain available through the item popup.
+  No console errors. This is software/source verification, not in-game testing.
+
 ## Build-color coverage — 2026-10-16
 
 - Initial category audit identified Dynamo, Mo & Krill and Seven as purple-only;

@@ -1,5 +1,20 @@
 # Decisions and open questions
 
+## Defining threats and short item comparisons — 2026-10-16
+
+The user accepted the previously proposed first sprint: research five thin heroes
+and add card-level choice guidance. Select Bebop, Infernus, Warden, Lady Geist and
+Yamato because each had exactly two options, with survival-only or healing-only
+coverage. Add a different response where sources support it, not another generic
+shield. This is the first five-hero batch, not complete-kit certification.
+
+Store optional decision { chooseWhen, tradeoff } on CounterRule beside its evidence.
+Validate both nonempty strings. Render only matched eligible rules, group identical
+pairs, retain enemy attribution and original details/player scope. The new copy
+replaces the front-facing mechanism paragraph instead of adding a new section or
+input. Unannotated rules retain their mechanism. Price-first ordering is unchanged;
+we are explaining choices, not inventing an optimal-item score.
+
 ## Green or both damage categories — 2026-10-16
 
 Adopt the user's coverage target: each enemy needs an eligible Vitality item, or

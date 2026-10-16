@@ -9,10 +9,15 @@ flow at user request. Scoped rules and the personalized engine remain in the mod
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published
-advice now includes 105 conditional rules / 16 items across all 42 captured selectable
+advice now includes 111 conditional rules / 16 items across all 42 captured selectable
 enemies, with partial scenario coverage. The full-roster source pass is complete;
 no in-game certification is implied. See [per-hero remaining work](docs/ROSTER_REVIEW.md).
 See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
+
+First defining-threat/decision sprint complete: Bebop, Infernus, Warden, Lady Geist
+and Yamato have six additional specific responses and 16 short choice/tradeoff
+summaries. Repeat this pattern in five-hero batches using ROSTER_REVIEW.md; the
+remaining heroes retain their existing summaries. No new UI inputs are needed.
 
 Next priorities:
 Build-color audit complete: all 42 enemies have a green option. Future research

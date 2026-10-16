@@ -1,5 +1,22 @@
 # Start here — continuation handoff
 
+## Defining threats and item decisions — 2026-10-16
+
+The user accepted priorities 1 and 2 from the earlier gap assessment: deepen five
+thin heroes and help choose between their items. Completed Bebop, Infernus,
+Warden, Lady Geist and Yamato: six new conditional rules, 111 total / 16 items.
+All five now have 3+ distinct options; all 42 retain two items and green coverage.
+
+Sixteen rules for those heroes now carry decision.chooseWhen/tradeoff. The compact
+card shows this pair in place of the mechanism paragraph; full mechanisms,
+conditions, limits and sources stay in details. Shared items label the enemy for
+each explanation. Other heroes retain existing summaries. No new inputs or scoring.
+
+Read COMMUNITY_RESEARCH.md for sources, accepted scope and excluded interactions.
+No in-game tests or review renewal; expiry remains November 14 UTC. Next repeat this
+five-hero depth/decision pass for the next thin group, not a whole-roster item-count
+loop. Timing validation and remaining per-hero questions remain open.
+
 ## Build-color coverage — 2026-10-16
 
 Implementation fbaa482 is live; Checks and Pages passed. The hosted page shows

@@ -200,7 +200,7 @@ describe('burst and expanded enemy boundaries',()=>{
   });
   it('matches shield resistance to the reviewed damage pattern, not every hero attack',()=>{
     const bebop=run({enemyHeroIds:['hero-15'],problems:['burst']});
-    expect(bebop.map(r=>r.item.name).sort()).toEqual(['Grit','Spirit Shielding']);
+    expect(bebop.map(r=>r.item.name).sort()).toEqual(['Dispel Magic','Grit','Spirit Shielding']);
     expect(bebop.find(r=>r.item.name==='Spirit Shielding')?.rules[0].conditions?.join()).toContain('Sticky Bomb');
     const burn=run({heroId:'hero-2',enemyHeroIds:['hero-1'],problems:['dot']});
     expect(burn.map(r=>r.item.name).sort()).toEqual(['Dispel Magic','Spirit Shielding']);

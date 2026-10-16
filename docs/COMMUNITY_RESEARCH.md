@@ -1,5 +1,55 @@
 # Community counter research — 2026-10-12
 
+## Defining-threat batch: five heroes — 2026-10-16
+
+Client/server 6785 and revision 11132425 rechecked at the public steam-info endpoint.
+Compared pinned item and ability definitions with the sources below. Added six
+source-reviewed rules and editorial decision summaries for all 16 rules in this
+batch. No live-game tests; existing item reviews and November 14 expiry unchanged.
+
+- **Bebop / Dispel Magic:** [Valve January 30 update](https://forums.playdeadlock.com/threads/01-30-2026-update.102822/)
+  explicitly changes dispelled Sticky Bomb to drop and keep counting down. The
+  [current ability notes](https://deadlock.wiki/Bebop) agree. Apply only to a bomb
+  attached to the user, before detonation, with time to leave its blast area.
+  Removing the attachment is not deleting the bomb, protecting nearby allies,
+  reversing the hook or stopping Hyper Beam. Compare with Grit before the hit and
+  Spirit Shielding only after surviving the damage trigger.
+- **Infernus / Slowing Hex:** pinned Flame Dash has the MOVEMENT behaviour flag,
+  now recorded as exact property evidence. The [movement-silence list](https://deadlock.wiki/Slowing_Hex)
+  names Flame Dash, but its older item values are superseded by pinned 6785 values.
+  Publish only prevention of a new cast on a targetable, unprotected enemy. Ongoing
+  dash cancellation, recasts and Concussive Combustion interruption are excluded.
+  Existing burn-purge and threshold-shielding choices remain separate.
+- **Warden / Dispel Magic:** [May cage discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1t6x3ae/nerf_warden_lvl_3_cage/),
+  the [September 20 player-authored build](https://deadlocklabs.gg/builds/warden-spoooomples-make-them-buy-dispel-816613/)
+  and the wiki Dispel interaction index support removing Binding Word. The build
+  explicitly plans repeat cages after the purge. Pinned Dispel is a non-ultimate
+  self-purge unusable while stunned/asleep. Exact pending-to-root event timing is
+  untested. No Last Stand counter or immunity claim; passive duration reduction
+  and post-root barrier remain distinct alternatives.
+- **Lady Geist / Dispel Magic:** the wiki interaction index names Life Drain/Malice.
+  An [August firsthand report](https://forums.playdeadlock.com/threads/lady-geist-life-drain-uninterruptible-by-cursed-relic.157029/)
+  distinguishes self-dispel from Cursed Relic failing to interrupt Life Drain.
+  [Community discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1sea0au/how_tf_am_i_supposed_to_fight_lady_geist/)
+  warns about repeat drain charges. Publish conditional removal of the user's
+  applied drain/Malice; exclude Soul Exchange, ally cleansing and Cursed Relic
+  interruption. Do not adopt a proposed Malice rework as live mechanics. Wiki
+  full pages were blocked for Warden/Geist; available search-index interaction
+  excerpts are corroboration, not a claim of full-page review.
+- **Yamato / Healbane and Toxic Bullets:** pinned Crimson Slash explicitly heals
+  on hero hits. [Ability notes](https://deadlock.wiki/Shadow_Transformation) and
+  [community discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/)
+  support targeting that recovery. Restrict the advice to outside Shadow
+  Transformation: immunity/cleanse persistence and kill healing remain unresolved.
+  Healbane needs qualifying spirit damage; Toxic Bullets needs bullet buildup.
+  Retain the existing four reviewed player-delivery examples, with no generalized
+  application or stacking claim. Rebuttal covers Flying Slash melee; Spirit
+  Shielding addresses post-trigger spirit follow-up, not healing denial.
+
+The six defining-* rule IDs and per-hero remaining questions are recorded in the
+roster-review ledger and regenerated reports. Decision text is an editorial summary
+of each rule's own evidence, not an independent mechanics source or numeric ranking.
+
 ## Build-color gaps — 2026-10-16
 
 Initial eligible coverage: 39 enemies with a green option; Dynamo, Mo & Krill and

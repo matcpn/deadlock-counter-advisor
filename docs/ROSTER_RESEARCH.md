@@ -36,7 +36,7 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Abrams | conditional 4/4/4 | conditional 2/3/3 | needs-research | conditional 1/2/2 | needs-research |
 | Apollo | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 1/1/1 |
 | Baba | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
-| Bebop | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
+| Bebop | conditional 2/3/3 | needs-research | needs-research | needs-research | needs-research |
 | Billy | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
 | Calico | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |
 | Celeste | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
@@ -47,10 +47,10 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Grey Talon | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 0/1/1 |
 | Haze | conditional 3/4/4 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Holliday | conditional 1/1/1 | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research |
-| Infernus | needs-research | needs-research | conditional 1/2/2 | needs-research | needs-research |
+| Infernus | needs-research | needs-research | conditional 1/2/2 | needs-research | conditional 1/1/1 |
 | Ivy | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
 | Kelvin | needs-research | needs-research | conditional 1/1/1 | conditional 1/2/2 | needs-research |
-| Lady Geist | needs-research | needs-research | needs-research | conditional 1/2/2 | needs-research |
+| Lady Geist | conditional 0/1/1 | needs-research | conditional 0/1/1 | conditional 1/2/2 | needs-research |
 | Lash | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 1/1/1 |
 | McGinnis | needs-research | needs-research | conditional 1/1/1 | conditional 1/2/2 | needs-research |
 | Mina | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |
@@ -72,9 +72,9 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Vindicta | conditional 1/1/1 | conditional 1/1/1 | needs-research | needs-research | conditional 0/1/1 |
 | Viscous | conditional 2/2/2 | conditional 1/1/1 | needs-research | needs-research | needs-research |
 | Vyper | conditional 1/2/2 | needs-research | needs-research | needs-research | needs-research |
-| Warden | conditional 1/1/1 | conditional 2/2/2 | needs-research | needs-research | needs-research |
+| Warden | conditional 1/1/1 | conditional 2/3/3 | needs-research | needs-research | needs-research |
 | Wraith | conditional 3/4/4 | conditional 1/1/1 | needs-research | needs-research | needs-research |
-| Yamato | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
+| Yamato | conditional 2/2/2 | needs-research | needs-research | conditional 1/2/2 | needs-research |
 
 ## Next research batches
 
@@ -347,7 +347,7 @@ Research directions: Debuff duration reduction, Barrier after qualifying control
 
 ### Infernus
 - **Napalm** (triaged): Spirit damage; Movement slow; Healing suppression. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
-- **Flame Dash** (triaged): Dash / flight / teleport; Damage over time. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
+- **Flame Dash** (triaged): Damage over time; Dash / flight / teleport. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. New-cast movement silence is traced to the raw MOVEMENT flag; ongoing-cast cancellation is excluded.
 - **Afterburn** (triaged): Spirit damage; Damage over time. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 - **Concussive Combustion** (triaged): Delayed / charged damage; Spirit damage; Stun. Tooltip explicitly says the ability cannot be interrupted once cast.
 

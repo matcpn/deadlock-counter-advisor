@@ -4,6 +4,18 @@ import { evidenceEligibility, type RecommendationOptions } from './recommend';
 import { stages } from './board';
 
 export interface BrowseItem { item: Item; rules: CounterRule[]; coveredEnemyIds: string[] }
+/** Only summarize matched rules; never borrow guidance from another enemy or stage. */
+export function browseExplanations(result: BrowseItem) {
+  const groups = new Map<string, { enemyIds: string[]; mechanism: string; decision?: CounterRule['decision'] }>();
+  for (const rule of result.rules) {
+    const key = JSON.stringify(rule.decision ?? rule.mechanism);
+    const group = groups.get(key);
+    if (group) {
+      if (!group.enemyIds.includes(rule.enemyHeroId)) group.enemyIds.push(rule.enemyHeroId);
+    } else groups.set(key, { enemyIds: [rule.enemyHeroId], mechanism: rule.mechanism, decision: rule.decision });
+  }
+  return [...groups.values()];
+}
 export interface BrowsePreferences {
   enemyHeroIds: string[]; allowActives: boolean; ownedItemIds: string[];
   responseWindow: Scenario['responseWindow'];

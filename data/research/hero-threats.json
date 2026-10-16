@@ -1132,16 +1132,31 @@
           "baselineDescription": "Dash forward, gaining slow resistance while leaving a flaming trail that deals spirit damage over time. Hold [W] while active to dash farther. Blaze forward, leaving a flame trail in your wake +1.0s Trail Duration and +20.0 DPS Enable 2 Ability Charges with 14s Recharge time",
           "signals": [
             {
-              "functionId": "mobility",
-              "quote": "Dash forward"
-            },
-            {
               "functionId": "dot",
               "quote": "spirit damage over time"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed. New-cast movement silence is traced to the raw MOVEMENT flag; ongoing-cast cancellation is excluded.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "mobility",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_PREVENT_BOT_USAGE",
+                    "CITADEL_ABILITY_BEHAVIOR_MOVEMENT",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "className": "ability_afterburn",

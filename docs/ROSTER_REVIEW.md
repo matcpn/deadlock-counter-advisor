@@ -51,10 +51,11 @@ Status: partial-source-reviewed.
 
 - **Grit / survive / burst:** A manually activated barrier can cushion incoming damage if applied before it lands.
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Dispel Magic / survive / burst:** Dispel Magic detaches an applied Sticky Bomb, leaving it counting down on the ground.
 
-Still open: Hook/uppercut barrier attribution, bomb purge and Hyper Beam coverage remain separate from the existing spirit-burst buffer.
+Still open: Test purge-to-movement timing and dropped-bomb splash safety; Hyper Beam interruption and hook protection remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Pinned hero definitions · client 6785](https://api.deadlock-api.com/v1/assets/heroes?client_version=6785); [Grit tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/grit); [Barrier mechanics guide · updated Sep 20, 2026](https://www.deadlock.io/en/mechanics/shields-and-barriers); [Spirit Shielding tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/spirit-shielding); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Pinned hero definitions · client 6785](https://api.deadlock-api.com/v1/assets/heroes?client_version=6785); [Grit tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/grit); [Barrier mechanics guide · updated Sep 20, 2026](https://www.deadlock.io/en/mechanics/shields-and-barriers); [Spirit Shielding tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/spirit-shielding); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Valve January 30 update: dispelled Sticky Bomb stays live on the ground](https://forums.playdeadlock.com/threads/01-30-2026-update.102822/); [Bebop ability interactions: purged bomb still detonates](https://deadlock.wiki/Bebop)
 
 ## Billy
 
@@ -176,10 +177,11 @@ Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / dot:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 - **Dispel Magic / survive / dot:** Community reports support removing applied Afterburn with Dispel Magic, if you can still activate it.
+- **Slowing Hex / disrupt / escape:** Slowing Hex can prevent a new Flame Dash cast while its movement-ability silence applies.
 
-Still open: Afterburn response is covered. Removal reapplication and other player healing-denial routes remain untested.
+Still open: Test first-cast versus ongoing Flame Dash/recast ordering; burn reapplication and ultimate response remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Pinned hero definitions · client 6785](https://api.deadlock-api.com/v1/assets/heroes?client_version=6785); [Spirit Shielding tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/spirit-shielding); [Barrier mechanics guide · updated Sep 20, 2026](https://www.deadlock.io/en/mechanics/shields-and-barriers); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Community Haze / Infernus discussion · date/patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Pinned hero definitions · client 6785](https://api.deadlock-api.com/v1/assets/heroes?client_version=6785); [Spirit Shielding tooltip and usage · shared API lineage](https://www.deadlock.io/en/items/spirit-shielding); [Barrier mechanics guide · updated Sep 20, 2026](https://www.deadlock.io/en/mechanics/shields-and-barriers); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Community Haze / Infernus discussion · date/patch uncertain](https://www.reddit.com/r/DeadlockTheGame/comments/1sdzq53/im_learning_still_and_need_someone_to_just/); [Movement silence list includes Flame Dash; older item numbers not adopted](https://deadlock.wiki/Slowing_Hex)
 
 ## Ivy
 
@@ -210,10 +212,11 @@ Status: partial-source-reviewed.
 
 - **Healbane / punish / sustain:** Healbane reduces incoming healing on Lady Geist while Life Drain is restoring her health.
 - **Toxic Bullets / punish / sustain:** Toxic Bullets reduces incoming healing on Lady Geist while Life Drain is restoring her health.
+- **Dispel Magic / survive / dot, burst:** Dispel Magic can remove applied Life Drain and Malice from yourself.
 
-Still open: Life Drain healing denial is distinct from Soul Exchange. No health-swap prevention, Malice purge or damage-type inference from self-damage is claimed.
+Still open: Test repeated Life Drain charges and purge timing; Cursed Relic conflicts and Soul Exchange prevention remain unresolved.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: geist · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: geist · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1s6rtsi/any_tips_on_how_to_play_against_lady_geist/); [Dispel Magic interaction list: Binding Word, Life Drain and Malice](https://deadlock.wiki/Dispel_Magic); [August report: Life Drain persists through Cursed Relic; self-dispel distinguished](https://forums.playdeadlock.com/threads/lady-geist-life-drain-uninterruptible-by-cursed-relic.157029/); [Lady Geist discussion: Dispel versus repeated Life Drain charges](https://www.reddit.com/r/DeadlockTheGame/comments/1sea0au/how_tf_am_i_supposed_to_fight_lady_geist/)
 
 ## Lash
 
@@ -460,10 +463,11 @@ Status: partial-source-reviewed.
 
 - **Reactive Barrier / survive / control, burst:** The immobilize from Binding Word can trigger a barrier for follow-up damage.
 - **Debuff Reducer / survive / control:** Passive debuff resistance can shorten Binding Word's applied immobilize.
+- **Dispel Magic / survive / control:** Dispel Magic can clear Binding Word from you while you are able to use items.
 
-Still open: Binding Word root follow-up is scoped. Escape timer is not root duration; upgraded Last Stand has Unstoppable, so blanket channel interrupts are excluded.
+Still open: Test pending-cage and post-root purge ordering, repeat casts and simultaneous stun; Last Stand protection/healing remain open.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: warden · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Binding_Word); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer); [Warden Binding Word duration and immunity reference](https://deadlock.wiki/Warden); [Historical Binding Word escape-timer bug report](https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: warden · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Binding_Word); [Debuff Reducer interaction list · numeric values stale](https://deadlock.wiki/Debuff_Reducer); [Warden Binding Word duration and immunity reference](https://deadlock.wiki/Warden); [Historical Binding Word escape-timer bug report](https://forums.playdeadlock.com/threads/debuff-reducer-on-warden-3.9409/); [Dispel Magic interaction list: Binding Word, Life Drain and Malice](https://deadlock.wiki/Dispel_Magic); [September 20 Warden build: cage, Dispel and repeat casts](https://deadlocklabs.gg/builds/warden-spoooomples-make-them-buy-dispel-816613/); [Warden cage discussion: Dispel as a response](https://www.reddit.com/r/DeadlockTheGame/comments/1t6x3ae/nerf_warden_lvl_3_cage/)
 
 ## Wraith
 
@@ -484,9 +488,11 @@ Status: partial-source-reviewed.
 
 - **Rebuttal / survive / burst:** Passive melee resistance reduces the melee portion of Flying Slash. No successful parry is required for that resistance.
 - **Spirit Shielding / survive / burst:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
+- **Healbane / punish / sustain:** Healbane reduces Yamato's incoming Crimson Slash healing while the healing-reduction debuff is applied.
+- **Toxic Bullets / punish / sustain:** Toxic Bullets reduces Yamato's incoming Crimson Slash healing while the healing-reduction debuff is applied.
 
-Still open: Flying Slash melee damage and raw-marker-supported Power Slash spirit damage are scoped separately. Test shield threshold timing; no parry claim, prevention of grapple, or debuff advice through Shadow Transformation immunity.
+Still open: Test healing reduction during Shadow Transformation and before/after cleanse; broaden delivery routes and Power Slash timing.
 
-Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: yamato · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Damage_Resistance); [Yamato defense discussion; spirit shielding and transformation limits](https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: yamato · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Damage_Resistance); [Yamato defense discussion; spirit shielding and transformation limits](https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053); [Yamato: Crimson Slash healing and Shadow Transformation protection](https://deadlock.wiki/Shadow_Transformation)
 
 A new client, changed ability text or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.

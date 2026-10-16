@@ -1,6 +1,7 @@
 import type { Catalog } from '../domain/types';
 import type { GameSnapshot } from '../domain/game-data';
 import type { browseBoard, BrowseItem } from '../engine/browse';
+import { browseExplanations } from '../engine/browse';
 import { ItemDetails } from './ItemDetails';
 
 export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browseBoard>;catalog:Catalog;game:GameSnapshot}) {
@@ -19,7 +20,10 @@ export function AdviceBoard({board,catalog,game}:{board:ReturnType<typeof browse
             <div className="item-heading">{(()=>{const item=game.items.find(i=>i.id===r.item.id);return item?<ItemDetails item={item} game={game}/>:<h3>{r.item.name}</h3>;})()}<strong>{r.item.cost.toLocaleString()} souls</strong></div>
             <div className="badges"><span>{r.item.category}</span><span className={r.item.activation==='active'?'active':''}>{r.item.activation==='conditional'?'CONDITIONAL PROC':r.item.activation.toUpperCase()}</span></div>
             <p>For {r.coveredEnemyIds.map(name).join(' + ')}.</p>
-            {unique(r.rules.map(rule=>rule.mechanism)).map(text=><p key={text}>{text}</p>)}
+            {browseExplanations(r).map((explanation,index)=><div className="decision-guide" key={index}>
+              {r.coveredEnemyIds.length>1&&<strong className="decision-enemies">{explanation.enemyIds.map(name).join(' + ')}</strong>}
+              {explanation.decision?<><p><strong>Choose when:</strong> {explanation.decision.chooseWhen}</p><p className="decision-tradeoff">{explanation.decision.tradeoff}</p></>:<p>{explanation.mechanism}</p>}
+            </div>)}
             {conditionGroups(r).filter(g=>g.playerScope).map(g=><p className="scope-note" key={g.id}>{g.enemy}: application reviewed for {g.playerScope}.</p>)}
             <details><summary>When to use, limits & sources</summary>
               <div className="conditions">{conditionGroups(r).map(group=><div key={group.id}><strong>{group.enemy}</strong><p>{group.mechanism}</p>{group.playerScope&&<p>Application reviewed for {group.playerScope}.</p>}<ul>{group.conditions.map(text=><li key={text}>{text}</li>)}</ul></div>)}</div>

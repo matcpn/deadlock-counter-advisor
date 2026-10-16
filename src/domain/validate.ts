@@ -130,6 +130,11 @@ export function parseCatalog(input: unknown): Catalog {
     if (r.conditions !== undefined && !strings(r.conditions, `${path}.conditions`).length) fail(path, 'Conditions must not be empty');
     if (r.response !== undefined) choice(r.response, ['passive', 'before-control', 'after-debuff', 'while-actionable'], `${path}.response`);
     if (r.stageReason !== undefined) string(r.stageReason, `${path}.stageReason`);
+    if (r.decision !== undefined) {
+      const decision = row(r.decision, `${path}.decision`);
+      string(decision.chooseWhen, `${path}.decision.chooseWhen`);
+      string(decision.tradeoff, `${path}.decision.tradeoff`);
+    }
     if (row(r.evidence, path).status === 'source-reviewed' &&
         (!r.playerHeroIds || !r.conditions || !r.response || !r.stageReason)) fail(path, 'Source-reviewed rule requires scope, conditions, response and stage rationale');
   }

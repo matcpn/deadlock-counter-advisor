@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "build-color-pass-2026-10-16",
+    "dataVersion": "defining-threats-2026-10-16",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -437,11 +437,65 @@
         "url": "https://forums.playdeadlock.com/threads/dynamo-not-activating-reactive-barrier.120634/",
         "title": "Kinetic Pulse does not trigger Reactive Barrier report",
         "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-bomb-patch",
+        "url": "https://forums.playdeadlock.com/threads/01-30-2026-update.102822/",
+        "title": "Valve January 30 update: dispelled Sticky Bomb stays live on the ground",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-bomb-wiki",
+        "url": "https://deadlock.wiki/Bebop",
+        "title": "Bebop ability interactions: purged bomb still detonates",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-dispel-wiki",
+        "url": "https://deadlock.wiki/Dispel_Magic",
+        "title": "Dispel Magic interaction list: Binding Word, Life Drain and Malice",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-warden-build",
+        "url": "https://deadlocklabs.gg/builds/warden-spoooomples-make-them-buy-dispel-816613/",
+        "title": "September 20 Warden build: cage, Dispel and repeat casts",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-warden-community",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1t6x3ae/nerf_warden_lvl_3_cage/",
+        "title": "Warden cage discussion: Dispel as a response",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-hex-wiki",
+        "url": "https://deadlock.wiki/Slowing_Hex",
+        "title": "Movement silence list includes Flame Dash; older item numbers not adopted",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-geist-report",
+        "url": "https://forums.playdeadlock.com/threads/lady-geist-life-drain-uninterruptible-by-cursed-relic.157029/",
+        "title": "August report: Life Drain persists through Cursed Relic; self-dispel distinguished",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-geist-community",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1sea0au/how_tf_am_i_supposed_to_fight_lady_geist/",
+        "title": "Lady Geist discussion: Dispel versus repeated Life Drain charges",
+        "accessedAt": "2026-10-16"
+      },
+      {
+        "id": "depth-yamato-wiki",
+        "url": "https://deadlock.wiki/Shadow_Transformation",
+        "title": "Yamato: Crimson Slash healing and Shadow Transformation protection",
+        "accessedAt": "2026-10-16"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 105 conditional rules / 16 items. Every source-selectable enemy has at least two distinct eligible item options across reviewed scenarios and stages. This is not complete kit coverage or a guarantee that two options fit every situation. No in-game tests. Build-color coverage: every enemy has a green option or both purple and orange across reviewed scenarios."
+      "note": "Source-reviewed beta: 111 conditional rules / 16 items. Every source-selectable enemy has at least two distinct eligible item options across reviewed scenarios and stages. This is not complete kit coverage or a guarantee that two options fit every situation. No in-game tests. Build-color coverage: every enemy has a green option or both purple and orange across reviewed scenarios."
     }
   },
   "heroes": [
@@ -2134,6 +2188,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+      },
+      "decision": {
+        "chooseWhen": "you can activate a barrier before Sticky Bomb explodes.",
+        "tradeoff": "Gives protection before the hit, unlike Spirit Shielding. The barrier can break and does not detach the bomb."
       }
     },
     {
@@ -2655,6 +2713,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
+      },
+      "decision": {
+        "chooseWhen": "you can survive Sticky Bomb damage reaching the spirit-damage trigger and need protection against follow-up hits.",
+        "tradeoff": "Protection arrives after the trigger. For one large bomb, consider a barrier beforehand or dropping it with Dispel."
       }
     },
     {
@@ -2742,6 +2804,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
+      },
+      "decision": {
+        "chooseWhen": "Afterburn is dealing enough concentrated spirit damage to trigger protection for follow-up hits.",
+        "tradeoff": "Passive protection after a threshold; it does not remove the burn. Dispel clears applied Afterburn while you can act."
       }
     },
     {
@@ -2993,6 +3059,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Community reports specifically propose Dispel against Infernus burn, compared with current Afterburn and Dispel tooltips. Removal is not an in-game tested interaction; immediate reapplication remains possible."
+      },
+      "decision": {
+        "chooseWhen": "Afterburn is already applied and you can activate a purge.",
+        "tradeoff": "Clears the current burn rather than waiting for a shielding proc. New hits can apply it again, so create distance."
       }
     },
     {
@@ -7271,6 +7341,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      },
+      "decision": {
+        "chooseWhen": "Binding Word roots you and follow-up damage is the danger.",
+        "tradeoff": "Automatic barrier after the root applies; it does not free you. Dispel requires an action but can remove Binding Word."
       }
     },
     {
@@ -7437,6 +7511,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      },
+      "decision": {
+        "chooseWhen": "Flying Slash's melee hit is the part of Yamato's approach you need to soften.",
+        "tradeoff": "Passive melee resistance needs no parry. It does not cover Power Slash or deny Crimson Slash healing."
       }
     },
     {
@@ -7484,6 +7562,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      },
+      "decision": {
+        "chooseWhen": "Life Drain is healing Lady Geist and you can apply qualifying spirit damage to her.",
+        "tradeoff": "Reduces her healing; it does not end the drain or counter Soul Exchange. Dispel clears your own drain/debuff instead."
       }
     },
     {
@@ -7530,6 +7612,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from the named ability and the current item definition. Community/guide evidence provides context, not independent proof of every interaction. No client experiment, guaranteed survival or whole-kit counter is claimed."
+      },
+      "decision": {
+        "chooseWhen": "Life Drain is healing Lady Geist and you can keep landing bullets to build up the debuff.",
+        "tradeoff": "Needs sustained bullet hits. Healbane uses spirit damage instead; neither is a Soul Exchange counter."
       }
     },
     {
@@ -8627,6 +8713,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Pinned negative-effect duration reduction compared with the named ability and community interaction reports. Source pages can contain older values; numeric item facts come from client 6785. No in-game timing or guaranteed escape test."
+      },
+      "decision": {
+        "chooseWhen": "you want passive duration reduction for Binding Word's applied root.",
+        "tradeoff": "Does not prevent the capture damage or extend your escape timer. Reactive Barrier protects follow-up damage instead."
       }
     },
     {
@@ -8967,6 +9057,10 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Current pinned item/ability definitions support this narrow inference. Community material is context, not a client test. Trigger ordering, damage survival and complete-kit coverage are not certified. Power Slash type is confirmed by FullChargeDamage.css_class=tech_damage and the damage_magic_color.svg icon in pinned raw properties; scaling alone is not the basis."
+      },
+      "decision": {
+        "chooseWhen": "you survive Power Slash and expect enough spirit damage to trigger protection for follow-up hits.",
+        "tradeoff": "Does not protect before the proc or stop the grapple. Rebuttal addresses Flying Slash melee damage instead."
       }
     },
     {
@@ -9473,6 +9567,465 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Pinned raw spirit-damage markers support Lightning Ball, Power Surge shock and Storm Cloud. Community discussion identifies repeated Seven spirit hits as a shielding use case. This is a conditional damage-protection inference, not client verification or a gun-build counter."
+      }
+    },
+    {
+      "id": "defining-bomb-15",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-15",
+      "goal": "survive",
+      "problems": [
+        "burst"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Dispel Magic detaches an applied Sticky Bomb, leaving it counting down on the ground.",
+      "conditions": [
+        "Sticky Bomb is attached to you and has not detonated.",
+        "The item is ready and usable; you are not stunned, asleep or prevented from using items.",
+        "You have time and a safe route to move beyond the dropped bomb before it explodes."
+      ],
+      "timing": "Activate after attachment and before detonation, then leave the blast area. Captured Dispel cooldown is 45 seconds; do not wait for the final instant.",
+      "limitation": "The bomb is not destroyed: you and allies can still be hit by its explosion. Does not undo hook displacement, stop Hyper Beam, remove a bomb attached to somebody else or protect against another application.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://forums.playdeadlock.com/threads/01-30-2026-update.102822/",
+          "https://deadlock.wiki/Bebop"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Valve explicitly changed dispelled bombs to remain on the ground and count down. The current wiki agrees; pinned Dispel and Sticky Bomb definitions bound this self-purge. No in-game timing or safe-distance test."
+      },
+      "decision": {
+        "chooseWhen": "a Sticky Bomb is attached and you can drop it, then leave the blast area.",
+        "tradeoff": "The bomb still explodes on the ground. Grit cushions damage; this needs a safe escape route."
+      }
+    },
+    {
+      "id": "defining-cage-25",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-25",
+      "goal": "survive",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Dispel Magic can clear Binding Word from you while you are able to use items.",
+      "conditions": [
+        "Binding Word is already applied to you; this is a reactive self-purge.",
+        "The item is ready and usable; you are not stunned, asleep or prevented from using items."
+      ],
+      "timing": "Use after Binding Word applies. Removing the pending debuff before capture avoids waiting out the root; after capture, removal cannot refund damage already taken. Cooldown 45 seconds.",
+      "limitation": "Not preemptive immunity. A second cage can reapply the effect while Dispel is on cooldown. Does not restore stamina spent or lost, stop Last Stand or remove its healing; a simultaneous stun can prevent activation.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Dispel_Magic",
+          "https://deadlocklabs.gg/builds/warden-spoooomples-make-them-buy-dispel-816613/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1t6x3ae/nerf_warden_lvl_3_cage/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Current pinned non-ultimate purge plus the wiki interaction index and 2026 community/build reports support Binding Word removal. Reports about Unstoppable were not treated as Dispel evidence. Exact event ordering at capture is untested."
+      },
+      "decision": {
+        "chooseWhen": "Binding Word has caught you and you can still use an item to clear it.",
+        "tradeoff": "Unlike Debuff Reducer or Reactive Barrier, this actively removes the effect. Another cage can catch you during its cooldown."
+      }
+    },
+    {
+      "id": "defining-drain-4",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-4",
+      "goal": "survive",
+      "problems": [
+        "dot",
+        "burst"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late reactive purchase when removing this specific debuff justifies delaying core items. Full price is charged; no component discount is assumed.",
+      "mechanism": "Dispel Magic can remove applied Life Drain and Malice from yourself.",
+      "conditions": [
+        "Life Drain or Malice is already applied to you.",
+        "The item is ready and usable; you are not stunned, asleep or prevented from using items."
+      ],
+      "timing": "Use after the drain or Malice applies, then break line of sight or create distance to limit reapplication. Captured cooldown 45 seconds.",
+      "limitation": "Does not prevent or reverse Soul Exchange, undo damage, stop a bomb already travelling, or protect an ally being drained. Extra Life Drain charges can reapply the tether. Cursed Relic interruption of Life Drain is disputed and is not recommended here.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Dispel_Magic",
+          "https://forums.playdeadlock.com/threads/lady-geist-life-drain-uninterruptible-by-cursed-relic.157029/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1sea0au/how_tf_am_i_supposed_to_fight_lady_geist/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "The wiki interaction index names Life Drain/Malice; an August firsthand forum report distinguishes self-dispel from failed Cursed Relic interruption. Community reports warn about repeated drain charges. These support a conditional self-purge, not blanket channel interruption or an ultimate counter."
+      },
+      "decision": {
+        "chooseWhen": "Life Drain is tethered to you or Malice stacks are amplifying her follow-up damage.",
+        "tradeoff": "This clears your debuffs; anti-heal instead reduces her recovery. More drain charges can reapply it, and Soul Exchange is unaffected."
+      }
+    },
+    {
+      "id": "defining-dash-1",
+      "itemId": "item-1813726886",
+      "enemyHeroId": "hero-1",
+      "goal": "disrupt",
+      "problems": [
+        "escape"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Slowing Hex can prevent a new Flame Dash cast while its movement-ability silence applies.",
+      "conditions": [
+        "Flame Dash has not started; Infernus is visible, targetable and within 25m base cast range.",
+        "You can use the active item, it is ready, and Infernus has no applicable debuff protection."
+      ],
+      "timing": "Apply before the escape cast while your team can follow up. Captured base duration 3.5 seconds, cooldown 29 seconds. This is a short window, not permanent lockdown.",
+      "limitation": "Does not cleanse Afterburn, erase an existing flame trail, stop ordinary stamina dashes or certify interruption of an ongoing Flame Dash. Concussive Combustion cannot be interrupted once cast; Slowing Hex is not its counter. Removal ends the opportunity.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Slowing_Hex"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned Flame Dash behaviours include CITADEL_ABILITY_BEHAVIOR_MOVEMENT, agreeing with the community movement-silence list. Current pinned Hex numbers override the older wiki. Rule deliberately excludes ongoing-cast cancellation and ultimate interruption."
+      },
+      "decision": {
+        "chooseWhen": "you can catch Infernus before he starts Flame Dash and follow up immediately.",
+        "tradeoff": "This limits a new escape cast. Use Dispel for an applied burn; Hex does not undo an ongoing dash or ultimate."
+      }
+    },
+    {
+      "id": "defining-healbane-27",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-27",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Healbane reduces Yamato's incoming Crimson Slash healing while the healing-reduction debuff is applied.",
+      "conditions": [
+        "Yamato is receiving Crimson Slash healing outside Shadow Transformation and is vulnerable to the healing-reduction debuff.",
+        "You can land qualifying spirit damage on the healing recipient while they heal."
+      ],
+      "timing": "Land spirit damage during the healing window. Reviewed delivery examples: Infernus Afterburn, Kelvin Frost Grenade, Victor Pain Battery, McGinnis Heavy Barrage. Ordinary bullets alone do not apply Healbane.",
+      "limitation": "Does not prevent Crimson Slash damage, the Flying Slash approach or Power Slash burst. Shadow Transformation is outside this rule: no application through immunity, persistence through its cleanse, or reduction of its kill healing is certified. Existing restricted player-delivery examples remain; anti-heal is not immediate survival.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Shadow_Transformation",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned Crimson Slash and healing-reduction definitions support a narrow recipient-side inference; community discussion supports the anti-heal use case. Conflicting immunity reports are not resolved: Shadow Transformation and its kill heal remain excluded. No new player-delivery route or stacking claim."
+      },
+      "decision": {
+        "chooseWhen": "Crimson Slash keeps healing Yamato through your spirit damage, outside Shadow Transformation.",
+        "tradeoff": "Requires qualifying spirit damage on Yamato. It does not protect you from her burst or certify anti-heal during her ultimate."
+      }
+    },
+    {
+      "id": "defining-toxic-27",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-27",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Consider when this named threat is actually causing the problem, from lane onward unless restricted below. Stage placement and strength are editorial; compare the purchase with core items.",
+      "mechanism": "Toxic Bullets reduces Yamato's incoming Crimson Slash healing while the healing-reduction debuff is applied.",
+      "conditions": [
+        "Yamato is receiving Crimson Slash healing outside Shadow Transformation and is vulnerable to the healing-reduction debuff.",
+        "You can maintain bullet hits on the healing recipient long enough to trigger the buildup."
+      ],
+      "timing": "Land enough bullet hits to trigger the bleed before or during the healing window; one hit is not assumed sufficient. Rebuild after removal.",
+      "limitation": "Does not prevent Crimson Slash damage, the Flying Slash approach or Power Slash burst. Shadow Transformation is outside this rule: no application through immunity, persistence through its cleanse, or reduction of its kill healing is certified. Existing restricted player-delivery examples remain; anti-heal is not immediate survival.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://deadlock.wiki/Shadow_Transformation",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1qtsii8/how_to_deal_with_yamato/"
+        ],
+        "reviewedAt": "2026-10-16",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned Crimson Slash and healing-reduction definitions support a narrow recipient-side inference; community discussion supports the anti-heal use case. Conflicting immunity reports are not resolved: Shadow Transformation and its kill heal remain excluded. No new player-delivery route or stacking claim."
+      },
+      "decision": {
+        "chooseWhen": "Crimson Slash keeps healing Yamato and you can maintain bullet buildup outside Shadow Transformation.",
+        "tradeoff": "Requires repeated bullet hits; one hit is not enough. Healbane fits qualifying spirit delivery instead. Her ultimate remains excluded."
       }
     }
   ]

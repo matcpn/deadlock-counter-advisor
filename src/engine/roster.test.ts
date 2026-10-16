@@ -83,7 +83,10 @@ describe('roster completion means bounded advice, not universal coverage',()=>{
     expect(r.every(r=>r.goal==='punish'&&r.rules[0].limitation.includes('not a counter to Soul Exchange'))).toBe(true);
     expect(run({...s,heroId:'hero-66'})).toHaveLength(2);
     expect(run({...s,heroId:'hero-13'})).toEqual([]);
-    expect(run({...s,problems:['burst']})).toEqual([]);
+    const burst=run({...s,problems:['burst']});
+    expect(burst.map(r=>r.item.name)).toEqual(['Dispel Magic']);
+    expect(burst[0].goal).toBe('survive');
+    expect(burst[0].rules[0].limitation).toContain('Does not prevent or reverse Soul Exchange');
   });
   it('keeps exceptional damage, alternate kits and wake-up limitations visible',()=>{
     const rule=(id:string)=>reviewedCatalog.rules.find(r=>r.id===id)!;
