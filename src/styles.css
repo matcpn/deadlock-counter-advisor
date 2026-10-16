@@ -44,3 +44,5 @@ main{padding-top:18px}.scenario{padding:14px}.threats{padding:10px;border:0}.sea
 .hero-choice.selected::after{content:'✓';position:absolute;top:2px;right:3px;background:#d6dbac;color:#17231f;border-radius:50%;width:15px;height:15px;font-size:11px;font-weight:bold;line-height:15px}
 .preferences{margin-top:8px;padding-top:10px}.selected-threats{font-size:12px;margin:8px 4px}.advisor{margin-top:24px}
 @media(max-width:600px){main{padding:10px 8px}.scenario{padding:6px}.threats{padding:6px}.hero-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:3px}.hero-choice{padding:4px 1px;gap:3px;min-height:55px;font-size:10px}.hero-choice img,.hero-choice .art-fallback{width:24px;height:24px}.hero-choice span{line-height:11px;min-height:22px}.hero-choice input{width:1px;height:1px}.search{margin-bottom:6px}.threats legend{font-size:12px}.preferences{margin:6px 6px 0;padding-top:8px}}
+
+.tier-price{display:block;margin-top:5px;font-size:12px;font-weight:400;color:#bac8c2}

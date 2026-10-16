@@ -14,7 +14,7 @@ export function AdviceBoard({board,catalog,game,focusHeroId}:{board:ReturnType<t
       ? rule.playerHeroIds.map(name).join(', ') : null
   }));
   return <div className="stage-board">{board.map(column=><section key={column.stage} aria-label={column.label}>
-    <h3>{column.label}</h3>
+    <h3>{column.label} <small className="tier-price">{column.priceLabel}</small></h3>
     {(()=>{
         const matches=column.results;
         const groups=groupAdvice(matches,focusHeroId);
@@ -42,7 +42,7 @@ export function AdviceBoard({board,catalog,game,focusHeroId}:{board:ReturnType<t
           {group.results.slice(0,2).map(card)}
           {group.results.length>2&&<details className="more-items"><summary>More options ({group.results.length-2})</summary>{group.results.slice(2).map(card)}</details>}
         </details>)}</div>;
-        return matches.length?<>{matches.slice(0,4).map(card)}{matches.length>4&&<details className="more-items"><summary>Show {matches.length-4} more items</summary>{matches.slice(4).map(card)}</details>}</>:<p className="small-empty">No reviewed options for this stage.</p>;
+        return matches.length?<>{matches.slice(0,4).map(card)}{matches.length>4&&<details className="more-items"><summary>Show {matches.length-4} more items</summary>{matches.slice(4).map(card)}</details>}</>:<p className="small-empty">No reviewed options at this price.</p>;
     })()}
   </section>)}</div>;
 }

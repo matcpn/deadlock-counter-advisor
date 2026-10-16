@@ -2,6 +2,11 @@
 
 ## Current simplified flow — 2026-10-16
 
+Early / Mid / Late now mean price tiers at the user's request: 800 or 1,600 /
+3,200 / 6,400 souls. Show prices beneath headings and each item only once across
+the board. Reviewed gameplay-stage notes remain in details; price placement does
+not change mechanics or the personalized engine's stage restrictions.
+
 At the user's request, select enemies and browse combined item lists for Early / Mid /
 Late. No player hero, build, souls, problem tabs, demo toggle, item preferences or
 goal headings. Actives are included; ownership and response filters stay in the engine.

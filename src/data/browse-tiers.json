@@ -1,0 +1,5 @@
+[
+  { "id": "lane", "label": "Early", "priceLabel": "800 / 1,600 souls", "costs": [800, 1600] },
+  { "id": "mid", "label": "Mid", "priceLabel": "3,200 souls", "costs": [3200] },
+  { "id": "late", "label": "Late", "priceLabel": "6,400 souls", "costs": [6400] }
+]

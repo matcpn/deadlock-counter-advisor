@@ -24,7 +24,7 @@ it('adds specific responses for the five thin heroes and guides every option in 
     expect(rules.every(r=>r.decision?.chooseWhen&&r.decision.tradeoff)).toBe(true);
   }
   const dis=board()[0].results.find(r=>r.item.name==='Dispel Magic');
-  expect(dis).toBeUndefined(); // Editorial mid/late placement is retained.
+  expect(dis).toBeUndefined(); // The 3,200-soul item belongs only in Mid.
   const mid=board()[1].results.find(r=>r.item.name==='Dispel Magic')!;
   const explanations=browseExplanations(mid);
   expect(explanations).toHaveLength(4);

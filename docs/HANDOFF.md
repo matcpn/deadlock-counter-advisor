@@ -1,5 +1,15 @@
 # Start here — continuation handoff
 
+## Price-tier columns — 2026-10-16
+
+The user requested Early 800/1,600, Mid 3,200 and Late 6,400. browseBoard now places
+each eligible item once by full price using src/data/browse-tiers.json. Prices are
+visible beneath headings. Rule stages/reasons remain in data; the personalized
+engine and research audits still evaluate gameplay stages independently.
+Abrams now has six Early options across three problem groups, Toxic Bullets in
+Mid/healing, and Unstoppable in Late/stun setup. This supersedes the repeated
+three-group-per-stage prototype below. No mechanics/data review dates changed.
+
 ## Abrams problem rows — 2026-10-16
 
 The user approved an Abrams-only presentation prototype. When Abrams is the sole

@@ -1,5 +1,14 @@
 # Decisions and open questions
 
+## Price-based Early / Mid / Late — 2026-10-16
+
+The user requested Early = 800/1,600 souls, Mid = 3,200 and Late = 6,400. This
+supersedes gameplay-stage filtering in the simplified browse UI. Each item appears
+once by its reviewed full price; keep eligible rules, their scope and stageReason
+intact. Do not rewrite rule stages or alter personalized recommendations/research.
+Label the prices under the headings. Preserve Abrams groups within each price tier,
+omitting empty groups and showing an empty tier honestly. Config stays outside UI.
+
 ## Prototype problem rows for Abrams — 2026-10-16
 
 The user found eight counter items difficult to compare and accepted an Abrams

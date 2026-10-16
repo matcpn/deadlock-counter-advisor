@@ -20,7 +20,11 @@ the UI never invents item numbers or promotes these facts into interaction rules
 ## Unpersonalized browse adapter — 2026-10-16
 
 The primary UI uses browseBoard: enemy IDs and optional active/owned/response filters
-produce a deduplicated item list for each stage across all problems and goals.
+produce a deduplicated item list for each price tier across all problems and goals.
+src/data/browse-tiers.json maps Early to 800/1,600, Mid to 3,200 and Late to 6,400.
+Browse does not filter by rule.stages; it retains every eligible rule and its
+stageReason. These are price buckets, not gameplay suitability judgments. The
+personalized engine and research coverage still use the reviewed gameplay stages.
 It shares the personalized engine's evidence eligibility gate. The existing release
 adapter still pauses on item/patch drift. Player scope remains attached to each
 rule and appears on restricted cards; there is no assumed player, build or budget.

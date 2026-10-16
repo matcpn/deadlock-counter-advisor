@@ -9,12 +9,23 @@ it('combines problems and objectives into one item while retaining every scoped 
   const board=browseBoard(reviewedCatalog,preferences,options);
   for(const column of board){
     expect(new Set(column.results.map(r=>r.item.id)).size).toBe(column.results.length);
-    const expected=reviewedCatalog.rules.filter(r=>preferences.enemyHeroIds.includes(r.enemyHeroId)&&r.stages.includes(column.stage));
+    const costs=column.stage==='lane'?[800,1600]:column.stage==='mid'?[3200]:[6400];
+    const expected=reviewedCatalog.rules.filter(r=>preferences.enemyHeroIds.includes(r.enemyHeroId)&&costs.includes(reviewedCatalog.items.find(i=>i.id===r.itemId)!.cost));
     expect(column.results.flatMap(r=>r.rules.map(rule=>rule.id)).sort()).toEqual(expected.map(r=>r.id).sort());
     expect(column.results.map(r=>r.item.cost)).toEqual(column.results.map(r=>r.item.cost).sort((a,b)=>a-b));
   }
   const scoped=board.flatMap(c=>c.results).flatMap(r=>r.rules).find(r=>r.playerHeroIds?.length===1);
   expect(scoped?.playerHeroIds).toEqual(['hero-1']);
+});
+it('puts every reviewed item in exactly one price tier without losing stage-scoped advice',()=>{
+  const board=browseBoard(reviewedCatalog,{...preferences,enemyHeroIds:reviewedCatalog.heroes.map(h=>h.id)},options);
+  expect(board.map(c=>[...new Set(c.results.map(r=>r.item.cost))])).toEqual([[800,1600],[3200],[6400]]);
+  const results=board.flatMap(c=>c.results);
+  expect(new Set(results.map(r=>r.item.id)).size).toBe(results.length);
+  expect(results).toHaveLength(reviewedCatalog.items.length);
+  expect(results.flatMap(r=>r.rules)).toHaveLength(reviewedCatalog.rules.length);
+  // A price bucket does not rewrite reviewed gameplay suitability.
+  expect(results.flatMap(r=>r.rules).every(rule=>reviewedCatalog.rules.includes(rule))).toBe(true);
 });
 it('allows Infernus as an enemy without a hidden player selection',()=>{
   const board=browseBoard(reviewedCatalog,{...preferences,enemyHeroIds:['hero-1']},options);

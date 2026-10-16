@@ -1,5 +1,18 @@
 # Validation record
 
+## Price-tier columns — 2026-10-16
+
+- npm run check passed: data/research verification, 179 tests across 11 files,
+  TypeScript and production build (existing chunk-size notice remains).
+- Whole-catalog test verifies exact 800/1,600 vs 3,200 vs 6,400 placement, every
+  reviewed item once and all 111 original rule objects preserved. Existing tests
+  retain freshness, player scope, ownership and response restrictions.
+- Updated Abrams group and green-coverage assertions for single-tier placement.
+  Personalized recommendation-stage tests still pass. No in-game tests.
+- Browser verified Abrams 6/1/1 item placement, expanded Toxic Bullets player scope,
+  and combined Abrams/Shiv prices. Desktop layout inspected; 375px viewport has
+  no horizontal overflow (360px content width), no console errors. Override reset.
+
 ## Abrams problem-row prototype — 2026-10-16
 
 - npm run check passed: data/research verification, 178 tests across 11 files,

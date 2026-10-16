@@ -27,7 +27,8 @@ it('offers passive green protection for the three formerly purple-only enemies w
   for(const [hero,item] of [['hero-2','Spirit Shielding'],['hero-11','Reactive Barrier'],['hero-18','Reactive Barrier']]){
     for(const build of ['weapon','spirit'] as const){
       const board=browseBoard(reviewedCatalog,{enemyHeroIds:[hero],allowActives:false,ownedItemIds:[],responseWindow:'stunned-or-slept'},options);
-      expect(board.every(c=>c.results.some(r=>r.item.name===item&&r.item.category==='vitality'))).toBe(true);
+      expect(board[0].results.some(r=>r.item.name===item&&r.item.category==='vitality')).toBe(true);
+      expect(board.slice(1).every(c=>c.results.every(r=>r.item.name!==item))).toBe(true);
       expect(run(hero,hero==='hero-2'?'dot':'control',{build,allowActives:false,responseWindow:'stunned-or-slept'}).some(r=>r.item.name===item&&r.goal==='survive')).toBe(true);
     }
   }
