@@ -12,7 +12,9 @@ Presentation configuration lives in src/data/advice-groups.json and consumes onl
 already-eligible browse results. No new mechanics or rules: 111 rules / 16 items.
 Eight Abrams rules now have chooseWhen/tradeoff summaries (24 guided rules total).
 Player-delivery scope, timing, evidence, item tooltips and expiry remain intact.
-178 tests and local desktop/mobile checks passed; publication status follows below.
+Published 0bf7456: Checks and Pages passed, as did 178 tests and desktop/mobile
+checks. Hosted groups and expanded comparisons verified; live preview left on
+Abrams for the user (permanent defaults still empty).
 Try this layout before extending the grouping to other heroes.
 
 ## Item preferences removed — 2026-10-16

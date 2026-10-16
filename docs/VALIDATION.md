@@ -16,6 +16,10 @@
   no horizontal overflow. No browser console errors; viewport override reset.
 - Presentation/copy changes reuse existing source-reviewed rules without renewing
   evidence or adding mechanics. No in-game tests.
+- Published 0bf7456: Checks 38940212110 and Pages 38940211868 succeeded. Live
+  Abrams groups and expanded stun comparison verified, no console errors.
+  Saved abrams-groups-live.png and left the hosted demo on Abrams with rows closed.
+  Local preview closed and server stopped; permanent enemy defaults remain empty.
 
 ## Item preferences removal — 2026-10-16
 
