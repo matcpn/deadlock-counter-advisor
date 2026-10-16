@@ -1,5 +1,14 @@
 # Start here — continuation handoff
 
+## Compact full-roster selector — 2026-10-16
+
+Removed the introductory branding, headline and subtitle at the user's request.
+The selector uses compact portrait/name tiles and no internal scrollbar; all 42
+heroes fit in the tested 1280×720 desktop and 375×667 mobile first view. Search,
+keyboard-accessible checkboxes, selected indicators and empty defaults remain.
+Item/stage headings remain useful navigation. No mechanics or recommendation data
+changed. See VALIDATION.md for build, browser and publication checks.
+
 ## Item stats and source popovers — 2026-10-16
 
 Implementation 6c3c187 is live. All 168 tests, Checks and Pages passed. The deployed

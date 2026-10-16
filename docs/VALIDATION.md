@@ -1,5 +1,16 @@
 # Validation record
 
+## Compact full-roster selector — 2026-10-16
+
+- TypeScript and production build passed; existing catalog chunk-size notice remains.
+  UI-only change: no engine/data edits or new tests required.
+- Local browser: all 42 tiles visible without nested scroll. Grid bottom 454px in
+  a 1280×720 viewport and 526px in a 375×667 viewport. scrollHeight equals clientHeight
+  in both; no horizontal page overflow. Intro headline/subtitle/branding removed.
+- Checked Yamato with keyboard Space and Baba by tile click. Filtering to Baba and
+  clearing the search retained both selections and restored all 42 choices.
+  No console errors observed; temporary viewport reset and preview tab closed.
+
 ## Item stats and source popovers — 2026-10-16
 
 - Regenerated normalized item data offline from immutable client-6785 snapshots.

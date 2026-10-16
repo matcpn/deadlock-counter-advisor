@@ -1,5 +1,12 @@
 # Decisions and open questions
 
+## Full roster before scrolling — 2026-10-16
+
+Remove the decorative introduction and devote the initial view to hero selection.
+Use compact portrait/name tiles, responsive columns and natural grid height instead
+of a fixed-height scrolling selector. Keep semantic input labels and useful item /
+stage headings. Preserve full accessible hero names, keyboard selection and search.
+
 ## Inspect item facts without expanding matchup advice — 2026-10-16
 
 The user requested item links and actual tooltip numbers. Use a shared accessible
