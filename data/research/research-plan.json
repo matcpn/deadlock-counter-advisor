@@ -26,11 +26,11 @@
         "hero-8"
       ],
       "questions": [
-        "Separate regeneration, ally healing, barriers and reanimation.",
-        "Review how healing reduction is delivered by different player heroes.",
-        "Compare sustained mitigation with attempts to interrupt or leave a damaging area."
+        "Test recipient-specific anti-heal application, Kelvin dome purge/reapplication and buildup timing.",
+        "Resolve turret-trigger attribution, Victor aura toggle interruption and reanimation health separately.",
+        "Extend player delivery coverage beyond the four reviewed heroes without assuming every spirit effect procs identically."
       ],
-      "status": "Next research batch."
+      "status": "First slice reviewed: healing denial, conditional spirit shielding and separate Inhibitor responses. In-game testing and full-kit coverage remain open."
     },
     {
       "title": "3. Flight, movement and escape",
@@ -44,7 +44,7 @@
         "Distinguish flight, teleport, untargetability and invisibility.",
         "Review execute wording separately from ordinary bonus damage against low-health targets."
       ],
-      "status": "Queued after healing and persistent damage."
+      "status": "Next research batch."
     }
   ],
   "gates": [

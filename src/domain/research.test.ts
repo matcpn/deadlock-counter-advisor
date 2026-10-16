@@ -92,12 +92,12 @@ describe('source-traced all-hero inventory',()=>{
 });
 
 describe('coverage and research are not recommendation generation',()=>{
-  it('reports all problem cells but only nine enemies with partial reviewed advice',()=>{
+  it('reports all problem cells but only twelve enemies with partial reviewed advice',()=>{
     const matrix=coverage();
     expect(matrix).toHaveLength(42);
     expect(matrix.flatMap(h=>h.cells)).toHaveLength(210);
-    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(9);
-    expect(matrix.find(h=>h.heroId==='hero-12')!.cells.every(c=>c.status==='needs-research')).toBe(true);
+    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(12);
+    expect(matrix.find(h=>h.heroId==='hero-3')!.cells.every(c=>c.status==='needs-research')).toBe(true);
     expect(matrix.flatMap(h=>h.cells).filter(c=>c.ruleIds.length).every(c=>c.status==='conditional')).toBe(true);
     expect(matrix.find(h=>h.heroId==='hero-2')!.cells.find(c=>c.problem==='control')!.goals).toEqual(['disrupt']);
   });
@@ -132,6 +132,6 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(backlog.find(f=>f.functionId==='channel')!.occurrences.some(o=>o.heroId==='hero-2')).toBe(true);
     expect(backlog.every((f,i)=>i===0||backlog[i-1].uncoveredHeroCount>=f.uncoveredHeroCount)).toBe(true);
     expect(reviewedCatalog).toEqual(before);
-    expect(reviewedCatalog.rules).toHaveLength(31);
+    expect(reviewedCatalog.rules).toHaveLength(42);
   });
 });

@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "channel-coverage-2026-10-15",
+    "dataVersion": "sustain-coverage-2026-10-15",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -113,11 +113,41 @@
         "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/",
         "title": "Mo & Krill interrupt discussion · 2026; patch uncertain",
         "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "sustain-victor",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/",
+        "title": "Victor counter discussion · 2026; patch/date uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "sustain-team",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1wtuxav/how_to_play_against_heal_heavy_comps/",
+        "title": "Healing-heavy teams / Inhibitor · 2026; arithmetic not adopted",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "sustain-kelvin",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1truf5v/countering_kelvin/",
+        "title": "Kelvin counter discussion · 2026; patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "sustain-mcginnis",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1lurbs3/people_forgot_how_to_counter_mcginnis/",
+        "title": "McGinnis counter discussion · July 8, 2025; historical context",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "shield-patch",
+        "url": "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053",
+        "title": "Valve gameplay update · May 22, 2026 · temporary shield resistance",
+        "accessedAt": "2026-10-15"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 31 conditional rules / 14 items, with partial advice for nine enemy heroes. Added channel disruption for Seven, Dynamo and Mo & Krill; Dynamo/Mo rescue requires a free teammate. Healing-denial advice remains Infernus-specific. No in-game tests or complete hero coverage."
+      "note": "Source-reviewed beta: 42 conditional rules / 15 items, with partial advice for 12 enemy heroes. Added healing denial and sustained-damage options for Victor, Kelvin and McGinnis. New anti-heal delivery is reviewed for Infernus, Kelvin, Victor and McGinnis; earlier Abrams/Shiv anti-heal remains Infernus-only. No in-game tests or complete hero coverage."
     }
   },
   "heroes": [
@@ -706,6 +736,36 @@
       "fit": {
         "spirit": 0.7,
         "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-2037039379",
+      "name": "Inhibitor",
+      "category": "vitality",
+      "cost": 6400,
+      "activation": "conditional",
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.5,
+        "weapon": 0.8,
         "hybrid": 0.7
       },
       "evidence": {
@@ -2073,12 +2133,12 @@
         "hero-27"
       ],
       "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
-      "mechanism": "Bullet resistance reduces the bullet portion; concentrated weapon damage can then trigger an additional barrier.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
       "conditions": [
         "The threat is repeated bullet damage, and you survive the damage needed to trigger the ready barrier."
       ],
-      "timing": "Equip beforehand. Captured values: 18% bullet resistance; 250 weapon damage within 4 seconds triggers 300 barrier for 8 seconds, 35-second cooldown.",
-      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger.",
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers.",
       "evidence": {
         "status": "source-reviewed",
         "patch": "client-6785",
@@ -2086,7 +2146,8 @@
           "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
           "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
           "https://www.deadlock.io/en/items/weapon-shielding",
-          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
         ],
         "reviewedAt": "2026-10-15",
         "expiresAt": "2026-11-14",
@@ -2096,7 +2157,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
       }
     },
     {
@@ -2158,12 +2219,12 @@
         "hero-27"
       ],
       "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
-      "mechanism": "Bullet resistance reduces the bullet portion; concentrated weapon damage can then trigger an additional barrier.",
+      "mechanism": "Concentrated bullet damage can trigger a barrier and temporary bullet resistance for follow-up damage. The resistance is not always on.",
       "conditions": [
         "The threat is repeated bullet damage, and you survive the damage needed to trigger the ready barrier."
       ],
-      "timing": "Equip beforehand. Captured values: 18% bullet resistance; 250 weapon damage within 4 seconds triggers 300 barrier for 8 seconds, 35-second cooldown.",
-      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger.",
+      "timing": "Equip beforehand. Survive the trigger: 250 bullet damage within 4 seconds. The proc grants a base 300 barrier and 18% bullet resistance for 8 seconds; cooldown 35 seconds.",
+      "limitation": "The barrier is conditional, not available before the opening damage. Separate spirit damage and control remain threats; slow, separated hits may not reach the trigger. Resistance is conditional on the proc, not protection before it triggers.",
       "evidence": {
         "status": "source-reviewed",
         "patch": "client-6785",
@@ -2171,7 +2232,8 @@
           "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
           "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
           "https://www.deadlock.io/en/items/weapon-shielding",
-          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
         ],
         "reviewedAt": "2026-10-15",
         "expiresAt": "2026-11-14",
@@ -2181,7 +2243,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
       }
     },
     {
@@ -2243,13 +2305,13 @@
         "hero-27"
       ],
       "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
-      "mechanism": "Spirit resistance targets the spirit damage; concentrated spirit damage can then trigger a temporary barrier.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
       "conditions": [
         "Bebop Sticky Bomb spirit damage is the problem; a single lethal bomb is not made safe by assuming the barrier procs first.",
         "The proc is ready and you survive the damage needed to trigger it."
       ],
-      "timing": "Equip beforehand. Captured values: 18% spirit resistance; 225 spirit damage within 3.5 seconds triggers 300 barrier for 8 seconds, 45-second cooldown.",
-      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit.",
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit. Resistance is conditional on the proc, not protection before it triggers.",
       "evidence": {
         "status": "source-reviewed",
         "patch": "client-6785",
@@ -2257,7 +2319,8 @@
           "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
           "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
           "https://www.deadlock.io/en/items/spirit-shielding",
-          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
         ],
         "reviewedAt": "2026-10-15",
         "expiresAt": "2026-11-14",
@@ -2267,7 +2330,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
       }
     },
     {
@@ -2329,13 +2392,13 @@
         "hero-27"
       ],
       "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
-      "mechanism": "Spirit resistance targets the spirit damage; concentrated spirit damage can then trigger a temporary barrier.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
       "conditions": [
         "Infernus Afterburn spirit damage is the problem; the burn is already damaging you.",
         "The proc is ready and you survive the damage needed to trigger it."
       ],
-      "timing": "Equip beforehand. Captured values: 18% spirit resistance; 225 spirit damage within 3.5 seconds triggers 300 barrier for 8 seconds, 45-second cooldown.",
-      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit.",
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not remove a bomb or burn, prevent control or reverse damage. The threshold may not be reached; the barrier cannot be assumed to save you from the first hit. Resistance is conditional on the proc, not protection before it triggers.",
       "evidence": {
         "status": "source-reviewed",
         "patch": "client-6785",
@@ -2343,7 +2406,8 @@
           "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
           "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
           "https://www.deadlock.io/en/items/spirit-shielding",
-          "https://www.deadlock.io/en/mechanics/shields-and-barriers"
+          "https://www.deadlock.io/en/mechanics/shields-and-barriers",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
         ],
         "reviewedAt": "2026-10-15",
         "expiresAt": "2026-11-14",
@@ -2353,7 +2417,7 @@
           "limitations"
         ],
         "reviewer": "Codex source comparison; no in-game test",
-        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified."
+        "note": "Source-reviewed inference from current item and ability definitions. The guide shares Deadlock API lineage and is not an independent client test. Exact damage ordering and practical survival are not certified. Corrected prior permanent-resistance wording: Valve May 22 update and captured conditional property flags establish temporary resistance after the proc."
       }
     },
     {
@@ -3205,6 +3269,636 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. Community references to Curse are historical terminology; current Cursed Relic is proposed because its tooltip explicitly includes an interrupt. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "sustain-healbane-hero-66",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-66",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.75,
+      "mechanism": "Spirit damage applies healing reduction to Victor, making that healing recipient easier to finish.",
+      "timing": "Land spirit damage during the healing window. Reviewed delivery examples: Infernus Afterburn, Kelvin Frost Grenade, Victor Pain Battery, McGinnis Heavy Barrage. Ordinary bullets alone do not apply Healbane.",
+      "limitation": "Does not prevent Shocking Reanimation or establish how its respawn health is calculated. Jumpstart debuff resistance can shorten the application window; no immunity or stacking bypass is assumed. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "Victor is receiving Jumpstart regeneration, upgraded Pain Battery healing, or healing from items/allies.",
+        "You can land qualifying spirit damage on the healing recipient while they heal."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-8"
+      ],
+      "stageReason": "Consider from lane onward if this named problem persists; this is an editorial tradeoff against core purchases, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "sustain-toxic-hero-66",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-66",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Bullet buildup applies a bleed that reduces incoming healing on Victor.",
+      "timing": "Land enough bullet hits to trigger the bleed before or during the healing window; one hit is not assumed sufficient. Rebuild after removal.",
+      "limitation": "Does not prevent Shocking Reanimation or establish how its respawn health is calculated. Jumpstart debuff resistance can shorten the application window; no immunity or stacking bypass is assumed. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "Victor is receiving Jumpstart regeneration, upgraded Pain Battery healing, or healing from items/allies.",
+        "You can maintain bullet hits on the healing recipient long enough to trigger the buildup."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-8"
+      ],
+      "stageReason": "Mid/late alternative when sustained shooting is practical and the purchase justifies delaying core items; full price is used.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "sustain-healbane-hero-12",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-12",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.75,
+      "mechanism": "Spirit damage applies healing reduction to Kelvin, making that healing recipient easier to finish.",
+      "timing": "Land spirit damage during the healing window. Reviewed delivery examples: Infernus Afterburn, Kelvin Frost Grenade, Victor Pain Battery, McGinnis Heavy Barrage. Ordinary bullets alone do not apply Healbane.",
+      "limitation": "Applying anti-heal to Kelvin does not reduce healing received by his allies. The upgraded Frozen Shelter can purge non-ultimate debuffs: reapply after a purge only if you can reach him. This does not open the dome or allow attacks through it. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "Kelvin himself is receiving Frost Grenade healing or Frozen Shelter regeneration and can be damaged.",
+        "You can land qualifying spirit damage on the healing recipient while they heal.",
+        "If the dome blocks your attacks or has purged the effect, do not count this as active anti-heal until it can be reapplied."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Consider from lane onward if this named problem persists; this is an editorial tradeoff against core purchases, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1truf5v/countering_kelvin/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "sustain-toxic-hero-12",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-12",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Bullet buildup applies a bleed that reduces incoming healing on Kelvin.",
+      "timing": "Land enough bullet hits to trigger the bleed before or during the healing window; one hit is not assumed sufficient. Rebuild after removal.",
+      "limitation": "Applying anti-heal to Kelvin does not reduce healing received by his allies. The upgraded Frozen Shelter can purge non-ultimate debuffs: reapply after a purge only if you can reach him. This does not open the dome or allow attacks through it. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "Kelvin himself is receiving Frost Grenade healing or Frozen Shelter regeneration and can be damaged.",
+        "You can maintain bullet hits on the healing recipient long enough to trigger the buildup.",
+        "If the dome blocks your attacks or has purged the effect, do not count this as active anti-heal until it can be reapplied."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-66",
+        "hero-8"
+      ],
+      "stageReason": "Mid/late alternative when sustained shooting is practical and the purchase justifies delaying core items; full price is used.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1truf5v/countering_kelvin/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "sustain-healbane-hero-8",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-8",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.75,
+      "mechanism": "Spirit damage applies healing reduction to McGinnis, making that healing recipient easier to finish.",
+      "timing": "Land spirit damage during the healing window. Reviewed delivery examples: Infernus Afterburn, Kelvin Frost Grenade, Victor Pain Battery, McGinnis Heavy Barrage. Ordinary bullets alone do not apply Healbane.",
+      "limitation": "Applying anti-heal to McGinnis does not suppress her healing output to other recipients. It does not destroy turrets, remove the healing area, strip its resistance bonus or open Spectral Wall. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "McGinnis herself is receiving Medicinal Specter healing and can be damaged.",
+        "You can land qualifying spirit damage on the healing recipient while they heal."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66"
+      ],
+      "stageReason": "Consider from lane onward if this named problem persists; this is an editorial tradeoff against core purchases, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1lurbs3/people_forgot_how_to_counter_mcginnis/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "sustain-toxic-hero-8",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-8",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Bullet buildup applies a bleed that reduces incoming healing on McGinnis.",
+      "timing": "Land enough bullet hits to trigger the bleed before or during the healing window; one hit is not assumed sufficient. Rebuild after removal.",
+      "limitation": "Applying anti-heal to McGinnis does not suppress her healing output to other recipients. It does not destroy turrets, remove the healing area, strip its resistance bonus or open Spectral Wall. Healing reduction is not burst protection or a guaranteed kill. No stacking benefit with other anti-heal is assumed.",
+      "conditions": [
+        "McGinnis herself is receiving Medicinal Specter healing and can be damaged.",
+        "You can maintain bullet hits on the healing recipient long enough to trigger the buildup."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-66"
+      ],
+      "stageReason": "Mid/late alternative when sustained shooting is practical and the purchase justifies delaying core items; full price is used.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1lurbs3/people_forgot_how_to_counter_mcginnis/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: pinned definitions establish incoming-healing reduction, regeneration/healing and the four reviewed player delivery routes. Community recommendations support anti-heal generally; the alternate bullet route is a tooltip-based inference, not a matchup experiment. No in-game, exact shot-count or stacking test."
+      }
+    },
+    {
+      "id": "victor-inhibitor-survive",
+      "itemId": "item-2037039379",
+      "enemyHeroId": "hero-66",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "After bullet buildup, Inhibitor reduces Victor's outgoing damage while its debuff lasts, including ongoing Aura of Suffering damage.",
+      "timing": "Apply through repeated bullet hits before relying on the benefit; maintain or rebuild after it expires or is removed. It is not a one-hit emergency response.",
+      "limitation": "Does not stop the aura, grant immunity, remove slows or prevent Shocking Reanimation. No claim that the two penalties add to a 70% lifesteal reduction; no stacking math is assumed. Its 6,400-soul cost and shooting exposure are substantial.",
+      "conditions": [
+        "Victor's Aura of Suffering is dealing ongoing damage; do not remain inside it just to apply this item.",
+        "You can land enough bullet hits on Victor to trigger buildup while still able to act.",
+        "The debuff is applied and remains active; removal or duration reduction can reduce its useful window."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-8"
+      ],
+      "stageReason": "Late-game targeted investment after an ongoing Victor problem is established; not an early survival fix. Stage and build fit are editorial judgments.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wtuxav/how_to_play_against_heal_heavy_comps/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned tooltip and properties separately establish outgoing-damage and received-healing penalties. Community reports corroborate Inhibitor against Victor but contain stale values and incorrect additive arithmetic; those are rejected. No in-game measurement or reanimation suppression claim."
+      }
+    },
+    {
+      "id": "victor-inhibitor-punish",
+      "itemId": "item-2037039379",
+      "enemyHeroId": "hero-66",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "After bullet buildup, Inhibitor reduces incoming healing on Victor; this is separate from its outgoing-damage reduction.",
+      "timing": "Apply through repeated bullet hits before relying on the benefit; maintain or rebuild after it expires or is removed. It is not a one-hit emergency response.",
+      "limitation": "Does not stop the aura, grant immunity, remove slows or prevent Shocking Reanimation. No claim that the two penalties add to a 70% lifesteal reduction; no stacking math is assumed. Its 6,400-soul cost and shooting exposure are substantial.",
+      "conditions": [
+        "Victor is receiving Jumpstart regeneration, upgraded Pain Battery healing, or healing from items/allies.",
+        "You can land enough bullet hits on Victor to trigger buildup while still able to act.",
+        "The debuff is applied and remains active; removal or duration reduction can reduce its useful window."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1",
+        "hero-12",
+        "hero-8"
+      ],
+      "stageReason": "Late-game targeted investment after an ongoing Victor problem is established; not an early survival fix. Stage and build fit are editorial judgments.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1wtuxav/how_to_play_against_heal_heavy_comps/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Pinned tooltip and properties separately establish outgoing-damage and received-healing penalties. Community reports corroborate Inhibitor against Victor but contain stale values and incorrect additive arithmetic; those are rejected. No in-game measurement or reanimation suppression claim."
+      }
+    },
+    {
+      "id": "sustain-shield-hero-66",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-66",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Aura of Suffering spirit damage is the problem, and enough damage arrives within the trigger window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability damage type and the item trigger. Kelvin beam and McGinnis rockets are classified using current damage presentation markers, not Spirit scaling alone. No timing experiment, trigger-hit absorption or guaranteed survival is claimed."
+      }
+    },
+    {
+      "id": "sustain-shield-hero-12",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-12",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Arctic Beam spirit damage is the problem, and enough damage arrives within the trigger window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability damage type and the item trigger. Kelvin beam and McGinnis rockets are classified using current damage presentation markers, not Spirit scaling alone. No timing experiment, trigger-hit absorption or guaranteed survival is claimed."
+      }
+    },
+    {
+      "id": "sustain-shield-hero-8",
+      "itemId": "item-112198670",
+      "enemyHeroId": "hero-8",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.55,
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Consider from lane onward when the named damage pattern persists. Reassess the benefit against delaying core items; the stage placement is editorial, not a measured build recommendation.",
+      "mechanism": "Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.",
+      "conditions": [
+        "Heavy Barrage spirit damage is the problem, and enough damage arrives within the trigger window.",
+        "The proc is ready and you survive the damage needed to trigger it."
+      ],
+      "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. This rule covers Heavy Barrage only; turret damage triggering this item remains unreviewed.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from the named ability damage type and the item trigger. Kelvin beam and McGinnis rockets are classified using current damage presentation markers, not Spirit scaling alone. No timing experiment, trigger-hit absorption or guaranteed survival is claimed."
       }
     }
   ]

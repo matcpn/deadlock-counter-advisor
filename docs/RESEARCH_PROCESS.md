@@ -12,7 +12,7 @@ The public steam-info endpoint was rechecked and still reports that client versi
    spans. Heroes can have many functions, and one ability can have several. The
    full description is retained so upgrades, conditions and negations stay visible.
 2. **Response functions:** categories such as spirit resistance, duration reduction,
-   applied-debuff removal or interruption. Twelve response families include links
+   applied-debuff removal or interruption. Thirteen response families include links
    to reviewed items where relevant. Empty families remain
    research tasks. Matching a threat to a family is only a lead.
 3. **Reviewed interactions:** separately maintained rules in reviewed-catalog.json.
@@ -82,12 +82,12 @@ Player scope is visible: existing healing-denial rules remain Infernus-only, whi
 generic personal-defense rules support other source-selectable players.
 
 No `no-supported-option` negative verdict is populated without a documented review.
-The initial inventory added no advice. The subsequent channel batch brings the catalog to 31 rules / 14 items; see COMMUNITY_RESEARCH.md.
+The initial inventory added no advice. The subsequent channel batch brings the catalog to 42 rules / 15 items; see COMMUNITY_RESEARCH.md.
 
 ## Research a batch
 
 1. Repair any missing descriptions/types for the selected heroes. The current
-   report flags 17 abilities, including incomplete base text, missing damage types,
+   report flags 16 abilities, including incomplete base text, missing damage types,
    transformed/copy kits and Wraith's card suits. This is a known-gap list, not a
    completeness audit. Base weapons and alternate kits still need inventory work.
 2. Read pinned item facts and current official changes; find accessible creator,
@@ -102,8 +102,8 @@ The initial inventory added no advice. The subsequent channel batch brings the c
    coverage, run checks and inspect the UI before publishing.
 
 First slice delivered: **Seven, Dynamo, Mo & Krill**, six conditional channel-interrupt rules with personal-survival and timing questions still open.
-Next: **Victor, Kelvin, McGinnis** for healing/persistent damage, followed by
-**Vindicta, Grey Talon, Calico** for flight/movement/escape. The complete function
+The first healing/persistent-damage slice for **Victor, Kelvin, McGinnis** is also
+delivered. Next: **Vindicta, Grey Talon, Calico** for flight/movement/escape. The complete function
 queue remains available for reprioritization as research reveals better shared
 opportunities. Research is incremental; exhaustive up-front certification is not
 required to keep improving the app.

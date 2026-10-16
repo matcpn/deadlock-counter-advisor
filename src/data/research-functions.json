@@ -9,7 +9,8 @@
       ],
       "responseIds": [
         "spirit-resistance",
-        "barrier"
+        "barrier",
+        "damage-output-reduction"
       ],
       "question": "Confirm damage instances, scaling and barrier timing."
     },
@@ -55,7 +56,8 @@
       ],
       "responseIds": [
         "debuff-removal",
-        "barrier"
+        "barrier",
+        "damage-output-reduction"
       ],
       "question": "Check removal eligibility, reapplication and ultimate exceptions."
     },
@@ -353,7 +355,8 @@
       "label": "Healing reduction",
       "itemIds": [
         "item-2603935618",
-        "item-3696726732"
+        "item-3696726732",
+        "item-2037039379"
       ]
     },
     {
@@ -368,6 +371,13 @@
       "id": "movement-denial",
       "label": "Movement denial",
       "itemIds": []
+    },
+    {
+      "id": "damage-output-reduction",
+      "label": "Reduce enemy damage output",
+      "itemIds": [
+        "item-2037039379"
+      ]
     }
   ]
 }

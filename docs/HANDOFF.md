@@ -1,5 +1,29 @@
 # Start here — continuation handoff
 
+## Healing and persistent-damage slice — 2026-10-15
+
+Added 11 source-reviewed rules for Victor, Kelvin and McGinnis. Total: 42 rules /
+15 items / 12 enemy heroes with partial advice. Healbane and Toxic Bullets target
+actual healing recipients; Inhibitor has separate late-game Survive/Punish rules
+for Victor. New anti-heal delivery is scoped to Infernus/Kelvin/Victor/McGinnis;
+older Abrams/Shiv anti-heal remains Infernus-only. Generic shielding spans players.
+
+Corrected the four prior Spirit/Weapon Shielding rules: their resistance is
+conditional after the proc, not always on. New sustained-damage rules cover Aura
+of Suffering, Arctic Beam and Heavy Barrage, not unreviewed turret triggers.
+Damage over time now explicitly includes beams/areas. No new scenario inputs.
+
+Two damage-type gaps repaired through checked raw evidence. Added Victor aura
+channel/toggle ambiguity; 16 known ability entries retain gaps. No reanimation
+prevention, attack-through-dome, global healer suppression or stacking math claims.
+Current client remains 6785; review expiry remains November 14 UTC. No in-game tests.
+
+Next batch: Vindicta, Grey Talon and Calico for flight/movement/escape. Keep personal
+survival/timing tests from earlier batches, more player delivery routes, Kelvin
+purge reapplication and turret attribution on the follow-up list. Read latest
+COMMUNITY_RESEARCH.md and VALIDATION.md for evidence, checks and publication status.
+
+
 ## Channel disruption slice — 2026-10-15
 
 Implementation 4356b94 is live; remote checks, Pages and pinned refresh passed.

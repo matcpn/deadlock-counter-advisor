@@ -124,6 +124,62 @@ describe('channel disruption and teammate rescue',()=>{
 });
 
 
+describe('healing recipients and persistent damage',()=>{
+  const enemies=['hero-66','hero-12','hero-8'];
+  it('separates affordable anti-heal from damage protection across the new enemies',()=>{
+    const sustain=run({enemyHeroIds:enemies,problems:['sustain']});
+    expect(sustain.map(r=>r.item.name)).toEqual(['Healbane','Toxic Bullets']);
+    expect(sustain.every(r=>r.goal==='punish'&&r.coveredEnemyIds.length===3)).toBe(true);
+    expect(sustain.find(r=>r.item.name==='Healbane')!.affordable).toBe(true);
+    expect(sustain.find(r=>r.item.name==='Toxic Bullets')!.affordable).toBe(false);
+    const dot=run({enemyHeroIds:enemies,problems:['dot']});
+    expect(dot.map(r=>r.item.name)).toEqual(['Spirit Shielding']);
+    expect(dot[0].goal).toBe('survive');
+    expect(dot[0].coveredEnemyIds).toHaveLength(3);
+    expect(run({enemyHeroIds:enemies,problems:['burst']})).toEqual([]);
+  });
+  it('keeps Inhibitor objectives separate and does not sell it as an early emergency fix',()=>{
+    for(const [problem,goal] of [['dot','survive'],['sustain','punish']] as const){
+      for(const stage of ['lane','mid'] as const)expect(run({enemyHeroIds:['hero-66'],problems:[problem],stage}).some(r=>r.item.name==='Inhibitor')).toBe(false);
+      const r=run({enemyHeroIds:['hero-66'],problems:[problem],stage:'late',budget:6400}).find(r=>r.item.name==='Inhibitor')!;
+      expect(r.goal).toBe(goal);expect(r.affordable).toBe(true);expect(r.item.category).toBe('vitality');expect(r.item.activation).toBe('conditional');
+      expect(r.rules[0].conditions?.join()).toContain('enough bullet hits');
+      expect(r.rules[0].limitation).toContain('Shocking Reanimation');
+      expect(run({enemyHeroIds:['hero-66'],problems:[problem],stage:'late',ownedItemIds:[r.item.id]}).some(row=>row.item.id===r.item.id)).toBe(false);
+    }
+  });
+  it('limits healing delivery to reviewed player routes without restricting generic defenses',()=>{
+    for(const heroId of ['hero-1','hero-12','hero-8'])expect(run({heroId,enemyHeroIds:['hero-66'],problems:['sustain'],allowActives:false}).map(r=>r.item.name)).toEqual(['Healbane','Toxic Bullets']);
+    expect(run({heroId:'hero-66',enemyHeroIds:['hero-12'],problems:['sustain']}).map(r=>r.item.name)).toEqual(['Healbane','Toxic Bullets']);
+    expect(run({heroId:'hero-13',enemyHeroIds:enemies,problems:['sustain']})).toEqual([]);
+    expect(run({heroId:'hero-13',enemyHeroIds:enemies,problems:['dot']}).map(r=>r.item.name)).toEqual(['Spirit Shielding']);
+    expect(run({heroId:'hero-12',problems:['sustain']})).toEqual([]); // Older Abrams/Shiv delivery remains Infernus-only.
+  });
+  it('requires recipient targeting and Kelvin purge reapplication, not healer-wide suppression',()=>{
+    const results=run({enemyHeroIds:enemies,problems:['sustain']});
+    for(const rule of results.flatMap(r=>r.rules)){
+      expect(rule.conditions?.join()).toContain('healing recipient');
+      if(rule.enemyHeroId==='hero-12'){
+        expect(rule.conditions?.join()).toContain('reapplied');
+        expect(rule.limitation).toContain('does not reduce healing received by his allies');
+        expect(rule.limitation).toContain('does not open the dome');
+      }
+      if(rule.enemyHeroId==='hero-8')expect(rule.limitation).toContain('does not suppress her healing output');
+      if(rule.enemyHeroId==='hero-66')expect(rule.limitation).toContain('Does not prevent Shocking Reanimation');
+    }
+  });
+  it('keeps shield resistance behind its trigger, including the corrected existing rules',()=>{
+    const rules=reviewedCatalog.rules.filter(r=>['item-112198670','item-805079544'].includes(r.itemId));
+    expect(rules).toHaveLength(7);
+    expect(rules.every(r=>r.mechanism.includes('not always on')&&r.timing.includes('Survive the trigger'))).toBe(true);
+    expect(rules.every(r=>r.limitation.includes('conditional on the proc'))).toBe(true);
+    const rockets=rules.find(r=>r.enemyHeroId==='hero-8')!;
+    expect(rockets.conditions?.join()).toContain('Heavy Barrage');
+    expect(rockets.limitation).toContain('turret damage triggering this item remains unreviewed');
+    expect(rules.filter(r=>r.itemId==='item-805079544').every(r=>r.timing.includes('cooldown 35 seconds'))).toBe(true);
+  });
+});
+
 describe('burst and expanded enemy boundaries',()=>{
   it('uses active defenses only while actionable, with passive options still present',()=>{
     const overrides:Partial<Scenario>={enemyHeroIds:['hero-13','hero-7'],problems:['burst']};

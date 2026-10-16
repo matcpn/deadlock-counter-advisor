@@ -1,5 +1,31 @@
 # Validation record
 
+## Healing and persistent-damage slice — 2026-10-15
+
+- Rechecked public steam-info: client/server 6785, revision 11132425, unchanged.
+  Reviewed pinned ability/item data, four community discussions and Valve's May 22
+  shielding patch text. Community timing/attribution uncertainties remain explicit.
+  No in-game testing or verified promotion.
+- Added 11 source-reviewed rules: 42 rules, 15 items, 12 enemies with partial advice.
+  New healing-denial delivery spans four reviewed player routes. Inhibitor is
+  late-game only; its survival and healing-denial rules stay separate.
+- Corrected four previous shielding rules to describe temporary resistance after
+  the damage proc. Weapon Shielding's current cooldown is 35 seconds. New spirit
+  protection is scoped to Victor's aura, Arctic Beam and Heavy Barrage; turret
+  attribution remains unreviewed. Two damage-type gaps resolved; one new aura
+  channel/toggle ambiguity recorded, leaving 16 ability entries with known gaps.
+- npm run check passed: snapshot verification, deterministic research regeneration,
+  103 tests across six files, strict TypeScript and production build.
+  Focused tests cover player scope, goal/stage/budget/ownership separation,
+  recipient targeting, dome purge, reanimation exclusions and conditional shielding.
+- Browser checks covered all three new enemies, unsupported-player healing denial,
+  generic player shielding, active-item filtering and affordable Inhibitor at 6,400.
+  Expanded timing/limits were inspected on desktop 1280px and mobile 375px.
+  Kelvin recipient/dome caveats wrap correctly; mobile document width 360px versus
+  375px viewport. No browser console errors observed. Not a full accessibility audit.
+- Publication validation follows below after deployment.
+
+
 ## Channel disruption and raw-property evidence — 2026-10-15
 
 - Public steam-info rechecked: client/server 6785, revision 11132425, unchanged.

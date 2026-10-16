@@ -1,11 +1,12 @@
 # Deadlock Counter Advisor
 
 A contextual advisor prototype with an imported, version-pinned game catalog.
-**Source-reviewed beta: 31 conditional rules across 14 items.** Personal defenses
+**Source-reviewed beta: 42 conditional rules across 15 items.** Personal defenses
 cover selected problems against Abrams, Shiv, Haze, Wraith, Bebop and Infernus.
 Channel disruption covers Seven, Dynamo and Mo & Krill, with teammate-rescue
 conditions for the latter two.
-Healing-denial advice remains Infernus-specific. Advice has sources and limits,
+New healing-denial advice covers Victor, Kelvin and McGinnis with four reviewed
+player delivery routes; earlier Abrams/Shiv anti-heal remains Infernus-specific. Advice has sources and limits,
 but has not been tested in-game. Synthetic items remain an opt-in layout preview.
 Start with
 [docs/HANDOFF.md](docs/HANDOFF.md).
@@ -31,13 +32,13 @@ commands, art provenance and manual GitHub refresh workflow.
 
 The collapsed roster-research section inventories all 42 source-selectable heroes
 and 168 main-slot abilities, with functional themes, source text, unresolved gaps
-and an enemy/problem coverage matrix. Nine enemies currently have partial advice;
+and an enemy/problem coverage matrix. Twelve enemies currently have partial advice;
 inventoried heroes are not automatically counter-covered.
 
 Run `npm run research:build` after a catalog refresh or annotation edit.
 `npm run research:verify` checks generated artifacts inside every full check.
 See [the generated backlog](docs/ROSTER_RESEARCH.md) and
-[research workflow](docs/RESEARCH_PROCESS.md). Next research batch: Victor, Kelvin, McGinnis.
+[research workflow](docs/RESEARCH_PROCESS.md). Next research batch: Vindicta, Grey Talon, Calico.
 The first channel slice is delivered; timing and personal-survival questions remain open.
 
 ## Included
@@ -55,7 +56,7 @@ The first channel slice is delivered; timing and personal-survival questions rem
 - Product specification, full handoff, context history, data design, and roadmap.
 
 Imported heroes and items are browseable source facts. The reviewed recommendation
-catalog uses fourteen real items with explicit prerequisites, application timing, review
+catalog uses fifteen real items with explicit prerequisites, application timing, review
 dates and source links. Optional preferences include owned items and ability to
 respond while controlled. Unsupported heroes/problems/goals are visibly empty.
 Scoring and stage placement are editorial, not calibrated effectiveness estimates.

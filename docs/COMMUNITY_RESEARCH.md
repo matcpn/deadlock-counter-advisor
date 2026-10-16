@@ -1,5 +1,83 @@
 # Community counter research — 2026-10-12
 
+## Healing and persistent-damage batch — 2026-10-15
+
+Eleven new conditional rules cover Victor, Kelvin and McGinnis: Healbane/Toxic
+Bullets against each healing recipient, Spirit Shielding against Aura of Suffering /
+Arctic Beam / Heavy Barrage respectively, plus separate Survive and Punish Inhibitor
+rules for Victor. Total: 42 rules / 15 items / 12 enemies with partial advice.
+Public steam-info remains client 6785 / revision 11132425. No in-game tests.
+
+### Evidence read and interpretation
+
+- [Pinned ability/item definitions](https://api.deadlock-api.com/v1/assets/items?client_version=6785)
+  establish healing/regen, incoming-healing reduction, bullet buildup, damage types,
+  prices/categories and triggers. Inhibitor (2037039379, upgrade_inhibitor) is a
+  6,400-soul vitality item with conditional bullet buildup and no components.
+  Properties distinguish outgoing damage (-30) from received/regen healing (-40);
+  the production cards deliberately avoid combined lifesteal arithmetic.
+- [Victor counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1w050cx/how_would_i_counter_victor/)
+  and [healing-heavy teams](https://www.reddit.com/r/DeadlockTheGame/comments/1wtuxav/how_to_play_against_heal_heavy_comps/)
+  support the anti-heal and Inhibitor research direction. Search dates and relative
+  rendered dates conflict; exact patch dates remain uncertain. Comments differ on
+  usefulness and contain stale numbers. Reject the claim that 30% outgoing-damage
+  reduction plus 40% incoming-healing reduction means 70% less lifesteal. Do not
+  infer all Victor healing is lifesteal; Jumpstart and upgraded Pain Battery differ.
+- [Kelvin counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1truf5v/countering_kelvin/)
+  recommends anti-heal including Healbane. Current Frozen Shelter text explicitly
+  describes regeneration and an upgrade purging non-ultimate debuffs. Anti-heal must
+  reach the recipient after removal; no attack-through-dome or dome-removal claim.
+- [McGinnis counter discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1lurbs3/people_forgot_how_to_counter_mcginnis/)
+  is historical (search date July 8, 2025), recommending Healbane alongside zone
+  pressure. It also contains conflicting Monster Rounds/turret claims, so no turret
+  damage multiplier or shield-trigger rule is promoted. Medicinal Specter healing
+  and resistance bonuses are separate. Debuffing McGinnis is not global suppression
+  of healing she supplies to her teammates or turrets.
+- Toxic Bullets delivery against Kelvin/McGinnis is a source-reviewed inference
+  from current incoming-healing and recipient definitions; the community evidence
+  primarily supports anti-heal generally, not an independently tested bullet proc.
+- A newly dated third-party McGinnis guide claimed healing is passive while turrets
+  are active. The captured definition describes a separately deployed healing
+  spirit; the guide's claim was not adopted. Fresh publication is not proof of accuracy.
+
+### Player delivery and exclusions
+
+New anti-heal rules are scoped to Infernus, Kelvin, Victor and McGinnis (excluding
+self-matchups), with reviewed spirit routes Afterburn, Frost Grenade, Pain Battery
+and Heavy Barrage. Bullet buildup requires sustained hits. Earlier Abrams/Shiv
+anti-heal scope remains Infernus-only. Generic defensive shield rules apply across
+all selectable player heroes. Scope differences remain visible in coverage cells.
+
+Anti-heal does not prevent Shocking Reanimation or certify its respawn-health
+interaction. Inhibitor is late-only, requires successful buildup, and cannot
+substitute for an emergency escape. It does not stop the aura or remove slows.
+Shield rules cover sustained hero ability damage after a qualifying trigger, not
+immunity or the first lethal hit. McGinnis turret attribution remains unreviewed.
+No new burst, chase or channel-interrupt rules were inferred from this batch.
+
+### Correction to existing shielding advice
+
+The earlier four Spirit/Weapon Shielding rules incorrectly implied always-on
+resistance. [Valve's May 22, 2026 update](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
+explicitly makes both resistance bonuses temporary on proc. Current raw properties
+also mark them ConditionallyApplied. Corrected the four rules before reusing that
+mechanism: base barrier 300 and matching resistance 18% for eight seconds after
+trigger. Spirit threshold 225/3.5s, cooldown 45s; weapon threshold 250/4s, cooldown
+35s. No absorption of the triggering hit is claimed. Valve text was retrieved in
+search results; the direct Steam page reader returned no article body.
+
+### Source inventory and remaining work
+
+Repaired Arctic Beam DPS and Heavy Barrage DamagePerRocket classifications using
+exact tech_damage and spirit-icon fields, not scaling alone. Added an explicit gap
+for Victor's Aura of Suffering: text says channeled, raw behaviour exposes a toggle
+without CHANNELLED. Its interruption semantics need testing. Reanimation is not
+ordinary healing; its raw NOT_SILENCABLE flag also forbids casually transferring
+silence claims. Sixteen ability entries now retain explicit source gaps.
+Next research batch: Vindicta, Grey Talon and Calico. Follow-ups: recipient delivery
+for more player heroes, dome reapplication, turret attribution and client tests.
+
+
 ## Channel disruption batch — 2026-10-15
 
 Added six narrow source-reviewed rules: Knockdown and Cursed Relic against Seven's

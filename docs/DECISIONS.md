@@ -1,5 +1,21 @@
 # Decisions and open questions
 
+## Healing recipients and shield correction — 2026-10-15
+
+- Keep healing denial under Punish and ongoing-damage mitigation under Survive.
+  Inhibitor can appear for separate reasons, never as anti-heal equals survival.
+- Apply recipient-specific conditions: debuffing a healer does not suppress healing
+  received by teammates; a Kelvin purge requires reapplication when reachable.
+- Review four concrete player delivery routes for the new anti-heal rules. Leave
+  other delivery gaps explicit and retain earlier Infernus-only scope.
+- Correct existing Spirit/Weapon Shielding resistance to temporary post-proc
+  protection using Valve's update and current conditional flags.
+- Broaden the existing Damage over time view description to include beams and
+  damaging areas; no new input or problem enum is needed.
+- Keep Victor reanimation, aura interruption and turret attribution unresolved;
+  do not promote them by analogy. Next batch is Vindicta/Grey Talon/Calico.
+
+
 ## Channel batch and structured source evidence — 2026-10-15
 
 - Publish a bounded six-rule disruption slice for Seven, Dynamo and Mo & Krill,

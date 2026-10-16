@@ -1398,14 +1398,13 @@
               "quote": "reducing their movement and fire rate"
             },
             {
-              "functionId": "unknown-damage",
-              "quote": "damaging targets"
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.DPS.css_class = \"tech_damage\"; properties.DPS.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Spirit damage classification is supported by the raw damage presentation class and icon; it is not inferred from scaling. Channel interruption and exact item proc timing are separate research questions."
         },
         {
           "className": "ability_ice_dome",
@@ -1659,18 +1658,17 @@
           "status": "triaged",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "volley of rockets"
-            },
-            {
               "functionId": "slow",
               "quote": "movement and dash slow"
+            },
+            {
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.DamagePerRocket.css_class = \"tech_damage\"; properties.DamagePerRocket.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Spirit damage classification is supported by the raw damage presentation class and icon; it is not inferred from scaling. Channel interruption and exact item proc timing are separate research questions."
         }
       ]
     },
@@ -2912,8 +2910,10 @@
               "quote": "ability is channeled"
             }
           ],
-          "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [
+            "Resolve toggle versus channel interruption semantics; a text theme alone does not establish interruptibility."
+          ],
+          "note": "Tooltip describes channeling, while raw behaviour exposes a toggle and no CHANNELLED flag. Do not transfer ordinary channel-interrupt rules without checking this interaction."
         },
         {
           "className": "ability_frank_revive",
@@ -2935,7 +2935,7 @@
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "Reanimation after lethal damage is separate from ordinary healing. No anti-heal or silence prevention rule is established; raw data includes NOT_SILENCABLE and a respawn-health property."
         }
       ]
     },
