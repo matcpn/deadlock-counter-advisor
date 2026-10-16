@@ -16,7 +16,12 @@
   Expanded mobile timing/limits remained readable. No browser console errors seen.
 - No game-client experiments or complete accessibility audit. 25 rules are
   source-reviewed hypotheses with explicit limits, not verified interactions.
-- Publication pending; remote run outcomes will be recorded after push.
+- Published implementation 95b23e2 to main. Remote Checks 38835946819 and Pages
+  38835946704 both succeeded. Reloaded the live repository-subpath page and
+  confirmed Grit, Reactive Barrier and Rebuttal in the default burst view. Saved
+  a screenshot of the deployed stage board. Local preview stopped after QA.
+- Existing non-failing GitHub action-runtime / Ubuntu migration notices persist;
+  no workflow changes were needed for this release.
 
 
 ## First sourced slice — 2026-10-15

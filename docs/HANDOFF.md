@@ -2,7 +2,8 @@
 
 ## Current expansion — 2026-10-15
 
-Burst-defense expansion implemented: 25 conditional source-reviewed rules / 12
+Implementation 95b23e2 is live; remote Checks and Pages succeeded and the live
+board was inspected. Burst-defense expansion: 25 conditional source-reviewed rules / 12
 items, pinned to unchanged client 6785. Generic personal defenses now work for all
 42 source-selectable player heroes against reviewed patterns from Abrams, Shiv,
 Haze, Wraith, Bebop and Infernus. Four healing-denial rules remain Infernus-specific.
