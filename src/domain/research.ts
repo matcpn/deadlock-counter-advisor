@@ -9,12 +9,17 @@ export interface ResearchFunctions {
 export interface ThreatSeeds {
   schemaVersion:number;clientVersion:number;triagedAt:string;reviewer:string;
   profiles:{heroId:string;abilities:{className:string;baselineDescription:string;
-    signals:{functionId:string;quote:string}[];note:string;gaps?:string[]}[]}[];
+    signals:{functionId:string;quote:string}[];propertySignals?:PropertySignal[];note:string;gaps?:string[]}[]}[];
 }
+export interface PropertySignal {
+  functionId:string;
+  facts:{path:string[];value:string|number|string[]}[];
+}
+type Signal={functionId:string;quote:string;source?:'properties'};
 export interface ThreatAbility {
   className:string;name:string;description:string;
   status:'triaged'|'needs-review'|'untriaged';
-  signals:{functionId:string;quote:string}[];note:string;gaps:string[];
+  signals:Signal[];note:string;gaps:string[];
 }
 export interface ThreatInventory {
   schemaVersion:1;clientVersion:number;triagedAt:string;sourceUrl:string;
@@ -23,9 +28,11 @@ export interface ThreatInventory {
 }
 const normalized=(text:string)=>text.replace(/\s+/g,' ').trim();
 const unique=(values:string[])=>new Set(values).size===values.length;
+const sourceValue=(record:unknown,path:string[]):unknown=>path.reduce<unknown>((value,key)=>
+  value!==null&&typeof value==='object'&&Object.hasOwn(value,key)?(value as Record<string,unknown>)[key]:undefined,record);
 
 /** Exact, manually selected source spans. Never interpret words as counter rules. */
-export function buildThreatInventory(game:GameSnapshot,seeds:ThreatSeeds,taxonomy:ResearchFunctions):ThreatInventory {
+export function buildThreatInventory(game:GameSnapshot,seeds:ThreatSeeds,taxonomy:ResearchFunctions,rawAbilities:Record<string,unknown>[]=[]):ThreatInventory {
   if(seeds.schemaVersion!==1||taxonomy.schemaVersion!==1) throw new Error('Unsupported research schema');
   if(!unique(seeds.profiles.map(p=>p.heroId))) throw new Error('Duplicate threat hero');
   if(!unique(taxonomy.functions.map(f=>f.id))||!unique(taxonomy.responses.map(r=>r.id))) throw new Error('Duplicate research function');
@@ -35,8 +42,11 @@ export function buildThreatInventory(game:GameSnapshot,seeds:ThreatSeeds,taxonom
   for(const p of seeds.profiles){
     if(!unique(p.abilities.map(a=>a.className))) throw new Error('Duplicate threat ability');
     for(const a of p.abilities){
-      if(!a.note.trim()||!unique(a.signals.map(s=>s.functionId))) throw new Error('Invalid threat annotation');
+      if(!a.note.trim()||!unique([...a.signals,...a.propertySignals??[]].map(s=>s.functionId))) throw new Error('Invalid threat annotation');
       for(const s of a.signals) if(!functionIds.has(s.functionId)||!s.quote.trim()||!a.baselineDescription.includes(s.quote)) throw new Error('Invalid evidence span or function');
+      for(const s of a.propertySignals??[]) if(!functionIds.has(s.functionId)||!s.facts.length||s.facts.some(f=>
+        !f.path.length||!['properties','behaviours'].includes(f.path[0])||f.path.some(k=>!k||['__proto__','constructor','prototype'].includes(k))||
+        !(typeof f.value==='string'||typeof f.value==='number'||(Array.isArray(f.value)&&f.value.every(v=>typeof v==='string'))))) throw new Error('Invalid property evidence');
     }
   }
   const heroes=game.heroes.filter(h=>h.selectable).map(h=>{
@@ -44,10 +54,14 @@ export function buildThreatInventory(game:GameSnapshot,seeds:ThreatSeeds,taxonom
     return {heroId:h.id,name:h.name,development:h.development,abilities:h.abilities.map(a=>{
       const seed=profile?.abilities.find(s=>s.className===a.className);
       const description=normalized(a.description);
-      const current=seed&&seeds.clientVersion===game.clientVersion&&seed.baselineDescription===description;
+      const raw=rawAbilities.filter(r=>r.class_name===a.className);
+      const propertiesCurrent=!seed?.propertySignals?.length||(raw.length===1&&seed.propertySignals.every(s=>s.facts.every(f=>
+        JSON.stringify(sourceValue(raw[0],f.path))===JSON.stringify(f.value))));
+      const current=seed&&seeds.clientVersion===game.clientVersion&&seed.baselineDescription===description&&propertiesCurrent;
       const status:ThreatAbility['status']=!seed?'untriaged':current?'triaged':'needs-review';
       return {className:a.className,name:a.name,description,status,
-        signals:current?seed.signals:[],gaps:current?(seed.gaps??[]):['Source triage required.'],note:!seed?'New or unmapped ability: inspect the source before assigning functions.':!current?'Snapshot or ability text changed. Previous tags are withheld until re-triaged.':seed.note};
+        signals:current?[...seed.signals,...(seed.propertySignals??[]).map(s=>({functionId:s.functionId,source:'properties' as const,
+          quote:s.facts.map(f=>`${f.path.join('.')} = ${JSON.stringify(f.value)}`).join('; ')}))]:[],gaps:current?(seed.gaps??[]):['Source triage required.'],note:!seed?'New or unmapped ability: inspect the source before assigning functions.':!current?'Snapshot, ability text or supporting properties changed or are missing. Previous tags are withheld until re-triaged.':seed.note};
     })};
   });
   return {schemaVersion:1,clientVersion:game.clientVersion,triagedAt:seeds.triagedAt,

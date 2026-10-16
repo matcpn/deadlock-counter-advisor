@@ -40,7 +40,7 @@ describe('source-reviewed defensive coverage',()=>{
   it('does not extrapolate player or enemy coverage',()=>{
     expect(run({heroId:'hero-2'}).map(r=>r.item.name)).toContain('Debuff Reducer');
     expect(run({heroId:'hero-2',problems:['sustain']})).toEqual([]);
-    expect(run({enemyHeroIds:['hero-2']})).toEqual([]);
+    expect(run({enemyHeroIds:['hero-12']})).toEqual([]);
     expect(run({enemyHeroIds:[]})).toEqual([]);
   });
   it('removes unavailable active responses without removing passive purchases',()=>{
@@ -82,6 +82,44 @@ describe('source-reviewed defensive coverage',()=>{
     expect(reviewedCatalog.heroes.map(h=>h.id).sort()).toEqual(game.heroes.filter(h=>h.selectable).map(h=>h.id).sort());
     expect(reviewedCatalog.manifest.coverage.completeRoster).toBe(false);
     expect(reviewedCatalog.items.some(i=>i.id.startsWith('demo-'))).toBe(false);
+  });
+});
+
+describe('channel disruption and teammate rescue',()=>{
+  const enemies=['hero-2','hero-11','hero-18'];
+  it('aggregates only reviewed channel matchups under Disrupt across player builds',()=>{
+    for(const heroId of ['hero-1','hero-3']){
+      const results=run({heroId,build:'weapon',enemyHeroIds:enemies});
+      expect(results.map(r=>r.item.name).sort()).toEqual(['Cursed Relic','Knockdown']);
+      expect(results.every(r=>r.goal==='disrupt'&&r.coveredEnemyIds.length===3)).toBe(true);
+    }
+    expect(run({enemyHeroIds:enemies,problems:['burst']})).toEqual([]);
+    expect(run({enemyHeroIds:enemies,problems:['sustain']})).toEqual([]);
+  });
+  it('withholds rescue actives when the player cannot act or excludes actives',()=>{
+    for(const restriction of [{allowActives:false},{responseWindow:'stunned-or-slept' as const}])expect(run({enemyHeroIds:enemies,...restriction})).toEqual([]);
+    for(const id of ['hero-11','hero-18']){
+      const results=run({enemyHeroIds:[id],responseWindow:'can-act'});
+      expect(results.every(r=>r.rules[0].conditions?.some(c=>c.includes('free teammate')&&c.includes('not the stunned victim')))).toBe(true);
+    }
+  });
+  it('keeps short-channel delay, immunity and caster damage limits explicit',()=>{
+    const results=run({enemyHeroIds:enemies});
+    const knockdown=results.find(r=>r.item.name==='Knockdown')!;
+    expect(knockdown.rules.every(r=>r.conditions?.some(c=>c.includes('2-second stun delay')))).toBe(true);
+    expect(knockdown.rules.find(r=>r.enemyHeroId==='hero-11')!.timing).toContain('2.75s');
+    expect(knockdown.rules.find(r=>r.enemyHeroId==='hero-18')!.timing).toContain('2.4s');
+    expect(results.flatMap(r=>r.rules).every(r=>r.conditions?.some(c=>c.includes('excludes protected targets')))).toBe(true);
+    expect(results.find(r=>r.item.name==='Cursed Relic')!.rules.every(r=>r.limitation.includes('own damage output is reduced'))).toBe(true);
+    expect(results.some(r=>r.item.name==='Silence Wave')).toBe(false);
+  });
+  it('keeps stage, budget and ownership independent for channel purchases',()=>{
+    const overrides={enemyHeroIds:enemies,budget:3200};
+    expect(run({...overrides,stage:'lane'})).toEqual([]);
+    const results=run(overrides);
+    expect(results.find(r=>r.item.name==='Knockdown')!.affordable).toBe(true);
+    expect(results.find(r=>r.item.name==='Cursed Relic')!.affordable).toBe(false);
+    expect(run({...overrides,ownedItemIds:['item-1254091416']}).map(r=>r.item.name)).toEqual(['Cursed Relic']);
   });
 });
 

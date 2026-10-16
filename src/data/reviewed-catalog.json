@@ -1,7 +1,7 @@
 {
   "manifest": {
     "schemaVersion": 1,
-    "dataVersion": "burst-coverage-2026-10-15",
+    "dataVersion": "channel-coverage-2026-10-15",
     "gamePatchId": "client-6785",
     "scoringVersion": "baseline-1",
     "kind": "production",
@@ -89,11 +89,35 @@
         "url": "https://forums.playdeadlock.com/threads/interaction-of-metal-skin-with-hero-passive-abilities-and-passive-items-dependent-on-bullets.37903/",
         "title": "Community Metal Skin interaction report · Oct 12, 2024; historical caution",
         "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "channel-seven",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg",
+        "title": "Seven channel interrupts · Sep 4, 2024; historical community report",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "channel-current",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/",
+        "title": "Seven and Dynamo counter discussion · 2026; displayed dates inconsistent",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "channel-dynamo",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/",
+        "title": "Dynamo teammate rescue discussion · 2026; patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "channel-mo",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/",
+        "title": "Mo & Krill interrupt discussion · 2026; patch uncertain",
+        "accessedAt": "2026-10-15"
       }
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 25 conditional rules / 12 items. Personal defenses cover selected problems against Abrams, Shiv, Haze, Wraith, Bebop and Infernus for all source-selectable player heroes. Healing-denial advice remains Infernus-specific. No in-game tests; chase and disruption coverage remain open."
+      "note": "Source-reviewed beta: 31 conditional rules / 14 items, with partial advice for nine enemy heroes. Added channel disruption for Seven, Dynamo and Mo & Krill; Dynamo/Mo rescue requires a free teammate. Healing-denial advice remains Infernus-specific. No in-game tests or complete hero coverage."
     }
   },
   "heroes": [
@@ -640,6 +664,66 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Facts compared with pinned client extraction. Conditional labels describe the item as a whole, including any triggered benefit. Build preferences are editorial."
+      }
+    },
+    {
+      "id": "item-1254091416",
+      "name": "Knockdown",
+      "category": "spirit",
+      "activation": "active",
+      "cost": 3200,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-2617435668",
+      "name": "Cursed Relic",
+      "category": "spirit",
+      "activation": "active",
+      "cost": 6400,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
       }
     }
   ],
@@ -2604,6 +2688,523 @@
         ],
         "reviewer": "Codex source comparison; no in-game test",
         "note": "Narrow inference from captured Sleep Dagger sleep and Debuff Reducer duration-reduction definitions. Practical wake-up and follow-up timing has not been tested."
+      }
+    },
+    {
+      "id": "channel-knockdown-hero-2",
+      "itemId": "item-1254091416",
+      "enemyHeroId": "hero-2",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.65,
+      "mechanism": "Knockdown's delayed stun can interrupt Seven's Storm Cloud if it lands while the channel is still running.",
+      "timing": "Cast early: the stun arrives after 2 seconds, plus cast/reaction time. Storm Cloud's captured base channel is 7s; upgrades and modifiers can change that. Do not wait until the channel is almost over.",
+      "limitation": "Not an immediate rescue: the target can keep channeling during the delay, and a late stun may arrive after the channel ends. Removal or stun immunity can defeat the attempt. Does not undo damage already dealt or guarantee survival. Only Storm Cloud is covered; this does not solve Power Surge, Lightning Ball or Static Charge.",
+      "conditions": [
+        "Seven is channeling Storm Cloud; this advice does not cover the rest of the kit.",
+        "You can act and use items; the item is ready.",
+        "Seven is visible, targetable and within cast range (45m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets.",
+        "Enough channel time remains for the 2-second stun delay plus casting and reaction time."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Knockdown is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. The current item applies a delayed stun; community reports support channel interruption only if that stun lands in time. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "channel-relic-hero-2",
+      "itemId": "item-2617435668",
+      "enemyHeroId": "hero-2",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Cursed Relic's explicit interrupt can stop Seven's Storm Cloud; this relies on the interrupt, not silence alone.",
+      "timing": "Use while the channel is running and you can act. The captured cast delay is 0.1s; range, targeting and reaction time still matter.",
+      "limitation": "Your own damage output is reduced for the curse duration. The tooltip removes non-ultimate buffs, but this rule makes no promise of bypassing Unstoppable, other protection or ultimate buffs. Does not undo damage already dealt or guarantee survival. Only Storm Cloud is covered; this does not solve Power Surge, Lightning Ball or Static Charge.",
+      "conditions": [
+        "Seven is channeling Storm Cloud; this advice does not cover the rest of the kit.",
+        "You can act and use items; the item is ready.",
+        "Seven is visible, targetable and within cast range (20m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Cursed Relic is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. Community references to Curse are historical terminology; current Cursed Relic is proposed because its tooltip explicitly includes an interrupt. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "channel-knockdown-hero-11",
+      "itemId": "item-1254091416",
+      "enemyHeroId": "hero-11",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.45,
+      "mechanism": "Knockdown's delayed stun can interrupt Dynamo's Singularity if it lands while the channel is still running.",
+      "timing": "Cast early: the stun arrives after 2 seconds, plus cast/reaction time. Singularity's captured base channel is 2.75s; upgrades and modifiers can change that. Do not wait until the channel is almost over.",
+      "limitation": "Not an immediate rescue: the target can keep channeling during the delay, and a late stun may arrive after the channel ends. Removal or stun immunity can defeat the attempt. Does not undo damage already dealt or guarantee survival. This is teammate rescue, not an item you can activate after being caught in this stun.",
+      "conditions": [
+        "Dynamo is channeling Singularity; this advice does not cover the rest of the kit.",
+        "You are a free teammate outside Singularity's control, not the stunned victim; the item is ready.",
+        "Dynamo is visible, targetable and within cast range (45m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets.",
+        "Enough channel time remains for the 2-second stun delay plus casting and reaction time."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Knockdown is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. The current item applies a delayed stun; community reports support channel interruption only if that stun lands in time. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "channel-relic-hero-11",
+      "itemId": "item-2617435668",
+      "enemyHeroId": "hero-11",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Cursed Relic's explicit interrupt can stop Dynamo's Singularity; this relies on the interrupt, not silence alone.",
+      "timing": "Use while the channel is running and you can act. The captured cast delay is 0.1s; range, targeting and reaction time still matter.",
+      "limitation": "Your own damage output is reduced for the curse duration. The tooltip removes non-ultimate buffs, but this rule makes no promise of bypassing Unstoppable, other protection or ultimate buffs. Does not undo damage already dealt or guarantee survival. This is teammate rescue, not an item you can activate after being caught in this stun.",
+      "conditions": [
+        "Dynamo is channeling Singularity; this advice does not cover the rest of the kit.",
+        "You are a free teammate outside Singularity's control, not the stunned victim; the item is ready.",
+        "Dynamo is visible, targetable and within cast range (20m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-18",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Cursed Relic is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. Community references to Curse are historical terminology; current Cursed Relic is proposed because its tooltip explicitly includes an interrupt. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "channel-knockdown-hero-18",
+      "itemId": "item-1254091416",
+      "enemyHeroId": "hero-18",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.45,
+      "mechanism": "Knockdown's delayed stun can interrupt Mo & Krill's Combo if it lands while the channel is still running.",
+      "timing": "Cast early: the stun arrives after 2 seconds, plus cast/reaction time. Combo's captured base channel is 2.4s; upgrades and modifiers can change that. Do not wait until the channel is almost over.",
+      "limitation": "Not an immediate rescue: the target can keep channeling during the delay, and a late stun may arrive after the channel ends. Removal or stun immunity can defeat the attempt. Does not undo damage already dealt or guarantee survival. This is teammate rescue, not an item you can activate after being caught in this stun.",
+      "conditions": [
+        "Mo & Krill is channeling Combo; this advice does not cover the rest of the kit.",
+        "You are a free teammate outside Combo's control, not the stunned victim; the item is ready.",
+        "Mo & Krill is visible, targetable and within cast range (45m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets.",
+        "Enough channel time remains for the 2-second stun delay plus casting and reaction time."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Knockdown is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. The current item applies a delayed stun; community reports support channel interruption only if that stun lands in time. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
+      }
+    },
+    {
+      "id": "channel-relic-hero-18",
+      "itemId": "item-2617435668",
+      "enemyHeroId": "hero-18",
+      "goal": "disrupt",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Cursed Relic's explicit interrupt can stop Mo & Krill's Combo; this relies on the interrupt, not silence alone.",
+      "timing": "Use while the channel is running and you can act. The captured cast delay is 0.1s; range, targeting and reaction time still matter.",
+      "limitation": "Your own damage output is reduced for the curse duration. The tooltip removes non-ultimate buffs, but this rule makes no promise of bypassing Unstoppable, other protection or ultimate buffs. Does not undo damage already dealt or guarantee survival. This is teammate rescue, not an item you can activate after being caught in this stun.",
+      "conditions": [
+        "Mo & Krill is channeling Combo; this advice does not cover the rest of the kit.",
+        "You are a free teammate outside Combo's control, not the stunned victim; the item is ready.",
+        "Mo & Krill is visible, targetable and within cast range (20m in the captured base item data).",
+        "The enemy has no active Unstoppable or other control/target protection; this recommendation excludes protected targets."
+      ],
+      "response": "while-actionable",
+      "playerHeroIds": [
+        "hero-6",
+        "hero-77",
+        "hero-88",
+        "hero-15",
+        "hero-72",
+        "hero-16",
+        "hero-81",
+        "hero-78",
+        "hero-64",
+        "hero-11",
+        "hero-76",
+        "hero-17",
+        "hero-13",
+        "hero-14",
+        "hero-1",
+        "hero-20",
+        "hero-12",
+        "hero-4",
+        "hero-31",
+        "hero-8",
+        "hero-63",
+        "hero-52",
+        "hero-67",
+        "hero-10",
+        "hero-50",
+        "hero-84",
+        "hero-79",
+        "hero-2",
+        "hero-19",
+        "hero-80",
+        "hero-60",
+        "hero-85",
+        "hero-69",
+        "hero-65",
+        "hero-66",
+        "hero-3",
+        "hero-35",
+        "hero-58",
+        "hero-25",
+        "hero-7",
+        "hero-27"
+      ],
+      "stageReason": "Mid/late teamfight utility when stopping this channel justifies delaying core items. Cursed Relic is not a prescribed build purchase, and stage placement is editorial rather than a price-to-stage conversion.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from pinned ability/item definitions and community matchup reports; no in-game test. Community references to Curse are historical terminology; current Cursed Relic is proposed because its tooltip explicitly includes an interrupt. Protected targets are excluded. Generic item delivery applies across listed players; build efficiency and practical reaction time are unmeasured."
       }
     }
   ]

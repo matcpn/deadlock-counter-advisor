@@ -1,5 +1,20 @@
 # Decisions and open questions
 
+## Channel batch and structured source evidence — 2026-10-15
+
+- Publish a bounded six-rule disruption slice for Seven, Dynamo and Mo & Krill,
+  keeping untested interactions source-reviewed and the existing expiry unchanged.
+- Make teammate rescue, remaining channel time, range and unprotected-target
+  prerequisites visible. Never present an active as usable by a stunned victim.
+- Exclude Silence Wave as an ongoing-channel interrupt based on its current text.
+  Do not extrapolate Cursed Relic's buff removal to immunity bypass.
+- Extend research annotations with exact raw-property references when plain text
+  loses damage icons or channel flags. Drift withholds annotations; classification
+  remains separate from recommendations. No new scenario input or runtime service.
+- Advance the research queue to Victor/Kelvin/McGinnis while preserving batch-one
+  timing, removal and personal-survival questions as open follow-ups.
+
+
 ## Cover the roster by function and incremental research — 2026-10-15
 
 The user approved an all-hero threat inventory and coverage matrix as the next

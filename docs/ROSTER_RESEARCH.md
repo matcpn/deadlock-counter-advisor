@@ -4,7 +4,7 @@
 
 Snapshot client 6785. Source-text triage: 2026-10-15. Coverage below evaluated at that fixed date for reproducibility; the app reevaluates availability today.
 
-42 selectable hero profiles / 168 main-slot abilities. 6 enemy heroes have at least one available reviewed rule; that is not complete hero coverage.
+42 selectable hero profiles / 168 main-slot abilities. 9 enemy heroes have at least one available reviewed rule; that is not complete hero coverage.
 
 Function labels are manually selected tooltip themes, not verified threats or counter matches. Full text may include upgrades, conditional effects and missing type icons. Base weapons, alternate kits, copied ultimates and builds are not exhaustively modeled.
 
@@ -20,9 +20,6 @@ Function labels are manually selected tooltip themes, not verified threats or co
 - **Lash / Ground Strike:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 - **McGinnis / Heavy Barrage:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 - **Mina / Rake:** Base ability description is missing; only upgrade fragments are captured.
-- **Seven / Lightning Ball:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
-- **Seven / Power Surge:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
-- **Seven / Storm Cloud:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
 - **Silver / Boot Kick:** Base ability description is missing; only upgrade fragments are captured.
 - **Silver / Lycan Curse:** Transformed abilities need a separate inventory.
 - **Sinclair / Vexing Bolt:** Enemy damage type is not explicit in the captured text; inspect raw properties or current client.
@@ -48,7 +45,7 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | Celeste | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Deadman Danny | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Drifter | needs-research | needs-research | needs-research | needs-research | needs-research |
-| Dynamo | needs-research | needs-research | needs-research | needs-research | needs-research |
+| Dynamo | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
 | Graves | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Grey Talon | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Haze | conditional 3/4/4 | conditional 2/2/2 | needs-research | needs-research | needs-research |
@@ -61,13 +58,13 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | McGinnis | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Mina | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Mirage | needs-research | needs-research | needs-research | needs-research | needs-research |
-| Mo & Krill | needs-research | needs-research | needs-research | needs-research | needs-research |
+| Mo & Krill | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
 | Paige | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Paradox | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Pocket | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Rat King | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Rem | needs-research | needs-research | needs-research | needs-research | needs-research |
-| Seven | needs-research | needs-research | needs-research | needs-research | needs-research |
+| Seven | needs-research | conditional 0/2/2 | needs-research | needs-research | needs-research |
 | Shiv | conditional 1/1/1 | needs-research | conditional 0/1/1 | conditional 1/2/2 | needs-research |
 | Silver | needs-research | needs-research | needs-research | needs-research | needs-research |
 | Sinclair | needs-research | needs-research | needs-research | needs-research | needs-research |
@@ -90,13 +87,17 @@ Plan status: matches captured client. Editorial research order based on reusable
 
 Seven, Dynamo, Mo & Krill
 
-- Separate delayed stun, sustained control and interruptible channels.
-- Resolve missing damage types from raw properties or current client observations.
-- Research duration reduction, qualifying barrier triggers and interrupt timing independently; do not transfer rules automatically.
+First slice reviewed: six conditional channel-interrupt rules; no in-game verification or full-kit coverage.
+
+- Follow up with controlled tests: Knockdown delay vs short channels; protection, removal and Cursed Relic interactions.
+- Still open: Static Charge removal, continuous-stun duration reduction, qualifying barrier triggers and personal survival.
+- Seven damage markers and Dynamo channel flag are traced to raw properties; alternate tooltip sections and other kit details remain incomplete.
 
 ### 2. Healing and persistent damage
 
 Victor, Kelvin, McGinnis
+
+Next research batch.
 
 - Separate regeneration, ally healing, barriers and reanimation.
 - Review how healing reduction is delivered by different player heroes.
@@ -105,6 +106,8 @@ Victor, Kelvin, McGinnis
 ### 3. Flight, movement and escape
 
 Vindicta, Grey Talon, Calico
+
+Queued after healing and persistent damage.
 
 - Check movement denial, delivery range and defensive activation windows.
 - Distinguish flight, teleport, untargetability and invisibility.
@@ -115,69 +118,64 @@ Vindicta, Grey Talon, Calico
 Ordered by number of heroes with no current published advice, then total hero reach. This is an editorial research-efficiency order, not a meta or popularity ranking. Heroes with advice can still have major unresearched threats. Response families are investigation directions, not approved item matches.
 
 ### Spirit damage
-32 heroes mention this theme; 26 have no available published advice in any problem.
+33 heroes mention this theme; 24 have no available published advice in any problem.
 Confirm damage instances, scaling and barrier timing.
 Research directions: Spirit resistance, Damage barrier
 
 ### Dash / flight / teleport
-28 heroes mention this theme; 24 have no available published advice in any problem.
+28 heroes mention this theme; 22 have no available published advice in any problem.
 Research delivery, range and immunity; mobility is not a single interruptible effect.
 Research directions: Movement denial
 
 ### Movement slow
-19 heroes mention this theme; 18 have no available published advice in any problem.
+19 heroes mention this theme; 16 have no available published advice in any problem.
 Separate movement slow, dash restrictions and ability lockout.
 Research directions: Debuff duration reduction, Applied debuff removal
 
 ### Healing / regeneration / lifesteal
-19 heroes mention this theme; 17 have no available published advice in any problem.
+19 heroes mention this theme; 15 have no available published advice in any problem.
 Check recipient, delivery, overlap and whether the effect is healing rather than a shield or deferral.
 Research directions: Healing reduction
-
-### Delayed / charged damage
-17 heroes mention this theme; 15 have no available published advice in any problem.
-Check activation window and whether this cast can actually be interrupted.
-Research directions: Damage barrier, Interrupt
 
 ### Special control / rules
 16 heroes mention this theme; 15 have no available published advice in any problem.
 Resolve the unique effect rather than mapping its name to stun, cleanse or immunity.
 Research directions: Resolve the specific mechanic before choosing a response family.
 
+### Delayed / charged damage
+17 heroes mention this theme; 14 have no available published advice in any problem.
+Check activation window and whether this cast can actually be interrupted.
+Research directions: Damage barrier, Interrupt
+
 ### Damage protection / avoidance
-15 heroes mention this theme; 14 have no available published advice in any problem.
+15 heroes mention this theme; 13 have no available published advice in any problem.
 Determine exact protection and duration; do not treat it as healing.
 Research directions: Resolve the specific mechanic before choosing a response family.
 
-### Pull / knockback / launch
-16 heroes mention this theme; 13 have no available published advice in any problem.
-Check displacement directly; immunity or barrier triggers cannot be inferred from movement.
-Research directions: Preemptive control immunity
-
 ### Damage over time
-16 heroes mention this theme; 13 have no available published advice in any problem.
+16 heroes mention this theme; 12 have no available published advice in any problem.
 Check removal eligibility, reapplication and ultimate exceptions.
 Research directions: Applied debuff removal, Damage barrier
 
-### Stun
-14 heroes mention this theme; 12 have no available published advice in any problem.
-Confirm ability rank, duration and proc ordering; do not promise a parry.
-Research directions: Debuff duration reduction, Preemptive control immunity, Barrier after qualifying control
+### Pull / knockback / launch
+16 heroes mention this theme; 11 have no available published advice in any problem.
+Check displacement directly; immunity or barrier triggers cannot be inferred from movement.
+Research directions: Preemptive control immunity
 
 ### Damage amplification / resist reduction
-12 heroes mention this theme; 11 have no available published advice in any problem.
+12 heroes mention this theme; 10 have no available published advice in any problem.
 Separate direct damage from stacking amplification and check removal eligibility.
 Research directions: Applied debuff removal
 
 ### Damage type unresolved
-11 heroes mention this theme; 11 have no available published advice in any problem.
+10 heroes mention this theme; 10 have no available published advice in any problem.
 Resolve missing damage type from raw fields or current client; Spirit scaling alone is insufficient.
 Research directions: Resolve the specific mechanic before choosing a response family.
 
-### Channeled ability
-11 heroes mention this theme; 10 have no available published advice in any problem.
-Test interruption eligibility, immunity and line-of-sight rules.
-Research directions: Interrupt
+### Stun
+14 heroes mention this theme; 9 have no available published advice in any problem.
+Confirm ability rank, duration and proc ordering; do not promise a parry.
+Research directions: Debuff duration reduction, Preemptive control immunity, Barrier after qualifying control
 
 ### Silence
 10 heroes mention this theme; 9 have no available published advice in any problem.
@@ -188,6 +186,11 @@ Research directions: Debuff duration reduction, Applied debuff removal, Barrier 
 9 heroes mention this theme; 8 have no available published advice in any problem.
 Investigate barrier-specific responses; healing reduction is not assumed to affect barriers.
 Research directions: Resolve the specific mechanic before choosing a response family.
+
+### Channeled ability
+11 heroes mention this theme; 7 have no available published advice in any problem.
+Test interruption eligibility, immunity and line-of-sight rules.
+Research directions: Interrupt
 
 ### Bullet / weapon damage
 8 heroes mention this theme; 6 have no available published advice in any problem.
@@ -230,7 +233,7 @@ Research detection and vision mechanics before proposing item responses.
 Research directions: Resolve the specific mechanic before choosing a response family.
 
 ### Disarm
-2 heroes mention this theme; 2 have no available published advice in any problem.
+2 heroes mention this theme; 1 have no available published advice in any problem.
 Check attack and item-use limits separately.
 Research directions: Debuff duration reduction, Applied debuff removal
 
@@ -299,7 +302,7 @@ Research directions: Debuff duration reduction, Barrier after qualifying control
 - **Kinetic Pulse** (triaged): Spirit damage; Pull / knockback / launch. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 - **Quantum Entanglement** (triaged): Damage protection / avoidance; Dash / flight / teleport. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 - **Rejuvenating Aurora** (triaged): Healing / regeneration / lifesteal; Channeled ability. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
-- **Singularity** (triaged): Spirit damage; Damage over time; Stun; Pull / knockback / launch. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
+- **Singularity** (triaged): Spirit damage; Damage over time; Stun; Pull / knockback / launch; Channeled ability. The channel flag is present in raw ability behaviours even though the captured plain text omits it. Continuous stun/pull is not modeled as a one-off removable debuff; duration reduction and self-rescue remain unresolved.
 
 ### Graves
 - **Jar of Dead** (triaged): Summons / deployables; Spirit damage. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
@@ -410,10 +413,10 @@ Research directions: Debuff duration reduction, Barrier after qualifying control
 - **Naptime** (triaged): Channeled ability; Sleep; Movement / stamina restriction; Spirit damage. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
 
 ### Seven
-- **Lightning Ball** (triaged): Damage type unresolved; Movement slow. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
+- **Lightning Ball** (triaged): Movement slow; Spirit damage. Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only.
 - **Static Charge** (triaged): Delayed / charged damage; Stun. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
-- **Power Surge** (triaged): Damage type unresolved; Damage amplification / resist reduction. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
-- **Storm Cloud** (triaged): Channeled ability; Damage type unresolved. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.
+- **Power Surge** (triaged): Damage amplification / resist reduction; Spirit damage. Damage-type classification comes from DamagePerChain's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only. This does not turn the underlying bullet hit into spirit damage.
+- **Storm Cloud** (triaged): Channeled ability; Spirit damage. Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only.
 
 ### Shiv
 - **Serrated Knives** (triaged): Damage over time. Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.

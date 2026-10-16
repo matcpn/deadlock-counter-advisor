@@ -851,10 +851,15 @@
             {
               "functionId": "displace",
               "quote": "pulling in nearby enemies"
+            },
+            {
+              "functionId": "channel",
+              "source": "properties",
+              "quote": "behaviours = [\"CITADEL_ABILITY_BEHAVIOR_CHANNELLED\",\"CITADEL_ABILITY_BEHAVIOR_EXCLUSIVE_USE\",\"CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_BUSY\",\"CITADEL_ABILITY_BEHAVIOR_INTERRUPT_MELEE_ON_CAST\",\"CITADEL_ABILITY_BEHAVIOR_NO_TARGET\",\"CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT\",\"CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST\"]"
             }
           ],
           "gaps": [],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "note": "The channel flag is present in raw ability behaviours even though the captured plain text omits it. Continuous stun/pull is not modeled as a one-off removable debuff; duration reduction and self-rescue remain unresolved."
         }
       ]
     },
@@ -2314,18 +2319,17 @@
           "status": "triaged",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "Does damage"
-            },
-            {
               "functionId": "slow",
               "quote": "move speed on hit targets"
+            },
+            {
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.DPS.css_class = \"tech_damage\"; properties.DPS.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only."
         },
         {
           "className": "citadel_ability_static_charge",
@@ -2352,18 +2356,17 @@
           "status": "triaged",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "shock damage"
-            },
-            {
               "functionId": "amp",
               "quote": "Applies -15% Spirit Resist"
+            },
+            {
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.DamagePerChain.css_class = \"tech_damage\"; properties.DamagePerChain.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Damage-type classification comes from DamagePerChain's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only. This does not turn the underlying bullet hit into spirit damage."
         },
         {
           "className": "citadel_ability_storm_cloud",
@@ -2376,14 +2379,13 @@
               "quote": "Channel an expanding storm"
             },
             {
-              "functionId": "unknown-damage",
-              "quote": "damages all enemies"
+              "functionId": "spirit",
+              "source": "properties",
+              "quote": "properties.DPS.css_class = \"tech_damage\"; properties.DPS.icon = \"https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg\""
             }
           ],
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
-          ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed."
+          "gaps": [],
+          "note": "Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only."
         }
       ]
     },

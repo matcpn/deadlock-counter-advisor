@@ -1,5 +1,71 @@
 # Community counter research — 2026-10-12
 
+## Channel disruption batch — 2026-10-15
+
+Added six narrow source-reviewed rules: Knockdown and Cursed Relic against Seven's
+Storm Cloud, Dynamo's Singularity and Mo & Krill's Combo. They populate Disrupt /
+Control & combos in mid and late game. Total: 31 rules / 14 items / nine enemies
+with partial advice. None have been tested in-game. Review expires November 14 UTC.
+Public steam-info was rechecked: client 6785 / revision 11132425, unchanged.
+
+### Sources and decisions
+
+- [Pinned definitions](https://api.deadlock-api.com/v1/assets/items?client_version=6785)
+  establish current item names, prices, categories, activation, range, delay and
+  tooltip mechanics. Knockdown (1254091416) is spirit/active/3,200 souls, base range
+  45m, cast delay 0.1s, stun delay 2s. Cursed Relic (2617435668) is spirit/active/6,400,
+  base range 20m, cast delay 0.1s. Neither has components in this snapshot.
+- [Seven and Dynamo discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1vzuoa3/as_a_new_player_how_do_i_deal_with_seven_and/)
+  corroborates Knockdown against both channels and identifies enemy Unstoppable as
+  a limitation. [Dynamo rescue discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1u6so3y/how_to_counter_phantom_strike_dynamo/)
+  identifies teammate interrupts when the victim cannot act. [Mo & Krill discussion](https://www.reddit.com/r/DeadlockTheGame/comments/1u5wyeh/best_way_to_counter_mokrill/)
+  proposes Knockdown/Curse against Combo. These are community reports, not official
+  tests; 2026 search dates and rendered relative dates conflict, so exact dates and
+  patch compatibility are not asserted.
+- [Seven interrupt discussion, September 4, 2024](https://www.reddit.com/r/DeadlockTheGame/comments/1f8l9jg)
+  explicitly separates Knockdown/Curse from silence. Retrieved search text was
+  available; direct page retrieval failed. Old names, prices and claims about
+  instant casts are not copied. Current Cursed Relic explicitly includes an
+  interrupt; historical use of “Curse” supplies context, not rename proof.
+- Current Silence Wave (619484391) explicitly excludes channel interruption. No
+  Silence Wave rule was added. Broad community “silence stops ult” advice is not
+  enough; preventing a cast and interrupting an active channel are different.
+
+### Exact scope and unresolved issues
+
+All source-selectable player heroes except the enemy can deliver these generic
+item effects. Build fit is neutral; no hero-specific synergy is certified.
+Dynamo/Mo rules require a free teammate, visibly stated before expanding details.
+Already-stunned/asleep removes all six rules. These are not personal stun escapes.
+
+Captured AbilityChannelTime values: Storm Cloud 7s, Singularity 2.75s, Combo 2.4s.
+Knockdown's 2s delay leaves little reaction margin on short channels; its rating
+is lower there, and sufficient remaining time is an explicit prerequisite.
+Modifiers/upgrades, latency and actual event ordering still require testing.
+Cursed Relic reduces the caster's own damage output; its curse is not silence-only.
+Protected targets are excluded for both items. Buff removal does not establish
+Unstoppable/immunity bypass, and no removed-damage or guaranteed rescue is claimed.
+Stage placement and strength are editorial judgments, not measured win rates.
+
+No rules were added for Seven's other abilities, Dynamo's other abilities, Burrow,
+healing denial, continuous-stun duration reduction or barrier triggers. Scorn
+healing, Static Charge removal and those interactions remain follow-up research.
+
+### Repaired source gaps
+
+Exact raw-property evidence now supports Seven's Lightning Ball DPS, Power Surge
+DamagePerChain, and Storm Cloud DPS as spirit damage components: css_class is
+tech_damage and the damage icon is damage_magic_color.svg. This is not inference
+from Spirit scaling. Underlying bullets remain separate. Dynamo's Singularity
+behaviours explicitly includes CHANNELLED despite missing that word in plain text.
+These four annotations retain exact paths/values and are withheld on property
+change, missing/duplicate source entity, description change or client change.
+Seventeen known ability entries still have source gaps, down from twenty; this
+is not a complete tooltip audit. Secondary sections, alternate kits and upgrades
+still need work. Neither these annotations nor response-family membership creates
+counter rules automatically.
+
+
 ## Burst-defense expansion — 2026-10-15
 
 The published catalog now contains 25 source-reviewed rules / 12 items. This section

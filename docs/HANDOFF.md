@@ -1,5 +1,27 @@
 # Start here — continuation handoff
 
+## Channel disruption slice — 2026-10-15
+
+Implemented six source-reviewed rules for Knockdown / Cursed Relic against Seven's
+Storm Cloud, Dynamo's Singularity and Mo & Krill's Combo. Total: 31 rules / 14 items,
+nine enemies with partial advice. Use Control & combos, mid/late Disrupt. Dynamo/Mo
+require a free teammate; stunned/asleep filters these actives. No new inputs.
+Knockdown has a two-second delay; short channels require immediate team response.
+Protected targets are excluded. Silence Wave is not an ongoing-channel interrupt.
+Read COMMUNITY_RESEARCH.md for sources, timing and unresolved questions.
+
+Raw-property annotations resolve three Seven damage-type gaps and add Dynamo's
+channel flag. Seventeen known ability entries still have source gaps. The offline
+builder checks exact paths/values from pinned raw items; missing/changed/duplicate
+records withhold tags. Data refresh still never renews interaction reviews.
+Current public source remains client 6785. Advice expiry remains November 14 UTC.
+
+Next research: Victor, Kelvin and McGinnis (healing/persistent damage), followed by
+Vindicta/Grey Talon/Calico. Batch-one personal survival, removal, barrier triggers
+and practical timing tests remain open; none of these new rules is in-game verified.
+See latest VALIDATION.md for actual checks and publication status.
+
+
 ## All-hero research foundation — 2026-10-15
 
 Implementation 488d9a1 is live; CI, Pages and the manual refresh passed. The live

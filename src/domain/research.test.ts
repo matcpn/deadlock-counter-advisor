@@ -1,4 +1,5 @@
 import {describe,it,expect} from 'vitest';
+import rawJson from '../../data/snapshots/client-6785/items.json';
 import gameJson from '../data/game-catalog.json';
 import seedsJson from '../../data/research/hero-threats.json';
 import taxonomy from '../data/research-functions.json';
@@ -8,7 +9,8 @@ import {buildThreatInventory,buildCoverage,researchBacklog,type ThreatSeeds} fro
 import type {GameSnapshot} from './game-data';
 const game=gameJson as GameSnapshot;
 const seeds=seedsJson as ThreatSeeds;
-const build=(snapshot=game,annotations=seeds)=>buildThreatInventory(snapshot,annotations,taxonomy);
+const rawAbilities=rawJson as Record<string,unknown>[];
+const build=(snapshot=game,annotations=seeds)=>buildThreatInventory(snapshot,annotations,taxonomy,rawAbilities);
 const coverage=(asOf='2026-10-15')=>buildCoverage(game,reviewedCatalog,asOf);
 
 describe('source-traced all-hero inventory',()=>{
@@ -19,7 +21,7 @@ describe('source-traced all-hero inventory',()=>{
     expect(inventory.heroes.flatMap(h=>h.abilities)).toHaveLength(168);
     for(const hero of inventory.heroes)for(const a of hero.abilities){
       expect(a.status).toBe('triaged');
-      for(const signal of a.signals)expect(a.description).toContain(signal.quote);
+      for(const signal of a.signals)if(signal.source!=='properties')expect(a.description).toContain(signal.quote);
     }
   });
   it('preserves negations, self effects, damage-type gaps and unique mechanics',()=>{
@@ -48,6 +50,30 @@ describe('source-traced all-hero inventory',()=>{
     expect(abilities[0].status).toBe('needs-review');
     expect(abilities[1].status).toBe('triaged');
   });
+  it('uses raw damage markers and channel flags without inferring from scaling alone',()=>{
+    const inventory=build();
+    const seven=inventory.heroes.find(h=>h.heroId==='hero-2')!;
+    for(const index of [0,2,3]){
+      expect(seven.abilities[index].signals).toContainEqual(expect.objectContaining({functionId:'spirit',source:'properties'}));
+      expect(seven.abilities[index].signals.some(s=>s.functionId==='unknown-damage')).toBe(false);
+      expect(seven.abilities[index].gaps).toEqual([]);
+    }
+    expect(inventory.heroes.find(h=>h.heroId==='hero-11')!.abilities[3].signals).toContainEqual(expect.objectContaining({functionId:'channel',source:'properties'}));
+  });
+  it('withholds classifications when property evidence is missing, duplicated or changed',()=>{
+    const changed=structuredClone(rawAbilities);
+    const ball=changed.find(r=>r.class_name==='citadel_ability_lightning_ball')!;
+    (ball.properties as Record<string,Record<string,unknown>>).DPS.icon='different-icon.svg';
+    for(const records of [[],changed,[...rawAbilities,rawAbilities.find(r=>r.class_name==='citadel_ability_lightning_ball')!]]){
+      const seven=buildThreatInventory(game,seeds,taxonomy,records).heroes.find(h=>h.heroId==='hero-2')!;
+      expect(seven.abilities[0].status).toBe('needs-review');
+      expect(seven.abilities[0].signals).toEqual([]);
+      expect(seven.abilities[1].status).toBe('triaged');
+    }
+    const invalid=structuredClone(seeds);
+    invalid.profiles.find(p=>p.heroId==='hero-2')!.abilities[0].propertySignals![0].facts=[];
+    expect(()=>build(game,invalid)).toThrow('Invalid property evidence');
+  });
   it('adds unknown heroes/abilities without copying another kit and records retired heroes',()=>{
     const changed=structuredClone(game),added={...structuredClone(changed.heroes[0]),id:'hero-9999',sourceId:9999,name:'New source hero',selectable:true};
     changed.heroes.push(added);
@@ -66,14 +92,14 @@ describe('source-traced all-hero inventory',()=>{
 });
 
 describe('coverage and research are not recommendation generation',()=>{
-  it('reports all problem cells but only six enemies with partial reviewed advice',()=>{
+  it('reports all problem cells but only nine enemies with partial reviewed advice',()=>{
     const matrix=coverage();
     expect(matrix).toHaveLength(42);
     expect(matrix.flatMap(h=>h.cells)).toHaveLength(210);
-    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(6);
-    expect(matrix.find(h=>h.heroId==='hero-2')!.cells.every(c=>c.status==='needs-research')).toBe(true);
+    expect(matrix.filter(h=>h.cells.some(c=>c.ruleIds.length))).toHaveLength(9);
+    expect(matrix.find(h=>h.heroId==='hero-12')!.cells.every(c=>c.status==='needs-research')).toBe(true);
     expect(matrix.flatMap(h=>h.cells).filter(c=>c.ruleIds.length).every(c=>c.status==='conditional')).toBe(true);
-    expect(matrix.flatMap(h=>h.cells).every(c=>!c.goals.includes('disrupt'))).toBe(true);
+    expect(matrix.find(h=>h.heroId==='hero-2')!.cells.find(c=>c.problem==='control')!.goals).toEqual(['disrupt']);
   });
   it('distinguishes scope, objective and stages from a blanket hero counter',()=>{
     const abrams=coverage().find(h=>h.heroId==='hero-6')!;
@@ -106,6 +132,6 @@ describe('coverage and research are not recommendation generation',()=>{
     expect(backlog.find(f=>f.functionId==='channel')!.occurrences.some(o=>o.heroId==='hero-2')).toBe(true);
     expect(backlog.every((f,i)=>i===0||backlog[i-1].uncoveredHeroCount>=f.uncoveredHeroCount)).toBe(true);
     expect(reviewedCatalog).toEqual(before);
-    expect(reviewedCatalog.rules).toHaveLength(25);
+    expect(reviewedCatalog.rules).toHaveLength(31);
   });
 });

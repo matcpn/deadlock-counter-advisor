@@ -44,13 +44,13 @@ export function ResearchCoverage({game,catalog}:{game:GameSnapshot;catalog:Catal
       {profiles.map(h=><details key={h.heroId} className="hero-profile"><summary>{h.name} · {h.abilities.length} main abilities</summary>
         {h.abilities.map(a=><article key={a.className}><h4>{a.name}</h4><p className="function-labels">{a.signals.map(s=>label(s.functionId)).join(' · ')||'Unclassified — inspect source'}</p>
           <p>{a.note}</p>{a.gaps.length>0&&<p className="research-gap">Open questions: {a.gaps.join(' ')}</p>}
-          <details><summary>Source text & classification evidence</summary><p>{a.status} · client {inventory.clientVersion}</p><p>{a.description||'No description supplied.'}</p><ul>{a.signals.map(s=><li key={s.functionId}>{label(s.functionId)}: “{s.quote}”</li>)}</ul><a href={inventory.sourceUrl} target="_blank" rel="noreferrer">Pinned ability definitions</a></details>
+          <details><summary>Source text & classification evidence</summary><p>{a.status} · client {inventory.clientVersion}</p><p>{a.description||'No description supplied.'}</p><ul>{a.signals.map(s=><li key={s.functionId}>{label(s.functionId)} ({s.source==='properties'?'raw properties':'tooltip'}): {s.quote}</li>)}</ul><a href={inventory.sourceUrl} target="_blank" rel="noreferrer">Pinned ability definitions</a></details>
         </article>)}
       </details>)}
     </details>
     <details><summary>Research queue · {gaps.length} abilities with source gaps</summary>
       <p>{plan.basis}</p>{plan.clientVersion!==game.clientVersion&&<p className="research-gap">The batch plan needs review for this snapshot.</p>}
-      {plan.batches.map(batch=><section key={batch.title}><h3>{batch.title}</h3><p>{batch.heroIds.map(name).join(' · ')}</p><ul>{batch.questions.map(q=><li key={q}>{q}</li>)}</ul></section>)}
+      {plan.batches.map(batch=><section key={batch.title}><h3>{batch.title}</h3><p>{batch.heroIds.map(name).join(' · ')}</p><p>{batch.status}</p><ul>{batch.questions.map(q=><li key={q}>{q}</li>)}</ul></section>)}
       <details><summary>Source gaps to resolve</summary><ul>{gaps.map(a=><li key={a.className}><strong>{a.hero} / {a.name}:</strong> {a.gaps.join(' ')}</li>)}</ul></details>
       <details><summary>Group research by function</summary><p>Ordered by reach among heroes with no current advice. Function matches suggest questions to investigate; they never create counter rules.</p>
         {backlog.map(f=><article key={f.functionId}><h4>{f.label} · {f.heroCount} heroes</h4><p>{f.uncoveredHeroCount} have no current advice in any problem. {f.question}</p><p>Response families to investigate: {f.responseIds.map(id=>taxonomy.responses.find(r=>r.id===id)!.label).join(', ')||'Resolve this mechanic first.'}</p></article>)}

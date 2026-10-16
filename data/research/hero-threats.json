@@ -753,8 +753,29 @@
               "quote": "pulling in nearby enemies"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": []
+          "note": "The channel flag is present in raw ability behaviours even though the captured plain text omits it. Continuous stun/pull is not modeled as a one-off removable debuff; duration reduction and self-rescue remain unresolved.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "channel",
+              "facts": [
+                {
+                  "path": [
+                    "behaviours"
+                  ],
+                  "value": [
+                    "CITADEL_ABILITY_BEHAVIOR_CHANNELLED",
+                    "CITADEL_ABILITY_BEHAVIOR_EXCLUSIVE_USE",
+                    "CITADEL_ABILITY_BEHAVIOR_CASTABLE_WHILE_BUSY",
+                    "CITADEL_ABILITY_BEHAVIOR_INTERRUPT_MELEE_ON_CAST",
+                    "CITADEL_ABILITY_BEHAVIOR_NO_TARGET",
+                    "CITADEL_ABILITY_BEHAVIOR_DISPLAYS_DAMAGE_IMPACT",
+                    "CITADEL_ABILITY_BEHAVIOR_DEACTIVATE_CROUCH_TOGGLE_ON_CAST"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2030,17 +2051,34 @@
           "baselineDescription": "Shoot a ball of lightning that travels in a straight line. Does damage to all targets in its radius. Slows down when damaging enemies and stops if it hits the world. Launch a damaging ball of lightning -28% move speed on hit targets and +1s Lifetime +58.5 DPS and +1.75m radius",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "Does damage"
-            },
-            {
               "functionId": "slow",
               "quote": "move speed on hit targets"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
+          "note": "Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "spirit",
+              "facts": [
+                {
+                  "path": [
+                    "properties",
+                    "DPS",
+                    "css_class"
+                  ],
+                  "value": "tech_damage"
+                },
+                {
+                  "path": [
+                    "properties",
+                    "DPS",
+                    "icon"
+                  ],
+                  "value": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+                }
+              ]
+            }
           ]
         },
         {
@@ -2064,17 +2102,34 @@
           "baselineDescription": "Power up your weapon with a shock effect, making your bullets proc shock damage on your target. This shock damage bounces to enemies near your target. Occurs once per burst shot. Create electric arcs with your shots +3m Move Speed +8 Damage and increased scaling +10s Duration Applies -15% Spirit Resist",
           "signals": [
             {
-              "functionId": "unknown-damage",
-              "quote": "shock damage"
-            },
-            {
               "functionId": "amp",
               "quote": "Applies -15% Spirit Resist"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
+          "note": "Damage-type classification comes from DamagePerChain's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only. This does not turn the underlying bullet hit into spirit damage.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "spirit",
+              "facts": [
+                {
+                  "path": [
+                    "properties",
+                    "DamagePerChain",
+                    "css_class"
+                  ],
+                  "value": "tech_damage"
+                },
+                {
+                  "path": [
+                    "properties",
+                    "DamagePerChain",
+                    "icon"
+                  ],
+                  "value": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+                }
+              ]
+            }
           ]
         },
         {
@@ -2084,15 +2139,32 @@
             {
               "functionId": "channel",
               "quote": "Channel an expanding storm"
-            },
-            {
-              "functionId": "unknown-damage",
-              "quote": "damages all enemies"
             }
           ],
-          "note": "Initial source-text triage only. Read the full tooltip for conditions and upgrade requirements; practical threat priority and interactions are unreviewed.",
-          "gaps": [
-            "Enemy damage type is not explicit in the captured text; inspect raw properties or current client."
+          "note": "Damage-type classification comes from DPS's damage presentation class and spirit-damage icon, not Spirit scaling alone. Source-reviewed extraction, not client testing; applies to the listed ability damage component only.",
+          "gaps": [],
+          "propertySignals": [
+            {
+              "functionId": "spirit",
+              "facts": [
+                {
+                  "path": [
+                    "properties",
+                    "DPS",
+                    "css_class"
+                  ],
+                  "value": "tech_damage"
+                },
+                {
+                  "path": [
+                    "properties",
+                    "DPS",
+                    "icon"
+                  ],
+                  "value": "https://assets-bucket.deadlock-api.com/assets-api-res/icons/icons/properties/damage_magic_color.svg"
+                }
+              ]
+            }
           ]
         }
       ]

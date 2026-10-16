@@ -6,19 +6,51 @@
   "batches": [
     {
       "title": "1. Control and channel interactions",
-      "heroIds": ["hero-2", "hero-11", "hero-18"],
-      "questions": ["Separate delayed stun, sustained control and interruptible channels.", "Resolve missing damage types from raw properties or current client observations.", "Research duration reduction, qualifying barrier triggers and interrupt timing independently; do not transfer rules automatically."]
+      "heroIds": [
+        "hero-2",
+        "hero-11",
+        "hero-18"
+      ],
+      "questions": [
+        "Follow up with controlled tests: Knockdown delay vs short channels; protection, removal and Cursed Relic interactions.",
+        "Still open: Static Charge removal, continuous-stun duration reduction, qualifying barrier triggers and personal survival.",
+        "Seven damage markers and Dynamo channel flag are traced to raw properties; alternate tooltip sections and other kit details remain incomplete."
+      ],
+      "status": "First slice reviewed: six conditional channel-interrupt rules; no in-game verification or full-kit coverage."
     },
     {
       "title": "2. Healing and persistent damage",
-      "heroIds": ["hero-66", "hero-12", "hero-8"],
-      "questions": ["Separate regeneration, ally healing, barriers and reanimation.", "Review how healing reduction is delivered by different player heroes.", "Compare sustained mitigation with attempts to interrupt or leave a damaging area."]
+      "heroIds": [
+        "hero-66",
+        "hero-12",
+        "hero-8"
+      ],
+      "questions": [
+        "Separate regeneration, ally healing, barriers and reanimation.",
+        "Review how healing reduction is delivered by different player heroes.",
+        "Compare sustained mitigation with attempts to interrupt or leave a damaging area."
+      ],
+      "status": "Next research batch."
     },
     {
       "title": "3. Flight, movement and escape",
-      "heroIds": ["hero-3", "hero-17", "hero-16"],
-      "questions": ["Check movement denial, delivery range and defensive activation windows.", "Distinguish flight, teleport, untargetability and invisibility.", "Review execute wording separately from ordinary bonus damage against low-health targets."]
+      "heroIds": [
+        "hero-3",
+        "hero-17",
+        "hero-16"
+      ],
+      "questions": [
+        "Check movement denial, delivery range and defensive activation windows.",
+        "Distinguish flight, teleport, untargetability and invisibility.",
+        "Review execute wording separately from ordinary bonus damage against low-health targets."
+      ],
+      "status": "Queued after healing and persistent damage."
     }
   ],
-  "gates": ["Repair incomplete ability text and alternate-kit gaps before relying on those profiles.", "Read current item facts and independent matchup evidence for each proposed interaction.", "Record exact affected ability, objective, conditions, exclusions, player scope and patch.", "Add behavioral regressions and keep untested interactions labeled source-reviewed."]
+  "gates": [
+    "Repair incomplete ability text and alternate-kit gaps before relying on those profiles.",
+    "Read current item facts and independent matchup evidence for each proposed interaction.",
+    "Record exact affected ability, objective, conditions, exclusions, player scope and patch.",
+    "Add behavioral regressions and keep untested interactions labeled source-reviewed."
+  ]
 }

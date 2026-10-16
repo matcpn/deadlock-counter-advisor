@@ -13,7 +13,7 @@ The public steam-info endpoint was rechecked and still reports that client versi
    full description is retained so upgrades, conditions and negations stay visible.
 2. **Response functions:** categories such as spirit resistance, duration reduction,
    applied-debuff removal or interruption. Twelve response families include links
-   to the twelve existing reviewed items where relevant. Empty families remain
+   to reviewed items where relevant. Empty families remain
    research tasks. Matching a threat to a family is only a lead.
 3. **Reviewed interactions:** separately maintained rules in reviewed-catalog.json.
    Only this layer reaches the recommendation engine. Neither inventory generation
@@ -29,7 +29,9 @@ interruption from sleep, cleanse eligibility from a debuff, or healing from defe
 
 - `data/research/hero-threats.json`: human-readable seed annotations. Each ability
   is identified by source class name and stores its baseline normalized description,
-  exact evidence spans, function IDs, notes and unresolved gaps. Initial triage is
+  exact evidence spans, function IDs, notes and unresolved gaps. Optional propertySignals
+  store exact paths and values in raw ability properties/behaviours; the builder
+  reads the pinned items snapshot and checks those values before publishing tags. Initial triage is
   explicitly attributed to Codex source-text comparison, not in-game verification.
 - `src/data/research-functions.json`: function vocabulary, response families and
   the question to investigate for each. Item references point at the reviewed
@@ -52,7 +54,8 @@ and includes the resulting report in its review artifact, even if later checks
 fail. It does not promote rules or update triage dates.
 
 A new client version withholds all old functional annotations. On same-client
-description drift, only the changed ability's annotations are withheld. New heroes
+description or supporting-property drift, only the changed ability's annotations
+are withheld. Missing or duplicate raw ability records also withhold property-backed tags. New heroes
 and abilities appear as untriaged; removed/unselectable heroes are retained as
 retired IDs in the report data. Re-triage requires reading the new source, updating
 the stored baseline and evidence deliberately, and rebuilding. The old seed text
@@ -79,12 +82,12 @@ Player scope is visible: existing healing-denial rules remain Infernus-only, whi
 generic personal-defense rules support other source-selectable players.
 
 No `no-supported-option` negative verdict is populated without a documented review.
-The current 25 advice rules remain unchanged by this inventory work.
+The initial inventory added no advice. The subsequent channel batch brings the catalog to 31 rules / 14 items; see COMMUNITY_RESEARCH.md.
 
 ## Research a batch
 
 1. Repair any missing descriptions/types for the selected heroes. The current
-   report flags 20 abilities, including incomplete base text, missing damage types,
+   report flags 17 abilities, including incomplete base text, missing damage types,
    transformed/copy kits and Wraith's card suits. This is a known-gap list, not a
    completeness audit. Base weapons and alternate kits still need inventory work.
 2. Read pinned item facts and current official changes; find accessible creator,
@@ -98,8 +101,8 @@ The current 25 advice rules remain unchanged by this inventory work.
 5. Add focused regression tests, update evidence/expiry intentionally, regenerate
    coverage, run checks and inspect the UI before publishing.
 
-First proposed batch: **Seven, Dynamo, Mo & Krill** for control/channel questions.
-Then **Victor, Kelvin, McGinnis** for healing/persistent damage, followed by
+First slice delivered: **Seven, Dynamo, Mo & Krill**, six conditional channel-interrupt rules with personal-survival and timing questions still open.
+Next: **Victor, Kelvin, McGinnis** for healing/persistent damage, followed by
 **Vindicta, Grey Talon, Calico** for flight/movement/escape. The complete function
 queue remains available for reprioritization as research reveals better shared
 opportunities. Research is incremental; exhaustive up-front certification is not

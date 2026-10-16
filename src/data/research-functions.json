@@ -359,7 +359,10 @@
     {
       "id": "interrupt",
       "label": "Interrupt",
-      "itemIds": []
+      "itemIds": [
+        "item-1254091416",
+        "item-2617435668"
+      ]
     },
     {
       "id": "movement-denial",

@@ -10,7 +10,8 @@ const [game,seeds,taxonomy,rawCatalog,plan]=await Promise.all([
   'src/data/game-catalog.json','data/research/hero-threats.json','src/data/research-functions.json','src/data/reviewed-catalog.json','data/research/research-plan.json'
 ].map(read));
 const catalog=parseCatalog(rawCatalog);
-const inventory=buildThreatInventory(game,seeds,taxonomy);
+const rawAbilities=await read(`data/snapshots/client-${game.clientVersion}/items.json`);
+const inventory=buildThreatInventory(game,seeds,taxonomy,rawAbilities);
 for(const response of taxonomy.responses) for(const id of response.itemIds) if(!catalog.items.some(i=>i.id===id)) throw new Error(`Unknown response item ${id}`);
 if(plan.schemaVersion!==1) throw new Error('Unsupported research plan');
 // Historical plan references survive a refresh, but are never silently treated as current.
@@ -36,7 +37,7 @@ const lines=[
   '',`| Enemy | ${coverageProblems.join(' | ')} |`,'| --- | --- | --- | --- | --- | --- |',
   ...inventory.heroes.map(h=>`| ${h.name}${h.development?' (development)':''} | ${coverage.find(c=>c.heroId===h.heroId).cells.map(cell).join(' | ')} |`),
   '', '## Next research batches','',`Plan status: ${planCurrent?'matches captured client':'STALE; replan against new client'}. ${plan.basis}`,'',
-  ...plan.batches.flatMap(b=>[`### ${b.title}`,``,b.heroIds.map(name).join(', '),'',...b.questions.map(q=>`- ${q}`),'']),
+  ...plan.batches.flatMap(b=>[`### ${b.title}`,``,b.heroIds.map(name).join(', '),'',b.status,'',...b.questions.map(q=>`- ${q}`),'']),
   '## Reusable function queue','',
   'Ordered by number of heroes with no current published advice, then total hero reach. This is an editorial research-efficiency order, not a meta or popularity ranking. Heroes with advice can still have major unresearched threats. Response families are investigation directions, not approved item matches.','',
   ...backlog.flatMap(f=>[`### ${f.label}`,`${f.heroCount} heroes mention this theme; ${f.uncoveredHeroCount} have no available published advice in any problem.`,f.question,

@@ -5,13 +5,14 @@
 Completed: all-hero source-text threat inventory (42 heroes / 168 main ability slots),
 function vocabulary, response families, coverage matrix, deterministic research
 regeneration, source-change invalidation and prioritized batches. Current published
-advice remains 25 conditional rules / 12 items across six enemies, not full coverage.
+advice now includes 31 conditional rules / 14 items across nine enemies, not full coverage.
+Batch one delivered six channel-interrupt rules and repaired three damage-type gaps.
 See [research backlog](docs/ROSTER_RESEARCH.md) and [process](docs/RESEARCH_PROCESS.md).
 
 Next priorities:
-1. Batch 1: Seven, Dynamo, Mo & Krill — resolve damage types and investigate control
-   and channel responses. Keep stun/sleep/silence/displacement/interrupt distinct.
-2. Batch 2: Victor, Kelvin, McGinnis — healing, regeneration and persistent damage.
+1. Batch-one follow-up: test short-channel timing, protection/removal and personal
+   survival for Seven, Dynamo and Mo & Krill. Six conditional interrupt rules exist.
+2. Next research batch: Victor, Kelvin, McGinnis — healing, regeneration and persistent damage.
 3. Batch 3: Vindicta, Grey Talon, Calico — flight, movement and escape.
 4. Resolve source gaps alongside each batch; directly test uncertain timing/removal
    interactions before verified promotion. Keep expanding the queue as new facts arrive.

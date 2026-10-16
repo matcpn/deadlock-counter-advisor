@@ -1,5 +1,32 @@
 # Validation record
 
+## Channel disruption and raw-property evidence — 2026-10-15
+
+- Public steam-info rechecked: client/server 6785, revision 11132425, unchanged.
+  Read pinned item/ability properties and four community discussions (one historical
+  Seven thread accessible through search text only). Exact community patch dates
+  remain uncertain. No in-game tests or verified promotion.
+- Added six source-reviewed channel rules / two items: 31 rules, 14 items, nine
+  enemies with partial advice. Three damage-type gaps resolved from raw markers;
+  17 ability entries retain explicit gaps. Dynamo channel flag is also traced.
+- npm run check passed: immutable snapshot verification, research regeneration,
+  98 tests across six files, strict TypeScript and production build. No chunk warning.
+  An initial type check rejected node:fs in tests; using a static raw-JSON test
+  import fixed it without introducing a dependency or shipping raw data to the UI.
+- New regressions cover multi-enemy Disrupt grouping, generic player/build scope,
+  no burst/sustain extrapolation, actionable-only rescue, short-channel delay,
+  protected targets, caster damage penalty, stage/budget/ownership independence,
+  raw-property classification and missing/changed/duplicate evidence invalidation.
+- Browser checks: selected Seven/Dynamo/Mo, confirmed conditional cards and teammate
+  prerequisites; 3,200 souls moves Knockdown into Buy now while Cursed Relic stays
+  Save for later; already stunned/asleep hides all six. Expanded timing/source
+  details and Seven's repaired raw-property evidence were inspected.
+- Desktop 1280px and mobile 375px checked. Long evidence paths wrap; mobile
+  document width 360px vs 375px viewport. Rescue conditions/details remain readable.
+  No browser console errors observed. This is not a full accessibility audit.
+- Publication pending at this checkpoint; remote outcomes will be recorded below.
+
+
 ## All-hero inventory and coverage — 2026-10-15
 
 - Rechecked public steam-info: client 6785 / revision 11132425, unchanged. Read all
