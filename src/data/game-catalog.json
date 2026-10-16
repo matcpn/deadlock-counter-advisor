@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "clientVersion": 6774,
-  "importedAt": "2026-10-12T02:41:42.070Z",
+  "clientVersion": 6785,
+  "importedAt": "2026-10-16T00:56:22.800Z",
   "source": "https://api.deadlock-api.com/docs",
   "status": "imported-unreviewed",
   "heroes": [
@@ -330,11 +330,32 @@
       "sourceId": 78,
       "className": "hero_deadpack",
       "name": "Deadman Danny",
-      "portrait": null,
-      "selectable": false,
+      "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.webp",
+      "selectable": true,
       "development": false,
       "disabled": false,
-      "abilities": []
+      "abilities": [
+        {
+          "className": "ability_deadpack_chargeblast",
+          "name": "Strix Salvo",
+          "description": "Launch a salvo of spirit missiles that lodge into the ground along a line. The missiles explode after a delay or upon detecting an enemy, dealing \n\n\n\n\n\nspirit damage and marking the target.\n\nShooting a marked enemy with a charged shot consumes a mark to deal \n\n\n\n\n\nbonus spirit damage and apply a fading slow.\n\nHold and drag to select the angle.\n\n-12s Cooldown\n\n+30 Damage\n+45 Marked Damage\n\n+2 Missiles, Longer Range, and Improved Spirit Scaling"
+        },
+        {
+          "className": "ability_deadpack_rocketeer",
+          "name": "Chimera Mk1",
+          "description": "Hold Jump / mantle to fly, building up heat. When max heat is reached, your jetpack will begin to overheat.\n\nOverheating: After a short delay, dive to the ground. Upon impact, create an explosion that deals damage and launches you and nearby enemies. If no hero is hit, you stun yourself. Press Ability 2 to dive early.\n\nCooling Down: After overheating, the jetpack cannot be used until it fully cools down.\n\nSlows affect you while airborne. You always explode on death.\n\nHeat vents faster while grounded\n\nOn Hero Hit: Heal and take no self damage\n\nOn Hero Hit: -50% Cooldown and +120 Spirit Damage"
+        },
+        {
+          "className": "ability_deadpack_flamethrower",
+          "name": "Jettison Fuel",
+          "description": "Spray fuel dealing \n\n\n\n\n\nweapon damage over time and shredding bullet resist, building up to a huge backblast that deals \n\n\n\n\n\nspirit damage and knocks you backwards.\n\nVents the jetpack when dealing damage.\n\n+60 Burst Damage\nOn Backblast Hit: +18% Fire Rate for 7s\n\n-10% Bullet Resist Shred\nOn Backblast Hit: Apply a Mark"
+        },
+        {
+          "className": "ability_deadpack_ultimate",
+          "name": "Close The Deal",
+          "description": "Grab an enemy and give them a hands-on demonstration, flying high into the air before crashing back to the ground.\n\nYou and the participant take \n\n\n\n\n\nspirit damage over time while falling and \n\n\n\n\n\nspirit damage upon impact. Damage is increased to enemies under 50% health.\n\n+0.5s Stun\n+8.0 Damage / Meter"
+        }
+      ]
     },
     {
       "id": "hero-64",
@@ -21363,8 +21384,8 @@
   },
   "counts": {
     "sourceHeroes": 65,
-    "sourceItems": 757,
-    "selectableHeroes": 41,
+    "sourceItems": 764,
+    "selectableHeroes": 42,
     "shopItems": 173
   }
 }

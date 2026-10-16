@@ -1,5 +1,46 @@
 # Community counter research — 2026-10-12
 
+## First published slice review — 2026-10-15
+
+The October 12 ledger is preserved as historical research. Published outcomes are
+now stored in src/data/reviewed-catalog.json with sources and per-rule review notes.
+No record is labeled verified. This is a reviewed proposal shown as conditional beta
+advice; no in-game experiment was performed and source agreement is not proof.
+
+Rechecked current public steam-info, imported immutable client 6785, and compared
+selected item definitions plus Infernus/Abrams/Shiv ability text with client 6774.
+Reopened the counter-item Reddit discussion, Shiv discussion, kurii guide, Debuff
+Reducer wiki, Healbane wiki, and official changelog/latest follow-up. The official
+thread contains a new follow-up about Baba, Deadman Danny and Radiant Regeneration;
+the extraction is not assumed to include every hotfix. Dispel wiki retrieval failed
+this pass, so its search excerpt is not counted as evidence. Older wiki reducer
+numbers remain inconsistent; only its explicit interaction list informs the narrow
+stun-duration inference. The Healbane page corroborates basic application mechanics,
+not all hero healing sources.
+
+| Original candidate | Release outcome |
+| --- | --- |
+| abrams-stun-reduction | Source-reviewed, narrowed to shorter stun; no parry timing claim |
+| abrams-preemptive-unstoppable | Source-reviewed, limited to preemptive stun protection; no displacement or damage immunity claim |
+| shiv-knives-dispel | Source-reviewed community report, conditional on applied knife bleed and ability to act; no execute protection |
+| anti-sustain-healbane | Two conditional Punish rules; actual healing and spirit application required |
+| anti-sustain-toxic | Two conditional Punish rules; actual healing and bullet buildup required |
+| abrams-barrier | Still held for trigger/damage ordering evidence |
+| reducer-is-cleanse | Rejected as a removal rule |
+| shiv-counterspell-execute | Still blocked for direct interaction/timing evidence |
+
+Infernus spirit application follows captured abilities, including Afterburn.
+Upgraded Napalm already has healing reduction in the source: cards explicitly warn
+about overlap and do not assume stacking gains. Shiv Bloodletting defers damage;
+anti-heal advice only applies if he is also receiving healing from items/allies.
+We have not certified all healing sources, stacking, cleanse exceptions or practical
+reaction windows. Stage placements and build preferences are editorial, not empirical.
+
+To renew: refresh facts, reopen original sources and current official hotfixes,
+review each rule's precise scope, rerun regressions, update dated evidence and expiry
+only after comparison. Do not bulk-promote the historical candidate ledger. Next
+research should address immediate burst survival and Reactive Barrier ordering.
+
 The user does not need to certify mechanics. Research should gather expert/creator
 and community observations, compare them with captured client data and official
 changes, and report unsupported interactions honestly. Request an in-game test only

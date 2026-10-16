@@ -1,5 +1,33 @@
 # Start here — continuation handoff
 
+## Current release — 2026-10-15
+
+First source-reviewed recommendation slice is implemented in src/data/reviewed-catalog.json:
+seven rules / five items for Infernus facing Abrams and Shiv. Control: Debuff Reducer
+and preemptive Unstoppable versus Abrams. DoT: community-reported Dispel Magic for
+applied Shiv knives. Sustain: Healbane or Toxic Bullets versus actual healing.
+All are explicitly source-reviewed beta, not verified or in-game tested. See
+COMMUNITY_RESEARCH.md for evidence and limits; no execute or guaranteed parry rule.
+
+Refreshed public source to client 6785: 42 selectable heroes and 173 shop items.
+Deadman Danny's availability changed; selected item facts and normalized abilities
+for this slice did not change versus 6774. Official latest follow-up was inspected;
+community extraction may still lag unrepresented hotfixes.
+
+Default board is real source-reviewed advice; demo remains opt-in. Added DoT view,
+per-card conditions, sources, review dates, stage rationale, owned-item filtering,
+soft build preference and optional response-window filtering. Prices are full cost;
+component credit, slots, team redundancy and enemy rank inputs remain unsupported.
+Unsupported heroes/problems/goals are shown as gaps. Source-reviewed advice requires
+an explicit engine option; verified-only evaluation still excludes it. Catalog
+version mismatch and review expiry suppress advice. This release expires 2026-11-14
+UTC, a maintenance policy, not a promise of freshness until then.
+
+Next: resolve Reactive Barrier trigger/damage ordering and immediate burst options;
+expand sourced matchup coverage; test practical timing before any verified promotion.
+No user mechanics certification is required. Read latest VALIDATION.md for checks
+and deployment status. Historical no-live-rules statements below are superseded.
+
 Prepared 2026-10-11 from the conversation supplied by the user. This file and the
 linked documents are the continuity contract; a new Codex session need not have
 access to the old chat. They preserve all product-relevant decisions visible in

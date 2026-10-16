@@ -1,7 +1,10 @@
 # Deadlock Counter Advisor
 
 A contextual advisor prototype with an imported, version-pinned game catalog.
-**Counter recommendations are still an opt-in synthetic preview.** Start with
+**First source-reviewed beta: Infernus versus Abrams/Shiv.** Seven conditional
+rules cover control, applied bleed and enemy healing. Advice has sources and limits,
+but has not been tested in-game. Synthetic items remain an opt-in layout preview.
+Start with
 [docs/HANDOFF.md](docs/HANDOFF.md).
 
 ## Run
@@ -16,7 +19,7 @@ npm run dev
 `npm run check` runs engine tests, TypeScript checking, and the production build.
 `npm run preview` serves the built site after `npm run build`.
 
-Refresh catalog: `npm run data:pull` (or append `-- --version 6774`).
+Refresh catalog: `npm run data:pull` (or append `-- --version 6785`).
 `npm run check` also verifies snapshot checksums and regeneration offline.
 See [GAME_DATA.md](docs/GAME_DATA.md) for the source, coverage limits, repeatable
 commands, art provenance and manual GitHub refresh workflow.
@@ -35,11 +38,18 @@ commands, art provenance and manual GitHub refresh workflow.
   checks and component graph validation. See [data review](docs/DATA_REVIEW.md).
 - Product specification, full handoff, context history, data design, and roadmap.
 
-Imported heroes and items are browseable source facts, with unreviewed counter and
-mode coverage. Demo rules cover only Infernus/Abrams/Shiv and invented items.
-Player synergy and production recommendation rules remain planned. Owned-item
-exclusion exists in the engine but has no UI yet. Scoring is an illustrative
-baseline, not calibrated gameplay advice.
+Imported heroes and items are browseable source facts. The first recommendation
+slice uses five real items with explicit prerequisites, application timing, review
+dates and source links. Optional preferences include owned items and ability to
+respond while controlled. Unsupported heroes/problems/goals are visibly empty.
+Scoring and stage placement are editorial, not calibrated effectiveness estimates.
+See [research and release scope](docs/COMMUNITY_RESEARCH.md).
+
+Advice is pinned to client 6785 and expires on November 14, 2026 UTC unless reviewed
+again. Refreshing facts does not renew advice. A new client version pauses the old
+rules; the manual refresh workflow retains review artifacts even if checks fail.
+Upgrade discounts, slots, full roster advice and guaranteed execute/parry outcomes
+are not implemented.
 
 ## GitHub and live preview
 

@@ -19,6 +19,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Pull pinned snapshot
+        id: snapshot
         env:
           CLIENT_VERSION: ${{ inputs.client_version }}
         run: |
@@ -29,6 +30,7 @@ jobs:
           fi
       - run: npm run check
       - uses: actions/upload-artifact@v4
+        if: ${{ always() && steps.snapshot.outcome == 'success' }}
         with:
           name: game-data-for-review
           path: |

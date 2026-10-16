@@ -1,5 +1,29 @@
 # Validation record
 
+## First sourced slice — 2026-10-15
+
+- Refreshed through the repeatable importer to client 6785 (build Oct 14 UTC).
+  42 selectable heroes / 173 shop items; only hero-78 changed in normalized diff.
+  Source fetch timestamps are UTC (Oct 16 UTC during this Oct 15 local session).
+- npm run check passed: immutable snapshot checksums/regeneration, 75 tests,
+  strict TypeScript and production build. No chunk warning. Existing 62 tests plus
+  13 source-reviewed scenario/boundary tests pass.
+- Regressions cover evidence opt-in, no synthetic/needs-review promotion, expiry,
+  patch mismatch, wrong player/enemy, separate burst/DoT/control/sustain results,
+  multi-enemy conditional coverage, weapon utility for spirit builds, active bans,
+  stunned/asleep timing, ownership, stage/budget independence and full-price upgrades.
+- Browser interaction smoke checks: real default cards, sustain/DoT views, budget
+  changing Toxic Bullets to Buy now, Healbane ownership exclusion, active ban,
+  stunned/asleep removing Dispel Magic, unsupported Haze player, and expanded card
+  evidence/timing/execute limitations. Browser showed item artwork and source links.
+- Desktop 1280px and mobile 375px layouts inspected. Mobile document scroll width
+  360px vs viewport 375px; no horizontal overflow. Empty objectives condensed to
+  one line each. This is not a complete keyboard/accessibility audit.
+- No in-game tests. Seven rules are source-reviewed beta, not verified. Mechanical
+  uncertainty, stale community dates and limited coverage remain visible.
+- Refresh artifact upload now runs after a successful pull even if later checks
+  fail. Remote workflow/deployment results will be recorded after publication.
+
 ## Community-source research — 2026-10-12
 
 - Read a dated counterbuying guide, two detailed Reddit discussions, two wiki

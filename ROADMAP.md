@@ -1,5 +1,22 @@
 # Implementation and maintenance plan
 
+## Current agenda — 2026-10-15
+
+Completed: first conditional source-reviewed beta slice (7 rules / 5 items), client
+6785 refresh, DoT view, visible prerequisites, source disclosures, inventory exclusion,
+response-window filter, version/expiry suppression and behavioral regressions.
+This is usable sourced advice, not completion of every Milestone 2 acceptance scenario.
+
+Next priorities:
+1. Find evidence for immediate burst survival, especially Reactive Barrier trigger
+   ordering; test unresolved practical timing before verified promotion.
+2. Expand hero/problem coverage with the same card and evidence contract.
+3. Add saved/shareable scenarios and remaining constraints where they change advice.
+4. Review the beta by 2026-11-14 UTC; source refresh alone does not renew rules.
+
+GitHub hosting and repeatable imports are already delivered. Historical milestone
+text below is retained for context; do not restart repository/deployment setup.
+
 ## Milestone 0 — portable foundation (this handoff)
 
 Deliver interface scaffold, minimal types, sample ranker, synthetic fixtures,

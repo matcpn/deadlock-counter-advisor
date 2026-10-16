@@ -1,5 +1,25 @@
 # Data model and recommendation contract
 
+## Implemented source-reviewed extension — 2026-10-15
+
+Evidence now includes source-reviewed, separate from verified, needs-review and demo.
+Both reviewed statuses require complete claim labels, source manifest membership,
+reviewer/date and matching client patch. Source-reviewed additionally requires expiry.
+The evaluator includes it only with allowSourceReviewed:true, and rejects expired
+or future-dated evidence. Default evaluation remains verified-only.
+
+Source-reviewed rules require playerHeroIds, nonempty visible conditions, response
+(passive / before-control / after-debuff), and stageReason. Scenario.responseWindow
+can explicitly exclude active timing that is impossible while stunned/asleep.
+Unobserved prerequisites remain conditional text, not automatically true facts.
+Problem dot is separate from burst. The release adapter additionally checks imported
+item identity, price, category, activation and components before showing advice.
+
+The scoped release JSON is independent of generated game-catalog.json. Snapshot
+refreshes never regenerate or promote rules. Review expiry is exclusive, by UTC date.
+The engine remains deterministic when asOf is supplied; the browser uses today's UTC
+date. Full item prices remain intentional; ownership never implies component credit.
+
 ## Architecture
 
 As of 2026-10-11, the source-import layer is separate: version-pinned API responses

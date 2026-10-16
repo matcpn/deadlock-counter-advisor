@@ -68,7 +68,7 @@ export function parseCatalog(input: unknown): Catalog {
   };
   const evidence = (value: unknown, path: string, requiredClaims: string[]) => {
     const e = row(value, path);
-    choice(e.status, ['demo', 'verified', 'needs-review'], `${path}.status`);
+    choice(e.status, ['demo', 'verified', 'source-reviewed', 'needs-review'], `${path}.status`);
     string(e.patch, `${path}.patch`); string(e.note, `${path}.note`);
     const claims = strings(e.claims, `${path}.claims`);
     const links = strings(e.sourceUrls, `${path}.sourceUrls`);
@@ -77,7 +77,12 @@ export function parseCatalog(input: unknown): Catalog {
     if (e.reviewer !== null) string(e.reviewer, `${path}.reviewer`);
     if (m.kind === 'demo' && e.status !== 'demo') fail(path, 'Demo catalog must contain only demo evidence');
     if (m.kind === 'production' && e.status === 'demo') fail(path, 'Synthetic evidence forbidden in production catalog');
-    if (e.status === 'verified') {
+    if (e.expiresAt !== undefined) {
+      date(e.expiresAt, `${path}.expiresAt`);
+      if (!e.reviewedAt || String(e.expiresAt) <= String(e.reviewedAt)) fail(path, 'Expiry must follow review');
+    }
+    if (e.status === 'source-reviewed' && !e.expiresAt) fail(path, 'Source review requires expiry');
+    if (e.status === 'verified' || e.status === 'source-reviewed') {
       if (e.patch !== m.gamePatchId) fail(path, 'Verified evidence patch differs from manifest');
       if (!links.length || !e.reviewedAt || !e.reviewer || requiredClaims.some(claim => !claims.includes(claim))) fail(path, 'Verified evidence is incomplete');
     }
@@ -109,7 +114,7 @@ export function parseCatalog(input: unknown): Catalog {
     const path = `rule.${r.id}`;
     reference(r.itemId, itemIds, `${path}.itemId`); reference(r.enemyHeroId, heroIds, `${path}.enemyHeroId`);
     choice(r.goal, ['survive', 'disrupt', 'punish'], `${path}.goal`);
-    for (const [key, allowed] of [['problems', ['burst', 'sustain', 'control', 'escape']], ['stages', ['lane', 'mid', 'late']]] as const) {
+    for (const [key, allowed] of [['problems', ['burst', 'sustain', 'control', 'escape', 'dot']], ['stages', ['lane', 'mid', 'late']]] as const) {
       const values = strings(r[key], `${path}.${key}`);
       if (!values.length) fail(path, 'Rule scope must not be empty');
       values.forEach(v => choice(v, allowed, `${path}.${key}`));
@@ -117,6 +122,16 @@ export function parseCatalog(input: unknown): Catalog {
     number(r.strength, 0, 1, `${path}.strength`);
     for (const key of ['mechanism', 'limitation', 'timing']) string(r[key], `${path}.${key}`);
     evidence(r.evidence, `${path}.evidence`, ['interaction', 'timing', 'limitations']);
+    if (r.playerHeroIds !== undefined) {
+      const players = strings(r.playerHeroIds, `${path}.playerHeroIds`);
+      if (!players.length) fail(path, 'Player scope must not be empty');
+      players.forEach(id => reference(id, heroIds, path));
+    }
+    if (r.conditions !== undefined && !strings(r.conditions, `${path}.conditions`).length) fail(path, 'Conditions must not be empty');
+    if (r.response !== undefined) choice(r.response, ['passive', 'before-control', 'after-debuff'], `${path}.response`);
+    if (r.stageReason !== undefined) string(r.stageReason, `${path}.stageReason`);
+    if (row(r.evidence, path).status === 'source-reviewed' &&
+        (!r.playerHeroIds || !r.conditions || !r.response || !r.stageReason)) fail(path, 'Source-reviewed rule requires scope, conditions, response and stage rationale');
   }
   return input as Catalog;
 }
@@ -129,7 +144,8 @@ export function validateScenario(input: unknown, catalog: Catalog): asserts inpu
   if (enemies.includes(s.heroId as string)) fail('scenario', 'Player hero cannot also be an enemy');
   choice(s.build, ['spirit', 'weapon', 'hybrid'], 'build');
   choice(s.stage, ['lane', 'mid', 'late'], 'stage');
-  strings(s.problems, 'problems').forEach(p => choice(p, ['burst', 'sustain', 'control', 'escape'], 'problems'));
+  strings(s.problems, 'problems').forEach(p => choice(p, ['burst', 'sustain', 'control', 'escape', 'dot'], 'problems'));
+  if (s.responseWindow !== undefined) choice(s.responseWindow, ['unknown', 'can-act', 'stunned-or-slept'], 'responseWindow');
   if (typeof s.budget !== 'number' || !Number.isSafeInteger(s.budget) || s.budget < 0) fail('budget', 'Invalid budget');
   const items = new Set(catalog.items.map(i => i.id));
   if (strings(s.ownedItemIds, 'ownedItemIds').some(id => !items.has(id))) fail('ownedItemIds', 'Unknown owned item');

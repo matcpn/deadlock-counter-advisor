@@ -9,6 +9,13 @@ tradeoff, and how confident/current is the advice?
 
 ## Main flow
 
+Implemented 2026-10-15: the default board now shows the first explicitly labeled
+source-reviewed beta rules for Infernus versus Abrams/Shiv. DoT has its own view;
+per-card prerequisites, evidence and expiry distinguish conditional advice from
+verified interactions. The synthetic board remains optional. Optional preferences
+now include build fit, owned items and response window. No complete burst, chase
+or Disrupt coverage is claimed. This supersedes the no-real-rules statement below.
+
 Updated 2026-10-11 at the user's request: hero and enemy selection remain primary.
 Problems are browseable result views; the selected problem displays Early/lane,
 Mid and Late columns together. No separate stage or problem-checkbox questionnaire

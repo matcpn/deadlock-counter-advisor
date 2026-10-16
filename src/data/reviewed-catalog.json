@@ -1,0 +1,688 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "dataVersion": "first-slice-2026-10-15",
+    "gamePatchId": "client-6785",
+    "scoringVersion": "baseline-1",
+    "kind": "production",
+    "sources": [
+      {
+        "id": "slice-source-0",
+        "url": "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+        "title": "Pinned item and ability definitions · client 6785",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "slice-source-1",
+        "url": "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+        "title": "Pinned hero definitions · client 6785",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "slice-source-2",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1r24qlp/can_someone_give_me_a_rundown_on_what_counter/",
+        "title": "Community counter-item discussion · date/patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "slice-source-3",
+        "url": "https://www.reddit.com/r/DeadlockTheGame/comments/1uk4jnj/how_do_you_deal_with_shiv/",
+        "title": "Community Shiv discussion · date/patch uncertain",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "slice-source-4",
+        "url": "https://deadlock.wiki/Debuff_Reducer",
+        "title": "Debuff Reducer interaction list · numeric values stale",
+        "accessedAt": "2026-10-15"
+      },
+      {
+        "id": "slice-source-5",
+        "url": "https://deadlocklabs.gg/builds/abrams-guide-to-counterbuying-809744/",
+        "title": "kurii: Guide to Counterbuying · updated Sep 15, 2026",
+        "accessedAt": "2026-10-15"
+      }
+    ],
+    "coverage": {
+      "completeRoster": false,
+      "note": "Source-reviewed beta: Infernus versus Abrams/Shiv, limited to control, damage over time and enemy healing. Seven conditional rules, five items. No in-game interaction tests. Burst, chase and disruption coverage remain open."
+    }
+  },
+  "heroes": [
+    {
+      "id": "hero-6",
+      "name": "Abrams"
+    },
+    {
+      "id": "hero-77",
+      "name": "Apollo"
+    },
+    {
+      "id": "hero-88",
+      "name": "Baba"
+    },
+    {
+      "id": "hero-15",
+      "name": "Bebop"
+    },
+    {
+      "id": "hero-72",
+      "name": "Billy"
+    },
+    {
+      "id": "hero-16",
+      "name": "Calico"
+    },
+    {
+      "id": "hero-81",
+      "name": "Celeste"
+    },
+    {
+      "id": "hero-78",
+      "name": "Deadman Danny"
+    },
+    {
+      "id": "hero-64",
+      "name": "Drifter"
+    },
+    {
+      "id": "hero-11",
+      "name": "Dynamo"
+    },
+    {
+      "id": "hero-76",
+      "name": "Graves"
+    },
+    {
+      "id": "hero-17",
+      "name": "Grey Talon"
+    },
+    {
+      "id": "hero-13",
+      "name": "Haze"
+    },
+    {
+      "id": "hero-14",
+      "name": "Holliday"
+    },
+    {
+      "id": "hero-1",
+      "name": "Infernus"
+    },
+    {
+      "id": "hero-20",
+      "name": "Ivy"
+    },
+    {
+      "id": "hero-12",
+      "name": "Kelvin"
+    },
+    {
+      "id": "hero-4",
+      "name": "Lady Geist"
+    },
+    {
+      "id": "hero-31",
+      "name": "Lash"
+    },
+    {
+      "id": "hero-8",
+      "name": "McGinnis"
+    },
+    {
+      "id": "hero-63",
+      "name": "Mina"
+    },
+    {
+      "id": "hero-52",
+      "name": "Mirage"
+    },
+    {
+      "id": "hero-18",
+      "name": "Mo & Krill"
+    },
+    {
+      "id": "hero-67",
+      "name": "Paige"
+    },
+    {
+      "id": "hero-10",
+      "name": "Paradox"
+    },
+    {
+      "id": "hero-50",
+      "name": "Pocket"
+    },
+    {
+      "id": "hero-84",
+      "name": "Rat King"
+    },
+    {
+      "id": "hero-79",
+      "name": "Rem"
+    },
+    {
+      "id": "hero-2",
+      "name": "Seven"
+    },
+    {
+      "id": "hero-19",
+      "name": "Shiv"
+    },
+    {
+      "id": "hero-80",
+      "name": "Silver"
+    },
+    {
+      "id": "hero-60",
+      "name": "Sinclair"
+    },
+    {
+      "id": "hero-85",
+      "name": "Solomon"
+    },
+    {
+      "id": "hero-69",
+      "name": "The Doorman"
+    },
+    {
+      "id": "hero-65",
+      "name": "Venator"
+    },
+    {
+      "id": "hero-66",
+      "name": "Victor"
+    },
+    {
+      "id": "hero-3",
+      "name": "Vindicta"
+    },
+    {
+      "id": "hero-35",
+      "name": "Viscous"
+    },
+    {
+      "id": "hero-58",
+      "name": "Vyper"
+    },
+    {
+      "id": "hero-25",
+      "name": "Warden"
+    },
+    {
+      "id": "hero-7",
+      "name": "Wraith"
+    },
+    {
+      "id": "hero-27",
+      "name": "Yamato"
+    }
+  ],
+  "items": [
+    {
+      "id": "item-1047818222",
+      "name": "Debuff Reducer",
+      "category": "vitality",
+      "activation": "passive",
+      "cost": 1600,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-2603935618",
+      "name": "Healbane",
+      "category": "vitality",
+      "activation": "conditional",
+      "cost": 1600,
+      "componentIds": [],
+      "fit": {
+        "spirit": 1,
+        "weapon": 0.6,
+        "hybrid": 0.8
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-3731635960",
+      "name": "Dispel Magic",
+      "category": "vitality",
+      "activation": "active",
+      "cost": 3200,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-3696726732",
+      "name": "Toxic Bullets",
+      "category": "weapon",
+      "activation": "conditional",
+      "cost": 3200,
+      "componentIds": [],
+      "fit": {
+        "spirit": 0.4,
+        "weapon": 1,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    },
+    {
+      "id": "item-3357231760",
+      "name": "Unstoppable",
+      "category": "vitality",
+      "activation": "active",
+      "cost": 6400,
+      "componentIds": [
+        "item-1047818222"
+      ],
+      "fit": {
+        "spirit": 0.7,
+        "weapon": 0.7,
+        "hybrid": 0.7
+      },
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "cost",
+          "category",
+          "activation",
+          "components"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Fields compared with pinned community client extraction. Passive/conditional label interpreted from trigger text. Build-fit values are editorial preferences, not measured effectiveness."
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "abrams-stun-reduction",
+      "itemId": "item-1047818222",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Shorter Abrams stuns can give you an earlier opportunity to respond.",
+      "timing": "Passive duration reduction; own it before the engage.",
+      "limitation": "Does not cleanse a stun, block damage or guarantee a parry. Ability rank, duration modifiers, spacing and latency still matter.",
+      "conditions": [
+        "The problem is the stun from Shoulder Charge hitting a wall or Seismic Impact."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Consider from lane onward if this specific problem persists; buy only when it justifies delaying core items. This is an editorial stage judgment, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://deadlock.wiki/Debuff_Reducer"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference: current tooltips describe stuns and duration reduction; an older wiki explicitly lists both abilities. Wiki numbers conflict with the snapshot, so no numeric stun or parry window is claimed."
+      }
+    },
+    {
+      "id": "abrams-preemptive-unstoppable",
+      "itemId": "item-3357231760",
+      "enemyHeroId": "hero-6",
+      "goal": "survive",
+      "problems": [
+        "control"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Preemptive stun immunity can keep you able to act through Abrams stun effects.",
+      "timing": "Activate before the stun lands, while you can still use items.",
+      "limitation": "Cannot activate while stunned or asleep. Does not provide damage immunity; displacement and exact combo outcomes are not certified.",
+      "conditions": [
+        "You can anticipate the engage and activate before control lands.",
+        "The item is ready and you are able to use it."
+      ],
+      "response": "before-control",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1r24qlp/can_someone_give_me_a_rundown_on_what_counter/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed inference from current immunity/stun descriptions and community matchup advice. Only the stun aspect is supported here; no blanket charge cancellation claim."
+      }
+    },
+    {
+      "id": "shiv-knives-dispel",
+      "itemId": "item-3731635960",
+      "enemyHeroId": "hero-19",
+      "goal": "survive",
+      "problems": [
+        "dot"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Community reports suggest clearing applied Serrated Knives bleed to stop its remaining ticks.",
+      "timing": "Use after knives have applied their debuff, while you can act; consider incoming reapplication.",
+      "limitation": "Cannot activate while stunned or asleep. Does not undo damage taken, prevent new knives, or establish protection from Killing Blow.",
+      "conditions": [
+        "Serrated Knives bleed is already applied.",
+        "You can use the item and its cooldown is ready."
+      ],
+      "response": "after-debuff",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1uk4jnj/how_do_you_deal_with_shiv/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Community-reported knife removal agrees with the current non-ultimate purge tooltip and knife description. Specific interaction has not been reproduced in-game; confidence is limited."
+      }
+    },
+    {
+      "id": "healbane-hero-6",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-6",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.8,
+      "mechanism": "Apply healing reduction through spirit damage to make a healing enemy easier to finish.",
+      "timing": "Land spirit damage while their healing matters. Infernus has spirit-damage abilities and Afterburn; ordinary bullets alone do not apply this effect.",
+      "limitation": "Healing denial does not protect you from burst, control or an execute. Extra anti-heal may overlap with upgraded Napalm or allies; no combined reduction or stacking benefit is assumed.",
+      "conditions": [
+        "Abrams is receiving healing, for example during Siphon Life.",
+        "You can land spirit damage during their healing window."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Consider from lane onward if this specific problem persists; buy only when it justifies delaying core items. This is an editorial stage judgment, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1r24qlp/can_someone_give_me_a_rundown_on_what_counter/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed conditional application: client tooltips establish healing reduction and Infernus spirit damage; community discussion recommends this matchup. No all-healing-source or stacking test has been performed."
+      }
+    },
+    {
+      "id": "toxic-hero-6",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-6",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Bullet buildup applies a bleed that also reduces incoming healing.",
+      "timing": "Keep hitting until the buildup triggers; it is not immediate healing denial from one bullet.",
+      "limitation": "Healing denial does not protect you from burst, control or an execute. Extra anti-heal may overlap with upgraded Napalm or allies; no combined reduction or stacking benefit is assumed. Sustained shooting exposes you and competes with core purchases.",
+      "conditions": [
+        "Abrams is receiving healing, for example during Siphon Life.",
+        "You can maintain enough bullet hits to trigger the bleed."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://deadlocklabs.gg/builds/abrams-guide-to-counterbuying-809744/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed scenario inference from the bullet-buildup tooltip and guide anti-heal grouping. This is an alternative application route, not an instruction to stack it with Healbane. Exact shots depend on buildup and are not claimed."
+      }
+    },
+    {
+      "id": "healbane-hero-19",
+      "itemId": "item-2603935618",
+      "enemyHeroId": "hero-19",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "lane",
+        "mid",
+        "late"
+      ],
+      "strength": 0.8,
+      "mechanism": "Apply healing reduction through spirit damage to make a healing enemy easier to finish.",
+      "timing": "Land spirit damage while their healing matters. Infernus has spirit-damage abilities and Afterburn; ordinary bullets alone do not apply this effect.",
+      "limitation": "Healing denial does not protect you from burst, control or an execute. It does not cancel Bloodletting damage deferral. Extra anti-heal may overlap with upgraded Napalm or allies; no combined reduction or stacking benefit is assumed.",
+      "conditions": [
+        "Shiv is receiving healing from his build or allies; Bloodletting damage deferral itself is not healing.",
+        "You can land spirit damage during their healing window."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Consider from lane onward if this specific problem persists; buy only when it justifies delaying core items. This is an editorial stage judgment, not a prescribed build.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1r24qlp/can_someone_give_me_a_rundown_on_what_counter/",
+          "https://www.reddit.com/r/DeadlockTheGame/comments/1uk4jnj/how_do_you_deal_with_shiv/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed conditional application: client tooltips establish healing reduction and Infernus spirit damage; community discussion recommends this matchup. No all-healing-source or stacking test has been performed."
+      }
+    },
+    {
+      "id": "toxic-hero-19",
+      "itemId": "item-3696726732",
+      "enemyHeroId": "hero-19",
+      "goal": "punish",
+      "problems": [
+        "sustain"
+      ],
+      "stages": [
+        "mid",
+        "late"
+      ],
+      "strength": 0.7,
+      "mechanism": "Bullet buildup applies a bleed that also reduces incoming healing.",
+      "timing": "Keep hitting until the buildup triggers; it is not immediate healing denial from one bullet.",
+      "limitation": "Healing denial does not protect you from burst, control or an execute. It does not cancel Bloodletting damage deferral. Extra anti-heal may overlap with upgraded Napalm or allies; no combined reduction or stacking benefit is assumed. Sustained shooting exposes you and competes with core purchases.",
+      "conditions": [
+        "Shiv is receiving healing from his build or allies; Bloodletting damage deferral itself is not healing.",
+        "You can maintain enough bullet hits to trigger the bleed."
+      ],
+      "response": "passive",
+      "playerHeroIds": [
+        "hero-1"
+      ],
+      "stageReason": "Mid/late consideration because it commits substantial souls to a specific response. It may delay core items; this stage placement is an editorial judgment, not a price-tier rule.",
+      "evidence": {
+        "status": "source-reviewed",
+        "patch": "client-6785",
+        "sourceUrls": [
+          "https://api.deadlock-api.com/v1/assets/items?client_version=6785",
+          "https://api.deadlock-api.com/v1/assets/heroes?client_version=6785",
+          "https://deadlocklabs.gg/builds/abrams-guide-to-counterbuying-809744/"
+        ],
+        "reviewedAt": "2026-10-15",
+        "expiresAt": "2026-11-14",
+        "claims": [
+          "interaction",
+          "timing",
+          "limitations"
+        ],
+        "reviewer": "Codex source comparison; no in-game test",
+        "note": "Source-reviewed scenario inference from the bullet-buildup tooltip and guide anti-heal grouping. This is an alternative application route, not an instruction to stack it with Healbane. Exact shots depend on buildup and are not claimed."
+      }
+    }
+  ]
+}

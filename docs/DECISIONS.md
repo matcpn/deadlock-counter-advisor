@@ -1,5 +1,34 @@
 # Decisions and open questions
 
+## Source-reviewed beta release — 2026-10-15
+
+The user authorized implementing the first real sourced slice. Accessible evidence
+supports conditional suggestions but does not certify live-client interactions.
+Added source-reviewed as a separate evidence status; never relabel community reports
+as verified. The UI explicitly opts into that status and labels it beta. Existing
+verified-only callers, needs-review exclusion and synthetic isolation are preserved.
+
+Every source-reviewed rule requires player scope, conditions, response timing and
+stage rationale, plus dated review/source links and expiry. Unknown situational
+conditions stay visible on the card; an explicit stunned/asleep response window
+filters preemptive and post-debuff active responses. This is not a complete control
+model: silence, disarm, active lockout, cooldown and ranks remain card prerequisites.
+
+The first release is deliberately scoped to Infernus. Healing denial is Punish only,
+knife removal is DoT only, and stun duration reduction is Control only. No invented
+Disrupt or burst rules fill empty columns. Build fit and stage placement are labeled
+editorial judgments. No numerical success rate, parry window or anti-heal stacking
+calculation is shown. Healbane and Toxic Bullets are alternatives, not a combined build.
+
+Source comparison is recorded as Codex review, not a human or gameplay test. A
+30-day maximum review period (exclusive expiry 2026-11-14 UTC) and strict client
+version match bound this beta. These supersede the earlier absence of an expiry
+policy. Fetching a newer snapshot never renews the review. Refresh artifacts are
+uploaded even when subsequent checks fail, so review material is not lost.
+
+App selection and shop browsing retain the entire source-selectable roster. Artwork
+component now recovers if its source changes after a previous image failed.
+
 ## Community-source research — 2026-10-12
 
 User explicitly wants guides, social discussions and other internet sources to
