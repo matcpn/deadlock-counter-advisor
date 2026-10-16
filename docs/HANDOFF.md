@@ -2,6 +2,9 @@
 
 ## Healing and persistent-damage slice — 2026-10-15
 
+Implementation eb3387c is live; remote checks, Pages and pinned refresh passed.
+The deployed 42-rule release and all three new enemy scenarios were inspected.
+
 Added 11 source-reviewed rules for Victor, Kelvin and McGinnis. Total: 42 rules /
 15 items / 12 enemy heroes with partial advice. Healbane and Toxic Bullets target
 actual healing recipients; Inhibitor has separate late-game Survive/Punish rules

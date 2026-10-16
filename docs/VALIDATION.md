@@ -23,7 +23,14 @@
   Expanded timing/limits were inspected on desktop 1280px and mobile 375px.
   Kelvin recipient/dome caveats wrap correctly; mobile document width 360px versus
   375px viewport. No browser console errors observed. Not a full accessibility audit.
-- Publication validation follows below after deployment.
+- Published implementation eb3387c. Checks 38848024526, Pages 38848024497 and
+  manual pinned refresh 38848036377 all succeeded. The refresh rebuilt research
+  and produced game-data-for-review (1,505,447 bytes, not expired).
+- Reloaded the live repository-subpath page and confirmed the 42-rule release,
+  all three new enemies, conditional shielding, late Inhibitor and healing-denial
+  cards. Inspected the deployed desktop breakpoint and saved sustain-counters-live.png.
+  No live browser console errors observed. Temporary preview tab closed and viewport
+  override reset. Existing non-failing action-runtime/Ubuntu migration notices remain.
 
 
 ## Channel disruption and raw-property evidence — 2026-10-15
