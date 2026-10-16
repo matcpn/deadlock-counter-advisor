@@ -42,7 +42,7 @@ function App() {
     <section className="scenario" aria-label="Enemy selection">
       <fieldset className="threats"><legend>Who is causing problems? · {enemies.length} selected</legend>
         <label className="search">Find a hero<input type="search" value={heroSearch} onChange={e=>setHeroSearch(e.target.value)} placeholder="Search all heroes"/></label>
-        <div className="hero-grid">{heroes.filter(h=>h.name.toLowerCase().includes(heroSearch.toLowerCase())).map(h=><label className={'hero-choice '+(enemies.includes(h.id)?'selected':'')} key={h.id}><input type="checkbox" checked={enemies.includes(h.id)} onChange={e=>setEnemies(ids=>e.target.checked?[...ids,h.id]:ids.filter(id=>id!==h.id))}/><Artwork src={h.portrait}/><span>{h.name}{h.development&&<small>Development flag</small>}</span></label>)}</div>
+        <div className="hero-grid">{heroes.filter(h=>h.name.toLowerCase().includes(heroSearch.toLowerCase())).map(h=><label className={'hero-choice '+(enemies.includes(h.id)?'selected':'')} key={h.id}><input type="checkbox" checked={enemies.includes(h.id)} onChange={e=>setEnemies(ids=>e.target.checked?[...ids,h.id]:ids.filter(id=>id!==h.id))}/><Artwork src={h.portrait}/><span>{h.name}</span></label>)}</div>
         {!heroes.some(h=>h.name.toLowerCase().includes(heroSearch.toLowerCase()))&&<p>No matching heroes.</p>}
       </fieldset>
       <p className="selected-threats">Selected threats: {enemies.length?enemies.map(heroName).join(' + '):'Choose one or more enemies above.'}</p>

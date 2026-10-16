@@ -57,10 +57,10 @@ October 11 America/New_York: 65 hero records, 757 item/ability/weapon records,
 
 The full raw roster is preserved. Selectors require `player_selectable`, not
 disabled, not prerelease-only, not limited-testing and not assigned-players-only.
-The API flags Baba as both selectable and in-development: keep that flag visible
-rather than claiming normal release availability. The selected roster is complete
-relative to this source filter, not independently audited against the live client.
-Unavailable development heroes can lack ability definitions; those absences are
+Upstream development metadata is ignored; it is not normalized, displayed or
+tracked for review invalidation. The selected roster is complete relative to this
+source filter, not independently audited against the live client.
+Unavailable heroes can lack ability definitions; those absences are
 explicit in normalized records. Missing abilities for selectable heroes fail import.
 
 Shop imports require `type=upgrade`, `shopable=true`, and not explicitly disabled.

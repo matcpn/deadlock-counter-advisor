@@ -12,7 +12,6 @@
       "name": "Abrams",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bull_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -44,7 +43,6 @@
       "name": "Apollo",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fencer_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -76,7 +74,6 @@
       "name": "Baba",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/baba_sm.webp",
       "selectable": true,
-      "development": true,
       "disabled": false,
       "abilities": [
         {
@@ -108,7 +105,6 @@
       "name": "Bebop",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bebop_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -140,7 +136,6 @@
       "name": "Billy",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/punkgoat_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -172,7 +167,6 @@
       "name": "Boho",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -204,7 +198,6 @@
       "name": "Bomber",
       "portrait": null,
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -236,7 +229,6 @@
       "name": "Cadence",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/cadence_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -268,7 +260,6 @@
       "name": "Calico",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -300,7 +291,6 @@
       "name": "Celeste",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/unicorn_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -332,7 +322,6 @@
       "name": "Deadman Danny",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/deadpack_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -364,7 +353,6 @@
       "name": "Drifter",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/drifter_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -396,7 +384,6 @@
       "name": "Druid",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/druid_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -428,7 +415,6 @@
       "name": "Dynamo",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/sumo_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -460,7 +446,6 @@
       "name": "Fathom",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/slork_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -492,7 +477,6 @@
       "name": "Fortuna",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/fortuna_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -524,7 +508,6 @@
       "name": "Graf",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/graf_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -556,7 +539,6 @@
       "name": "Graves",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/necro_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -588,7 +570,6 @@
       "name": "Grey Talon",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/archer_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -620,7 +601,6 @@
       "name": "Gunslinger",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gunslinger_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -652,7 +632,6 @@
       "name": "Haze",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/haze_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -684,7 +663,6 @@
       "name": "hero_testhero",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/nano_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -716,7 +694,6 @@
       "name": "Holliday",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/astro_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -748,7 +725,6 @@
       "name": "Infernus",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/inferno_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -780,7 +756,6 @@
       "name": "Ivy",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/tengu_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -812,7 +787,6 @@
       "name": "Kali",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_sm.webp",
       "selectable": false,
-      "development": false,
       "disabled": true,
       "abilities": [
         {
@@ -844,7 +818,6 @@
       "name": "Kelvin",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kelvin_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -876,7 +849,6 @@
       "name": "Lady Geist",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/spectre_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -908,7 +880,6 @@
       "name": "Lash",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/lash_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -940,7 +911,6 @@
       "name": "McGinnis",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/engineer_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -972,7 +942,6 @@
       "name": "Mina",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vampirebat_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1004,7 +973,6 @@
       "name": "Mirage",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/mirage_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1036,7 +1004,6 @@
       "name": "Mo & Krill",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/digger_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1068,7 +1035,6 @@
       "name": "Nurse Harrow",
       "portrait": null,
       "selectable": false,
-      "development": false,
       "disabled": false,
       "abilities": []
     },
@@ -1079,7 +1045,6 @@
       "name": "Opera",
       "portrait": null,
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1111,7 +1076,6 @@
       "name": "Paige",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/bookworm_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1143,7 +1107,6 @@
       "name": "Paradox",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chrono_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1175,7 +1138,6 @@
       "name": "Pocket",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/synth_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1207,7 +1169,6 @@
       "name": "Rat King",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/ratking_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1239,7 +1200,6 @@
       "name": "Raven",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/operative_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1271,7 +1231,6 @@
       "name": "Rem",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/familiar_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1303,7 +1262,6 @@
       "name": "Rutger",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/rutger_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1335,7 +1293,6 @@
       "name": "Seven",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/gigawatt_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1367,7 +1324,6 @@
       "name": "Shield Guy",
       "portrait": null,
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1399,7 +1355,6 @@
       "name": "Shiv",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/shiv_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1431,7 +1386,6 @@
       "name": "Silver",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/werewolf_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1463,7 +1417,6 @@
       "name": "Sinclair",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/magician_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1495,7 +1448,6 @@
       "name": "Skyrunner",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/skyrunner_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1527,7 +1479,6 @@
       "name": "Solomon",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/chessmaster_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1559,7 +1510,6 @@
       "name": "Swan",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/swan_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1591,7 +1541,6 @@
       "name": "The Boss",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yakuza_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1623,7 +1572,6 @@
       "name": "The Doorman",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/doorman_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1655,7 +1603,6 @@
       "name": "Thumper",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/thumper_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1687,7 +1634,6 @@
       "name": "Trapper",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/trapper_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1719,7 +1665,6 @@
       "name": "Vandal",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/vandal_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -1751,7 +1696,6 @@
       "name": "Venator",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/priest_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1783,7 +1727,6 @@
       "name": "Victor",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/frank_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1815,7 +1758,6 @@
       "name": "Vindicta",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/hornet_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1847,7 +1789,6 @@
       "name": "Violet",
       "portrait": null,
       "selectable": false,
-      "development": false,
       "disabled": false,
       "abilities": []
     },
@@ -1858,7 +1799,6 @@
       "name": "Viscous",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/viscous_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1890,7 +1830,6 @@
       "name": "Vyper",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/kali_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1922,7 +1861,6 @@
       "name": "Warden",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/warden_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1954,7 +1892,6 @@
       "name": "Wraith",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wraith_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {
@@ -1986,7 +1923,6 @@
       "name": "Wrecker",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/wrecker_sm.webp",
       "selectable": false,
-      "development": true,
       "disabled": true,
       "abilities": [
         {
@@ -2018,7 +1954,6 @@
       "name": "Yamato",
       "portrait": "https://assets-bucket.deadlock-api.com/assets-api-res/images/heroes/yamato_sm.webp",
       "selectable": true,
-      "development": false,
       "disabled": false,
       "abilities": [
         {

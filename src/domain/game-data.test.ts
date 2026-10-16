@@ -8,7 +8,16 @@ const run=(heroes:unknown=[hero],items:unknown=[ability,item])=>normalizeGameDat
 describe('repeatable source import',()=>{
   it('keeps source identities and extracts only purchasable upgrades',()=>{const result=run();expect(result.items.map(i=>i.id)).toEqual(['item-3']);expect(result.heroes[0].id).toBe('hero-1');expect(result.status).toBe('imported-unreviewed');});
   it('retains unavailable heroes without making them selectable',()=>expect(run([{...hero,disabled:true} ,{...hero,id:4,class_name:'hero_other'}]).heroes.find(h=>h.id==='hero-1')?.selectable).toBe(false));
-  it('keeps development flags visible instead of silently claiming release availability',()=>expect(run([{...hero,in_development:true}]).heroes[0].development).toBe(true));
+  it('ignores upstream development metadata without changing roster eligibility or diffs',()=>{
+    const baseline=run();
+    for(const in_development of [true,false,undefined]){
+      const result=run([{...hero,in_development,development_state:'release'}]);
+      expect(result).toEqual(baseline);
+      expect(result.heroes[0]).not.toHaveProperty('development');
+      expect(result.heroes[0].selectable).toBe(true);
+      expect(diffGameData(baseline,result).heroes.changed).toEqual([]);
+    }
+  });
   it('does not turn non-active tooltips into passive-counter claims',()=>expect(run().items[0].activation).toBe('non-active'));
   it('accepts explicit active input',()=>expect(run([hero],[ability,{...item,activation:'press',is_active_item:true}]).items[0].activation).toBe('active'));
   it('rejects contradictory activation',()=>expect(()=>run([hero],[ability,{...item,is_active_item:true}])).toThrow('Contradictory'));

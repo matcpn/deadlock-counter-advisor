@@ -36,7 +36,7 @@ Counts are rules for early / mid / late, across all supported player scopes. Bud
 | --- | --- | --- | --- | --- | --- |
 | Abrams | conditional 4/4/4 | conditional 2/3/3 | needs-research | conditional 1/2/2 | needs-research |
 | Apollo | needs-research | needs-research | needs-research | needs-research | conditional 1/1/1 |
-| Baba (development) | needs-research | needs-research | conditional 1/1/1 | needs-research | needs-research |
+| Baba | needs-research | needs-research | conditional 1/1/1 | needs-research | needs-research |
 | Bebop | conditional 2/2/2 | needs-research | needs-research | needs-research | needs-research |
 | Billy | conditional 1/1/1 | needs-research | needs-research | needs-research | needs-research |
 | Calico | conditional 1/1/1 | needs-research | needs-research | needs-research | conditional 1/1/1 |

@@ -27,7 +27,7 @@ export function ResearchCoverage({game,catalog}:{game:GameSnapshot;catalog:Catal
     <div className="coverage-scroll" role="region" aria-label="All-hero coverage matrix" tabIndex={0}>
       <table className="coverage-table"><caption>Enemy × problem · expand a populated cell for stages and scope</caption>
         <thead><tr><th scope="col">Enemy hero</th>{problemAreas.map(p=><th scope="col" key={p.id}>{p.label}</th>)}</tr></thead>
-        <tbody>{profiles.map(h=><tr key={h.heroId}><th scope="row">{h.name}{h.development&&<small>Development flag</small>}</th>{problemAreas.map(p=>{
+        <tbody>{profiles.map(h=><tr key={h.heroId}><th scope="row">{h.name}</th>{problemAreas.map(p=>{
           const cell=coverage.find(c=>c.heroId===h.heroId)!.cells.find(c=>c.problem===p.id)!;
           return <td key={p.id}>{cell.ruleIds.length?<details className={'coverage-cell '+cell.status}><summary>{statusLabels[cell.status]} · {cell.ruleIds.length}</summary>
             <p>Rules: early {cell.stages.lane} / mid {cell.stages.mid} / late {cell.stages.late}.</p>

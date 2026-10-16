@@ -327,7 +327,7 @@
     ],
     "coverage": {
       "completeRoster": false,
-      "note": "Source-reviewed beta: 83 conditional rules / 16 items. Every source-selectable enemy has a limited reviewed scenario; this is not full ability, problem or player-delivery coverage. No in-game tests. New movement advice requires targetability and timing; immunity, copied kits and development availability remain limited."
+      "note": "Source-reviewed beta: 83 conditional rules / 16 items. Every source-selectable enemy has a limited reviewed scenario; this is not full ability, problem or player-delivery coverage. No in-game tests. New movement advice requires targetability and timing; immunity and copied kits remain limited."
     }
   },
   "heroes": [
@@ -4849,7 +4849,7 @@
         "The proc is ready and you survive the damage needed to trigger it."
       ],
       "timing": "Equip beforehand. Survive the trigger: 225 spirit damage within 3.5 seconds. The proc grants a base 300 barrier and 18% spirit resistance for 8 seconds; cooldown 45 seconds.",
-      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not restore stolen Spirit, remove silence or prevent Feed The Birds. Source marks Baba as development; current-mode availability is not certified.",
+      "limitation": "Does not stop the damaging ability, remove control or negate damage already taken. Resistance is conditional on the proc; slow or scattered damage may never trigger it. Do not stay exposed just to activate a barrier. Does not restore stolen Spirit, remove silence or prevent Feed The Birds.",
       "evidence": {
         "status": "source-reviewed",
         "patch": "client-6785",

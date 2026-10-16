@@ -1,5 +1,13 @@
 # Start here — continuation handoff
 
+## Development flag removed — 2026-10-16
+
+At the user's request, development metadata is no longer tracked. Removed the
+normalized field, selector/research labels, roster review baseline comparison,
+generated report labels and Baba caveat. Raw source snapshots remain intact.
+The importer ignores in_development; re-pulling data cannot restore the badge.
+Normal roster eligibility and gameplay evidence checks remain. See VALIDATION.md.
+
 ## Enemy-first UI cleanup — 2026-10-16
 
 Implementation 10bd10d is live. All 159 tests, Checks and Pages passed; the hosted

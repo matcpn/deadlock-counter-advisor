@@ -94,6 +94,6 @@ describe('roster completion means bounded advice, not universal coverage',()=>{
     expect(rule('roster-reactive-79').limitation).toContain('may not count toward waking');
     expect(rule('roster-reactive-14').limitation).toContain('Powder Keg knockup is excluded');
     expect(rule('roster-spirit-85').limitation).toContain('checkmate/execution');
-    expect(rule('roster-spirit-88').limitation).toContain('development');
+    expect(rule('roster-spirit-88').limitation).toContain('Does not restore stolen Spirit');
   });
 });

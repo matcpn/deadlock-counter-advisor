@@ -33,13 +33,13 @@ Still open: Only Disengaging Sigil prevention is reviewed. Riposte invulnerabili
 
 Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: apollo · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1r7msm9/02172026_update/)
 
-## Baba (source development flag)
+## Baba
 
 Status: partial-source-reviewed.
 
 - **Spirit Shielding / survive / dot:** Concentrated spirit damage can trigger a barrier and temporary spirit resistance for follow-up damage. The resistance is not always on.
 
-Still open: The snapshot marks Baba development despite current public discussion. Do not infer match availability. Spirit theft, brew modes and bird transformation need testing.
+Still open: Spirit theft, brew modes and bird transformation need testing.
 
 Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: baba · community evidence; patch and test limits recorded in roster review](https://www.reddit.com/r/DeadlockTheGame/comments/1x6e1td/how_do_you_counter_baba/); [Valve gameplay update · May 22, 2026 · temporary shield resistance](https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053)
 
@@ -467,4 +467,4 @@ Still open: Flying Slash melee damage is scoped. No parry claim, no prevention o
 
 Evidence: [Pinned item and ability definitions · client 6785](https://api.deadlock-api.com/v1/assets/items?client_version=6785); [Roster review: yamato · community evidence; patch and test limits recorded in roster review](https://deadlock.wiki/Damage_Resistance)
 
-A new client, changed ability text, changed development flag or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.
+A new client, changed ability text or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.

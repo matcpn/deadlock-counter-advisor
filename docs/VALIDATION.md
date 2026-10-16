@@ -1,5 +1,16 @@
 # Validation record
 
+## Development metadata removal — 2026-10-16
+
+- Removed the field from normalized heroes, research inventory and review baselines,
+  UI/report labels and Baba's non-mechanics caveat. Raw snapshots are unchanged.
+- Regression test confirms true/false/missing upstream development values produce
+  identical normalized data and no hero-change diff; selectable eligibility stays
+  intact. Existing ability/client review invalidation and Baba scenario tests pass.
+- npm run check passed: snapshot checksums/offline regeneration, research verification,
+  159 tests across eight files, strict TypeScript and production build.
+- Publication pending.
+
 ## Enemy-first UI cleanup — 2026-10-16
 
 - npm run check passed: immutable snapshot and generated research verification,

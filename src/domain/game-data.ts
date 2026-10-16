@@ -1,7 +1,7 @@
 /** Imported game facts are independent of the reviewed recommendation catalog. */
 export interface GameHero {
   id: string; sourceId: number; className: string; name: string; portrait: string | null;
-  selectable: boolean; development: boolean; disabled: boolean;
+  selectable: boolean; disabled: boolean;
   abilities: {className: string; name: string; description: string}[];
 }
 export interface GameItem {
@@ -79,12 +79,12 @@ export function normalizeGameData(rawHeroes: unknown, rawItems: unknown, rawColo
   };
   itemRows.filter(i=>i.type==='upgrade').forEach(i=>visit(text(i.class_name)));
   const heroes: GameHero[] = heroRows.map(h => {
-    const disabled = boolean(h.disabled), development = boolean(h.in_development);
+    const disabled = boolean(h.disabled);
     const selectable = boolean(h.player_selectable) && !disabled && !boolean(h.prerelease_only) &&
       !boolean(h.limited_testing) && !boolean(h.assigned_players_only);
     const images = object(h.images ?? {});
     return {id:`hero-${integer(h.id)}`, sourceId:integer(h.id),className:text(h.class_name),name:text(h.name),
-      portrait:image(images.icon_image_small_webp ?? images.icon_image_small),selectable,development,disabled,
+      portrait:image(images.icon_image_small_webp ?? images.icon_image_small),selectable,disabled,
       abilities:Object.entries(object(h.items)).filter(([slot]) => /^signature[1-4]$/.test(slot)).map(([,name]) => {
         const ability = byClass.get(text(name));
         if (!ability) {

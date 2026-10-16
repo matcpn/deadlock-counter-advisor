@@ -23,12 +23,12 @@ export interface ThreatAbility {
 }
 export interface ThreatInventory {
   schemaVersion:1;clientVersion:number;triagedAt:string;sourceUrl:string;
-  heroes:{heroId:string;name:string;development:boolean;abilities:ThreatAbility[]}[];
+  heroes:{heroId:string;name:string;abilities:ThreatAbility[]}[];
   retiredHeroIds:string[];
 }
 export interface RosterReview {
   schemaVersion:number;clientVersion:number;reviewedAt:string;meaning:string;
-  heroes:{heroId:string;name:string;development:boolean;status:string;ruleIds:string[];
+  heroes:{heroId:string;name:string;status:string;ruleIds:string[];
     sourceUrls:string[];remainingQuestions:string[];
     abilityBaselines:{className:string;description:string}[]}[];
 }
@@ -46,7 +46,7 @@ export function auditRosterReview(game:GameSnapshot,catalog:Catalog,review:Roste
   }
   return game.heroes.filter(h=>h.selectable).map(h=>{
     const record=review.heroes.find(r=>r.heroId===h.id);
-    const current=record&&review.clientVersion===game.clientVersion&&record.development===h.development&&
+    const current=record&&review.clientVersion===game.clientVersion&&
       record.abilityBaselines.length===h.abilities.length&&h.abilities.every(a=>record.abilityBaselines.some(b=>b.className===a.className&&b.description===normalized(a.description)));
     return {heroId:h.id,status:!record?'unreviewed':current?'partial-source-reviewed':'needs-review',record};
   });
@@ -76,7 +76,7 @@ export function buildThreatInventory(game:GameSnapshot,seeds:ThreatSeeds,taxonom
   }
   const heroes=game.heroes.filter(h=>h.selectable).map(h=>{
     const profile=seeds.profiles.find(p=>p.heroId===h.id);
-    return {heroId:h.id,name:h.name,development:h.development,abilities:h.abilities.map(a=>{
+    return {heroId:h.id,name:h.name,abilities:h.abilities.map(a=>{
       const seed=profile?.abilities.find(s=>s.className===a.className);
       const description=normalized(a.description);
       const raw=rawAbilities.filter(r=>r.class_name===a.className);

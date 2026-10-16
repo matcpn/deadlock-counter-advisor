@@ -1,5 +1,15 @@
 # Decisions and open questions
 
+## Stop tracking development metadata — 2026-10-16
+
+The user confirmed Baba is live and explicitly requested removing development flags
+entirely. Ignore upstream in_development metadata during normalization. Do not render
+it, include it in research inventories/review baselines, or invalidate reviews when
+it changes. Remove the Baba-specific development caveat. Raw immutable API snapshots
+remain untouched for provenance. Existing selectable/disabled/prerelease/testing
+filters and mechanics/evidence gates are unchanged. This supersedes earlier
+instructions to preserve a visible development label.
+
 ## Enemy-first UI — 2026-10-16
 
 The user explicitly removed problem tabs, synthetic preview, player hero/build/souls

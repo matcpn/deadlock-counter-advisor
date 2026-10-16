@@ -37,7 +37,7 @@ const lines=[
   '', '## Coverage matrix','',
   'Counts are rules for early / mid / late, across all supported player scopes. Budget, owned items and ability to act are not applied here. Conditional means source-reviewed beta exists for part of the problem; needs-research means no published rule, not proof that no counter exists. Needs-review means an existing rule is unavailable. No negative interaction verdicts are invented.',
   '',`| Enemy | ${coverageProblems.join(' | ')} |`,'| --- | --- | --- | --- | --- | --- |',
-  ...inventory.heroes.map(h=>`| ${h.name}${h.development?' (development)':''} | ${coverage.find(c=>c.heroId===h.heroId).cells.map(cell).join(' | ')} |`),
+  ...inventory.heroes.map(h=>`| ${h.name} | ${coverage.find(c=>c.heroId===h.heroId).cells.map(cell).join(' | ')} |`),
   '', '## Next research batches','',`Plan status: ${planCurrent?'matches captured client':'STALE; replan against new client'}. ${plan.basis}`,'',
   ...plan.batches.flatMap(b=>[`### ${b.title}`,``,b.heroIds.map(name).join(', '),'',b.status,'',...b.questions.map(q=>`- ${q}`),'']),
   '## Reusable function queue','',
@@ -54,11 +54,11 @@ const reviewLines=['# Roster source-review pass','',
   `Reviewed ${rosterReview.reviewedAt}, client ${rosterReview.clientVersion}. ${rosterReview.meaning}`,'',
   `${rosterAudit.filter(r=>r.status==='partial-source-reviewed').length}/${rosterAudit.length} current source-selectable heroes accounted for. Advice remains conditional, not complete coverage of every ability, problem, stage or player. See [coverage matrix](ROSTER_RESEARCH.md) and [source review notes](COMMUNITY_RESEARCH.md).`,'',
   ...rosterAudit.flatMap(a=>{const h=game.heroes.find(h=>h.id===a.heroId),r=a.record;return [
-    `## ${h.name}${h.development?' (source development flag)':''}`,'',`Status: ${a.status}.`,'',
+    `## ${h.name}`,'',`Status: ${a.status}.`,'',
     ...(r?[...r.ruleIds.map(id=>{const rule=catalog.rules.find(x=>x.id===id);return `- **${catalog.items.find(i=>i.id===rule.itemId).name} / ${rule.goal} / ${rule.problems.join(', ')}:** ${rule.mechanism}`;}),'',
       `Still open: ${r.remainingQuestions.join(' ')}`,'',
       `Evidence: ${r.sourceUrls.map(url=>`[${catalog.manifest.sources.find(s=>s.url===url).title}](${url})`).join('; ')}`,'']:['No review record: inspect the new source before adding advice.',''])];}),
-  'A new client, changed ability text, changed development flag or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.',''];
+  'A new client, changed ability text or newly selectable hero invalidates completion in this report. It never generates or renews recommendations.',''];
 const outputs=[['src/data/threat-inventory.json',JSON.stringify(inventory,null,2)+'\n'],['docs/ROSTER_RESEARCH.md',lines.join('\n')],['docs/ROSTER_REVIEW.md',reviewLines.join('\n')]];
 for(const [path,body] of outputs){
   if(args[0]==='--verify'){

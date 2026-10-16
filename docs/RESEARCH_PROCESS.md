@@ -42,7 +42,7 @@ interruption from sleep, cleanse eligibility from a debuff, or healing from defe
   edit the source annotations or plan and rebuild them instead of hand-editing.
 - `data/research/roster-review.json`: per-hero pass ledger, exact ability baselines,
   rule/source references and unresolved questions. `docs/ROSTER_REVIEW.md` is generated
-  from it. New heroes or changed source descriptions/development flags lose completion;
+  from it. New heroes or changed source descriptions lose completion;
   invalid rule identities, missing rule/source references and duplicate records fail
   validation. This does not generate or renew recommendations.
 

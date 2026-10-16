@@ -7,7 +7,6 @@
     {
       "heroId": "hero-6",
       "name": "Abrams",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "abrams-stun-reduction",
@@ -55,7 +54,6 @@
     {
       "heroId": "hero-77",
       "name": "Apollo",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-hex-77"
@@ -89,7 +87,6 @@
     {
       "heroId": "hero-88",
       "name": "Baba",
-      "development": true,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-88"
@@ -100,7 +97,7 @@
         "https://steamcommunity.com/games/1422450/announcements/detail/670617878982034053"
       ],
       "remainingQuestions": [
-        "The snapshot marks Baba development despite current public discussion. Do not infer match availability. Spirit theft, brew modes and bird transformation need testing."
+        "Spirit theft, brew modes and bird transformation need testing."
       ],
       "abilityBaselines": [
         {
@@ -124,7 +121,6 @@
     {
       "heroId": "hero-15",
       "name": "Bebop",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "grit-hero-15",
@@ -163,7 +159,6 @@
     {
       "heroId": "hero-72",
       "name": "Billy",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-melee-72"
@@ -197,7 +192,6 @@
     {
       "heroId": "hero-16",
       "name": "Calico",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-hex-16",
@@ -232,7 +226,6 @@
     {
       "heroId": "hero-81",
       "name": "Celeste",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-81",
@@ -268,7 +261,6 @@
     {
       "heroId": "hero-78",
       "name": "Deadman Danny",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-weapon-78",
@@ -304,7 +296,6 @@
     {
       "heroId": "hero-64",
       "name": "Drifter",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-64",
@@ -340,7 +331,6 @@
     {
       "heroId": "hero-11",
       "name": "Dynamo",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-11",
@@ -376,7 +366,6 @@
     {
       "heroId": "hero-76",
       "name": "Graves",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-76",
@@ -411,7 +400,6 @@
     {
       "heroId": "hero-17",
       "name": "Grey Talon",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-flight-17",
@@ -447,7 +435,6 @@
     {
       "heroId": "hero-13",
       "name": "Haze",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "grit-hero-13",
@@ -492,7 +479,6 @@
     {
       "heroId": "hero-14",
       "name": "Holliday",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-14",
@@ -528,7 +514,6 @@
     {
       "heroId": "hero-1",
       "name": "Infernus",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "spirit-shield-hero-1",
@@ -567,7 +552,6 @@
     {
       "heroId": "hero-20",
       "name": "Ivy",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-20"
@@ -601,7 +585,6 @@
     {
       "heroId": "hero-12",
       "name": "Kelvin",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "sustain-healbane-hero-12",
@@ -639,7 +622,6 @@
     {
       "heroId": "hero-4",
       "name": "Lady Geist",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-healbane-4",
@@ -674,7 +656,6 @@
     {
       "heroId": "hero-31",
       "name": "Lash",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-hex-31"
@@ -708,7 +689,6 @@
     {
       "heroId": "hero-8",
       "name": "McGinnis",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "sustain-healbane-hero-8",
@@ -746,7 +726,6 @@
     {
       "heroId": "hero-63",
       "name": "Mina",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-hex-63",
@@ -783,7 +762,6 @@
     {
       "heroId": "hero-52",
       "name": "Mirage",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-dispel-52"
@@ -817,7 +795,6 @@
     {
       "heroId": "hero-18",
       "name": "Mo & Krill",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-18",
@@ -852,7 +829,6 @@
     {
       "heroId": "hero-67",
       "name": "Paige",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-67",
@@ -888,7 +864,6 @@
     {
       "heroId": "hero-10",
       "name": "Paradox",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-10"
@@ -923,7 +898,6 @@
     {
       "heroId": "hero-50",
       "name": "Pocket",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-50"
@@ -958,7 +932,6 @@
     {
       "heroId": "hero-84",
       "name": "Rat King",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-weapon-84"
@@ -993,7 +966,6 @@
     {
       "heroId": "hero-79",
       "name": "Rem",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-79"
@@ -1027,7 +999,6 @@
     {
       "heroId": "hero-2",
       "name": "Seven",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "channel-knockdown-hero-2",
@@ -1063,7 +1034,6 @@
     {
       "heroId": "hero-19",
       "name": "Shiv",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "shiv-knives-dispel",
@@ -1105,7 +1075,6 @@
     {
       "heroId": "hero-80",
       "name": "Silver",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-weapon-80"
@@ -1140,7 +1109,6 @@
     {
       "heroId": "hero-60",
       "name": "Sinclair",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-60"
@@ -1175,7 +1143,6 @@
     {
       "heroId": "hero-85",
       "name": "Solomon",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-85",
@@ -1211,7 +1178,6 @@
     {
       "heroId": "hero-69",
       "name": "The Doorman",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-69"
@@ -1246,7 +1212,6 @@
     {
       "heroId": "hero-65",
       "name": "Venator",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-65"
@@ -1280,7 +1245,6 @@
     {
       "heroId": "hero-66",
       "name": "Victor",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "sustain-healbane-hero-66",
@@ -1321,7 +1285,6 @@
     {
       "heroId": "hero-3",
       "name": "Vindicta",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-flight-3"
@@ -1355,7 +1318,6 @@
     {
       "heroId": "hero-35",
       "name": "Viscous",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-melee-35"
@@ -1389,7 +1351,6 @@
     {
       "heroId": "hero-58",
       "name": "Vyper",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-spirit-58"
@@ -1424,7 +1385,6 @@
     {
       "heroId": "hero-25",
       "name": "Warden",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-reactive-25"
@@ -1458,7 +1418,6 @@
     {
       "heroId": "hero-7",
       "name": "Wraith",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "grit-hero-7",
@@ -1502,7 +1461,6 @@
     {
       "heroId": "hero-27",
       "name": "Yamato",
-      "development": false,
       "status": "partial-source-reviewed",
       "ruleIds": [
         "roster-melee-27"
