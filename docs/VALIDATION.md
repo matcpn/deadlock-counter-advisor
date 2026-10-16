@@ -13,7 +13,11 @@
   expandable extra items and evidence, limited Infernus delivery labels, active
   filtering and selection of Infernus as an enemy. Desktop 1280px and mobile 375px
   layouts inspected; mobile document width 360px. No console errors observed.
-- Publication pending.
+- Implementation 10bd10d published. Checks 38908980010 and Pages 38908980039
+  succeeded. Live verification confirmed 42 enemy choices, three stage lists and
+  no removed controls/goal headings. Inspected deployed desktop columns; no console
+  errors observed. Saved simplified-advisor-live.png, closed the temporary preview
+  and reset the viewport override. Existing non-failing action migration notices remain.
 
 ## Whole-roster source review — 2026-10-16
 

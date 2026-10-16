@@ -3,9 +3,9 @@
 A contextual advisor prototype with an imported, version-pinned game catalog.
 **Source-reviewed beta: 83 conditional rules across 16 items.** All 42 captured
 source-selectable enemy heroes now have at least one bounded scenario. Advice is
-organized by problem, stage and Survive / Disrupt / Punish, with sources and limits.
+organized into combined Early / Mid / Late item lists, with expandable sources and limits.
 This is partial coverage, not every ability or player delivery route, and has not
-been tested in-game. Synthetic items remain an opt-in layout preview.
+been tested in-game. Synthetic items remain test fixtures only.
 Start with
 [docs/HANDOFF.md](docs/HANDOFF.md).
 
@@ -44,28 +44,28 @@ refreshing data does not renew it.
 ## Included
 
 - React + TypeScript + Vite interface with searchable full source roster, portraits,
-  multiple enemies, problem views and optional budget/active preference.
+  multiple enemies and optional active/owned-item/response preferences.
 - Imported item browser with source categories, colors, images, tier lists,
   tooltips, properties and source links.
-- Separate Survive / Disrupt / Punish cards with category colors, activation labels,
-  affordability, covered threats, timing, and limitations.
-- Pure recommendation engine, explicit demo opt-in, tests, lockfile, CI, and Pages
-  deployments on accepted main pushes. Problem boards show all stages together.
+- Combined stage item cards with category colors, activation labels, prices,
+  covered threats, player application scope, timing and limitations.
+- Pure personalized engine plus an unpersonalized browse adapter, tests, lockfile,
+  CI and Pages deployments on accepted main pushes. No synthetic UI preview.
 - Runtime catalog/scenario validation, versioned manifest, evidence completeness
   checks and component graph validation. See [data review](docs/DATA_REVIEW.md).
 - Product specification, full handoff, context history, data design, and roadmap.
 
 Imported heroes and items are browseable source facts. The reviewed recommendation
-catalog uses fifteen real items with explicit prerequisites, application timing, review
+catalog uses sixteen real items with explicit prerequisites, application timing, review
 dates and source links. Optional preferences include owned items and ability to
-respond while controlled. Unsupported heroes/problems/goals are visibly empty.
+respond while controlled. Unsupported selections remain empty.
 Scoring and stage placement are editorial, not calibrated effectiveness estimates.
 See [research and release scope](docs/COMMUNITY_RESEARCH.md).
 
 Advice is pinned to client 6785 and expires on November 14, 2026 UTC unless reviewed
 again. Refreshing facts does not renew advice. A new client version pauses the old
 rules; the manual refresh workflow retains review artifacts even if checks fail.
-Upgrade discounts, slots, full roster advice and guaranteed execute/parry outcomes
+Upgrade discounts, slots, complete kit coverage and guaranteed execute/parry outcomes
 are not implemented.
 
 ## GitHub and live preview
@@ -76,7 +76,7 @@ are not implemented.
 Pushes to `main` run Checks and Publish GitHub Pages. The Pages workflow installs
 locked dependencies and runs `npm run check` before uploading `dist` and deploying.
 It also supports manual dispatch. Pages is configured to use GitHub Actions.
-Only successful builds can deploy; the public UI clearly labels synthetic data.
+Only successful builds can deploy; synthetic fixtures are excluded from the public UI.
 
 Vite uses a relative base (`./`) for the repository subpath. There is no path router;
 future share state should use query parameters or hashes for Pages compatibility.

@@ -2,6 +2,9 @@
 
 ## Enemy-first UI cleanup — 2026-10-16
 
+Implementation 10bd10d is live. All 159 tests, Checks and Pages passed; the hosted
+combined stage lists and absence of the requested controls were verified.
+
 The user requested a simpler UI. Enemy selection now drives one combined item list
 per Early / Mid / Late stage. Removed player/build/budget inputs, problem tabs,
 synthetic preview, goal headings and the long beta banner. Data/review details are
