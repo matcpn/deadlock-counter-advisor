@@ -14,6 +14,10 @@
 - Channel-disruption tests now scope their assertions to Disrupt results, preserving
   their original delay, targetability, ownership and stage checks alongside the newly
   available passive Survive options. No gameplay tests were performed.
+- Published fbaa482. Checks 38920598268 and Pages 38920598145 passed. On the
+  hosted page, selecting Dynamo, Mo & Krill and Seven shows both green items in
+  Early / lane with the intended threat summaries. No console errors observed.
+  Saved build-colors-live.png and restored the empty initial selection.
 
 ## Compact full-roster selector — 2026-10-16
 

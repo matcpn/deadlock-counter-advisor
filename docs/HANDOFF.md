@@ -2,6 +2,9 @@
 
 ## Build-color coverage — 2026-10-16
 
+Implementation fbaa482 is live; Checks and Pages passed. The hosted page shows
+Reactive Barrier for Dynamo + Mo & Krill and Spirit Shielding for Seven.
+
 The user requires each enemy to have a green (Vitality) option, or both purple
 (Spirit) and orange (Weapon) options. This supplements the two-distinct-item target.
 The initial audit found 39 with green; Dynamo, Mo & Krill and Seven only had purple.
