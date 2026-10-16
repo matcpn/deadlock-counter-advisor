@@ -21,8 +21,16 @@
   one line each. This is not a complete keyboard/accessibility audit.
 - No in-game tests. Seven rules are source-reviewed beta, not verified. Mechanical
   uncertainty, stale community dates and limited coverage remain visible.
-- Refresh artifact upload now runs after a successful pull even if later checks
-  fail. Remote workflow/deployment results will be recorded after publication.
+- Published implementation ef93ce2 to main. Remote Checks 38833394840 and Pages
+  38833394817 succeeded. Manual refresh run 38833414086 (client 6785) succeeded;
+  its game-data-for-review artifact is available. The failure-path upload condition
+  was inspected but not exercised by deliberately failing a remote run.
+- Reloaded the live repository-subpath page and confirmed client 6785, the real
+  default Debuff Reducer card, and Dispel Magic in the DoT future-purchase bucket.
+  Saved a local screenshot of the live recommendation card. No runtime source or
+  LLM service is needed to show the deployed rules.
+- GitHub emitted non-failing action-runtime deprecation/Ubuntu migration notices;
+  workflows completed successfully. Action-version maintenance is a future chore.
 
 ## Community-source research — 2026-10-12
 

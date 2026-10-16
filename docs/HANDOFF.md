@@ -2,6 +2,9 @@
 
 ## Current release — 2026-10-15
 
+Implementation ef93ce2 is live on GitHub Pages; remote Checks, Pages and the pinned
+manual refresh succeeded (run IDs in VALIDATION.md). Live real cards were inspected.
+
 First source-reviewed recommendation slice is implemented in src/data/reviewed-catalog.json:
 seven rules / five items for Infernus facing Abrams and Shiv. Control: Debuff Reducer
 and preemptive Unstoppable versus Abrams. DoT: community-reported Dispel Magic for
