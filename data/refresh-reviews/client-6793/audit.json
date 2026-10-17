@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-16",
+  "status": "candidate-not-promoted",
+  "baselineCommit": "275bea821ec95c44e261777916941579ee49a44d",
+  "fromVersion": 6785,
+  "toVersion": 6793,
+  "newlySelectable": [
+    {
+      "id": "hero-86",
+      "name": "Violet"
+    }
+  ],
+  "normalizedChanges": {
+    "heroes": [
+      {
+        "id": "hero-85",
+        "name": "Solomon",
+        "fields": [
+          "abilities"
+        ]
+      },
+      {
+        "id": "hero-86",
+        "name": "Violet",
+        "fields": [
+          "portrait",
+          "selectable",
+          "abilities"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "id": "item-2739107182",
+        "name": "Burst Fire",
+        "fields": [
+          "description",
+          "tooltipSections"
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "dataVerify": "passed",
+    "researchVerifyBeforeBuild": "failed: generated inventory out of date",
+    "researchBuild": "43 heroes; 0 with available reviewed advice; 172 ability gaps (includes stale triage)",
+    "researchVerifyAfterBuild": "passed",
+    "candidateTests": {
+      "passed": 161,
+      "failed": 19,
+      "total": 180
+    },
+    "repeatPinnedPull": "No catalog changes",
+    "browser": "Violet selectable; portrait loaded; advice paused on patch mismatch"
+  },
+  "decision": "Preserve candidate and raw snapshot; restore published 6785 runtime pending review. Do not renew evidence or loosen gates."
+}

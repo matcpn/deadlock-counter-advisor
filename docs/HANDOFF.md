@@ -1,5 +1,16 @@
 # Start here — continuation handoff
 
+## Violet pull and onboarding audit — 2026-10-16
+
+Pulled client 6793 twice; Violet appears automatically with portrait/four abilities,
+43 selectable heroes. Saved raw snapshot and candidate bundle under
+data/refresh-reviews/client-6793; runtime remains 6785 after the audit. New-client
+review gating pauses all advice; after research regeneration 161 candidate tests
+passed and 19 failed. Do not deploy the candidate by merely bumping review versions.
+Read VIOLET_REFRESH_AUDIT.md for evidence, missing Living Ink base text, manual
+onboarding steps and prioritized fixes. User requested identifying friction for
+later fixes; no counter rules or gate redesign were requested in this pass.
+
 ## Price-tier columns — 2026-10-16
 
 The user requested Early 800/1,600, Mid 3,200 and Late 6,400. browseBoard now places

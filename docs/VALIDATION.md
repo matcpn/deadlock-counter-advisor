@@ -1,5 +1,19 @@
 # Validation record
 
+## Violet refresh audit — 2026-10-16
+
+- Client 6793 pull/offline checksum verification passed. Repeat pinned pull produced
+  no catalog changes. Violet automatically imported/selectable with a loaded portrait.
+- Initial check stopped at stale research output. research:build and research:verify
+  passed, then candidate tests reported 161 passed / 19 failed / 180 total. See
+  VIOLET_REFRESH_AUDIT.md and data/refresh-reviews/client-6793/audit.json.
+- Browser confirmed new-client review gate pauses all advice. Candidate and reports
+  saved outside production; six generated/runtime files restored to their prior
+  committed versions. No invented Violet rules, evidence renewal or bypasses.
+- Restored production baseline: npm run check passes all 179 tests, immutable
+  data/research checks, strict TypeScript and production build. Existing bundle
+  notice remains. Local preview closed and server stopped.
+
 ## Price-tier columns — 2026-10-16
 
 - npm run check passed: data/research verification, 179 tests across 11 files,

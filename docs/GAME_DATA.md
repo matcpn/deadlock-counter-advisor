@@ -7,6 +7,7 @@ Use Node 24, then run:
 ```sh
 npm ci
 npm run data:pull
+npm run research:build
 npm run check
 ```
 
@@ -24,6 +25,11 @@ that the newest live patch is fully represented. No API key or browser fetch is
 required: the static site ships the committed normalized snapshot.
 
 ## Files and review
+
+The October 16 Violet dry run is documented in [VIOLET_REFRESH_AUDIT.md](VIOLET_REFRESH_AUDIT.md).
+Client 6793 is preserved as a candidate, not the published runtime. Until staging
+is implemented, run experimental pulls in a disposable checkout: the pull writes
+the runtime catalog and a new client pauses old reviewed recommendations.
 
 - `data/snapshots/client-6774/`: original API bytes and a source manifest containing
   endpoint URLs, SHA-256 checksums, retrieval timestamp, counts and art provenance.

@@ -2,6 +2,11 @@
 
 ## Current agenda — 2026-10-16
 
+New priority from the Violet refresh audit: stage imports separately, split import
+validation from release-coverage tests, and produce per-change review impact.
+Client 6793 imports Violet automatically but cannot be promoted without review;
+see [concrete follow-ups](docs/VIOLET_REFRESH_AUDIT.md). Candidate data is preserved.
+
 UI cleanup delivered: enemy-first selection and combined stage item lists. Player,
 build, budget, problem tabs, demo preview and goal headings removed from the main
 flow at user request. Scoped rules and the personalized engine remain in the model.

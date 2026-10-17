@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": 6793,
+  "importedAt": "2026-10-17T01:07:24.747Z",
+  "sourceStatus": "community-client-extraction",
+  "sources": [
+    {
+      "file": "steam-info.json",
+      "url": "https://api.deadlock-api.com/v1/assets/steam-info?client_version=6793",
+      "sha256": "844b6ce4955ad63b3b7709330cfde5ac65f88eff100cc61d65545927f08b75a4"
+    },
+    {
+      "file": "heroes.json",
+      "url": "https://api.deadlock-api.com/v1/assets/heroes?client_version=6793",
+      "sha256": "0a987618e380a677e5635f5bb85eac72c151a5136791441fa6630a3d0ba50964"
+    },
+    {
+      "file": "items.json",
+      "url": "https://api.deadlock-api.com/v1/assets/items?client_version=6793",
+      "sha256": "1f6fc3760e03addf2c918d7ee3b9ef59705668258ba3a7b1d0d44f04c6bb7b34"
+    },
+    {
+      "file": "colors.json",
+      "url": "https://api.deadlock-api.com/v1/assets/colors?client_version=6793",
+      "sha256": "f833e6a05ed52587a3fd83ba8018a80ff0c8da0860ad89addc8cf6f765c62902"
+    }
+  ],
+  "counts": {
+    "sourceHeroes": 65,
+    "sourceItems": 774,
+    "selectableHeroes": 43,
+    "shopItems": 173
+  },
+  "artwork": {
+    "owner": "Valve",
+    "provider": "Deadlock API asset URLs",
+    "license": "Game artwork is not covered by the API code MIT license; no ownership or endorsement claimed."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "fromVersion": 6785,
+  "toVersion": 6793,
+  "heroes": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "hero-85",
+      "hero-86"
+    ]
+  },
+  "items": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "item-2739107182"
+    ]
+  },
+  "colorsChanged": false,
+  "reviewRequired": "Imported facts only. Review affected mechanics and counter rules before certifying recommendations."
+}
